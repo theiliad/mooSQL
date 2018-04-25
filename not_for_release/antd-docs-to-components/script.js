@@ -160,7 +160,6 @@ ${importFileNames.map(filename => `import ${filename} from './${filename}.js'`).
 export default (
     <div>
 ${importFileNames.map(filename => `        <${filename} />`).join('\n')}
-        <BasicDemo />
     </div>
 )
                     `
