@@ -3,6 +3,10 @@ const { lstatSync, readdirSync } = require('fs')
     , fs = require('fs')
     , { join } = require('path')
     , rimraf = require('rimraf')
+    , showdown  = require('showdown')
+    , converter = new showdown.Converter()
+    , convert = require('htmr')
+    , md = require('markdown-it')()
 
 
 
@@ -38,6 +42,11 @@ String.prototype.regexIndexOf = function(regex, startpos) {
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
 }
 
 // make promise version of fs.readFile()
@@ -105,6 +114,7 @@ initialPromise.then(() => {
                     , demoComponentPromises = []
                     , demoComponents = []
                     , demoComponentNames = []
+                    , styles = []
 
                 let indexFileString = `import React from 'react'\n`
                 , importFileNames = []
@@ -151,6 +161,12 @@ export default expComponent
                             // console.log(`./artifacts/${antdComponentName}/${componentName}.js Saved!`);
                         })
 
+                        if (data.indexOf('<style>') > -1) {
+                            styles.push(data.substring(data.indexOf('<style>') + '<style>'.length, data.indexOf('</style>')))
+
+                            console.log(data.substring(data.indexOf('<style>') + '<style>'.length, data.indexOf('</style>')))
+                        }
+
                         importFileNames.push(componentName)
                         resolve(true)
                     })
@@ -159,20 +175,42 @@ export default expComponent
                 })
 
                 Promise.all(demoComponentPromises).then(() => {
-                    indexFileString += `
-${importFileNames.map(filename => `import ${filename} from './${filename}.js'`).join('\n')}
+                    fs.readFileAsync(`${directory}/index.en-US.md`, (err, data, resolve, reject) => {
+                        const markDownData = data.substring(locations('---', data)[1])
+                        readmeHTML = md.renderInline(markDownData)
 
-const expComponent = () => (
-    <div>
-${importFileNames.map(filename => `        <${filename} />`).join('\n')}
-    </div>
-)
-export default expComponent
-                    `
-                    fs.writeFile(`./artifacts/${antdComponentName}/index.js`, indexFileString, function (err) {
-                        if (err) throw err;
-                        
-                        console.log(`./artifacts/${antdComponentName}/index.js Saved!`);
+                        indexFileString += `
+    ${importFileNames.map(filename => `import ${filename} from './${filename}.js'`).join('\n')}
+    import { Card } from 'antd';
+    const ReactMarkdown = require('react-markdown')
+    ${styles.length > 0 ? "require('./styles.scss')\n" : ''}` +
+    "const markDownInput = `" + readmeHTML.replaceAll('`', '\\`').replaceAll('<code>', '\\`\\`\\`').replaceAll('</code>', '\\`\\`\\`') + "`" +
+    `\nconst expComponent = () => (
+        <div>
+            <h4>${antdComponentName.split('-').map(item => item == '-' ? undefined : item.capitalize()).join(' ')}</h4>
+
+            <Card bordered={false}>
+                ${importFileNames.map(filename => `        <${filename} />`).join('\n')}
+
+                <ReactMarkdown source={markDownInput} />
+            </Card>
+        </div>
+    )
+    export default expComponent
+                        `
+                        fs.writeFile(`./artifacts/${antdComponentName}/index.js`, indexFileString, function (err) {
+                            if (err) throw err;
+                            
+                            console.log(`./artifacts/${antdComponentName}/index.js Saved!`);
+                        })
+
+                        if (styles.length > 0) {
+                            fs.writeFile(`./artifacts/${antdComponentName}/styles.scss`, styles.join('\n'), function (err) {
+                                if (err) throw err;
+                                
+                                console.log(`./artifacts/${antdComponentName}/styles.scss Saved!`);
+                            })
+                        }
                     })
                 })
             }
