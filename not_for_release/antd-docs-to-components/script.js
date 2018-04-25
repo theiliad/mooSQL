@@ -134,7 +134,12 @@ initialPromise.then(() => {
                                                                         .replace(', mountNode', '').replace(');', '')
                                                                         .replace(',\n  mountNode', '')
 
-                        finalComponent += `export default (\n${insideDomMountBracket}\n)`.replace(/^\s*$(?:\r\n?|\n)/gm, '')
+                        finalComponent += `
+const expComponent = () => (
+${insideDomMountBracket}
+)
+export default expComponent
+`.replace(/^\s*$(?:\r\n?|\n)/gm, '')
 
                         let fileString = `import React from 'react'\n`
                         const jsxCode = data.substring(JSXStartPos, data.indexOf('ReactDOM.render'))
@@ -157,11 +162,12 @@ initialPromise.then(() => {
                     indexFileString += `
 ${importFileNames.map(filename => `import ${filename} from './${filename}.js'`).join('\n')}
 
-export default (
+const expComponent = () => (
     <div>
 ${importFileNames.map(filename => `        <${filename} />`).join('\n')}
     </div>
 )
+export default expComponent
                     `
                     fs.writeFile(`./artifacts/${antdComponentName}/index.js`, indexFileString, function (err) {
                         if (err) throw err;
