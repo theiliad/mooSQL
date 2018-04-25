@@ -11,6 +11,7 @@ const webpack = require('webpack')
 , ExtractTextPlugin = require("extract-text-webpack-plugin")
 , CopyWebpackPlugin = require('copy-webpack-plugin')
 , SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin')
+, UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 // , BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 , PLUGINS = [
     HtmlWebpackPluginConfig,
@@ -29,16 +30,6 @@ const isProd = process.env.NODE_ENV === 'production'
 
 if (isProd) {
   // JS_LOADERS.unshift(WebpackStrip.loader('console.log'));
-
-  PLUGINS.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-          warnings: false,
-      },
-      sourceMap: false,
-      comments: false
-    })
-  );
 } else {
   // PLUGINS.push("react-hot-loader/babel");
 }
@@ -104,4 +95,17 @@ module.exports = {
     },
     historyApiFallback: true
   },
+  optimization: {
+    minimizer: [
+      new UglifyJSPlugin({
+        uglifyOptions: {
+          compress: {
+            warnings: false,
+          },
+          sourceMap: false,
+          comments: false
+        }
+      })
+    ]
+  }
 }
