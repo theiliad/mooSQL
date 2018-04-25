@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+@import "commons";
+@import "container";
+@import "general";
+@import "toasts";
+
+@import 'antd-overrides';
+
+html, body {
+    background: #f7f8fc;
+    padding: 0 !important;
+}
+
+textarea {
+    font-size: 14px !important;
+}
+
+div#header {
+    position: relative;
+    height: auto;
+    padding: 0;
+    z-index: 1;
+    border: none;
+    background: #fff;
+    box-shadow: 0 4px 30px -7px rgba(70, 78, 142, 0.15);
+
+    div.logo {
+        display: table;
+        margin: auto;
+
+        img {
+            height: 47px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .ant-menu-horizontal {
+        line-height: 71px !important;
+        border: none;
+    }
+
+    div.header-right {
+        float: right;
+
+        a.pages-menu {
+            vertical-align: middle;
+            
+            i {
+                font-size: 20px;
+                transform: rotate(90deg);
+                margin-left: 15px;
+                margin-right: -10px;
+            }
+        }
+    }
+
+    a.ant-dropdown-link {
+        font-size: 15px;
+        margin-top: 4px;
+    }
+}
+
+div#app-content {
+    padding: 20px;
+}
+
+div#app-sidebar {
+    min-width: 0 !important;
+    box-shadow: 0 0 15px rgba(53, 61, 129, 0.05);
+
+    div.ant-layout-sider-trigger {
+        position: static !important;
+    }
+
+    div.side-menu {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            border: none;
+
+            li:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+div#app-footer {
+    position: relative;
+}
+
+.login-form {
+    max-width: 350px;
+    // margin: auto;
+    margin-top: 30px;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+
+    &.facebook {
+        background: #365899;
+        border-color: #365899;
+        margin-top: 5px;
+    }
+}

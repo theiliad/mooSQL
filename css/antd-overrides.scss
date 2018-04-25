@@ -1,0 +1,165 @@
+@import "commons";
+
+.ant-layout {
+    background: transparent;
+}
+
+.ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
+    font-size: 14px;
+    padding: 10px 12px;
+}
+
+.ant-btn-group-lg > .ant-btn {
+    border-color: #ecf7f8;
+}
+
+// Dropdown
+.ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
+    background-color: #f4fcff;
+    
+    a {
+        color: $primary_color;
+    }
+}
+
+.ant-dropdown-menu-item-group {
+    &.not-first {
+        padding-top: 15px;
+        border-top: 1px solid #e6e9ec;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+
+        li.active {
+            background: #f4fcff;
+            border-radius: 0;
+        }
+    }
+}
+
+.ant-dropdown-menu-item-group-title {
+    color: #000;
+    font-weight: 700;
+    font-size: 11px;
+    padding-top: 10px;
+}
+
+// Select
+.ant-select-dropdown-menu-item:hover, .ant-select-dropdown-menu-item-active {
+    background-color: #f4fcff;
+    color: $primary_color;
+}
+
+// Spinner
+.ant-spin-nested-loading > div > .ant-spin {
+    max-height: 10000px;
+}
+
+// Steps
+.ant-steps-item-process > .ant-steps-item-content > .ant-steps-item-title:after {
+    background-color: #d0e1e2;
+}
+
+.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+    color: #c9dee0;
+}
+
+.ant-steps-item-wait > .ant-steps-item-content > .ant-steps-item-title {
+    color: #d2e4e5;
+}
+
+.ant-steps-item-title:after, .ant-steps-item-custom .ant-steps-item-icon > .ant-steps-icon,
+.ant-steps-item-title {
+    transition: all .1s ease-out;
+}
+
+// Datepicker
+.ant-time-picker-panel-select li:hover {
+    background: #ecf7f8;
+    color: $primary_color;
+}
+
+// Buttons
+.ant-btn-danger {
+    color: #f5222d;
+    background-color: #fff;
+    border-color: #f5222d;
+    margin-left: 4px;
+}
+
+// Layout
+.ant-layout {
+    overflow: visible !important;
+}
+
+div.ant-layout-has-sider div.ant-layout-sider {
+    transition: none;
+    background: none;
+    width: auto !important;
+    flex: none !important;
+    max-width: 10000px !important;
+    min-width: 200px !important;
+}
+
+// Message
+.ant-message-notice-content {
+    padding: 0;
+    box-shadow: none;
+    background: none;
+
+    div.ant-message-custom-content {
+        padding: 10px 16px;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: #fff;
+
+        &.ant-message-warning {
+            background: #faad14;
+        }
+
+        &.ant-message-error {
+            background: #f5222d;
+        }
+
+        &.ant-message-success {
+            background: #52c41a;
+        }
+
+        i.anticon {
+            color: #fff;
+        }
+    }
+}
+
+// Table Icons
+.ant-table-tbody {
+    i {
+        &.anticon-check-circle, &.anticon-close-circle {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        &.anticon-check-circle {            
+            &:before {
+                color: #52c41a;
+            }
+        }
+
+        &.anticon-close-circle {
+            &:before {
+                color: #f5222d;
+            }
+        }
+    }
+}
+
+// Cards
+.ant-card {
+    box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.1);
+
+    div.ant-card-head {
+        border-bottom: 1px solid rgba(239, 240, 251, 1);
+    }
+}

@@ -1,0 +1,140 @@
+@import "commons";
+
+html, body {
+    margin: 0;
+    font-family: "Nunito Sans", $fonts;
+}
+
+* {
+    font-family: "Nunito Sans", $fonts;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-weight: 700;
+    font-family: "Nunito", $fonts;
+}
+
+h1,
+.h1 {
+    font-size: 36px;
+}
+h2,
+.h2 {
+    font-size: 30px;
+}
+h3,
+.h3 {
+    font-size: 24px;
+}
+h4,
+.h4 {
+    font-size: 18px;
+}
+h5,
+.h5 {
+    font-size: 14px;
+}
+h6,
+.h6 {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: auto;
+    padding: 0 20px;
+
+    &.small {
+        max-width: 950px;
+    }
+
+    &.xsmall {
+        max-width: 700px;
+    }
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.paddingTop {
+    &-30 {
+        padding-top: 30px;
+    }
+}
+
+.marginTop {
+    &-10 {
+        margin-top: 10px;
+    }
+
+    &-15 {
+        margin-top: 15px;
+    }
+
+    &-30 {
+        margin-top: 30px !important;
+    }
+
+    &-60 {
+        margin-top: 60px;
+    }
+}
+
+.marginBottom {
+    margin-bottom: 30px;
+
+    &-30 {
+        margin-bottom: 30px;
+    }
+    
+    &-15 {
+        margin-bottom: 15px;
+    }
+}
+
+table {
+    th, td {
+        vertical-align: middle;
+    }
+}
+
+a {
+    color: $primary_color;
+}
+
+.fullheight {
+    min-height: 100vh;
+}
+
+.block {
+    display: block;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: "Nunito Sans", $fonts;
+}
+
+.ui.primary.button, .ui.primary.buttons .button {
+    background-color: $primary_color;
+}
+
+.ui.primary.button:hover, .ui.primary.buttons:hover .button:hover,
+.ui.primary.button:focus, .ui.primary.buttons:focus .button:focus {
+    background-color: $primary_hover_color;
+}
+
+div.card {
+    padding: 15px;
+    background: #fff;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+}
