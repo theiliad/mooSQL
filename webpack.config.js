@@ -10,7 +10,6 @@ const webpack = require('webpack')
 , JS_LOADERS = ['babel-loader']
 , ExtractTextPlugin = require("extract-text-webpack-plugin")
 , CopyWebpackPlugin = require('copy-webpack-plugin')
-, ProgressBarPlugin = require('progress-bar-webpack-plugin')
 , UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 , PLUGINS = [
     HtmlWebpackPluginConfig,
@@ -37,7 +36,6 @@ if (isProd) {
 // If environment is not Netlify
 if (!process.env.NETLIFY) {
   PLUGINS.concat([
-    new ProgressBarPlugin(),
     // new BundleAnalyzerPlugin()
   ])
 }
@@ -73,22 +71,26 @@ module.exports = {
       { test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        }),
-        exclude: /node_modules/ 
+          use: ['css-loader?{minimize: true}', 'sass-loader']
+        })
       },
       {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
+            'css-loader?{minimize: true}',
             `less-loader?{"javascriptEnabled": true, "sourceMap":true, "modifyVars":${JSON.stringify(theme)}}`
             //, "modifyVars":${JSON.stringify(theme)}
           ]
         }),
       },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ], exclude: /node_modules/ },
+      { test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader']
+        })
+      },
       { test: /\.(png|jpg|svg|gif|woff|woff2|ttf|eot)$/, loader: 'url-loader?limit=25000' }
     ]
   },

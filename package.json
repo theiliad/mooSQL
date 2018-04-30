@@ -50,7 +50,6 @@
     "less": "^3.0.2",
     "less-loader": "^4.1.0",
     "node-sass": "^4.8.3",
-    "progress-bar-webpack-plugin": "^1.11.0",
     "react-hot-loader": "^4.1.0",
     "sass-loader": "^7.0.1",
     "simple-progress-webpack-plugin": "^1.1.2",
