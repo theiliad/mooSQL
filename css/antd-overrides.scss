@@ -157,12 +157,26 @@ div.ant-layout-has-sider div.ant-layout-sider {
 
 // Menu
 .ant-layout-sider-trigger {
-    background: #363e83;
+    background: #fff;
+
+    i {
+        &::before {
+            color: #333;
+        }
+    }
 }
 
 // Cards
 .ant-card {
     box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.1);
+    transition: $generic_transition;
+
+    &.hoverable {
+        &:hover {
+            box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.3);
+            transition: $generic_transition;
+        }
+    }
 
     div.ant-card-head {
         border-bottom: 1px solid rgba(239, 240, 251, 1);

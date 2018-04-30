@@ -8,6 +8,9 @@
 @import 'antd-overrides';
 @import 'antd/cards';
 
+// Custom core-admin components
+@import 'core-components';
+
 html, body {
     background: #fafafd;
     // #f7f8fc;

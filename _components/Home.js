@@ -27,6 +27,7 @@ import { Spin, message } from 'antd'
 import ContentLayout from './ContentLayout'
 import { Card } from 'antd';
 import { Row, Col } from 'antd';
+import { Avatar } from 'antd';
 
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 
@@ -68,7 +69,7 @@ class HomeComponent extends React.Component {
                             >
                                 <defs>
                                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#363e83" stopOpacity={0.8}/>
+                                        <stop offset="5%" stopColor="#2196F3" stopOpacity={0.8}/>
                                         <stop offset="95%" stopColor="#6c78e4" stopOpacity={0}/>
                                     </linearGradient>
                                     
@@ -82,24 +83,44 @@ class HomeComponent extends React.Component {
                                 <YAxis />
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <Tooltip />
-                                <Area type="monotone" dataKey="uv" stroke="#7076a6" fillOpacity={1} strokeWidth={2} fill="url(#colorUv)" />
+                                <Area type="monotone" dataKey="uv" stroke="#2196F3" fillOpacity={1} strokeWidth={2} fill="url(#colorUv)" />
                                 <Area type="monotone" dataKey="pv" stroke="#ff9a8d" fillOpacity={1} strokeWidth={2} fill="url(#colorPv)" />
                             </AreaChart>
                         </Card>
                     </Col>
 
                     <Col className="gutter-row" span={6}>
-                        <Card bordered={false} className="gradient-primary">
-                            <p>Card content</p>
-                            <p>Card content</p>
-                            <p>Card content</p>
-                        </Card>
+                        <Link to={'/'}>
+                            <Card bordered={false} className="hoverable gradient-primary circle-figure">
+                                <div className="circle light">
+                                    <span>23</span>
 
-                        <Card bordered={false} className="gradient-secondary marginTop-15">
-                            <p>Card content</p>
-                            <p>Card content</p>
-                            <p>Card content</p>
-                        </Card>
+                                    <Icon type="right" />
+                                </div>
+
+                                <div className="content">
+                                    <h3>Comments</h3>
+
+                                    <p>From xuvaa61, mike23 and 7 others</p>
+                                </div>
+                            </Card>
+                        </Link>
+
+                        <Link to={'/'}>
+                            <Card bordered={false} className="hoverable gradient-secondary circle-figure marginTop-15">
+                                <div className="circle light">
+                                    <span>77</span>
+
+                                    <Icon type="right" />
+                                </div>
+
+                                <div className="content">
+                                    <h3>New Jobs</h3>
+
+                                    <p>By Hooli, Pied Piper and 63 others</p>
+                                </div>
+                            </Card>
+                        </Link>
                     </Col>
                 </Row>
             </div>

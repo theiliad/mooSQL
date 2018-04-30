@@ -8,10 +8,16 @@
 }
 
 .ant-card.gradient-secondary {
-    background: #353d81;
-    background: -moz-linear-gradient(-45deg,  #353d81 0%, #6c78e4 100%);
-    background: -webkit-linear-gradient(-45deg,  #353d81 0%,#6c78e4 100%);
-    background: linear-gradient(135deg,  #353d81 0%,#6c78e4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353d81', endColorstr='#6c78e4',GradientType=1 );
+    background: #2196F3;
+    background: -moz-linear-gradient(-45deg,  #2196F3 0%, #6c78e4 100%);
+    background: -webkit-linear-gradient(-45deg,  #2196F3 0%,#6c78e4 100%);
+    background: linear-gradient(135deg,  #2196F3 0%,#6c78e4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2196F3', endColorstr='#6c78e4',GradientType=1 );
     color: #fff;
+}
+
+.ant-card .ant-body {
+    h1, h2, h3, h4, h5, h6 {
+        color: #333;
+    }
 }
