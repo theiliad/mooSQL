@@ -7,11 +7,11 @@ import CustomizedTriggerOfNewTabDemo from './CustomizedTriggerOfNewTabDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import AddCloseTabDemo from './AddCloseTabDemo.js'
 import ExtraContentDemo from './ExtraContentDemo.js'
-import IconDemo from './IconDemo.js'
 import PositionDemo from './PositionDemo.js'
+import IconDemo from './IconDemo.js'
 import SizeDemo from './SizeDemo.js'
 import SlideDemo from './SlideDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -59,19 +59,58 @@ Ant Design has 3 types of Tabs for different situations.
 const expComponent = () => (
         <div>
             <h4>Tabs</h4>
+            <p>
+
+Tabs make it easy to switch between different views.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <ContainerOfCardTypeTabDemo />
-        <CardTypeTabDemo />
-        <CustomizedTriggerOfNewTabDemo />
-        <DisabledDemo />
-        <AddCloseTabDemo />
-        <ExtraContentDemo />
-        <IconDemo />
-        <PositionDemo />
-        <SizeDemo />
-        <SlideDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Container Of Card Type Tab" bordered={true}><ContainerOfCardTypeTabDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Card Type Tab" bordered={true}><CardTypeTabDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customized Trigger Of New Tab" bordered={true}><CustomizedTriggerOfNewTabDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Add Close Tab" bordered={true}><AddCloseTabDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Extra Content" bordered={true}><ExtraContentDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Position" bordered={true}><PositionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Icon" bordered={true}><IconDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Slide" bordered={true}><SlideDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

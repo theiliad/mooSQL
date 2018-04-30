@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="994px" height="255.021px" viewBox="0 0 994 255.021" enable-background="new 0 0 994 255.021" xml:space="preserve">
 <g>
 	
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="17.0444" y1="127.1172" x2="238.1113" y2="127.1172" gradientTransform="matrix(0.7071 0.7071 -0.7071 0.7071 126.9998 -52.6048)">
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="440.6309" y1="-196.0198" x2="661.6992" y2="-196.0198" gradientTransform="matrix(0.7071 0.7071 0.7071 -0.7071 -123.7985 -400.8429)">
 		<stop  offset="0" style="stop-color:#FF7A9B"/>
 		<stop  offset="1" style="stop-color:#FFA798"/>
 	</linearGradient>
@@ -15,5 +16,5 @@
 <polygon fill="#FFFFFF" points="122.856,150.863 95.291,150.863 124.321,115.387 96.689,115.387 154.231,61.914 131.969,102.792 
 	159.731,102.792 129.528,139.211 158.396,139.211 100.399,193.107 "/>
 <rect x="292" y="76.506" fill="none" width="736" height="105"/>
-<text transform="matrix(1 0 0 1 292 165.9648)" fill="#353D82" font-family="'MuseoSansRounded-700'" font-size="126">Core Admin</text>
+<text transform="matrix(1 0 0 1 292 165.9646)" fill="#353D82" font-family="'MuseoSansRounded-700'" font-size="126">Core Admin</text>
 </svg>

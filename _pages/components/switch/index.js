@@ -1,11 +1,11 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import DisabledDemo from './DisabledDemo.js'
 import LoadingDemo from './LoadingDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import TwoSizesDemo from './TwoSizesDemo.js'
 import TextIconDemo from './TextIconDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -41,13 +41,34 @@ Switching Selector.
 const expComponent = () => (
         <div>
             <h4>Switch</h4>
+            <p>
+
+Switching Selector.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <DisabledDemo />
-        <LoadingDemo />
-        <TwoSizesDemo />
-        <TextIconDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Loading" bordered={true}><LoadingDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Two Sizes" bordered={true}><TwoSizesDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Text Icon" bordered={true}><TextIconDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

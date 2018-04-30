@@ -3,7 +3,7 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import CallbackDemo from './CallbackDemo.js'
 import ContainerToScrollDemo from './ContainerToScrollDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -32,11 +32,26 @@ Please note that Affix should not cover other content on the page, especially wh
 const expComponent = () => (
         <div>
             <h4>Affix</h4>
+            <p>
+
+Make an element stick to viewport.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <CallbackDemo />
-        <ContainerToScrollDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Callback" bordered={true}><CallbackDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Container To Scroll" bordered={true}><ContainerToScrollDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

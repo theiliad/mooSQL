@@ -9,7 +9,7 @@ import MiniVersionDemo from './MiniVersionDemo.js'
 import SwitchStepDemo from './SwitchStepDemo.js'
 import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import VerticalDemo from './VerticalDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -49,17 +49,50 @@ A single step in the step bar.
 const expComponent = () => (
         <div>
             <h4>Steps</h4>
+            <p>
+
+`Steps` is a navigation bar that guides users through the steps of a task.
+
+</p>
 
             <Card bordered={false}>
-                        <CustomizedDotStyleDemo />
-        <ErrorStatusDemo />
-        <WithIconDemo />
-        <DotStyleDemo />
-        <BasicDemo />
-        <MiniVersionDemo />
-        <SwitchStepDemo />
-        <VerticalMiniVersionDemo />
-        <VerticalDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Dot Style" bordered={true}><CustomizedDotStyleDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Error Status" bordered={true}><ErrorStatusDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="With Icon" bordered={true}><WithIconDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Dot Style" bordered={true}><DotStyleDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Mini Version" bordered={true}><MiniVersionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Switch Step" bordered={true}><SwitchStepDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Vertical Mini Version" bordered={true}><VerticalMiniVersionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

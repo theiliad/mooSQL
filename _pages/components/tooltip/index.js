@@ -4,7 +4,7 @@ import React from 'react'
 import AdjustPlacementAutomaticallyDemo from './AdjustPlacementAutomaticallyDemo.js'
 import BasicDemo from './BasicDemo.js'
 import PlacementDemo from './PlacementDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -48,12 +48,29 @@ Please ensure that the child node of \`\`\`Tooltip\`\`\` accepts \`\`\`onMouseEn
 const expComponent = () => (
         <div>
             <h4>Tooltip</h4>
+            <p>
+
+A simple text popup tip.
+
+</p>
 
             <Card bordered={false}>
-                        <ArrowPointingAtTheCenterDemo />
-        <AdjustPlacementAutomaticallyDemo />
-        <BasicDemo />
-        <PlacementDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Arrow Pointing At The Center" bordered={true}><ArrowPointingAtTheCenterDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Adjust Placement Automatically" bordered={true}><AdjustPlacementAutomaticallyDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

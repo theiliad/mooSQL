@@ -8,7 +8,7 @@ import CompleteControlOverFileListDemo from './CompleteControlOverFileListDemo.j
 import PicturesWallDemo from './PicturesWallDemo.js'
 import PicturesWithListStyleDemo from './PicturesWithListStyleDemo.js'
 import UploadManuallyDemo from './UploadManuallyDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -79,16 +79,45 @@ Please set property \`\`\`url\`\`\` of property \`\`\`fileList\`\`\` to control 
 const expComponent = () => (
         <div>
             <h4>Upload</h4>
+            <p>
+
+Upload file by selecting or dragging.
+
+</p>
 
             <Card bordered={false}>
-                        <AvatarDemo />
-        <UploadByClickingDemo />
-        <DefaultFilesDemo />
-        <DragAndDropDemo />
-        <CompleteControlOverFileListDemo />
-        <PicturesWallDemo />
-        <PicturesWithListStyleDemo />
-        <UploadManuallyDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Avatar" bordered={true}><AvatarDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Upload By Clicking" bordered={true}><UploadByClickingDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Default Files" bordered={true}><DefaultFilesDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Drag And Drop" bordered={true}><DragAndDropDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Complete Control Over File List" bordered={true}><CompleteControlOverFileListDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Pictures Wall" bordered={true}><PicturesWallDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Pictures With List Style" bordered={true}><PicturesWithListStyleDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Upload Manually" bordered={true}><UploadManuallyDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

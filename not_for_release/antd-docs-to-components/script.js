@@ -78,15 +78,15 @@ const componentDirectories = getDirectories('./components')
 // console.log(filteredDirectories)
 
 const initialPromise = new Promise((resolve, reject) => {
-    if (!fs.existsSync('./artifacts')){
-        fs.mkdirAsync('./artifacts').then(() => {
+    if (!fs.existsSync('../../_pages/components')){
+        fs.mkdirAsync('../../_pages/components').then(() => {
             resolve(true)
         })
     } else {
-        rimraf('./artifacts', function () {
+        rimraf('../../_pages/components', function () {
             console.log('Existing Artifacts Deleted!');
 
-            fs.mkdirAsync('./artifacts').then(() => {
+            fs.mkdirAsync('../../_pages/components').then(() => {
                 resolve(true)
             })
         });
@@ -99,8 +99,8 @@ initialPromise.then(() => {
     filteredDirectories.map((directory, index) => {
         const antdComponentName = directory.replace('components/', '')
 
-        if (!fs.existsSync(`./artifacts/${antdComponentName}`)) {
-            const dirPromise = fs.mkdirAsync(`./artifacts/${antdComponentName}`);
+        if (!fs.existsSync(`../../_pages/components/${antdComponentName}`)) {
+            const dirPromise = fs.mkdirAsync(`../../_pages/components/${antdComponentName}`);
             dirPromises.push(dirPromise)
         }
     })
@@ -155,7 +155,7 @@ export default expComponent
                         const jsxCode = data.substring(JSXStartPos, data.indexOf('ReactDOM.render'))
 
                         fileString += jsxCode.substring(jsxCode.indexOf("\n") + 1) + "\n" + finalComponent
-                        fs.writeFile(`./artifacts/${antdComponentName}/${componentName}.js`, fileString, function (err) {
+                        fs.writeFile(`../../_pages/components/${antdComponentName}/${componentName}.js`, fileString, function (err) {
                             if (err) throw err;
                             
                             // console.log(`./artifacts/${antdComponentName}/${componentName}.js Saved!`);
@@ -163,8 +163,6 @@ export default expComponent
 
                         if (data.indexOf('<style>') > -1) {
                             styles.push(data.substring(data.indexOf('<style>') + '<style>'.length, data.indexOf('</style>')))
-
-                            console.log(data.substring(data.indexOf('<style>') + '<style>'.length, data.indexOf('</style>')))
                         }
 
                         importFileNames.push(componentName)
@@ -178,19 +176,31 @@ export default expComponent
                     fs.readFileAsync(`${directory}/index.en-US.md`, (err, data, resolve, reject) => {
                         const markDownData = data.substring(locations('---', data)[1])
                         readmeHTML = md.renderInline(markDownData)
+                        
+                        const componentDescription = markDownData.substring(3, markDownData.indexOf('##'))
 
                         indexFileString += `
     ${importFileNames.map(filename => `import ${filename} from './${filename}.js'`).join('\n')}
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     ${styles.length > 0 ? "require('./styles.scss')\n" : ''}` +
     "const markDownInput = `" + readmeHTML.replaceAll('`', '\\`').replaceAll('<code>', '\\`\\`\\`').replaceAll('</code>', '\\`\\`\\`') + "`" +
     `\nconst expComponent = () => (
         <div>
             <h4>${antdComponentName.split('-').map(item => item == '-' ? undefined : item.capitalize()).join(' ')}</h4>
+            <p>${componentDescription}</p>
 
             <Card bordered={false}>
-                ${importFileNames.map(filename => `        <${filename} />`).join('\n')}
+                ${
+                    importFileNames.map((filename, index) => {
+                        const JSXTag = `        <Col span={12}>\n        <Card title="${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}" bordered={true}><${filename} /></Card>\n        </Col>`
+                            , startRow = ((index + 1) % 2)
+                        
+                        if (startRow == 1 && index == (importFileNames.length -1)) return '<Row gutter={30}>\n' + JSXTag + '\n</Row>'
+                        else if (startRow == 0) return JSXTag + '\n</Row>'
+                        else if (startRow == 1) return '<Row gutter={16}>\n' + JSXTag
+                    }).join('\n')
+                }
 
                 <ReactMarkdown source={markDownInput} />
             </Card>
@@ -198,17 +208,17 @@ export default expComponent
     )
     export default expComponent
                         `
-                        fs.writeFile(`./artifacts/${antdComponentName}/index.js`, indexFileString, function (err) {
+                        fs.writeFile(`../../_pages/components/${antdComponentName}/index.js`, indexFileString, function (err) {
                             if (err) throw err;
                             
-                            console.log(`./artifacts/${antdComponentName}/index.js Saved!`);
+                            console.log(`../../_pages/components/${antdComponentName}/index.js Saved!`);
                         })
 
                         if (styles.length > 0) {
-                            fs.writeFile(`./artifacts/${antdComponentName}/styles.scss`, styles.join('\n'), function (err) {
+                            fs.writeFile(`../../_pages/components/${antdComponentName}/styles.scss`, styles.join('\n'), function (err) {
                                 if (err) throw err;
                                 
-                                console.log(`./artifacts/${antdComponentName}/styles.scss Saved!`);
+                                console.log(`../../_pages/components/${antdComponentName}/styles.scss Saved!`);
                             })
                         }
                     })

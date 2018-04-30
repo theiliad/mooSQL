@@ -9,7 +9,7 @@ import InformationModalDialogDemo from './InformationModalDialogDemo.js'
 import InternationalizationDemo from './InternationalizationDemo.js'
 import ManualToDestroyDemo from './ManualToDestroyDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -96,17 +96,50 @@ margin-right: 8px;
 const expComponent = () => (
         <div>
             <h4>Modal</h4>
+            <p>
+
+Modal dialogs.
+
+</p>
 
             <Card bordered={false}>
-                        <AsynchronouslyCloseDemo />
-        <BasicDemo />
-        <ConfirmationModalDialogDemo />
-        <ConfirmationModalDialogDemo />
-        <CustomizedFooterDemo />
-        <InformationModalDialogDemo />
-        <InternationalizationDemo />
-        <ManualToDestroyDemo />
-        <ToCustomizeThePositionOfModalDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Asynchronously Close" bordered={true}><AsynchronouslyCloseDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Footer" bordered={true}><CustomizedFooterDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Information Modal Dialog" bordered={true}><InformationModalDialogDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Internationalization" bordered={true}><InternationalizationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Manual To Destroy" bordered={true}><ManualToDestroyDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="To Customize The Position Of Modal" bordered={true}><ToCustomizeThePositionOfModalDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

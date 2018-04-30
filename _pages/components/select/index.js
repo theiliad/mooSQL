@@ -7,12 +7,12 @@ import CoordinateDemo from './CoordinateDemo.js'
 import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import OptionGroupDemo from './OptionGroupDemo.js'
-import SearchBoxDemo from './SearchBoxDemo.js'
 import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
-import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
+import SearchBoxDemo from './SearchBoxDemo.js'
 import SizesDemo from './SizesDemo.js'
+import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
 import TagsDemo from './TagsDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -92,20 +92,61 @@ Select component to select value from options.
 const expComponent = () => (
         <div>
             <h4>Select</h4>
+            <p>
+
+Select component to select value from options.
+
+</p>
 
             <Card bordered={false}>
-                        <AutomaticTokenizationDemo />
-        <BasicUsageDemo />
-        <AutomaticCompletionDemo />
-        <CoordinateDemo />
-        <GetValueOfSelectedItemDemo />
-        <MultipleSelectionDemo />
-        <OptionGroupDemo />
-        <SearchBoxDemo />
-        <SelectWithSearchFieldDemo />
-        <SearchAndSelectUsersDemo />
-        <SizesDemo />
-        <TagsDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Automatic Tokenization" bordered={true}><AutomaticTokenizationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Automatic Completion" bordered={true}><AutomaticCompletionDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Coordinate" bordered={true}><CoordinateDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Get Value Of Selected Item" bordered={true}><GetValueOfSelectedItemDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Option Group" bordered={true}><OptionGroupDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Select With Search Field" bordered={true}><SelectWithSearchFieldDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Search Box" bordered={true}><SearchBoxDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Sizes" bordered={true}><SizesDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Search And Select Users" bordered={true}><SearchAndSelectUsersDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Tags" bordered={true}><TagsDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

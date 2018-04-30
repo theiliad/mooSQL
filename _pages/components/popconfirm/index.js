@@ -4,7 +4,7 @@ import React from 'react'
 import ConditionalTriggerDemo from './ConditionalTriggerDemo.js'
 import LocaleTextDemo from './LocaleTextDemo.js'
 import PlacementDemo from './PlacementDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -37,12 +37,29 @@ Please ensure that the child node of \`\`\`Popconfirm\`\`\` accepts \`\`\`onMous
 const expComponent = () => (
         <div>
             <h4>Popconfirm</h4>
+            <p>
+
+A simple and compact confirmation dialog of an action.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <ConditionalTriggerDemo />
-        <LocaleTextDemo />
-        <PlacementDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Conditional Trigger" bordered={true}><ConditionalTriggerDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Locale Text" bordered={true}><LocaleTextDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

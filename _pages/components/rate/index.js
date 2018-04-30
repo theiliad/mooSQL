@@ -6,7 +6,7 @@ import ClearStarDemo from './ClearStarDemo.js'
 import ReadOnlyDemo from './ReadOnlyDemo.js'
 import HalfStarDemo from './HalfStarDemo.js'
 import ShowCopywritingDemo from './ShowCopywritingDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -47,14 +47,37 @@ Rate component.
 const expComponent = () => (
         <div>
             <h4>Rate</h4>
+            <p>
+
+Rate component.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <OtherCharacterDemo />
-        <ClearStarDemo />
-        <ReadOnlyDemo />
-        <HalfStarDemo />
-        <ShowCopywritingDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Other Character" bordered={true}><OtherCharacterDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Clear Star" bordered={true}><ClearStarDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Read Only" bordered={true}><ReadOnlyDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Half Star" bordered={true}><HalfStarDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Show Copywriting" bordered={true}><ShowCopywritingDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

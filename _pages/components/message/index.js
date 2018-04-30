@@ -4,7 +4,7 @@ import React from 'react'
 import NormalPromptDemo from './NormalPromptDemo.js'
 import MessageOfLoadingDemo from './MessageOfLoadingDemo.js'
 import OtherTypesOfMessageDemo from './OtherTypesOfMessageDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -51,12 +51,29 @@ Methods for global configuration and destruction are also provided:
 const expComponent = () => (
         <div>
             <h4>Message</h4>
+            <p>
+
+Display global messages as feedback in response to user operations.
+
+</p>
 
             <Card bordered={false}>
-                        <CustomizeDurationDemo />
-        <NormalPromptDemo />
-        <MessageOfLoadingDemo />
-        <OtherTypesOfMessageDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customize Duration" bordered={true}><CustomizeDurationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Normal Prompt" bordered={true}><NormalPromptDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Message Of Loading" bordered={true}><MessageOfLoadingDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Other Types Of Message" bordered={true}><OtherTypesOfMessageDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

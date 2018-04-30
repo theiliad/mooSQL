@@ -15,7 +15,7 @@ import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
 import OtherFormControlsDemo from './OtherFormControlsDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -178,23 +178,74 @@ max-width: 600px;
 const expComponent = () => (
         <div>
             <h4>Form</h4>
+            <p>
+
+Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.
+
+</p>
 
             <Card bordered={false}>
-                        <AdvancedSearchDemo />
-        <CoordinatedControlsDemo />
-        <CustomizedFormControlsDemo />
-        <DynamicFormItemDemo />
-        <DynamicRulesDemo />
-        <FormInModalToCreateDemo />
-        <StoreFormDataIntoUpperComponentDemo />
-        <HorizontalLoginFormDemo />
-        <FormLayoutDemo />
-        <LoginFormDemo />
-        <RegistrationDemo />
-        <TimerelatedControlsDemo />
-        <OtherFormControlsDemo />
-        <CustomizedValidationDemo />
-        <HandleFormDataManuallyDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Advanced Search" bordered={true}><AdvancedSearchDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Coordinated Controls" bordered={true}><CoordinatedControlsDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Form Controls" bordered={true}><CustomizedFormControlsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Dynamic Form Item" bordered={true}><DynamicFormItemDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Dynamic Rules" bordered={true}><DynamicRulesDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Form In Modal To Create" bordered={true}><FormInModalToCreateDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Store Form Data Into Upper Component" bordered={true}><StoreFormDataIntoUpperComponentDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Horizontal Login Form" bordered={true}><HorizontalLoginFormDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Form Layout" bordered={true}><FormLayoutDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Login Form" bordered={true}><LoginFormDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Registration" bordered={true}><RegistrationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Timerelated Controls" bordered={true}><TimerelatedControlsDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Other Form Controls" bordered={true}><OtherFormControlsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customized Validation" bordered={true}><CustomizedValidationDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Handle Form Data Manually" bordered={true}><HandleFormDataManuallyDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

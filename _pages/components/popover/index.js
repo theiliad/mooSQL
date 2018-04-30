@@ -5,7 +5,7 @@ import BasicDemo from './BasicDemo.js'
 import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import ThreeWaysToTriggerDemo from './ThreeWaysToTriggerDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -34,13 +34,34 @@ Please ensure that the child node of \`\`\`Popover\`\`\` accepts \`\`\`onMouseEn
 const expComponent = () => (
         <div>
             <h4>Popover</h4>
+            <p>
+
+The floating card popped by clicking or hovering.
+
+</p>
 
             <Card bordered={false}>
-                        <ArrowPointingDemo />
-        <BasicDemo />
-        <ControllingTheCloseOfTheDialogDemo />
-        <PlacementDemo />
-        <ThreeWaysToTriggerDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Arrow Pointing" bordered={true}><ArrowPointingDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Controlling The Close Of The Dialog" bordered={true}><ControllingTheCloseOfTheDialogDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Three Ways To Trigger" bordered={true}><ThreeWaysToTriggerDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

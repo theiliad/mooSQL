@@ -4,13 +4,13 @@ import React from 'react'
 import FlexAlignmentDemo from './FlexAlignmentDemo.js'
 import FlexOrderDemo from './FlexOrderDemo.js'
 import FlexLayoutDemo from './FlexLayoutDemo.js'
-import ColumnOffsetDemo from './ColumnOffsetDemo.js'
 import GridGutterDemo from './GridGutterDemo.js'
+import ColumnOffsetDemo from './ColumnOffsetDemo.js'
 import PlaygroundDemo from './PlaygroundDemo.js'
 import MoreResponsiveDemo from './MoreResponsiveDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
 import GridSortDemo from './GridSortDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -125,18 +125,53 @@ The breakpoints of responsive grid follow <a href="https://getbootstrap.com/docs
 const expComponent = () => (
         <div>
             <h4>Grid</h4>
+            <p>
+
+24 Grids System。
+
+</p>
 
             <Card bordered={false}>
-                        <BasicGridDemo />
-        <FlexAlignmentDemo />
-        <FlexOrderDemo />
-        <FlexLayoutDemo />
-        <ColumnOffsetDemo />
-        <GridGutterDemo />
-        <PlaygroundDemo />
-        <MoreResponsiveDemo />
-        <ResponsiveDemo />
-        <GridSortDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic Grid" bordered={true}><BasicGridDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Flex Alignment" bordered={true}><FlexAlignmentDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Flex Order" bordered={true}><FlexOrderDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Flex Layout" bordered={true}><FlexLayoutDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Grid Gutter" bordered={true}><GridGutterDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Column Offset" bordered={true}><ColumnOffsetDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Playground" bordered={true}><PlaygroundDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="More Responsive" bordered={true}><MoreResponsiveDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Grid Sort" bordered={true}><GridSortDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

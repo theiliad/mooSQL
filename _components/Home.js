@@ -28,6 +28,18 @@ import ContentLayout from './ContentLayout'
 import { Card } from 'antd';
 import { Row, Col } from 'antd';
 
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
+
+const data = [
+  { name: 'Page A', uv: 4000, pv: 4800, amt: 2400 },
+  { name: 'Page B', uv: 3000, pv: 3800, amt: 2210 },
+  { name: 'Page C', uv: 2000, pv: 9800, amt: 2290 },
+  { name: 'Page D', uv: 2780, pv: 3908, amt: 2000 },
+  { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
+  { name: 'Page F', uv: 2390, pv: 3800, amt: 2500 },
+  { name: 'Page G', uv: 3490, pv: 4800, amt: 2100 },
+]
+
 class HomeComponent extends React.Component {
     constructor(props) {
         super(props)
@@ -49,11 +61,41 @@ class HomeComponent extends React.Component {
 
                 <Row gutter={16} className="marginTop-30">
                     <Col className="gutter-row" span={18}>
-                        <div className="gutter-box">col-9</div>
+                        <Card bordered={false}>
+                            <AreaChart
+                                width={730} height={250} data={data}
+                                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+                            >
+                                <defs>
+                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#363e83" stopOpacity={0.8}/>
+                                        <stop offset="95%" stopColor="#6c78e4" stopOpacity={0}/>
+                                    </linearGradient>
+                                    
+                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#ff9a8d" stopOpacity={0.8}/>
+                                        <stop offset="95%" stopColor="#ff6f90" stopOpacity={0}/>
+                                    </linearGradient>
+                                </defs>
+
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <Tooltip />
+                                <Area type="monotone" dataKey="uv" stroke="#7076a6" fillOpacity={1} strokeWidth={2} fill="url(#colorUv)" />
+                                <Area type="monotone" dataKey="pv" stroke="#ff9a8d" fillOpacity={1} strokeWidth={2} fill="url(#colorPv)" />
+                            </AreaChart>
+                        </Card>
                     </Col>
 
                     <Col className="gutter-row" span={6}>
-                        <Card bordered={false}>
+                        <Card bordered={false} className="gradient-primary">
+                            <p>Card content</p>
+                            <p>Card content</p>
+                            <p>Card content</p>
+                        </Card>
+
+                        <Card bordered={false} className="gradient-secondary marginTop-15">
                             <p>Card content</p>
                             <p>Card content</p>
                             <p>Card content</p>

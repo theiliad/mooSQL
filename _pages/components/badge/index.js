@@ -7,7 +7,7 @@ import ClickableDemo from './ClickableDemo.js'
 import StandaloneDemo from './StandaloneDemo.js'
 import OverflowCountDemo from './OverflowCountDemo.js'
 import StatusDemo from './StatusDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -37,15 +37,42 @@ Badge normally appears in proximity to notifications or user avatars with eye-ca
 const expComponent = () => (
         <div>
             <h4>Badge</h4>
+            <p>
+
+Small numerical value or status descriptor for UI elements.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <DynamicDemo />
-        <RedBadgeDemo />
-        <ClickableDemo />
-        <StandaloneDemo />
-        <OverflowCountDemo />
-        <StatusDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Dynamic" bordered={true}><DynamicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Red Badge" bordered={true}><RedBadgeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Clickable" bordered={true}><ClickableDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Standalone" bordered={true}><StandaloneDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Overflow Count" bordered={true}><OverflowCountDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Status" bordered={true}><StatusDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

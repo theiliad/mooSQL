@@ -5,7 +5,7 @@ import BasicDemo from './BasicDemo.js'
 import CustomDatasourceDemo from './CustomDatasourceDemo.js'
 import PerformanceTestDemo from './PerformanceTestDemo.js'
 import SearchDemo from './SearchDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -51,13 +51,34 @@ If there's no \`\`\`key\`\`\` in your data, you should use \`\`\`rowKey\`\`\` to
 const expComponent = () => (
         <div>
             <h4>Transfer</h4>
+            <p>
+
+Double column transfer choice box.
+
+</p>
 
             <Card bordered={false}>
-                        <AdvancedDemo />
-        <BasicDemo />
-        <CustomDatasourceDemo />
-        <PerformanceTestDemo />
-        <SearchDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Advanced" bordered={true}><AdvancedDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Custom Datasource" bordered={true}><CustomDatasourceDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Performance Test" bordered={true}><PerformanceTestDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Search" bordered={true}><SearchDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

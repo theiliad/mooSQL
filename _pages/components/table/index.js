@@ -23,7 +23,7 @@ import SelectionAndOperationDemo from './SelectionAndOperationDemo.js'
 import CustomSelectionDemo from './CustomSelectionDemo.js'
 import SelectionDemo from './SelectionDemo.js'
 import SizeDemo from './SizeDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -170,31 +170,106 @@ If \`\`\`dataSource[i].key\`\`\` is not provided, then you should specify the pr
 const expComponent = () => (
         <div>
             <h4>Table</h4>
+            <p>
+
+A table displays rows of data.
+
+</p>
 
             <Card bordered={false}>
-                        <AjaxDemo />
-        <BasicUsageDemo />
-        <BorderTitleAndFooterDemo />
-        <ColSpanAndRowSpanDemo />
-        <CustomizedFilterPanelDemo />
-        <DragSortingDemo />
-        <DynamicSettingsDemo />
-        <EditableCellsDemo />
-        <EditableRowsDemo />
-        <TreeDataDemo />
-        <ExpandableRowDemo />
-        <FixedColumnsAndHeaderDemo />
-        <FixedColumnsDemo />
-        <FixedHeaderDemo />
-        <GroupingTableHeadDemo />
-        <FilterAndSorterDemo />
-        <JSXStyleAPIDemo />
-        <NestedTablesDemo />
-        <ResetFiltersAndSortersDemo />
-        <SelectionAndOperationDemo />
-        <CustomSelectionDemo />
-        <SelectionDemo />
-        <SizeDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Ajax" bordered={true}><AjaxDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Border Title And Footer" bordered={true}><BorderTitleAndFooterDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Col Span And Row Span" bordered={true}><ColSpanAndRowSpanDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Filter Panel" bordered={true}><CustomizedFilterPanelDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Drag Sorting" bordered={true}><DragSortingDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Dynamic Settings" bordered={true}><DynamicSettingsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Editable Cells" bordered={true}><EditableCellsDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Editable Rows" bordered={true}><EditableRowsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Tree Data" bordered={true}><TreeDataDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Expandable Row" bordered={true}><ExpandableRowDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Fixed Columns And Header" bordered={true}><FixedColumnsAndHeaderDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Fixed Columns" bordered={true}><FixedColumnsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Fixed Header" bordered={true}><FixedHeaderDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Grouping Table Head" bordered={true}><GroupingTableHeadDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Filter And Sorter" bordered={true}><FilterAndSorterDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="J S X Style A P I" bordered={true}><JSXStyleAPIDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Nested Tables" bordered={true}><NestedTablesDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Reset Filters And Sorters" bordered={true}><ResetFiltersAndSortersDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Selection And Operation" bordered={true}><SelectionAndOperationDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Custom Selection" bordered={true}><CustomSelectionDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Selection" bordered={true}><SelectionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

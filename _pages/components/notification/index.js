@@ -7,7 +7,7 @@ import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhi
 import PlacementDemo from './PlacementDemo.js'
 import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -66,15 +66,42 @@ The properties of config are as follows:
 const expComponent = () => (
         <div>
             <h4>Notification</h4>
+            <p>
+
+Display a notification message globally.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <CustomizedIconDemo />
-        <CustomizedStyleDemo />
-        <DurationAfterWhichTheNotificationBoxIsClosedDemo />
-        <PlacementDemo />
-        <CustomCloseButtonDemo />
-        <NotificationWithIconDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customized Icon" bordered={true}><CustomizedIconDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Style" bordered={true}><CustomizedStyleDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Duration After Which The Notification Box Is Closed" bordered={true}><DurationAfterWhichTheNotificationBoxIsClosedDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Custom Close Button" bordered={true}><CustomCloseButtonDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Notification With Icon" bordered={true}><NotificationWithIconDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

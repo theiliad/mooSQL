@@ -1,15 +1,15 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import ChangerDemo from './ChangerDemo.js'
-import ControlledDemo from './ControlledDemo.js'
+    import ChangerDemo from './ChangerDemo.js'
+import BasicDemo from './BasicDemo.js'
 import PrevAndNextDemo from './PrevAndNextDemo.js'
+import ControlledDemo from './ControlledDemo.js'
 import JumperDemo from './JumperDemo.js'
 import MiniSizeDemo from './MiniSizeDemo.js'
-import MoreDemo from './MoreDemo.js'
 import SimpleModeDemo from './SimpleModeDemo.js'
+import MoreDemo from './MoreDemo.js'
 import TotalNumberDemo from './TotalNumberDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -46,17 +46,50 @@ A long list can be divided into several pages by \`\`\`Pagination\`\`\`, and onl
 const expComponent = () => (
         <div>
             <h4>Pagination</h4>
+            <p>
+
+A long list can be divided into several pages by `Pagination`, and only one page will be loaded at a time.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <ChangerDemo />
-        <ControlledDemo />
-        <PrevAndNextDemo />
-        <JumperDemo />
-        <MiniSizeDemo />
-        <MoreDemo />
-        <SimpleModeDemo />
-        <TotalNumberDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Changer" bordered={true}><ChangerDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Prev And Next" bordered={true}><PrevAndNextDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Jumper" bordered={true}><JumperDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Mini Size" bordered={true}><MiniSizeDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Simple Mode" bordered={true}><SimpleModeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="More" bordered={true}><MoreDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Total Number" bordered={true}><TotalNumberDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

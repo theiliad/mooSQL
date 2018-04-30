@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
-import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
+    import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
+import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
+import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
 import ControlledPanelsDemo from './ControlledPanelsDemo.js'
@@ -11,7 +11,7 @@ import PresettedRangesDemo from './PresettedRangesDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -123,19 +123,58 @@ margin: 0 8px 12px 0;
 const expComponent = () => (
         <div>
             <h4>Date Picker</h4>
+            <p>
+
+To select or input a date.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <CustomizedDateRenderingDemo />
-        <DisabledDateTimeDemo />
-        <DisabledDemo />
-        <ExtraFooterDemo />
-        <DateFormatDemo />
-        <ControlledPanelsDemo />
-        <PresettedRangesDemo />
-        <ThreeSizesDemo />
-        <CustomizedRangePickerDemo />
-        <ChooseTimeDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Date Rendering" bordered={true}><CustomizedDateRenderingDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Disabled Date Time" bordered={true}><DisabledDateTimeDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Extra Footer" bordered={true}><ExtraFooterDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Date Format" bordered={true}><DateFormatDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Controlled Panels" bordered={true}><ControlledPanelsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Presetted Ranges" bordered={true}><PresettedRangesDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Three Sizes" bordered={true}><ThreeSizesDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customized Range Picker" bordered={true}><CustomizedRangePickerDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Choose Time" bordered={true}><ChooseTimeDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

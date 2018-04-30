@@ -1,17 +1,17 @@
 import React from 'react'
 
-    import IconImageDemo from './IconImageDemo.js'
-import BasicDemo from './BasicDemo.js'
-import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
+    import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
+import IconImageDemo from './IconImageDemo.js'
 import ControlledDemo from './ControlledDemo.js'
+import BasicDemo from './BasicDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
-import PlacementDemo from './PlacementDemo.js'
 import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
+import PlacementDemo from './PlacementDemo.js'
 import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -74,19 +74,58 @@ When need to mention someone or something.
 const expComponent = () => (
         <div>
             <h4>Mention</h4>
+            <p>
+
+Mention component.
+
+</p>
 
             <Card bordered={false}>
-                        <IconImageDemo />
-        <BasicDemo />
-        <AsynchronousLoadingDemo />
-        <ControlledDemo />
-        <WithFormDemo />
-        <CustomizeSuggestionDemo />
-        <MultilinesModeDemo />
-        <PlacementDemo />
-        <CustomizeTriggerTokenDemo />
-        <SuggestionContainerDemo />
-        <DisabledOrReadOnlyDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Asynchronous Loading" bordered={true}><AsynchronousLoadingDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Icon Image" bordered={true}><IconImageDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="With Form" bordered={true}><WithFormDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customize Suggestion" bordered={true}><CustomizeSuggestionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Multilines Mode" bordered={true}><MultilinesModeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customize Trigger Token" bordered={true}><CustomizeTriggerTokenDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Suggestion Container" bordered={true}><SuggestionContainerDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Disabled Or Read Only" bordered={true}><DisabledOrReadOnlyDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

@@ -5,7 +5,7 @@ import DecimalsDemo from './DecimalsDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import FormatterDemo from './FormatterDemo.js'
 import SizesDemo from './SizesDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -42,13 +42,34 @@ When a numeric value needs to be provided.
 const expComponent = () => (
         <div>
             <h4>Input Number</h4>
+            <p>
+
+Enter a number within certain range with the mouse or keyboard.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <DecimalsDemo />
-        <DisabledDemo />
-        <FormatterDemo />
-        <SizesDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Decimals" bordered={true}><DecimalsDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Formatter" bordered={true}><FormatterDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Sizes" bordered={true}><SizesDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

@@ -7,7 +7,7 @@ import OpenCurrentSubmenuOnlyDemo from './OpenCurrentSubmenuOnlyDemo.js'
 import SwitchTheMenuTypeDemo from './SwitchTheMenuTypeDemo.js'
 import MenuThemesDemo from './MenuThemesDemo.js'
 import VerticalMenuDemo from './VerticalMenuDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -79,15 +79,42 @@ Divider line in between menu items, only used in vertical popup Menu or Dropdown
 const expComponent = () => (
         <div>
             <h4>Menu</h4>
+            <p>
+
+Menu list of Navigation.
+
+</p>
 
             <Card bordered={false}>
-                        <TopNavigationDemo />
-        <CollapsedInlineMenuDemo />
-        <InlineMenuDemo />
-        <OpenCurrentSubmenuOnlyDemo />
-        <SwitchTheMenuTypeDemo />
-        <MenuThemesDemo />
-        <VerticalMenuDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Top Navigation" bordered={true}><TopNavigationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Collapsed Inline Menu" bordered={true}><CollapsedInlineMenuDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Inline Menu" bordered={true}><InlineMenuDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Open Current Submenu Only" bordered={true}><OpenCurrentSubmenuOnlyDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Switch The Menu Type" bordered={true}><SwitchTheMenuTypeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Menu Themes" bordered={true}><MenuThemesDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Vertical Menu" bordered={true}><VerticalMenuDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

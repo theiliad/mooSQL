@@ -2,9 +2,9 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import CardDemo from './CardDemo.js'
-import NoticeCalendarDemo from './NoticeCalendarDemo.js'
 import SelectableCalendarDemo from './SelectableCalendarDemo.js'
-    import { Card } from 'antd';
+import NoticeCalendarDemo from './NoticeCalendarDemo.js'
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -39,12 +39,29 @@ When data is in the form of dates, such as schedules, timetables, prices calenda
 const expComponent = () => (
         <div>
             <h4>Calendar</h4>
+            <p>
+
+Container for displaying data in calendar form.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <CardDemo />
-        <NoticeCalendarDemo />
-        <SelectableCalendarDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Card" bordered={true}><CardDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Selectable Calendar" bordered={true}><SelectableCalendarDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Notice Calendar" bordered={true}><NoticeCalendarDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

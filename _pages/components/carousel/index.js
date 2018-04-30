@@ -4,7 +4,7 @@ import React from 'react'
 import BasicDemo from './BasicDemo.js'
 import FadeInDemo from './FadeInDemo.js'
 import VerticalDemo from './VerticalDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -41,12 +41,29 @@ For more info on the parameters, refer to the <a href="https://github.com/akiran
 const expComponent = () => (
         <div>
             <h4>Carousel</h4>
+            <p>
+
+A carousel component. Scales with its container.
+
+</p>
 
             <Card bordered={false}>
-                        <ScrollAutomaticallyDemo />
-        <BasicDemo />
-        <FadeInDemo />
-        <VerticalDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Scroll Automatically" bordered={true}><ScrollAutomaticallyDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Fade In" bordered={true}><FadeInDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

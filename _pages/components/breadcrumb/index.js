@@ -5,7 +5,7 @@ import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
 import ReactRouterIntegrationDemo from './ReactRouterIntegrationDemo.js'
 import ConfiguringTheSeparatorDemo from './ConfiguringTheSeparatorDemo.js'
 import WithAnIconDemo from './WithAnIconDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -38,13 +38,34 @@ The link of Breadcrumb item targets \`\`\`#\`\`\` by default, you can use \`\`\`
 const expComponent = () => (
         <div>
             <h4>Breadcrumb</h4>
+            <p>
+
+A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicUsageDemo />
-        <OtherRouterIntegrationDemo />
-        <ReactRouterIntegrationDemo />
-        <ConfiguringTheSeparatorDemo />
-        <WithAnIconDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Other Router Integration" bordered={true}><OtherRouterIntegrationDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="React Router Integration" bordered={true}><ReactRouterIntegrationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Configuring The Separator" bordered={true}><ConfiguringTheSeparatorDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="With An Icon" bordered={true}><WithAnIconDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

@@ -4,7 +4,7 @@ import React from 'react'
 import BasicDemo from './BasicDemo.js'
 import AutosetFontSizeDemo from './AutosetFontSizeDemo.js'
 import TypeDemo from './TypeDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -23,12 +23,29 @@ Avatars can be used to represent people or objects. It supports images, \`\`\`Ic
 const expComponent = () => (
         <div>
             <h4>Avatar</h4>
+            <p>
+
+Avatars can be used to represent people or objects. It supports images, `Icon`s, or letters.
+
+</p>
 
             <Card bordered={false}>
-                        <WithBadgeDemo />
-        <BasicDemo />
-        <AutosetFontSizeDemo />
-        <TypeDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="With Badge" bordered={true}><WithBadgeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Autoset Font Size" bordered={true}><AutosetFontSizeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Type" bordered={true}><TypeDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

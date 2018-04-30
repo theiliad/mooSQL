@@ -4,7 +4,7 @@ import React from 'react'
 import CheckableDemo from './CheckableDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import GenerateFormTreeDataDemo from './GenerateFormTreeDataDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -73,12 +73,29 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
 const expComponent = () => (
         <div>
             <h4>Tree Select</h4>
+            <p>
+
+Tree selection control.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <CheckableDemo />
-        <MultipleSelectionDemo />
-        <GenerateFormTreeDataDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Checkable" bordered={true}><CheckableDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Generate Form Tree Data" bordered={true}><GenerateFormTreeDataDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

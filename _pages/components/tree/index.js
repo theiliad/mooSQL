@@ -7,7 +7,7 @@ import DraggableDemo from './DraggableDemo.js'
 import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
 import TreeWithLineDemo from './TreeWithLineDemo.js'
 import SearchableDemo from './SearchableDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -75,15 +75,40 @@ to avoid double computing. But, this brings some restrictions.
 const expComponent = () => (
         <div>
             <h4>Tree</h4>
+            <p>
+
+</p>
 
             <Card bordered={false}>
-                        <BasicControlledExampleDemo />
-        <BasicDemo />
-        <CustomizeIconDemo />
-        <DraggableDemo />
-        <LoadDataAsynchronouslyDemo />
-        <TreeWithLineDemo />
-        <SearchableDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic Controlled Example" bordered={true}><BasicControlledExampleDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customize Icon" bordered={true}><CustomizeIconDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Draggable" bordered={true}><DraggableDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Load Data Asynchronously" bordered={true}><LoadDataAsynchronouslyDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Tree With Line" bordered={true}><TreeWithLineDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Searchable" bordered={true}><SearchableDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

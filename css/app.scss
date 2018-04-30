@@ -6,9 +6,11 @@
 @import "toasts";
 
 @import 'antd-overrides';
+@import 'antd/cards';
 
 html, body {
-    background: #f7f8fc;
+    background: #fafafd;
+    // #f7f8fc;
     padding: 0 !important;
 }
 
@@ -80,6 +82,16 @@ div#app-sidebar {
         ul {
             height: 100%;
             border: none;
+
+            li.ant-menu-item-selected {
+                max-width: 100%;
+                background-color: rgba(255, 163, 152, 0.15);
+                color: #ff6f8f;
+
+                &::after {
+                    content: none;
+                }
+            }
 
             li:first-child {
                 margin-top: 0;

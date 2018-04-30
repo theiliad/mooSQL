@@ -281,7 +281,7 @@ class App extends React.Component {
             <Content id="app-content">
               <div className="container">
                 <Switch>
-                  <Route path="/" component={TabsDemo} exact={true} />
+                  <Route path="/" component={HomeComponent} exact={true} />
 
                   {/* <Route
                     path="/form/create"

@@ -4,11 +4,11 @@ import React from 'react'
 import DisabledDemo from './DisabledDemo.js'
 import RadioStyleDemo from './RadioStyleDemo.js'
 import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
-import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
 import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
+import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
 import RadioGroupDemo from './RadioGroupDemo.js'
 import SizeDemo from './SizeDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -57,16 +57,45 @@ radio group，wrap a group of \`\`\`Radio\`\`\`。
 const expComponent = () => (
         <div>
             <h4>Radio</h4>
+            <p>
+
+Radio.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <DisabledDemo />
-        <RadioStyleDemo />
-        <VerticalRadioGroupDemo />
-        <RadioGroupGroupOptionalDemo />
-        <RadioGroupWithNameDemo />
-        <RadioGroupDemo />
-        <SizeDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Radio Style" bordered={true}><RadioStyleDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Vertical Radio Group" bordered={true}><VerticalRadioGroupDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Radio Group With Name" bordered={true}><RadioGroupWithNameDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Radio Group Group Optional" bordered={true}><RadioGroupGroupOptionalDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Radio Group" bordered={true}><RadioGroupDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

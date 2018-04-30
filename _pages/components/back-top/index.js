@@ -2,7 +2,7 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import CustomStyleDemo from './CustomStyleDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -28,10 +28,21 @@ import CustomStyleDemo from './CustomStyleDemo.js'
 const expComponent = () => (
         <div>
             <h4>Back Top</h4>
+            <p>
+
+`BackTop` makes it easy to go back to the top of the page.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <CustomStyleDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Custom Style" bordered={true}><CustomStyleDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

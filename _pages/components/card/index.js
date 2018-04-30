@@ -2,15 +2,15 @@ import React from 'react'
 
     import BasicCardDemo from './BasicCardDemo.js'
 import NoBorderDemo from './NoBorderDemo.js'
-import GridCardDemo from './GridCardDemo.js'
 import CustomizedContentDemo from './CustomizedContentDemo.js'
+import GridCardDemo from './GridCardDemo.js'
 import CardInColumnDemo from './CardInColumnDemo.js'
 import InnerCardDemo from './InnerCardDemo.js'
-import LoadingCardDemo from './LoadingCardDemo.js'
 import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
+import LoadingCardDemo from './LoadingCardDemo.js'
 import SimpleCardDemo from './SimpleCardDemo.js'
 import WithTabsDemo from './WithTabsDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -63,18 +63,53 @@ A card can be used to display content related to a single subject. The content c
 const expComponent = () => (
         <div>
             <h4>Card</h4>
+            <p>
+
+Simple rectangular container.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicCardDemo />
-        <NoBorderDemo />
-        <GridCardDemo />
-        <CustomizedContentDemo />
-        <CardInColumnDemo />
-        <InnerCardDemo />
-        <LoadingCardDemo />
-        <SupportMoreContentConfigurationDemo />
-        <SimpleCardDemo />
-        <WithTabsDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic Card" bordered={true}><BasicCardDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="No Border" bordered={true}><NoBorderDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized Content" bordered={true}><CustomizedContentDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Grid Card" bordered={true}><GridCardDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Card In Column" bordered={true}><CardInColumnDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Inner Card" bordered={true}><InnerCardDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Support More Content Configuration" bordered={true}><SupportMoreContentConfigurationDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Loading Card" bordered={true}><LoadingCardDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Simple Card" bordered={true}><SimpleCardDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="With Tabs" bordered={true}><WithTabsDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

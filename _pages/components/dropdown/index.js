@@ -4,12 +4,12 @@ import React from 'react'
 import ContextMenuDemo from './ContextMenuDemo.js'
 import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
 import ClickEventDemo from './ClickEventDemo.js'
-import OtherElementsDemo from './OtherElementsDemo.js'
 import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
+import OtherElementsDemo from './OtherElementsDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import CascadingMenuDemo from './CascadingMenuDemo.js'
 import TriggerModeDemo from './TriggerModeDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -56,17 +56,50 @@ You should use <a href="/components/menu/">Menu</a> as \`\`\`overlay\`\`\`. The 
 const expComponent = () => (
         <div>
             <h4>Dropdown</h4>
+            <p>
+
+A dropdown list.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <ContextMenuDemo />
-        <ButtonWithDropdownMenuDemo />
-        <ClickEventDemo />
-        <OtherElementsDemo />
-        <TheWayOfHidingMenuDemo />
-        <PlacementDemo />
-        <CascadingMenuDemo />
-        <TriggerModeDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Context Menu" bordered={true}><ContextMenuDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Button With Dropdown Menu" bordered={true}><ButtonWithDropdownMenuDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Click Event" bordered={true}><ClickEventDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="The Way Of Hiding Menu" bordered={true}><TheWayOfHidingMenuDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Other Elements" bordered={true}><OtherElementsDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Cascading Menu" bordered={true}><CascadingMenuDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Trigger Mode" bordered={true}><TriggerModeDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

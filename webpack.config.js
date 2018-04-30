@@ -10,9 +10,8 @@ const webpack = require('webpack')
 , JS_LOADERS = ['babel-loader']
 , ExtractTextPlugin = require("extract-text-webpack-plugin")
 , CopyWebpackPlugin = require('copy-webpack-plugin')
-, SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin')
+, ProgressBarPlugin = require('progress-bar-webpack-plugin')
 , UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-// , BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 , PLUGINS = [
     HtmlWebpackPluginConfig,
     new webpack.optimize.ModuleConcatenationPlugin(),      
@@ -24,6 +23,7 @@ const webpack = require('webpack')
         from: './public'
       }
     ], {context: '.'}),
+    new ExtractTextPlugin('style.css')
   ]
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -37,7 +37,7 @@ if (isProd) {
 // If environment is not Netlify
 if (!process.env.NETLIFY) {
   PLUGINS.concat([
-    new SimpleProgressWebpackPlugin(),
+    new ProgressBarPlugin(),
     // new BundleAnalyzerPlugin()
   ])
 }
@@ -49,11 +49,11 @@ PLUGINS.push(
   })
 )
 
-// const theme = {
-//   'primary-color': '#203160',
-//   'secondary-color': '#6ecce0',
-//   'link-color': '#203160',
-// }
+const theme = {
+  'primary-color': '#ff6f8f',
+  'secondary-color': '#363e83',
+  'link-color': '#ff6f8f',
+}
 
 module.exports = {
   entry: './index.js',
@@ -70,15 +70,23 @@ module.exports = {
           exclude: /node_modules/
       },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/, use: [ 'style-loader', 'css-loader', 'sass-loader' ], exclude: /node_modules/ },
+      { test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        }),
+        exclude: /node_modules/ 
+      },
       {
         test: /\.less$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          `less-loader?{"javascriptEnabled": true, "sourceMap":true}`
-          //, "modifyVars":${JSON.stringify(theme)}
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            `less-loader?{"javascriptEnabled": true, "sourceMap":true, "modifyVars":${JSON.stringify(theme)}}`
+            //, "modifyVars":${JSON.stringify(theme)}
+          ]
+        }),
       },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ], exclude: /node_modules/ },
       { test: /\.(png|jpg|svg|gif|woff|woff2|ttf|eot)$/, loader: 'url-loader?limit=25000' }

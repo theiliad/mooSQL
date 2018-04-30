@@ -2,11 +2,11 @@ import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
 import LookupPatternsCertainCategoryDemo from './LookupPatternsCertainCategoryDemo.js'
-import CustomizeInputComponentDemo from './CustomizeInputComponentDemo.js'
 import NoncasesensitiveAutoCompleteDemo from './NoncasesensitiveAutoCompleteDemo.js'
+import CustomizeInputComponentDemo from './CustomizeInputComponentDemo.js'
 import CustomizedDemo from './CustomizedDemo.js'
 import LookupPatternsUncertainCategoryDemo from './LookupPatternsUncertainCategoryDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -49,14 +49,37 @@ When there is a need for autocomplete functionality.
 const expComponent = () => (
         <div>
             <h4>Auto Complete</h4>
+            <p>
+
+Autocomplete function of input field.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicUsageDemo />
-        <LookupPatternsCertainCategoryDemo />
-        <CustomizeInputComponentDemo />
-        <NoncasesensitiveAutoCompleteDemo />
-        <CustomizedDemo />
-        <LookupPatternsUncertainCategoryDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Lookup Patterns Certain Category" bordered={true}><LookupPatternsCertainCategoryDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Noncasesensitive Auto Complete" bordered={true}><NoncasesensitiveAutoCompleteDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customize Input Component" bordered={true}><CustomizeInputComponentDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Customized" bordered={true}><CustomizedDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Lookup Patterns Uncertain Category" bordered={true}><LookupPatternsUncertainCategoryDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

@@ -2,14 +2,14 @@ import React from 'react'
 
     import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
 import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
+import DynamicDemo from './DynamicDemo.js'
 import CircularProgressBarDemo from './CircularProgressBarDemo.js'
 import DashboardDemo from './DashboardDemo.js'
-import DynamicDemo from './DynamicDemo.js'
 import CustomTextFormatDemo from './CustomTextFormatDemo.js'
 import MiniSizeProgressBarDemo from './MiniSizeProgressBarDemo.js'
 import ProgressBarDemo from './ProgressBarDemo.js'
 import ProgressBarWithSuccessSegmentDemo from './ProgressBarWithSuccessSegmentDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -42,17 +42,50 @@ If it will take a long time to complete an operation, you can use \`\`\`Progress
 const expComponent = () => (
         <div>
             <h4>Progress</h4>
+            <p>
+
+Display the current progress of an operation flow.
+
+</p>
 
             <Card bordered={false}>
-                        <DynamicCircularProgressBarDemo />
-        <MiniSizeCircularProgressBarDemo />
-        <CircularProgressBarDemo />
-        <DashboardDemo />
-        <DynamicDemo />
-        <CustomTextFormatDemo />
-        <MiniSizeProgressBarDemo />
-        <ProgressBarDemo />
-        <ProgressBarWithSuccessSegmentDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Dynamic Circular Progress Bar" bordered={true}><DynamicCircularProgressBarDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Mini Size Circular Progress Bar" bordered={true}><MiniSizeCircularProgressBarDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Dynamic" bordered={true}><DynamicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Circular Progress Bar" bordered={true}><CircularProgressBarDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Dashboard" bordered={true}><DashboardDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Custom Text Format" bordered={true}><CustomTextFormatDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Mini Size Progress Bar" bordered={true}><MiniSizeProgressBarDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Progress Bar" bordered={true}><ProgressBarDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Progress Bar With Success Segment" bordered={true}><ProgressBarWithSuccessSegmentDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

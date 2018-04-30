@@ -5,10 +5,10 @@ import GridDemo from './GridDemo.js'
 import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
 import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
 import LoadMoreDemo from './LoadMoreDemo.js'
-import SimpleListDemo from './SimpleListDemo.js'
 import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
+import SimpleListDemo from './SimpleListDemo.js'
 import VerticalDemo from './VerticalDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
@@ -67,16 +67,45 @@ A list can be used to display content related to a single subject. The content c
 const expComponent = () => (
         <div>
             <h4>List</h4>
+            <p>
+
+Simple List.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicListDemo />
-        <GridDemo />
-        <ScrollingLoadedDemo />
-        <InfiniteVirtualizedDemo />
-        <LoadMoreDemo />
-        <SimpleListDemo />
-        <ResponsiveGridListDemo />
-        <VerticalDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic List" bordered={true}><BasicListDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Grid" bordered={true}><GridDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Scrolling Loaded" bordered={true}><ScrollingLoadedDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Infinite Virtualized" bordered={true}><InfiniteVirtualizedDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Load More" bordered={true}><LoadMoreDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Responsive Grid List" bordered={true}><ResponsiveGridListDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Simple List" bordered={true}><SimpleListDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

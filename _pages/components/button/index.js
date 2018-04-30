@@ -8,7 +8,7 @@ import IconDemo from './IconDemo.js'
 import LoadingDemo from './LoadingDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
 import SizeDemo from './SizeDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -54,16 +54,45 @@ margin-right: 0;
 const expComponent = () => (
         <div>
             <h4>Button</h4>
+            <p>
+
+To trigger an operation.
+
+</p>
 
             <Card bordered={false}>
-                        <TypeDemo />
-        <ButtonGroupDemo />
-        <DisabledDemo />
-        <GhostButtonDemo />
-        <IconDemo />
-        <LoadingDemo />
-        <MultipleButtonsDemo />
-        <SizeDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Type" bordered={true}><TypeDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Button Group" bordered={true}><ButtonGroupDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Ghost Button" bordered={true}><GhostButtonDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Icon" bordered={true}><IconDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Loading" bordered={true}><LoadingDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Multiple Buttons" bordered={true}><MultipleButtonsDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>

@@ -7,7 +7,7 @@ import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
 import GraduatedSliderDemo from './GraduatedSliderDemo.js'
 import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
 import VerticalDemo from './VerticalDemo.js'
-    import { Card } from 'antd';
+    import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
 const markDownInput = `---
@@ -48,15 +48,42 @@ To input a value in a range.
 const expComponent = () => (
         <div>
             <h4>Slider</h4>
+            <p>
+
+A Slider component for displaying current value and intervals in range.
+
+</p>
 
             <Card bordered={false}>
-                        <BasicDemo />
-        <EventDemo />
-        <SliderWithIconDemo />
-        <SliderWithInputNumberDemo />
-        <GraduatedSliderDemo />
-        <CustomizeTooltipDemo />
-        <VerticalDemo />
+                <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Event" bordered={true}><EventDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Slider With Icon" bordered={true}><SliderWithIconDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Slider With Input Number" bordered={true}><SliderWithInputNumberDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Graduated Slider" bordered={true}><GraduatedSliderDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Customize Tooltip" bordered={true}><CustomizeTooltipDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+        </Col>
+</Row>
 
                 <ReactMarkdown source={markDownInput} />
             </Card>
