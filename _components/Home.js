@@ -66,6 +66,8 @@ class HomeComponent extends React.Component {
         }
     }
 
+    formatNumbers = (num) => num.toLocaleString('en-CA')
+
     render() {
         return (
             <div>
@@ -112,7 +114,7 @@ class HomeComponent extends React.Component {
                                 <div>
                                     <div className="title">
                                         <p>Active Users</p>
-                                        <h4>7000</h4>
+                                        <h4>{this.formatNumbers(7000)}</h4>
                                     </div>
 
                                     <div className="actions">
@@ -158,8 +160,8 @@ class HomeComponent extends React.Component {
                             title={
                                 <div>
                                     <div className="title">
-                                        <p>Active Users</p>
-                                        <h4>7000</h4>
+                                        <p>Job Postings this Week</p>
+                                        <h4>{this.formatNumbers(21379)}</h4>
                                     </div>
 
                                     <div className="actions">
