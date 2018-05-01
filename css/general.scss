@@ -138,3 +138,17 @@ div.card {
     border-radius: .28571429rem;
     box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
 }
+
+text {
+    animation: fadein 2s;
+}
+
+.recharts-cartesian-grid {
+    animation: 3s ease 0s normal forwards 1 fadein;
+    opacity: 1;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
