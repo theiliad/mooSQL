@@ -21,3 +21,43 @@
         color: #333;
     }
 }
+
+// Widget
+.ant-card.widget {
+    div.ant-card-head {
+        border: none;
+    }
+
+    div.ant-card-head-title {
+        padding-bottom: 0;
+
+        div.title {
+            float: left;
+
+            p {
+                font-size: 14px;
+                margin: 0;
+                margin-top: 3px;
+            }
+    
+            h4 {
+                font-size: 32px;
+                margin: 0;
+                margin-top: -4px;
+            }
+        }
+
+        div.actions {
+            float: right;
+            font-size: 21px;
+        }
+    }
+
+    div.ant-card-body {
+        padding: 0;
+
+        div.spaced {
+            padding: 0 24px;
+        }
+    }
+}
