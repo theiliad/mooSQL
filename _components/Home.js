@@ -285,7 +285,7 @@ class HomeComponent extends React.Component {
                 {/*
                     Stock Quotes
                 */}
-                <h4 className="marginTop-60 marginBottom-10">Top Performing Tech Stocks</h4>
+                <h4 className="marginTop-60 marginBottom-20">Top Performing Tech Stocks</h4>
                 <Spin spinning={isLoading.stocksQuotes}>
                     <div className="widget-core-links">
                         <Row gutter={16}>
@@ -308,7 +308,7 @@ class HomeComponent extends React.Component {
                 {/*
                     Crypto Quotes
                 */}
-                <h4 className="marginTop-30 marginBottom-10">Top Performing Cryptocurrencies</h4>
+                <h4 className="marginTop-30 marginBottom-20">Top Performing Cryptocurrencies</h4>
                 <Spin spinning={isLoading.stocksQuotes}>
                     <div className="widget-core-links">
                         <Row gutter={16}>
