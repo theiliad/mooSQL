@@ -1,3 +1,7 @@
+.ant-card.gradient-primary, .ant-card.ant-card.gradient-secondary {
+    margin-bottom: 15px;
+}
+
 .ant-card.gradient-primary {
     background: #ff6f90;
     background: -moz-linear-gradient(-45deg,  #ff6f90 0%, #fca98d 100%);
@@ -24,6 +28,8 @@
 
 // Widget
 .ant-card.widget {
+    margin-bottom: 15px;
+
     div.ant-card-head {
         border: none;
     }

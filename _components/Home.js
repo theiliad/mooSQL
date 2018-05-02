@@ -85,8 +85,6 @@ class HomeComponent extends React.Component {
                     price: stock[keys[1]],
                     up: Math.random() >= 0.5
                 })
-
-                console.log(result[result.length - 1])
             })
 
             return result
@@ -155,7 +153,7 @@ class HomeComponent extends React.Component {
                         </Card>
                     </Col> */}
 
-                    <Col className="gutter-row" span={9}>
+                    <Col className="gutter-row" xs={24} md={12} lg={9}>
                         <Card
                             title={
                                 <div>
@@ -202,7 +200,7 @@ class HomeComponent extends React.Component {
                         </Card>
                     </Col>
 
-                    <Col className="gutter-row" span={9}>
+                    <Col className="gutter-row" xs={24} md={12} lg={9}>
                         <Card
                             title={
                                 <div>
@@ -249,7 +247,7 @@ class HomeComponent extends React.Component {
                         </Card>
                     </Col>
 
-                    <Col className="gutter-row" span={6}>
+                    <Col className="gutter-row" xs={24} md={24} lg={6}>
                         <Link to={'/'}>
                             <Card bordered={false} className="hoverable gradient-primary circle-figure">
                                 <div className="circle light">
@@ -287,12 +285,12 @@ class HomeComponent extends React.Component {
                 {/*
                     Stock Quotes
                 */}
-                <h4 className="marginTop-60">Top Performing Tech Stocks</h4>
+                <h4 className="marginTop-60 marginBottom-10">Top Performing Tech Stocks</h4>
                 <Spin spinning={isLoading.stocksQuotes}>
                     <div className="widget-core-links">
                         <Row gutter={16}>
                             {quotes && quotes.stocksQuotes.map(quote =>
-                                <Col className="gutter-row" span={8}>
+                                <Col className="gutter-row" xs={24} sm={12} md={8}>
                                     <div className="diamond-logo">
                                         <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
                                     </div>
@@ -310,12 +308,12 @@ class HomeComponent extends React.Component {
                 {/*
                     Crypto Quotes
                 */}
-                <h4 className="marginTop-60">Top Performing Cryptocurrencies</h4>
+                <h4 className="marginTop-30 marginBottom-10">Top Performing Cryptocurrencies</h4>
                 <Spin spinning={isLoading.stocksQuotes}>
                     <div className="widget-core-links">
                         <Row gutter={16}>
                             {quotes && quotes.stocksQuotes.map(quote =>
-                                <Col className="gutter-row" span={8}>
+                                <Col className="gutter-row" xs={24} sm={12} md={8}>
                                     <div className="diamond-logo">
                                         <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
                                     </div>
