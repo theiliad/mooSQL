@@ -69,3 +69,52 @@ div.circle-figure {
         }
     }
 }
+
+// Diamond containers with logos inside
+.diamond-logo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 17px;
+    transform: rotate(45deg);
+    box-shadow: 4px 4px 30px -7px rgba(70,78,142, 0.2);
+
+    img {
+        position: absolute;
+        max-width: 25px;
+        max-height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.widget-core-links {
+    div.diamond-logo {
+        float: left;
+        margin-right: 25px;
+    }
+
+    div.content {
+        p.title {
+            font-weight: 900;
+            font-size: 22px;
+            margin-bottom: 0;
+
+            i {
+                font-size: 13px;
+                margin-top: -6px;
+                vertical-align: middle;
+                
+                &.anticon-caret-up {
+                    color: #39e041;
+                }
+
+                &.anticon-caret-down {
+                    color: #ff5252;
+                }
+            }
+        }
+    }
+}

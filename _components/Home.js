@@ -16,6 +16,7 @@ import { connect } from 'react-redux'
 
 // Networking
 import axios from 'axios'
+import API_URLS from '../_data/apis'
 
 // Antd
 import { Layout, Icon } from 'antd'
@@ -63,12 +64,58 @@ class HomeComponent extends React.Component {
         super(props)
 
         this.state = {
+            isLoading: {
+                stocksQuotes: true,
+                cryptoQuotes: true
+            }
         }
+    }
+
+    componentDidMount() {
+        this.fetchStockQuotes()
+    }
+
+    fetchStockQuotes = () => {
+        const quotesParser = (data) => {
+            const result = []
+            data.map(stock => {
+                const keys = Object.keys(stock)
+                result.push({
+                    name: stock[keys[0]],
+                    price: stock[keys[1]],
+                    up: Math.random() >= 0.5
+                })
+
+                console.log(result[result.length - 1])
+            })
+
+            return result
+        }
+
+        axios.get(API_URLS.quotes.stocks)
+        .then(function (response) {
+            console.log(response.data)
+            this.setState({
+                ...this.state,
+                quotes: {
+                    ...this.state.quotes,
+                    stocksQuotes: quotesParser(response.data["Stock Quotes"])
+                },
+                isLoading: {
+                    ...this.state.isLoading,
+                    stocksQuotes: false
+                }
+            })
+        }.bind(this))
+        .catch(function (error) {
+            console.log(error)
+        })
     }
 
     formatNumbers = (num) => num.toLocaleString('en-CA')
 
     render() {
+        const { isLoading, quotes } = this.state
         return (
             <div>
                 <h4>Comments</h4>
@@ -118,7 +165,7 @@ class HomeComponent extends React.Component {
                                     </div>
 
                                     <div className="actions">
-                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger='click'>
+                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger={['click']}>
                                             <a className="ant-dropdown-link" href="#">
                                                 <Icon type="setting" />
                                             </a>
@@ -160,7 +207,7 @@ class HomeComponent extends React.Component {
                             title={
                                 <div>
                                     <div className="title">
-                                        <p>Job Postings this Week</p>
+                                        <p>Job Applicants this Week</p>
                                         <h4>{this.formatNumbers(21379)}</h4>
                                     </div>
 
@@ -236,6 +283,52 @@ class HomeComponent extends React.Component {
                         </Link>
                     </Col>
                 </Row>
+
+                {/*
+                    Stock Quotes
+                */}
+                <h4 className="marginTop-60">Top Performing Tech Stocks</h4>
+                <Spin spinning={isLoading.stocksQuotes}>
+                    <div className="widget-core-links">
+                        <Row gutter={16}>
+                            {quotes && quotes.stocksQuotes.map(quote =>
+                                <Col className="gutter-row" span={8}>
+                                    <div className="diamond-logo">
+                                        <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
+                                    </div>
+                                    
+                                    <div className="content">
+                                        <p className="title">{quote.name} <Icon type={quote.up ? 'caret-up' : 'caret-down'} /></p>
+                                        <p>${this.formatNumbers(quote.price)}</p>
+                                    </div>
+                                </Col>
+                            )}
+                        </Row>
+                    </div>
+                </Spin>
+
+                {/*
+                    Crypto Quotes
+                */}
+                <h4 className="marginTop-60">Top Performing Cryptocurrencies</h4>
+                <Spin spinning={isLoading.stocksQuotes}>
+                    <div className="widget-core-links">
+                        <Row gutter={16}>
+                            {quotes && quotes.stocksQuotes.map(quote =>
+                                <Col className="gutter-row" span={8}>
+                                    <div className="diamond-logo">
+                                        <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
+                                    </div>
+                                    
+                                    <div className="content">
+                                        <p className="title">{quote.name} <Icon type={quote.up ? 'caret-up' : 'caret-down'} /></p>
+                                        <p>${this.formatNumbers(quote.price)}</p>
+                                    </div>
+                                </Col>
+                            )}
+                        </Row>
+                    </div>
+                </Spin>
             </div>
         )
     }
