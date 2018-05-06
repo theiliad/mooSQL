@@ -110,7 +110,7 @@ class HomeComponent extends React.Component {
         })
     }
 
-    formatNumbers = (num) => num.toLocaleString('en-CA')
+    formatNumbers = (num) => (num % 1 != 0 ? parseFloat(num).toFixed(2) : num).toLocaleString('en-CA')
 
     render() {
         const { isLoading, quotes } = this.state
@@ -210,7 +210,7 @@ class HomeComponent extends React.Component {
                                     </div>
 
                                     <div className="actions">
-                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger='click'>
+                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger={['click']}>
                                             <a className="ant-dropdown-link" href="#">
                                                 <Icon type="setting" />
                                             </a>
@@ -289,8 +289,8 @@ class HomeComponent extends React.Component {
                 <Spin spinning={isLoading.stocksQuotes}>
                     <div className="widget-core-links">
                         <Row gutter={16}>
-                            {quotes && quotes.stocksQuotes.map(quote =>
-                                <Col className="gutter-row" xs={24} sm={12} md={8}>
+                            {quotes && quotes.stocksQuotes.map((quote, index) =>
+                                <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                     <div className="diamond-logo">
                                         <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
                                     </div>
@@ -312,8 +312,8 @@ class HomeComponent extends React.Component {
                 <Spin spinning={isLoading.stocksQuotes}>
                     <div className="widget-core-links">
                         <Row gutter={16}>
-                            {quotes && quotes.stocksQuotes.map(quote =>
-                                <Col className="gutter-row" xs={24} sm={12} md={8}>
+                            {quotes && quotes.stocksQuotes.map((quote, index) =>
+                                <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                     <div className="diamond-logo">
                                         <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
                                     </div>
