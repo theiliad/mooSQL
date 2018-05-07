@@ -44,7 +44,7 @@ a {
     text-decoration: none;
 }
 
-code {
+pre, code {
     padding: 3px 5px;
     background: #f6f8fa;
     color: $primary_color;
@@ -52,10 +52,14 @@ code {
     border-radius: 3px;
 }
 
-pre code {
-    width: 100%;
-    display: block;
+pre {
+    margin-top: 15px;
     padding: 20px;
+
+    code {
+        width: 100%;
+        display: block;
+    }
 }
 
 .container {
