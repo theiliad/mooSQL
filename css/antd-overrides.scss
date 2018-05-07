@@ -127,6 +127,10 @@ div.ant-layout-has-sider div.ant-layout-sider {
             background: #52c41a;
         }
 
+        &.ant-message-info, &.ant-message-loading {
+            background: $accent_color;
+        }
+
         i.anticon {
             color: #fff;
         }

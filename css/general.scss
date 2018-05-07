@@ -44,6 +44,20 @@ a {
     text-decoration: none;
 }
 
+code {
+    padding: 3px 5px;
+    background: #f6f8fa;
+    color: $primary_color;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+pre code {
+    width: 100%;
+    display: block;
+    padding: 20px;
+}
+
 .container {
     margin: auto;
     padding: 0 20px;
