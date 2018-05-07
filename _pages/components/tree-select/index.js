@@ -80,10 +80,22 @@ Tree selection control.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Checkable" bordered={true}><CheckableDemo /></Card>
-        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
-        <Card title="Generate Form Tree Data" bordered={true}><GenerateFormTreeDataDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Checkable</h4>
+        <CheckableDemo />
+        </div>
+<div className="component-demo">
+        <h4>Multiple Selection</h4>
+        <MultipleSelectionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Generate Form Tree Data</h4>
+        <GenerateFormTreeDataDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

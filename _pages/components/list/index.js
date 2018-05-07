@@ -3,11 +3,11 @@ import React from 'react'
     import BasicListDemo from './BasicListDemo.js'
 import GridDemo from './GridDemo.js'
 import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
-import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
 import LoadMoreDemo from './LoadMoreDemo.js'
 import SimpleListDemo from './SimpleListDemo.js'
-import VerticalDemo from './VerticalDemo.js'
 import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
+import VerticalDemo from './VerticalDemo.js'
+import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -74,14 +74,38 @@ Simple List.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic List" bordered={true}><BasicListDemo /></Card>
-        <Card title="Grid" bordered={true}><GridDemo /></Card>
-        <Card title="Scrolling Loaded" bordered={true}><ScrollingLoadedDemo /></Card>
-        <Card title="Infinite Virtualized" bordered={true}><InfiniteVirtualizedDemo /></Card>
-        <Card title="Load More" bordered={true}><LoadMoreDemo /></Card>
-        <Card title="Simple List" bordered={true}><SimpleListDemo /></Card>
-        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
-        <Card title="Responsive Grid List" bordered={true}><ResponsiveGridListDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic List</h4>
+        <BasicListDemo />
+        </div>
+<div className="component-demo">
+        <h4>Grid</h4>
+        <GridDemo />
+        </div>
+<div className="component-demo">
+        <h4>Scrolling Loaded</h4>
+        <ScrollingLoadedDemo />
+        </div>
+<div className="component-demo">
+        <h4>Load More</h4>
+        <LoadMoreDemo />
+        </div>
+<div className="component-demo">
+        <h4>Simple List</h4>
+        <SimpleListDemo />
+        </div>
+<div className="component-demo">
+        <h4>Responsive Grid List</h4>
+        <ResponsiveGridListDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical</h4>
+        <VerticalDemo />
+        </div>
+<div className="component-demo">
+        <h4>Infinite Virtualized</h4>
+        <InfiniteVirtualizedDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

@@ -59,12 +59,30 @@ Autocomplete function of input field.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
-        <Card title="Lookup Patterns Certain Category" bordered={true}><LookupPatternsCertainCategoryDemo /></Card>
-        <Card title="Customize Input Component" bordered={true}><CustomizeInputComponentDemo /></Card>
-        <Card title="Noncasesensitive Auto Complete" bordered={true}><NoncasesensitiveAutoCompleteDemo /></Card>
-        <Card title="Customized" bordered={true}><CustomizedDemo /></Card>
-        <Card title="Lookup Patterns Uncertain Category" bordered={true}><LookupPatternsUncertainCategoryDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Lookup Patterns Certain Category</h4>
+        <LookupPatternsCertainCategoryDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Input Component</h4>
+        <CustomizeInputComponentDemo />
+        </div>
+<div className="component-demo">
+        <h4>Noncasesensitive Auto Complete</h4>
+        <NoncasesensitiveAutoCompleteDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized</h4>
+        <CustomizedDemo />
+        </div>
+<div className="component-demo">
+        <h4>Lookup Patterns Uncertain Category</h4>
+        <LookupPatternsUncertainCategoryDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

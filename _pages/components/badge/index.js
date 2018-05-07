@@ -1,12 +1,12 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import DynamicDemo from './DynamicDemo.js'
 import RedBadgeDemo from './RedBadgeDemo.js'
+import DynamicDemo from './DynamicDemo.js'
 import ClickableDemo from './ClickableDemo.js'
-import StandaloneDemo from './StandaloneDemo.js'
 import OverflowCountDemo from './OverflowCountDemo.js'
 import StatusDemo from './StatusDemo.js'
+import StandaloneDemo from './StandaloneDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -50,13 +50,34 @@ Small numerical value or status descriptor for UI elements.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Dynamic" bordered={true}><DynamicDemo /></Card>
-        <Card title="Red Badge" bordered={true}><RedBadgeDemo /></Card>
-        <Card title="Clickable" bordered={true}><ClickableDemo /></Card>
-        <Card title="Standalone" bordered={true}><StandaloneDemo /></Card>
-        <Card title="Overflow Count" bordered={true}><OverflowCountDemo /></Card>
-        <Card title="Status" bordered={true}><StatusDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Red Badge</h4>
+        <RedBadgeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dynamic</h4>
+        <DynamicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Clickable</h4>
+        <ClickableDemo />
+        </div>
+<div className="component-demo">
+        <h4>Overflow Count</h4>
+        <OverflowCountDemo />
+        </div>
+<div className="component-demo">
+        <h4>Status</h4>
+        <StatusDemo />
+        </div>
+<div className="component-demo">
+        <h4>Standalone</h4>
+        <StandaloneDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

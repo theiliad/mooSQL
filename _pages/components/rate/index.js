@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
+    import ClearStarDemo from './ClearStarDemo.js'
+import BasicDemo from './BasicDemo.js'
 import OtherCharacterDemo from './OtherCharacterDemo.js'
-import ClearStarDemo from './ClearStarDemo.js'
-import ReadOnlyDemo from './ReadOnlyDemo.js'
 import HalfStarDemo from './HalfStarDemo.js'
 import ShowCopywritingDemo from './ShowCopywritingDemo.js'
+import ReadOnlyDemo from './ReadOnlyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -54,12 +54,30 @@ Rate component.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Other Character" bordered={true}><OtherCharacterDemo /></Card>
-        <Card title="Clear Star" bordered={true}><ClearStarDemo /></Card>
-        <Card title="Read Only" bordered={true}><ReadOnlyDemo /></Card>
-        <Card title="Half Star" bordered={true}><HalfStarDemo /></Card>
-        <Card title="Show Copywriting" bordered={true}><ShowCopywritingDemo /></Card>
+                <div className="component-demo">
+        <h4>Clear Star</h4>
+        <ClearStarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Other Character</h4>
+        <OtherCharacterDemo />
+        </div>
+<div className="component-demo">
+        <h4>Half Star</h4>
+        <HalfStarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Show Copywriting</h4>
+        <ShowCopywritingDemo />
+        </div>
+<div className="component-demo">
+        <h4>Read Only</h4>
+        <ReadOnlyDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

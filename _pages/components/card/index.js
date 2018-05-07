@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import BasicCardDemo from './BasicCardDemo.js'
+    import CustomizedContentDemo from './CustomizedContentDemo.js'
+import BasicCardDemo from './BasicCardDemo.js'
 import NoBorderDemo from './NoBorderDemo.js'
-import CustomizedContentDemo from './CustomizedContentDemo.js'
 import GridCardDemo from './GridCardDemo.js'
 import CardInColumnDemo from './CardInColumnDemo.js'
 import InnerCardDemo from './InnerCardDemo.js'
-import LoadingCardDemo from './LoadingCardDemo.js'
 import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
+import LoadingCardDemo from './LoadingCardDemo.js'
 import SimpleCardDemo from './SimpleCardDemo.js'
 import WithTabsDemo from './WithTabsDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -72,16 +72,46 @@ Simple rectangular container.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Card" bordered={true}><BasicCardDemo /></Card>
-        <Card title="No Border" bordered={true}><NoBorderDemo /></Card>
-        <Card title="Customized Content" bordered={true}><CustomizedContentDemo /></Card>
-        <Card title="Grid Card" bordered={true}><GridCardDemo /></Card>
-        <Card title="Card In Column" bordered={true}><CardInColumnDemo /></Card>
-        <Card title="Inner Card" bordered={true}><InnerCardDemo /></Card>
-        <Card title="Loading Card" bordered={true}><LoadingCardDemo /></Card>
-        <Card title="Support More Content Configuration" bordered={true}><SupportMoreContentConfigurationDemo /></Card>
-        <Card title="Simple Card" bordered={true}><SimpleCardDemo /></Card>
-        <Card title="With Tabs" bordered={true}><WithTabsDemo /></Card>
+                <div className="component-demo">
+        <h4>Customized Content</h4>
+        <CustomizedContentDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Card</h4>
+        <BasicCardDemo />
+        </div>
+<div className="component-demo">
+        <h4>No Border</h4>
+        <NoBorderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Grid Card</h4>
+        <GridCardDemo />
+        </div>
+<div className="component-demo">
+        <h4>Card In Column</h4>
+        <CardInColumnDemo />
+        </div>
+<div className="component-demo">
+        <h4>Inner Card</h4>
+        <InnerCardDemo />
+        </div>
+<div className="component-demo">
+        <h4>Support More Content Configuration</h4>
+        <SupportMoreContentConfigurationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Loading Card</h4>
+        <LoadingCardDemo />
+        </div>
+<div className="component-demo">
+        <h4>Simple Card</h4>
+        <SimpleCardDemo />
+        </div>
+<div className="component-demo">
+        <h4>With Tabs</h4>
+        <WithTabsDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

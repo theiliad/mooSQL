@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import CustomizeDurationDemo from './CustomizeDurationDemo.js'
-import NormalPromptDemo from './NormalPromptDemo.js'
-import MessageOfLoadingDemo from './MessageOfLoadingDemo.js'
+    import NormalPromptDemo from './NormalPromptDemo.js'
+import CustomizeDurationDemo from './CustomizeDurationDemo.js'
 import OtherTypesOfMessageDemo from './OtherTypesOfMessageDemo.js'
+import MessageOfLoadingDemo from './MessageOfLoadingDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -63,10 +63,22 @@ Display global messages as feedback in response to user operations.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Customize Duration" bordered={true}><CustomizeDurationDemo /></Card>
-        <Card title="Normal Prompt" bordered={true}><NormalPromptDemo /></Card>
-        <Card title="Message Of Loading" bordered={true}><MessageOfLoadingDemo /></Card>
-        <Card title="Other Types Of Message" bordered={true}><OtherTypesOfMessageDemo /></Card>
+                <div className="component-demo">
+        <h4>Normal Prompt</h4>
+        <NormalPromptDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Duration</h4>
+        <CustomizeDurationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Other Types Of Message</h4>
+        <OtherTypesOfMessageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Message Of Loading</h4>
+        <MessageOfLoadingDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

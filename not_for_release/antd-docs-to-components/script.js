@@ -198,7 +198,7 @@ export default expComponent
             <Card bordered={false}>
                 ${
                     importFileNames.map((filename, index) => {
-                        const JSXTag = `<div>\n        <h4>${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}</h4>\n        <${filename} />\n        </div>`
+                        const JSXTag = `<div className="component-demo">\n        <h4>${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}</h4>\n        <${filename} />\n        </div>`
                         
                         return JSXTag
                     }).join('\n')

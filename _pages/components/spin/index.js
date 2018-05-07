@@ -2,9 +2,9 @@ import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
 import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
-import InsideAContainerDemo from './InsideAContainerDemo.js'
 import DelayDemo from './DelayDemo.js'
 import EmbeddedModeDemo from './EmbeddedModeDemo.js'
+import InsideAContainerDemo from './InsideAContainerDemo.js'
 import SizeDemo from './SizeDemo.js'
 import CustomizedDescriptionDemo from './CustomizedDescriptionDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -39,13 +39,34 @@ A spinner for displaying loading state of a page or a section.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
-        <Card title="Custom Spinning Indicator" bordered={true}><CustomSpinningIndicatorDemo /></Card>
-        <Card title="Inside A Container" bordered={true}><InsideAContainerDemo /></Card>
-        <Card title="Delay" bordered={true}><DelayDemo /></Card>
-        <Card title="Embedded Mode" bordered={true}><EmbeddedModeDemo /></Card>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
-        <Card title="Customized Description" bordered={true}><CustomizedDescriptionDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Spinning Indicator</h4>
+        <CustomSpinningIndicatorDemo />
+        </div>
+<div className="component-demo">
+        <h4>Delay</h4>
+        <DelayDemo />
+        </div>
+<div className="component-demo">
+        <h4>Embedded Mode</h4>
+        <EmbeddedModeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Inside A Container</h4>
+        <InsideAContainerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Size</h4>
+        <SizeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Description</h4>
+        <CustomizedDescriptionDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

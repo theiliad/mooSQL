@@ -61,11 +61,26 @@ Double column transfer choice box.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Advanced" bordered={true}><AdvancedDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Custom Datasource" bordered={true}><CustomDatasourceDemo /></Card>
-        <Card title="Performance Test" bordered={true}><PerformanceTestDemo /></Card>
-        <Card title="Search" bordered={true}><SearchDemo /></Card>
+                <div className="component-demo">
+        <h4>Advanced</h4>
+        <AdvancedDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Datasource</h4>
+        <CustomDatasourceDemo />
+        </div>
+<div className="component-demo">
+        <h4>Performance Test</h4>
+        <PerformanceTestDemo />
+        </div>
+<div className="component-demo">
+        <h4>Search</h4>
+        <SearchDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

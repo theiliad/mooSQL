@@ -5,9 +5,9 @@ import ContextMenuDemo from './ContextMenuDemo.js'
 import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
 import ClickEventDemo from './ClickEventDemo.js'
 import OtherElementsDemo from './OtherElementsDemo.js'
-import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import CascadingMenuDemo from './CascadingMenuDemo.js'
+import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
 import TriggerModeDemo from './TriggerModeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -63,15 +63,42 @@ A dropdown list.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Context Menu" bordered={true}><ContextMenuDemo /></Card>
-        <Card title="Button With Dropdown Menu" bordered={true}><ButtonWithDropdownMenuDemo /></Card>
-        <Card title="Click Event" bordered={true}><ClickEventDemo /></Card>
-        <Card title="Other Elements" bordered={true}><OtherElementsDemo /></Card>
-        <Card title="The Way Of Hiding Menu" bordered={true}><TheWayOfHidingMenuDemo /></Card>
-        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
-        <Card title="Cascading Menu" bordered={true}><CascadingMenuDemo /></Card>
-        <Card title="Trigger Mode" bordered={true}><TriggerModeDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Context Menu</h4>
+        <ContextMenuDemo />
+        </div>
+<div className="component-demo">
+        <h4>Button With Dropdown Menu</h4>
+        <ButtonWithDropdownMenuDemo />
+        </div>
+<div className="component-demo">
+        <h4>Click Event</h4>
+        <ClickEventDemo />
+        </div>
+<div className="component-demo">
+        <h4>Other Elements</h4>
+        <OtherElementsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Placement</h4>
+        <PlacementDemo />
+        </div>
+<div className="component-demo">
+        <h4>Cascading Menu</h4>
+        <CascadingMenuDemo />
+        </div>
+<div className="component-demo">
+        <h4>The Way Of Hiding Menu</h4>
+        <TheWayOfHidingMenuDemo />
+        </div>
+<div className="component-demo">
+        <h4>Trigger Mode</h4>
+        <TriggerModeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

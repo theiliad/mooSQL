@@ -43,8 +43,14 @@ Hyperlinks to scroll on one page.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Static Anchor" bordered={true}><StaticAnchorDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Static Anchor</h4>
+        <StaticAnchorDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

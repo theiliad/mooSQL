@@ -2,12 +2,12 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
-import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import DisabledDemo from './DisabledDemo.js'
+import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
-import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import PresettedRangesDemo from './PresettedRangesDemo.js'
+import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
@@ -137,17 +137,50 @@ To select or input a date.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Customized Date Rendering" bordered={true}><CustomizedDateRenderingDemo /></Card>
-        <Card title="Disabled Date Time" bordered={true}><DisabledDateTimeDemo /></Card>
-        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        <Card title="Extra Footer" bordered={true}><ExtraFooterDemo /></Card>
-        <Card title="Date Format" bordered={true}><DateFormatDemo /></Card>
-        <Card title="Controlled Panels" bordered={true}><ControlledPanelsDemo /></Card>
-        <Card title="Presetted Ranges" bordered={true}><PresettedRangesDemo /></Card>
-        <Card title="Three Sizes" bordered={true}><ThreeSizesDemo /></Card>
-        <Card title="Customized Range Picker" bordered={true}><CustomizedRangePickerDemo /></Card>
-        <Card title="Choose Time" bordered={true}><ChooseTimeDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Date Rendering</h4>
+        <CustomizedDateRenderingDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled Date Time</h4>
+        <DisabledDateTimeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Extra Footer</h4>
+        <ExtraFooterDemo />
+        </div>
+<div className="component-demo">
+        <h4>Date Format</h4>
+        <DateFormatDemo />
+        </div>
+<div className="component-demo">
+        <h4>Presetted Ranges</h4>
+        <PresettedRangesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Controlled Panels</h4>
+        <ControlledPanelsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Three Sizes</h4>
+        <ThreeSizesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Range Picker</h4>
+        <CustomizedRangePickerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Choose Time</h4>
+        <ChooseTimeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

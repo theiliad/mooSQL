@@ -1,10 +1,10 @@
 import React from 'react'
 
     import PrePostTabDemo from './PrePostTabDemo.js'
-import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
 import BasicUsageDemo from './BasicUsageDemo.js'
-import InputGroupDemo from './InputGroupDemo.js'
+import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
 import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
+import InputGroupDemo from './InputGroupDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
 import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import TextAreaDemo from './TextAreaDemo.js'
@@ -93,15 +93,42 @@ Keyboard and mouse can be used for providing or changing data.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Pre Post Tab" bordered={true}><PrePostTabDemo /></Card>
-        <Card title="Autosizing The Height To Fit The Content" bordered={true}><AutosizingTheHeightToFitTheContentDemo /></Card>
-        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
-        <Card title="Input Group" bordered={true}><InputGroupDemo /></Card>
-        <Card title="Prefix And Suffix" bordered={true}><PrefixAndSuffixDemo /></Card>
-        <Card title="Search Box" bordered={true}><SearchBoxDemo /></Card>
-        <Card title="Three Sizes Of Input" bordered={true}><ThreeSizesOfInputDemo /></Card>
-        <Card title="Text Area" bordered={true}><TextAreaDemo /></Card>
-        <Card title="Format Tooltip Input" bordered={true}><FormatTooltipInputDemo /></Card>
+                <div className="component-demo">
+        <h4>Pre Post Tab</h4>
+        <PrePostTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Autosizing The Height To Fit The Content</h4>
+        <AutosizingTheHeightToFitTheContentDemo />
+        </div>
+<div className="component-demo">
+        <h4>Prefix And Suffix</h4>
+        <PrefixAndSuffixDemo />
+        </div>
+<div className="component-demo">
+        <h4>Input Group</h4>
+        <InputGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Search Box</h4>
+        <SearchBoxDemo />
+        </div>
+<div className="component-demo">
+        <h4>Three Sizes Of Input</h4>
+        <ThreeSizesOfInputDemo />
+        </div>
+<div className="component-demo">
+        <h4>Text Area</h4>
+        <TextAreaDemo />
+        </div>
+<div className="component-demo">
+        <h4>Format Tooltip Input</h4>
+        <FormatTooltipInputDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

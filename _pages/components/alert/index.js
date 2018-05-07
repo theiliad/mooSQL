@@ -2,12 +2,12 @@ import React from 'react'
 
     import BannerDemo from './BannerDemo.js'
 import BasicDemo from './BasicDemo.js'
-import ClosableDemo from './ClosableDemo.js'
 import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
-import DescriptionDemo from './DescriptionDemo.js'
 import IconDemo from './IconDemo.js'
-import SmoothlyUnmountDemo from './SmoothlyUnmountDemo.js'
+import DescriptionDemo from './DescriptionDemo.js'
+import ClosableDemo from './ClosableDemo.js'
 import MoreTypesDemo from './MoreTypesDemo.js'
+import SmoothlyUnmountDemo from './SmoothlyUnmountDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -45,14 +45,38 @@ Alert component for feedback.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Banner" bordered={true}><BannerDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Closable" bordered={true}><ClosableDemo /></Card>
-        <Card title="Customized Close Text" bordered={true}><CustomizedCloseTextDemo /></Card>
-        <Card title="Description" bordered={true}><DescriptionDemo /></Card>
-        <Card title="Icon" bordered={true}><IconDemo /></Card>
-        <Card title="Smoothly Unmount" bordered={true}><SmoothlyUnmountDemo /></Card>
-        <Card title="More Types" bordered={true}><MoreTypesDemo /></Card>
+                <div className="component-demo">
+        <h4>Banner</h4>
+        <BannerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Close Text</h4>
+        <CustomizedCloseTextDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon</h4>
+        <IconDemo />
+        </div>
+<div className="component-demo">
+        <h4>Description</h4>
+        <DescriptionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Closable</h4>
+        <ClosableDemo />
+        </div>
+<div className="component-demo">
+        <h4>More Types</h4>
+        <MoreTypesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Smoothly Unmount</h4>
+        <SmoothlyUnmountDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

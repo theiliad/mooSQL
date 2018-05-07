@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import ColorDemo from './ColorDemo.js'
 import CustomDemo from './CustomDemo.js'
+import ColorDemo from './ColorDemo.js'
 import LastNodeDemo from './LastNodeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -54,10 +54,22 @@ Vertical display timeline.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Color" bordered={true}><ColorDemo /></Card>
-        <Card title="Custom" bordered={true}><CustomDemo /></Card>
-        <Card title="Last Node" bordered={true}><LastNodeDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom</h4>
+        <CustomDemo />
+        </div>
+<div className="component-demo">
+        <h4>Color</h4>
+        <ColorDemo />
+        </div>
+<div className="component-demo">
+        <h4>Last Node</h4>
+        <LastNodeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

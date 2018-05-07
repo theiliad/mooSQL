@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
+    import DraggableDemo from './DraggableDemo.js'
+import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
 import BasicDemo from './BasicDemo.js'
 import CustomizeIconDemo from './CustomizeIconDemo.js'
-import DraggableDemo from './DraggableDemo.js'
 import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
 import TreeWithLineDemo from './TreeWithLineDemo.js'
 import SearchableDemo from './SearchableDemo.js'
@@ -84,13 +84,34 @@ const expComponent = () => (
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Controlled Example" bordered={true}><BasicControlledExampleDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Customize Icon" bordered={true}><CustomizeIconDemo /></Card>
-        <Card title="Draggable" bordered={true}><DraggableDemo /></Card>
-        <Card title="Load Data Asynchronously" bordered={true}><LoadDataAsynchronouslyDemo /></Card>
-        <Card title="Tree With Line" bordered={true}><TreeWithLineDemo /></Card>
-        <Card title="Searchable" bordered={true}><SearchableDemo /></Card>
+                <div className="component-demo">
+        <h4>Draggable</h4>
+        <DraggableDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Controlled Example</h4>
+        <BasicControlledExampleDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Icon</h4>
+        <CustomizeIconDemo />
+        </div>
+<div className="component-demo">
+        <h4>Load Data Asynchronously</h4>
+        <LoadDataAsynchronouslyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Tree With Line</h4>
+        <TreeWithLineDemo />
+        </div>
+<div className="component-demo">
+        <h4>Searchable</h4>
+        <SearchableDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

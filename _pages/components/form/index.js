@@ -4,17 +4,17 @@ import React from 'react'
 import CoordinatedControlsDemo from './CoordinatedControlsDemo.js'
 import CustomizedFormControlsDemo from './CustomizedFormControlsDemo.js'
 import DynamicFormItemDemo from './DynamicFormItemDemo.js'
-import DynamicRulesDemo from './DynamicRulesDemo.js'
-import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperComponentDemo.js'
 import FormInModalToCreateDemo from './FormInModalToCreateDemo.js'
+import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperComponentDemo.js'
 import HorizontalLoginFormDemo from './HorizontalLoginFormDemo.js'
+import DynamicRulesDemo from './DynamicRulesDemo.js'
 import FormLayoutDemo from './FormLayoutDemo.js'
 import LoginFormDemo from './LoginFormDemo.js'
-import RegistrationDemo from './RegistrationDemo.js'
 import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
-import OtherFormControlsDemo from './OtherFormControlsDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
+import RegistrationDemo from './RegistrationDemo.js'
+import OtherFormControlsDemo from './OtherFormControlsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -205,21 +205,66 @@ Form is used to collect, validate, and submit the user input, usually contains v
 </p>
 
             <Card bordered={false}>
-                        <Card title="Advanced Search" bordered={true}><AdvancedSearchDemo /></Card>
-        <Card title="Coordinated Controls" bordered={true}><CoordinatedControlsDemo /></Card>
-        <Card title="Customized Form Controls" bordered={true}><CustomizedFormControlsDemo /></Card>
-        <Card title="Dynamic Form Item" bordered={true}><DynamicFormItemDemo /></Card>
-        <Card title="Dynamic Rules" bordered={true}><DynamicRulesDemo /></Card>
-        <Card title="Store Form Data Into Upper Component" bordered={true}><StoreFormDataIntoUpperComponentDemo /></Card>
-        <Card title="Form In Modal To Create" bordered={true}><FormInModalToCreateDemo /></Card>
-        <Card title="Horizontal Login Form" bordered={true}><HorizontalLoginFormDemo /></Card>
-        <Card title="Form Layout" bordered={true}><FormLayoutDemo /></Card>
-        <Card title="Login Form" bordered={true}><LoginFormDemo /></Card>
-        <Card title="Registration" bordered={true}><RegistrationDemo /></Card>
-        <Card title="Timerelated Controls" bordered={true}><TimerelatedControlsDemo /></Card>
-        <Card title="Other Form Controls" bordered={true}><OtherFormControlsDemo /></Card>
-        <Card title="Customized Validation" bordered={true}><CustomizedValidationDemo /></Card>
-        <Card title="Handle Form Data Manually" bordered={true}><HandleFormDataManuallyDemo /></Card>
+                <div className="component-demo">
+        <h4>Advanced Search</h4>
+        <AdvancedSearchDemo />
+        </div>
+<div className="component-demo">
+        <h4>Coordinated Controls</h4>
+        <CoordinatedControlsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Form Controls</h4>
+        <CustomizedFormControlsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dynamic Form Item</h4>
+        <DynamicFormItemDemo />
+        </div>
+<div className="component-demo">
+        <h4>Form In Modal To Create</h4>
+        <FormInModalToCreateDemo />
+        </div>
+<div className="component-demo">
+        <h4>Store Form Data Into Upper Component</h4>
+        <StoreFormDataIntoUpperComponentDemo />
+        </div>
+<div className="component-demo">
+        <h4>Horizontal Login Form</h4>
+        <HorizontalLoginFormDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dynamic Rules</h4>
+        <DynamicRulesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Form Layout</h4>
+        <FormLayoutDemo />
+        </div>
+<div className="component-demo">
+        <h4>Login Form</h4>
+        <LoginFormDemo />
+        </div>
+<div className="component-demo">
+        <h4>Timerelated Controls</h4>
+        <TimerelatedControlsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Validation</h4>
+        <CustomizedValidationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Handle Form Data Manually</h4>
+        <HandleFormDataManuallyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Registration</h4>
+        <RegistrationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Other Form Controls</h4>
+        <OtherFormControlsDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

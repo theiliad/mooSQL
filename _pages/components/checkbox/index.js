@@ -4,8 +4,8 @@ import React from 'react'
 import CheckAllDemo from './CheckAllDemo.js'
 import ControlledCheckboxDemo from './ControlledCheckboxDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import CheckboxGroupDemo from './CheckboxGroupDemo.js'
 import UseWithGridDemo from './UseWithGridDemo.js'
+import CheckboxGroupDemo from './CheckboxGroupDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -58,12 +58,30 @@ Checkbox.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Check All" bordered={true}><CheckAllDemo /></Card>
-        <Card title="Controlled Checkbox" bordered={true}><ControlledCheckboxDemo /></Card>
-        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        <Card title="Checkbox Group" bordered={true}><CheckboxGroupDemo /></Card>
-        <Card title="Use With Grid" bordered={true}><UseWithGridDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Check All</h4>
+        <CheckAllDemo />
+        </div>
+<div className="component-demo">
+        <h4>Controlled Checkbox</h4>
+        <ControlledCheckboxDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Use With Grid</h4>
+        <UseWithGridDemo />
+        </div>
+<div className="component-demo">
+        <h4>Checkbox Group</h4>
+        <CheckboxGroupDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

@@ -2,13 +2,13 @@ import React from 'react'
 
     import BasicStructureDemo from './BasicStructureDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
-import FixedSiderDemo from './FixedSiderDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
-import SiderDemo from './SiderDemo.js'
+import FixedSiderDemo from './FixedSiderDemo.js'
+import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
-import HeaderSiderDemo from './HeaderSiderDemo.js'
+import SiderDemo from './SiderDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -131,15 +131,42 @@ Handling the overall layout of a page.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Structure" bordered={true}><BasicStructureDemo /></Card>
-        <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
-        <Card title="Fixed Sider" bordered={true}><FixedSiderDemo /></Card>
-        <Card title="Fixed Header" bordered={true}><FixedHeaderDemo /></Card>
-        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
-        <Card title="Sider" bordered={true}><SiderDemo /></Card>
-        <Card title="Header Sider" bordered={true}><HeaderSiderDemo /></Card>
-        <Card title="Header Content Footer" bordered={true}><HeaderContentFooterDemo /></Card>
-        <Card title="Header Sider" bordered={true}><HeaderSiderDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic Structure</h4>
+        <BasicStructureDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Trigger</h4>
+        <CustomTriggerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Fixed Header</h4>
+        <FixedHeaderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Responsive</h4>
+        <ResponsiveDemo />
+        </div>
+<div className="component-demo">
+        <h4>Fixed Sider</h4>
+        <FixedSiderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Header Sider</h4>
+        <HeaderSiderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Header Sider</h4>
+        <HeaderSiderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Header Content Footer</h4>
+        <HeaderContentFooterDemo />
+        </div>
+<div className="component-demo">
+        <h4>Sider</h4>
+        <SiderDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

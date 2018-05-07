@@ -43,9 +43,18 @@ Make an element stick to viewport.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Callback" bordered={true}><CallbackDemo /></Card>
-        <Card title="Container To Scroll" bordered={true}><ContainerToScrollDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Callback</h4>
+        <CallbackDemo />
+        </div>
+<div className="component-demo">
+        <h4>Container To Scroll</h4>
+        <ContainerToScrollDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

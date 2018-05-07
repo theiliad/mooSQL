@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import CustomizedIconDemo from './CustomizedIconDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CustomizedIconDemo from './CustomizedIconDemo.js'
 import CustomizedStyleDemo from './CustomizedStyleDemo.js'
-import BasicDemo from './BasicDemo.js'
 import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
-import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -79,13 +79,34 @@ Display a notification message globally.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Customized Icon" bordered={true}><CustomizedIconDemo /></Card>
-        <Card title="Customized Style" bordered={true}><CustomizedStyleDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Duration After Which The Notification Box Is Closed" bordered={true}><DurationAfterWhichTheNotificationBoxIsClosedDemo /></Card>
-        <Card title="Custom Close Button" bordered={true}><CustomCloseButtonDemo /></Card>
-        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
-        <Card title="Notification With Icon" bordered={true}><NotificationWithIconDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Icon</h4>
+        <CustomizedIconDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Style</h4>
+        <CustomizedStyleDemo />
+        </div>
+<div className="component-demo">
+        <h4>Duration After Which The Notification Box Is Closed</h4>
+        <DurationAfterWhichTheNotificationBoxIsClosedDemo />
+        </div>
+<div className="component-demo">
+        <h4>Placement</h4>
+        <PlacementDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Close Button</h4>
+        <CustomCloseButtonDemo />
+        </div>
+<div className="component-demo">
+        <h4>Notification With Icon</h4>
+        <NotificationWithIconDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

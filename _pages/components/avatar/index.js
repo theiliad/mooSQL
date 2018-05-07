@@ -30,10 +30,22 @@ Avatars can be used to represent people or objects. It supports images, \`Icon\`
 </p>
 
             <Card bordered={false}>
-                        <Card title="With Badge" bordered={true}><WithBadgeDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Autoset Font Size" bordered={true}><AutosetFontSizeDemo /></Card>
-        <Card title="Type" bordered={true}><TypeDemo /></Card>
+                <div className="component-demo">
+        <h4>With Badge</h4>
+        <WithBadgeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Autoset Font Size</h4>
+        <AutosetFontSizeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Type</h4>
+        <TypeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

@@ -44,10 +44,22 @@ A simple and compact confirmation dialog of an action.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Conditional Trigger" bordered={true}><ConditionalTriggerDemo /></Card>
-        <Card title="Locale Text" bordered={true}><LocaleTextDemo /></Card>
-        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Conditional Trigger</h4>
+        <ConditionalTriggerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Locale Text</h4>
+        <LocaleTextDemo />
+        </div>
+<div className="component-demo">
+        <h4>Placement</h4>
+        <PlacementDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

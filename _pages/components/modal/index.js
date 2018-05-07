@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
+    import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
 import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
-import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import BasicDemo from './BasicDemo.js'
 import CustomizedFooterDemo from './CustomizedFooterDemo.js'
+import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
 import InformationModalDialogDemo from './InformationModalDialogDemo.js'
-import InternationalizationDemo from './InternationalizationDemo.js'
 import ManualToDestroyDemo from './ManualToDestroyDemo.js'
+import InternationalizationDemo from './InternationalizationDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -106,15 +106,42 @@ Modal dialogs.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Asynchronously Close" bordered={true}><AsynchronouslyCloseDemo /></Card>
-        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
-        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
-        <Card title="Customized Footer" bordered={true}><CustomizedFooterDemo /></Card>
-        <Card title="Information Modal Dialog" bordered={true}><InformationModalDialogDemo /></Card>
-        <Card title="Internationalization" bordered={true}><InternationalizationDemo /></Card>
-        <Card title="Manual To Destroy" bordered={true}><ManualToDestroyDemo /></Card>
-        <Card title="To Customize The Position Of Modal" bordered={true}><ToCustomizeThePositionOfModalDemo /></Card>
+                <div className="component-demo">
+        <h4>Asynchronously Close</h4>
+        <AsynchronouslyCloseDemo />
+        </div>
+<div className="component-demo">
+        <h4>Confirmation Modal Dialog</h4>
+        <ConfirmationModalDialogDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Footer</h4>
+        <CustomizedFooterDemo />
+        </div>
+<div className="component-demo">
+        <h4>Confirmation Modal Dialog</h4>
+        <ConfirmationModalDialogDemo />
+        </div>
+<div className="component-demo">
+        <h4>Information Modal Dialog</h4>
+        <InformationModalDialogDemo />
+        </div>
+<div className="component-demo">
+        <h4>Manual To Destroy</h4>
+        <ManualToDestroyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Internationalization</h4>
+        <InternationalizationDemo />
+        </div>
+<div className="component-demo">
+        <h4>To Customize The Position Of Modal</h4>
+        <ToCustomizeThePositionOfModalDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

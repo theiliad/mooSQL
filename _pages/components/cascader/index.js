@@ -2,8 +2,8 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
-import CustomTriggerDemo from './CustomTriggerDemo.js'
 import CustomRenderDemo from './CustomRenderDemo.js'
+import CustomTriggerDemo from './CustomTriggerDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
 import DisabledOptionDemo from './DisabledOptionDemo.js'
 import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
@@ -85,16 +85,46 @@ Cascade selection box.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Change On Select" bordered={true}><ChangeOnSelectDemo /></Card>
-        <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
-        <Card title="Custom Render" bordered={true}><CustomRenderDemo /></Card>
-        <Card title="Default Value" bordered={true}><DefaultValueDemo /></Card>
-        <Card title="Disabled Option" bordered={true}><DisabledOptionDemo /></Card>
-        <Card title="Load Options Lazily" bordered={true}><LoadOptionsLazilyDemo /></Card>
-        <Card title="Hover" bordered={true}><HoverDemo /></Card>
-        <Card title="Search" bordered={true}><SearchDemo /></Card>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Change On Select</h4>
+        <ChangeOnSelectDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Render</h4>
+        <CustomRenderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Trigger</h4>
+        <CustomTriggerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Default Value</h4>
+        <DefaultValueDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled Option</h4>
+        <DisabledOptionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Load Options Lazily</h4>
+        <LoadOptionsLazilyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Hover</h4>
+        <HoverDemo />
+        </div>
+<div className="component-demo">
+        <h4>Search</h4>
+        <SearchDemo />
+        </div>
+<div className="component-demo">
+        <h4>Size</h4>
+        <SizeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

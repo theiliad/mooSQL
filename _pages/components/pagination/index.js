@@ -2,8 +2,8 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import ChangerDemo from './ChangerDemo.js'
-import PrevAndNextDemo from './PrevAndNextDemo.js'
 import ControlledDemo from './ControlledDemo.js'
+import PrevAndNextDemo from './PrevAndNextDemo.js'
 import JumperDemo from './JumperDemo.js'
 import MiniSizeDemo from './MiniSizeDemo.js'
 import MoreDemo from './MoreDemo.js'
@@ -55,15 +55,42 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Changer" bordered={true}><ChangerDemo /></Card>
-        <Card title="Prev And Next" bordered={true}><PrevAndNextDemo /></Card>
-        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
-        <Card title="Jumper" bordered={true}><JumperDemo /></Card>
-        <Card title="Mini Size" bordered={true}><MiniSizeDemo /></Card>
-        <Card title="More" bordered={true}><MoreDemo /></Card>
-        <Card title="Simple Mode" bordered={true}><SimpleModeDemo /></Card>
-        <Card title="Total Number" bordered={true}><TotalNumberDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Changer</h4>
+        <ChangerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Controlled</h4>
+        <ControlledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Prev And Next</h4>
+        <PrevAndNextDemo />
+        </div>
+<div className="component-demo">
+        <h4>Jumper</h4>
+        <JumperDemo />
+        </div>
+<div className="component-demo">
+        <h4>Mini Size</h4>
+        <MiniSizeDemo />
+        </div>
+<div className="component-demo">
+        <h4>More</h4>
+        <MoreDemo />
+        </div>
+<div className="component-demo">
+        <h4>Simple Mode</h4>
+        <SimpleModeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Total Number</h4>
+        <TotalNumberDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

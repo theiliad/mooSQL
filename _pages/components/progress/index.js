@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
-import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
+    import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
+import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
 import CircularProgressBarDemo from './CircularProgressBarDemo.js'
 import DashboardDemo from './DashboardDemo.js'
 import DynamicDemo from './DynamicDemo.js'
@@ -49,15 +49,42 @@ Display the current progress of an operation flow.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Mini Size Circular Progress Bar" bordered={true}><MiniSizeCircularProgressBarDemo /></Card>
-        <Card title="Dynamic Circular Progress Bar" bordered={true}><DynamicCircularProgressBarDemo /></Card>
-        <Card title="Circular Progress Bar" bordered={true}><CircularProgressBarDemo /></Card>
-        <Card title="Dashboard" bordered={true}><DashboardDemo /></Card>
-        <Card title="Dynamic" bordered={true}><DynamicDemo /></Card>
-        <Card title="Custom Text Format" bordered={true}><CustomTextFormatDemo /></Card>
-        <Card title="Mini Size Progress Bar" bordered={true}><MiniSizeProgressBarDemo /></Card>
-        <Card title="Progress Bar" bordered={true}><ProgressBarDemo /></Card>
-        <Card title="Progress Bar With Success Segment" bordered={true}><ProgressBarWithSuccessSegmentDemo /></Card>
+                <div className="component-demo">
+        <h4>Dynamic Circular Progress Bar</h4>
+        <DynamicCircularProgressBarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Mini Size Circular Progress Bar</h4>
+        <MiniSizeCircularProgressBarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Circular Progress Bar</h4>
+        <CircularProgressBarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dashboard</h4>
+        <DashboardDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dynamic</h4>
+        <DynamicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Text Format</h4>
+        <CustomTextFormatDemo />
+        </div>
+<div className="component-demo">
+        <h4>Mini Size Progress Bar</h4>
+        <MiniSizeProgressBarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Progress Bar</h4>
+        <ProgressBarDemo />
+        </div>
+<div className="component-demo">
+        <h4>Progress Bar With Success Segment</h4>
+        <ProgressBarWithSuccessSegmentDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

@@ -9,8 +9,8 @@ import AddCloseTabDemo from './AddCloseTabDemo.js'
 import ExtraContentDemo from './ExtraContentDemo.js'
 import IconDemo from './IconDemo.js'
 import PositionDemo from './PositionDemo.js'
-import SizeDemo from './SizeDemo.js'
 import SlideDemo from './SlideDemo.js'
+import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -66,17 +66,50 @@ Tabs make it easy to switch between different views.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Container Of Card Type Tab" bordered={true}><ContainerOfCardTypeTabDemo /></Card>
-        <Card title="Card Type Tab" bordered={true}><CardTypeTabDemo /></Card>
-        <Card title="Customized Trigger Of New Tab" bordered={true}><CustomizedTriggerOfNewTabDemo /></Card>
-        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        <Card title="Add Close Tab" bordered={true}><AddCloseTabDemo /></Card>
-        <Card title="Extra Content" bordered={true}><ExtraContentDemo /></Card>
-        <Card title="Icon" bordered={true}><IconDemo /></Card>
-        <Card title="Position" bordered={true}><PositionDemo /></Card>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
-        <Card title="Slide" bordered={true}><SlideDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Container Of Card Type Tab</h4>
+        <ContainerOfCardTypeTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Card Type Tab</h4>
+        <CardTypeTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Trigger Of New Tab</h4>
+        <CustomizedTriggerOfNewTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Add Close Tab</h4>
+        <AddCloseTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Extra Content</h4>
+        <ExtraContentDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon</h4>
+        <IconDemo />
+        </div>
+<div className="component-demo">
+        <h4>Position</h4>
+        <PositionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Slide</h4>
+        <SlideDemo />
+        </div>
+<div className="component-demo">
+        <h4>Size</h4>
+        <SizeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

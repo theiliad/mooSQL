@@ -34,9 +34,18 @@ A divider line separates different content.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Horizontal" bordered={true}><HorizontalDemo /></Card>
-        <Card title="Orientation Of Title" bordered={true}><OrientationOfTitleDemo /></Card>
-        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+                <div className="component-demo">
+        <h4>Horizontal</h4>
+        <HorizontalDemo />
+        </div>
+<div className="component-demo">
+        <h4>Orientation Of Title</h4>
+        <OrientationOfTitleDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical</h4>
+        <VerticalDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

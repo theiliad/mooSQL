@@ -3,12 +3,12 @@ import React from 'react'
     import BasicGridDemo from './BasicGridDemo.js'
 import FlexAlignmentDemo from './FlexAlignmentDemo.js'
 import FlexOrderDemo from './FlexOrderDemo.js'
-import FlexLayoutDemo from './FlexLayoutDemo.js'
 import GridGutterDemo from './GridGutterDemo.js'
+import FlexLayoutDemo from './FlexLayoutDemo.js'
 import ColumnOffsetDemo from './ColumnOffsetDemo.js'
-import PlaygroundDemo from './PlaygroundDemo.js'
 import MoreResponsiveDemo from './MoreResponsiveDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
+import PlaygroundDemo from './PlaygroundDemo.js'
 import GridSortDemo from './GridSortDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -132,16 +132,46 @@ const expComponent = () => (
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Grid" bordered={true}><BasicGridDemo /></Card>
-        <Card title="Flex Alignment" bordered={true}><FlexAlignmentDemo /></Card>
-        <Card title="Flex Order" bordered={true}><FlexOrderDemo /></Card>
-        <Card title="Flex Layout" bordered={true}><FlexLayoutDemo /></Card>
-        <Card title="Grid Gutter" bordered={true}><GridGutterDemo /></Card>
-        <Card title="Column Offset" bordered={true}><ColumnOffsetDemo /></Card>
-        <Card title="Playground" bordered={true}><PlaygroundDemo /></Card>
-        <Card title="More Responsive" bordered={true}><MoreResponsiveDemo /></Card>
-        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
-        <Card title="Grid Sort" bordered={true}><GridSortDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic Grid</h4>
+        <BasicGridDemo />
+        </div>
+<div className="component-demo">
+        <h4>Flex Alignment</h4>
+        <FlexAlignmentDemo />
+        </div>
+<div className="component-demo">
+        <h4>Flex Order</h4>
+        <FlexOrderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Grid Gutter</h4>
+        <GridGutterDemo />
+        </div>
+<div className="component-demo">
+        <h4>Flex Layout</h4>
+        <FlexLayoutDemo />
+        </div>
+<div className="component-demo">
+        <h4>Column Offset</h4>
+        <ColumnOffsetDemo />
+        </div>
+<div className="component-demo">
+        <h4>More Responsive</h4>
+        <MoreResponsiveDemo />
+        </div>
+<div className="component-demo">
+        <h4>Responsive</h4>
+        <ResponsiveDemo />
+        </div>
+<div className="component-demo">
+        <h4>Playground</h4>
+        <PlaygroundDemo />
+        </div>
+<div className="component-demo">
+        <h4>Grid Sort</h4>
+        <GridSortDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

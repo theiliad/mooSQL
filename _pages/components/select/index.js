@@ -1,17 +1,17 @@
 import React from 'react'
 
-    import BasicUsageDemo from './BasicUsageDemo.js'
-import AutomaticTokenizationDemo from './AutomaticTokenizationDemo.js'
-import AutomaticCompletionDemo from './AutomaticCompletionDemo.js'
+    import AutomaticTokenizationDemo from './AutomaticTokenizationDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import CoordinateDemo from './CoordinateDemo.js'
+import AutomaticCompletionDemo from './AutomaticCompletionDemo.js'
 import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
-import MultipleSelectionDemo from './MultipleSelectionDemo.js'
-import OptionGroupDemo from './OptionGroupDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
 import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
-import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
+import MultipleSelectionDemo from './MultipleSelectionDemo.js'
+import OptionGroupDemo from './OptionGroupDemo.js'
 import SizesDemo from './SizesDemo.js'
 import TagsDemo from './TagsDemo.js'
+import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -103,18 +103,54 @@ Select component to select value from options.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
-        <Card title="Automatic Tokenization" bordered={true}><AutomaticTokenizationDemo /></Card>
-        <Card title="Automatic Completion" bordered={true}><AutomaticCompletionDemo /></Card>
-        <Card title="Coordinate" bordered={true}><CoordinateDemo /></Card>
-        <Card title="Get Value Of Selected Item" bordered={true}><GetValueOfSelectedItemDemo /></Card>
-        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
-        <Card title="Option Group" bordered={true}><OptionGroupDemo /></Card>
-        <Card title="Search Box" bordered={true}><SearchBoxDemo /></Card>
-        <Card title="Select With Search Field" bordered={true}><SelectWithSearchFieldDemo /></Card>
-        <Card title="Search And Select Users" bordered={true}><SearchAndSelectUsersDemo /></Card>
-        <Card title="Sizes" bordered={true}><SizesDemo /></Card>
-        <Card title="Tags" bordered={true}><TagsDemo /></Card>
+                <div className="component-demo">
+        <h4>Automatic Tokenization</h4>
+        <AutomaticTokenizationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Coordinate</h4>
+        <CoordinateDemo />
+        </div>
+<div className="component-demo">
+        <h4>Automatic Completion</h4>
+        <AutomaticCompletionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Get Value Of Selected Item</h4>
+        <GetValueOfSelectedItemDemo />
+        </div>
+<div className="component-demo">
+        <h4>Search Box</h4>
+        <SearchBoxDemo />
+        </div>
+<div className="component-demo">
+        <h4>Select With Search Field</h4>
+        <SelectWithSearchFieldDemo />
+        </div>
+<div className="component-demo">
+        <h4>Multiple Selection</h4>
+        <MultipleSelectionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Option Group</h4>
+        <OptionGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Sizes</h4>
+        <SizesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Tags</h4>
+        <TagsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Search And Select Users</h4>
+        <SearchAndSelectUsersDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

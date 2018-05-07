@@ -93,13 +93,34 @@ Menu list of Navigation.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Top Navigation" bordered={true}><TopNavigationDemo /></Card>
-        <Card title="Collapsed Inline Menu" bordered={true}><CollapsedInlineMenuDemo /></Card>
-        <Card title="Inline Menu" bordered={true}><InlineMenuDemo /></Card>
-        <Card title="Open Current Submenu Only" bordered={true}><OpenCurrentSubmenuOnlyDemo /></Card>
-        <Card title="Switch The Menu Type" bordered={true}><SwitchTheMenuTypeDemo /></Card>
-        <Card title="Menu Themes" bordered={true}><MenuThemesDemo /></Card>
-        <Card title="Vertical Menu" bordered={true}><VerticalMenuDemo /></Card>
+                <div className="component-demo">
+        <h4>Top Navigation</h4>
+        <TopNavigationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Collapsed Inline Menu</h4>
+        <CollapsedInlineMenuDemo />
+        </div>
+<div className="component-demo">
+        <h4>Inline Menu</h4>
+        <InlineMenuDemo />
+        </div>
+<div className="component-demo">
+        <h4>Open Current Submenu Only</h4>
+        <OpenCurrentSubmenuOnlyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Switch The Menu Type</h4>
+        <SwitchTheMenuTypeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Menu Themes</h4>
+        <MenuThemesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical Menu</h4>
+        <VerticalMenuDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

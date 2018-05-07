@@ -48,10 +48,22 @@ A carousel component. Scales with its container.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Scroll Automatically" bordered={true}><ScrollAutomaticallyDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Fade In" bordered={true}><FadeInDemo /></Card>
-        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+                <div className="component-demo">
+        <h4>Scroll Automatically</h4>
+        <ScrollAutomaticallyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Fade In</h4>
+        <FadeInDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical</h4>
+        <VerticalDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

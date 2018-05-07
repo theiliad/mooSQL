@@ -1,12 +1,12 @@
 import React from 'react'
 
-    import HoursDemo from './HoursDemo.js'
-import AddonDemo from './AddonDemo.js'
-import DisabledDemo from './DisabledDemo.js'
+    import AddonDemo from './AddonDemo.js'
 import BasicDemo from './BasicDemo.js'
+import HoursDemo from './HoursDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import HourAndMinuteDemo from './HourAndMinuteDemo.js'
-import IntervalOptionDemo from './IntervalOptionDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
+import IntervalOptionDemo from './IntervalOptionDemo.js'
 import UnderControlDemo from './UnderControlDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -76,14 +76,38 @@ To select/input a time.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Hours" bordered={true}><HoursDemo /></Card>
-        <Card title="Addon" bordered={true}><AddonDemo /></Card>
-        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Hour And Minute" bordered={true}><HourAndMinuteDemo /></Card>
-        <Card title="Interval Option" bordered={true}><IntervalOptionDemo /></Card>
-        <Card title="Three Sizes" bordered={true}><ThreeSizesDemo /></Card>
-        <Card title="Under Control" bordered={true}><UnderControlDemo /></Card>
+                <div className="component-demo">
+        <h4>Addon</h4>
+        <AddonDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Hours</h4>
+        <HoursDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Hour And Minute</h4>
+        <HourAndMinuteDemo />
+        </div>
+<div className="component-demo">
+        <h4>Three Sizes</h4>
+        <ThreeSizesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Interval Option</h4>
+        <IntervalOptionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Under Control</h4>
+        <UnderControlDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

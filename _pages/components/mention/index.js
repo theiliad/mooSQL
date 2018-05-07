@@ -1,15 +1,15 @@
 import React from 'react'
 
-    import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
-import BasicDemo from './BasicDemo.js'
-import IconImageDemo from './IconImageDemo.js'
+    import IconImageDemo from './IconImageDemo.js'
 import ControlledDemo from './ControlledDemo.js'
+import BasicDemo from './BasicDemo.js'
+import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
 import WithFormDemo from './WithFormDemo.js'
-import MultilinesModeDemo from './MultilinesModeDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
 import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
-import SuggestionContainerDemo from './SuggestionContainerDemo.js'
+import MultilinesModeDemo from './MultilinesModeDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -86,17 +86,50 @@ Mention component.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Asynchronous Loading" bordered={true}><AsynchronousLoadingDemo /></Card>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Icon Image" bordered={true}><IconImageDemo /></Card>
-        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
-        <Card title="With Form" bordered={true}><WithFormDemo /></Card>
-        <Card title="Multilines Mode" bordered={true}><MultilinesModeDemo /></Card>
-        <Card title="Customize Suggestion" bordered={true}><CustomizeSuggestionDemo /></Card>
-        <Card title="Customize Trigger Token" bordered={true}><CustomizeTriggerTokenDemo /></Card>
-        <Card title="Suggestion Container" bordered={true}><SuggestionContainerDemo /></Card>
-        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
-        <Card title="Disabled Or Read Only" bordered={true}><DisabledOrReadOnlyDemo /></Card>
+                <div className="component-demo">
+        <h4>Icon Image</h4>
+        <IconImageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Controlled</h4>
+        <ControlledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Asynchronous Loading</h4>
+        <AsynchronousLoadingDemo />
+        </div>
+<div className="component-demo">
+        <h4>With Form</h4>
+        <WithFormDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Suggestion</h4>
+        <CustomizeSuggestionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Trigger Token</h4>
+        <CustomizeTriggerTokenDemo />
+        </div>
+<div className="component-demo">
+        <h4>Multilines Mode</h4>
+        <MultilinesModeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Placement</h4>
+        <PlacementDemo />
+        </div>
+<div className="component-demo">
+        <h4>Suggestion Container</h4>
+        <SuggestionContainerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled Or Read Only</h4>
+        <DisabledOrReadOnlyDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

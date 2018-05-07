@@ -2,9 +2,9 @@ import React from 'react'
 
     import TypeDemo from './TypeDemo.js'
 import ButtonGroupDemo from './ButtonGroupDemo.js'
+import IconDemo from './IconDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import GhostButtonDemo from './GhostButtonDemo.js'
-import IconDemo from './IconDemo.js'
 import LoadingDemo from './LoadingDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
 import SizeDemo from './SizeDemo.js'
@@ -61,14 +61,38 @@ To trigger an operation.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Type" bordered={true}><TypeDemo /></Card>
-        <Card title="Button Group" bordered={true}><ButtonGroupDemo /></Card>
-        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        <Card title="Ghost Button" bordered={true}><GhostButtonDemo /></Card>
-        <Card title="Icon" bordered={true}><IconDemo /></Card>
-        <Card title="Loading" bordered={true}><LoadingDemo /></Card>
-        <Card title="Multiple Buttons" bordered={true}><MultipleButtonsDemo /></Card>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
+                <div className="component-demo">
+        <h4>Type</h4>
+        <TypeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Button Group</h4>
+        <ButtonGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon</h4>
+        <IconDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Ghost Button</h4>
+        <GhostButtonDemo />
+        </div>
+<div className="component-demo">
+        <h4>Loading</h4>
+        <LoadingDemo />
+        </div>
+<div className="component-demo">
+        <h4>Multiple Buttons</h4>
+        <MultipleButtonsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Size</h4>
+        <SizeDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>

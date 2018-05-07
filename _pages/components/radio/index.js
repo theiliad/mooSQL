@@ -2,12 +2,12 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import RadioStyleDemo from './RadioStyleDemo.js'
 import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
+import RadioStyleDemo from './RadioStyleDemo.js'
 import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
 import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
-import RadioGroupDemo from './RadioGroupDemo.js'
 import SizeDemo from './SizeDemo.js'
+import RadioGroupDemo from './RadioGroupDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -64,14 +64,38 @@ Radio.
 </p>
 
             <Card bordered={false}>
-                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        <Card title="Radio Style" bordered={true}><RadioStyleDemo /></Card>
-        <Card title="Vertical Radio Group" bordered={true}><VerticalRadioGroupDemo /></Card>
-        <Card title="Radio Group Group Optional" bordered={true}><RadioGroupGroupOptionalDemo /></Card>
-        <Card title="Radio Group With Name" bordered={true}><RadioGroupWithNameDemo /></Card>
-        <Card title="Radio Group" bordered={true}><RadioGroupDemo /></Card>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
+                <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical Radio Group</h4>
+        <VerticalRadioGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Radio Style</h4>
+        <RadioStyleDemo />
+        </div>
+<div className="component-demo">
+        <h4>Radio Group Group Optional</h4>
+        <RadioGroupGroupOptionalDemo />
+        </div>
+<div className="component-demo">
+        <h4>Radio Group With Name</h4>
+        <RadioGroupWithNameDemo />
+        </div>
+<div className="component-demo">
+        <h4>Size</h4>
+        <SizeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Radio Group</h4>
+        <RadioGroupDemo />
+        </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
