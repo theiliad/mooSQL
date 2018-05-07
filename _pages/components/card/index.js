@@ -5,8 +5,8 @@ import NoBorderDemo from './NoBorderDemo.js'
 import CustomizedContentDemo from './CustomizedContentDemo.js'
 import GridCardDemo from './GridCardDemo.js'
 import CardInColumnDemo from './CardInColumnDemo.js'
-import LoadingCardDemo from './LoadingCardDemo.js'
 import InnerCardDemo from './InnerCardDemo.js'
+import LoadingCardDemo from './LoadingCardDemo.js'
 import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
 import SimpleCardDemo from './SimpleCardDemo.js'
 import WithTabsDemo from './WithTabsDemo.js'
@@ -23,25 +23,27 @@ A card can be used to display content related to a single subject. The content c
 
 ## API
 
-\`\`\`html &lt;Card title=&quot;Card title&quot;&gt;Card content&lt;/Card&gt;\`\`\`
+\`\`\`html
+<Card title="Card title">Card content</Card>
+\`\`\`
 
 ### Card
 
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
-| actions | The action list, shows at the bottom of the Card. | Array&lt;ReactNode&gt; | - |
+| actions | The action list, shows at the bottom of the Card. | Array<ReactNode> | - |
 | bodyStyle | Inline style to apply to the card content | object | - |
-| bordered | Toggles rendering of the border around the card | boolean | \`\`\`true\`\`\` |
+| bordered | Toggles rendering of the border around the card | boolean | \`true\` |
 | cover | Card cover | ReactNode | - |
-| extra | Content to render in the top-right corner of the card | string|ReactNode | - |
+| extra | Content to render in the top-right corner of the card | string\|ReactNode | - |
 | hoverable | Lift up when hovering card | boolean | false |
 | loading | Shows a loading indicator while the contents of the card are being fetched | boolean | false |
-| tabList | List of TabPane's head. | Array&lt;{key: string, tab: ReactNode}&gt; | - |
+| tabList | List of TabPane's head. | Array&lt;{key: string, tab: ReactNode}> | - |
 | activeTabKey | Current TabPane's key | string | - |
-| defaultActiveTabKey | Initial active TabPane's key, if \`\`\`activeTabKey\`\`\` is not set. | string | - |
-| title | Card title | string|ReactNode | - |
-| type | Card style type, can be set to \`\`\`inner\`\`\` or not set | string | - |
-| onTabChange | Callback when tab is switched | (key) =&gt; void | - |
+| defaultActiveTabKey | Initial active TabPane's key, if \`activeTabKey\` is not set. | string | - |
+| title | Card title | string\|ReactNode | - |
+| type | Card style type, can be set to \`inner\` or not set | string | - |
+| onTabChange | Callback when tab is switched | (key) => void | - |
 
 ### Card.Grid
 
@@ -70,48 +72,18 @@ Simple rectangular container.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Basic Card" bordered={true}><BasicCardDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic Card" bordered={true}><BasicCardDemo /></Card>
         <Card title="No Border" bordered={true}><NoBorderDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Customized Content" bordered={true}><CustomizedContentDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Grid Card" bordered={true}><GridCardDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Card In Column" bordered={true}><CardInColumnDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Loading Card" bordered={true}><LoadingCardDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Inner Card" bordered={true}><InnerCardDemo /></Card>
-        </Col>
-        <Col span={12}>
+        <Card title="Loading Card" bordered={true}><LoadingCardDemo /></Card>
         <Card title="Support More Content Configuration" bordered={true}><SupportMoreContentConfigurationDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Simple Card" bordered={true}><SimpleCardDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="With Tabs" bordered={true}><WithTabsDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

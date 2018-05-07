@@ -2,12 +2,12 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
+import CustomTriggerDemo from './CustomTriggerDemo.js'
 import CustomRenderDemo from './CustomRenderDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
-import CustomTriggerDemo from './CustomTriggerDemo.js'
 import DisabledOptionDemo from './DisabledOptionDemo.js'
-import HoverDemo from './HoverDemo.js'
 import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
+import HoverDemo from './HoverDemo.js'
 import SearchDemo from './SearchDemo.js'
 import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -24,7 +24,9 @@ Cascade selection box.
 
 ## API
 
-\`\`\`html &lt;Cascader options={options} onChange={onChange} /&gt;\`\`\`
+\`\`\`html
+<Cascader options={options} onChange={onChange} />
+\`\`\`
 
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
@@ -32,33 +34,33 @@ Cascade selection box.
 | autoFocus | get focus when component mounted | boolean | false |
 | changeOnSelect | change value on each selection if set to true, see above demo for details | boolean | false |
 | className | additional css class | string | - |
-| defaultValue | initial selected value | string[] | [] |
+| defaultValue | initial selected value | string\[] | \[] |
 | disabled | whether disabled select | boolean | false |
-| displayRender | render function of displaying selected options | \`\`\`(label, selectedOptions) =&gt; ReactNode\`\`\` | \`\`\`label =&gt; label.join(' / ')\`\`\` |
+| displayRender | render function of displaying selected options | \`(label, selectedOptions) => ReactNode\` | \`label => label.join(' / ')\` |
 | expandTrigger | expand current item when click or hover, one of 'click' 'hover' | string | 'click' |
-| getPopupContainer | Parent Node which the selector should be rendered to. Default to \`\`\`body\`\`\`. When position issues happen, try to modify it into scrollable content and position it relative.<a href="https://codepen.io/afc163/pen/zEjNOy?editors=0010">example</a> | Function(triggerNode) | () =&gt; document.body |
-| loadData | To load option lazily, and it cannot work with \`\`\`showSearch\`\`\` | \`\`\`(selectedOptions) =&gt; void\`\`\` | - |
+| getPopupContainer | Parent Node which the selector should be rendered to. Default to \`body\`. When position issues happen, try to modify it into scrollable content and position it relative.[example](https://codepen.io/afc163/pen/zEjNOy?editors=0010) | Function(triggerNode) | () => document.body |
+| loadData | To load option lazily, and it cannot work with \`showSearch\` | \`(selectedOptions) => void\` | - |
 | notFoundContent | Specify content to show when no result matches. | string | 'Not Found' |
 | options | data options of cascade | object | - |
 | placeholder | input placeholder | string | 'Please select' |
 | popupClassName | additional className of popup overlay | string | - |
-| popupPlacement | use preset popup align config from builtinPlacements：\`\`\`bottomLeft\`\`\` \`\`\`bottomRight\`\`\` \`\`\`topLeft\`\`\` \`\`\`topRight\`\`\` | string | \`\`\`bottomLeft\`\`\` |
+| popupPlacement | use preset popup align config from builtinPlacements：\`bottomLeft\` \`bottomRight\` \`topLeft\` \`topRight\` | string | \`bottomLeft\` |
 | popupVisible | set visible of cascader popup | boolean | - |
-| showSearch | Whether show search input in single mode. | boolean|object | false |
-| size | input size, one of \`\`\`large\`\`\` \`\`\`default\`\`\` \`\`\`small\`\`\` | string | \`\`\`default\`\`\` |
+| showSearch | Whether show search input in single mode. | boolean\|object | false |
+| size | input size, one of \`large\` \`default\` \`small\` | string | \`default\` |
 | style | additional style | string | - |
-| value | selected value | string[] | - |
-| onChange | callback when finishing cascader select | \`\`\`(value, selectedOptions) =&gt; void\`\`\` | - |
-| onPopupVisibleChange | callback when popup shown or hidden | \`\`\`(value) =&gt; void\`\`\` | - |
+| value | selected value | string\[] | - |
+| onChange | callback when finishing cascader select | \`(value, selectedOptions) => void\` | - |
+| onPopupVisibleChange | callback when popup shown or hidden | \`(value) => void\` | - |
 
-Fields in \`\`\`showSearch\`\`\`:
+Fields in \`showSearch\`:
 
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
-| filter | The function will receive two arguments, inputValue and option, if the function returns true, the option will be included in the filtered set; Otherwise, it will be excluded. | \`\`\`function(inputValue, path): boolean\`\`\` |  |
+| filter | The function will receive two arguments, inputValue and option, if the function returns true, the option will be included in the filtered set; Otherwise, it will be excluded. | \`function(inputValue, path): boolean\` |  |
 | matchInputWidth | Whether the width of result list equals to input's | boolean |  |
-| render | Used to render filtered options. | \`\`\`function(inputValue, path): ReactNode\`\`\` |  |
-| sort | Used to sort filtered options. | \`\`\`function(a, b, inputValue)\`\`\` |  |
+| render | Used to render filtered options. | \`function(inputValue, path): ReactNode\` |  |
+| sort | Used to sort filtered options. | \`function(a, b, inputValue)\` |  |
 
 ## Methods
 
@@ -67,11 +69,11 @@ Fields in \`\`\`showSearch\`\`\`:
 | blur() | remove focus |
 | focus() | get focus |
 
-&lt;style&gt;
+<style>
 .ant-cascader-picker {
-width: 300px;
+  width: 300px;
 }
-&lt;/style&gt;
+</style>
 `
 const expComponent = () => (
         <div>
@@ -83,48 +85,18 @@ Cascade selection box.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         <Card title="Change On Select" bordered={true}><ChangeOnSelectDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Custom Render" bordered={true}><CustomRenderDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Default Value" bordered={true}><DefaultValueDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
-        </Col>
-        <Col span={12}>
+        <Card title="Custom Render" bordered={true}><CustomRenderDemo /></Card>
+        <Card title="Default Value" bordered={true}><DefaultValueDemo /></Card>
         <Card title="Disabled Option" bordered={true}><DisabledOptionDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Hover" bordered={true}><HoverDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Load Options Lazily" bordered={true}><LoadOptionsLazilyDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
+        <Card title="Hover" bordered={true}><HoverDemo /></Card>
         <Card title="Search" bordered={true}><SearchDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Size" bordered={true}><SizeDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

@@ -6,7 +6,11 @@ const { lstatSync, readdirSync } = require('fs')
     , showdown  = require('showdown')
     , converter = new showdown.Converter()
     , convert = require('htmr')
-    , md = require('markdown-it')()
+    , md = require('markdown-it')({
+        html:         true,        // Enable HTML tags in source
+        linkify:      true,        // Autoconvert URL-like text to links
+        quotes: '“”‘’'
+      })
 
 
 
@@ -174,8 +178,8 @@ export default expComponent
 
                 Promise.all(demoComponentPromises).then(() => {
                     fs.readFileAsync(`${directory}/index.en-US.md`, (err, data, resolve, reject) => {
-                        const markDownData = data.substring(locations('---', data)[1])
-                        readmeHTML = md.renderInline(markDownData)
+                        const markDownData = data.substring(locations('---', data)[1]).replaceAll('\`', '\\`')
+                        // readmeHTML = md.renderInline(markDownData)
                         
                         const componentDescription = markDownData.substring(3, markDownData.indexOf('##'))
 
@@ -184,7 +188,8 @@ export default expComponent
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     ${styles.length > 0 ? "require('./styles.scss')\n" : ''}` +
-    "const markDownInput = `" + readmeHTML.replaceAll('`', '\\`').replaceAll('<code>', '\\`\\`\\`').replaceAll('</code>', '\\`\\`\\`') + "`" +
+    // .replaceAll('`', '\\`').replaceAll('<code>', '\\`\\`\\`').replaceAll('</code>', '\\`\\`\\`')
+    "const markDownInput = `" + unescape(markDownData) + "`" +
     `\nconst expComponent = () => (
         <div>
             <h4>${antdComponentName.split('-').map(item => item == '-' ? undefined : item.capitalize()).join(' ')}</h4>
@@ -193,16 +198,13 @@ export default expComponent
             <Card bordered={false}>
                 ${
                     importFileNames.map((filename, index) => {
-                        const JSXTag = `        <Col span={12}>\n        <Card title="${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}" bordered={true}><${filename} /></Card>\n        </Col>`
-                            , startRow = ((index + 1) % 2)
+                        const JSXTag = `        <Card title="${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}" bordered={true}><${filename} /></Card>`
                         
-                        if (startRow == 1 && index == (importFileNames.length -1)) return '<Row gutter={30}>\n' + JSXTag + '\n</Row>'
-                        else if (startRow == 0) return JSXTag + '\n</Row>'
-                        else if (startRow == 1) return '<Row gutter={16}>\n' + JSXTag
+                        return JSXTag
                     }).join('\n')
                 }
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

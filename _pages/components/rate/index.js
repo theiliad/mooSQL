@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import ClearStarDemo from './ClearStarDemo.js'
+    import BasicDemo from './BasicDemo.js'
 import OtherCharacterDemo from './OtherCharacterDemo.js'
+import ClearStarDemo from './ClearStarDemo.js'
 import ReadOnlyDemo from './ReadOnlyDemo.js'
-import BasicDemo from './BasicDemo.js'
 import HalfStarDemo from './HalfStarDemo.js'
 import ShowCopywritingDemo from './ShowCopywritingDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -24,7 +24,7 @@ Rate component.
 | allowClear | whether to allow clear when click again | boolean | true |
 | allowHalf | whether to allow semi selection | boolean | false |
 | autoFocus | get focus when component mounted | boolean | false |
-| character | custom character of rate | ReactNode | \`\`\`&lt;Icon type=&quot;star&quot; /&gt;\`\`\` |
+| character | custom character of rate | ReactNode | \`<Icon type="star" />\` |
 | className | custom class name of rate | string | - |
 | count | star count | number | 5 |
 | defaultValue | default value | number | 0 |
@@ -54,32 +54,14 @@ Rate component.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Clear Star" bordered={true}><ClearStarDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         <Card title="Other Character" bordered={true}><OtherCharacterDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
+        <Card title="Clear Star" bordered={true}><ClearStarDemo /></Card>
         <Card title="Read Only" bordered={true}><ReadOnlyDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Half Star" bordered={true}><HalfStarDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Show Copywriting" bordered={true}><ShowCopywritingDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

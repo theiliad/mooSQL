@@ -22,12 +22,16 @@ Please note that Affix should not cover other content on the page, especially wh
 | -------- | ----------- | ---- | ------- |
 | offsetBottom | Pixels to offset from bottom when calculating position of scroll | number | - |
 | offsetTop | Pixels to offset from top when calculating position of scroll | number | 0 |
-| target | specifies the scrollable area dom node | () =&gt; HTMLElement | () =&gt; window |
+| target | specifies the scrollable area dom node | () => HTMLElement | () => window |
 | onChange | Callback for when affix state is changed | Function(affixed) | - |
 
-<strong>Note:</strong> Children of \`\`\`Affix\`\`\` can not be \`\`\`position: absolute\`\`\`, but you can set \`\`\`Affix\`\`\` as \`\`\`position: absolute\`\`\`:
+**Note:** Children of \`Affix\` can not be \`position: absolute\`, but you can set \`Affix\` as \`position: absolute\`:
 
-\`\`\`jsx &lt;Affix style={{ position: 'absolute', top: y, left: x}}&gt; ... &lt;/Affix&gt;\`\`\`
+\`\`\`jsx
+<Affix style={{ position: 'absolute', top: y, left: x}}>
+  ...
+</Affix>
+\`\`\`
 `
 const expComponent = () => (
         <div>
@@ -39,21 +43,11 @@ Make an element stick to viewport.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         <Card title="Callback" bordered={true}><CallbackDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={30}>
-        <Col span={12}>
         <Card title="Container To Scroll" bordered={true}><ContainerToScrollDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

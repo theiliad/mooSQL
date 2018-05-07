@@ -6,7 +6,7 @@ import CustomStyleDemo from './CustomStyleDemo.js'
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
 
-\`\`\`BackTop\`\`\` makes it easy to go back to the top of the page.
+\`BackTop\` makes it easy to go back to the top of the page.
 
 ## When To Use
 
@@ -15,14 +15,14 @@ import CustomStyleDemo from './CustomStyleDemo.js'
 
 ## API
 
-&gt; The distance to the bottom is set to \`\`\`50px\`\`\` by default, which is overridable.
-&gt;
-&gt; If you decide to use custom styles, please note the size limit: no more than \`\`\`40px * 40px\`\`\`.
+> The distance to the bottom is set to \`50px\` by default, which is overridable.
+>
+> If you decide to use custom styles, please note the size limit: no more than \`40px * 40px\`.
 
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
-| target | specifies the scrollable area dom node | () =&gt; HTMLElement | () =&gt; window |
-| visibilityHeight | the \`\`\`BackTop\`\`\` button will not show until the scroll height reaches this value | number | 400 |
+| target | specifies the scrollable area dom node | () => HTMLElement | () => window |
+| visibilityHeight | the \`BackTop\` button will not show until the scroll height reaches this value | number | 400 |
 | onClick | a callback function, which can be executed when you click the button | Function | - |
 `
 const expComponent = () => (
@@ -30,21 +30,15 @@ const expComponent = () => (
             <h4>Back Top</h4>
             <p>
 
-`BackTop` makes it easy to go back to the top of the page.
+\`BackTop\` makes it easy to go back to the top of the page.
 
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         <Card title="Custom Style" bordered={true}><CustomStyleDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

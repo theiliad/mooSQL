@@ -1,8 +1,8 @@
 import React from 'react'
 
     import HorizontalDemo from './HorizontalDemo.js'
-import VerticalDemo from './VerticalDemo.js'
 import OrientationOfTitleDemo from './OrientationOfTitleDemo.js'
+import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -21,8 +21,8 @@ A divider line separates different content.
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
 | dashed | whether line is dashed | Boolean | false |
-| type | direction type of divider | enum: \`\`\`horizontal\`\`\` \`\`\`vertical\`\`\` | \`\`\`horizontal\`\`\` |
-| orientation | position of title inside divider | enum: \`\`\`left\`\`\` \`\`\`right\`\`\` \`\`\`center\`\`\` | \`\`\`center\`\`\` |
+| type | direction type of divider | enum: \`horizontal\` \`vertical\` | \`horizontal\` |
+| orientation | position of title inside divider | enum: \`left\` \`right\` \`center\` | \`center\` |
 `
 const expComponent = () => (
         <div>
@@ -34,21 +34,11 @@ A divider line separates different content.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Horizontal" bordered={true}><HorizontalDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={30}>
-        <Col span={12}>
+                        <Card title="Horizontal" bordered={true}><HorizontalDemo /></Card>
         <Card title="Orientation Of Title" bordered={true}><OrientationOfTitleDemo /></Card>
-        </Col>
-</Row>
+        <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

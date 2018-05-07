@@ -4,8 +4,8 @@ import React from 'react'
 import CheckAllDemo from './CheckAllDemo.js'
 import ControlledCheckboxDemo from './ControlledCheckboxDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import UseWithGridDemo from './UseWithGridDemo.js'
 import CheckboxGroupDemo from './CheckboxGroupDemo.js'
+import UseWithGridDemo from './UseWithGridDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -33,10 +33,10 @@ Checkbox.
 
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
-| defaultValue | Default selected value | string[] | [] |
+| defaultValue | Default selected value | string\[] | \[] |
 | disabled | Disable all checkboxes | boolean | false |
-| options | Specifies options | string[] | [] |
-| value | Used for setting the currently selected value. | string[] | [] |
+| options | Specifies options | string\[] | \[] |
+| value | Used for setting the currently selected value. | string\[] | \[] |
 | onChange | The callback function that is triggered when the state changes. | Function(checkedValue) | - |
 
 ## Methods
@@ -58,32 +58,14 @@ Checkbox.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         <Card title="Check All" bordered={true}><CheckAllDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Controlled Checkbox" bordered={true}><ControlledCheckboxDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Use With Grid" bordered={true}><UseWithGridDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Checkbox Group" bordered={true}><CheckboxGroupDemo /></Card>
-        </Col>
-</Row>
+        <Card title="Use With Grid" bordered={true}><UseWithGridDemo /></Card>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

@@ -20,32 +20,37 @@ Display global messages as feedback in response to user operations.
 
 This components provides some static methods, with usage and arguments as following:
 
-- \`\`\`message.success(content, [duration], onClose)\`\`\`
-- \`\`\`message.error(content, [duration], onClose)\`\`\`
-- \`\`\`message.info(content, [duration], onClose)\`\`\`
-- \`\`\`message.warning(content, [duration], onClose)\`\`\`
-- \`\`\`message.warn(content, [duration], onClose)\`\`\` // alias of warning
-- \`\`\`message.loading(content, [duration], onClose)\`\`\`
+- \`message.success(content, [duration], onClose)\`
+- \`message.error(content, [duration], onClose)\`
+- \`message.info(content, [duration], onClose)\`
+- \`message.warning(content, [duration], onClose)\`
+- \`message.warn(content, [duration], onClose)\` // alias of warning
+- \`message.loading(content, [duration], onClose)\`
 
 | Argument | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
-| content | content of the message | string|ReactNode | - |
+| content | content of the message | string\|ReactNode | - |
 | duration | time(seconds) before auto-dismiss, don't dismiss if set to 0 | number | 1.5 |
 | onClose | Specify a function that will be called when the message is closed | Function | - |
 
 Methods for global configuration and destruction are also provided:
 
-- \`\`\`message.config(options)\`\`\`
-- \`\`\`message.destroy()\`\`\`
+- \`message.config(options)\`
+- \`message.destroy()\`
 
 ### message.config
 
-\`\`\`js message.config({ top: 100, duration: 2, });\`\`\`
+\`\`\`js
+message.config({
+  top: 100,
+  duration: 2,
+});
+\`\`\`
 
 | Argument | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
 | duration | time before auto-dismiss, in seconds | number | 1.5 |
-| getContainer | Return the mount node for Message | () =&gt; HTMLElement | () =&gt; document.body |
+| getContainer | Return the mount node for Message | () => HTMLElement | () => document.body |
 | top | distance from top | number | 24px |
 `
 const expComponent = () => (
@@ -58,24 +63,12 @@ Display global messages as feedback in response to user operations.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Customize Duration" bordered={true}><CustomizeDurationDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Customize Duration" bordered={true}><CustomizeDurationDemo /></Card>
         <Card title="Normal Prompt" bordered={true}><NormalPromptDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Message Of Loading" bordered={true}><MessageOfLoadingDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Other Types Of Message" bordered={true}><OtherTypesOfMessageDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

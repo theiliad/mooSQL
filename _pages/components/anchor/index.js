@@ -21,7 +21,7 @@ For displaying anchor hyperlinks on page and jumping between them.
 | -------- | ----------- | ---- | ------- |
 | affix | Fixed mode of Anchor | boolean | true |
 | bounds | Bounding distance of anchor area | number | 5(px) |
-| getContainer | Scrolling container | () =&gt; HTMLElement | () =&gt; window  |
+| getContainer | Scrolling container | () => HTMLElement | () => window  |
 | offsetBottom | Pixels to offset from bottom when calculating position of scroll | number | - |
 | offsetTop | Pixels to offset from top when calculating position of scroll | number | 0 |
 | showInkInFixed | Whether show ink-balls in Fixed mode | boolean | false |
@@ -31,7 +31,7 @@ For displaying anchor hyperlinks on page and jumping between them.
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
 | href | target of hyperlink | string |  |
-| title | content of  hyperlink | string|ReactNode |  |
+| title | content of  hyperlink | string\|ReactNode |  |
 `
 const expComponent = () => (
         <div>
@@ -43,16 +43,10 @@ Hyperlinks to scroll on one page.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-        <Col span={12}>
+                        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         <Card title="Static Anchor" bordered={true}><StaticAnchorDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )

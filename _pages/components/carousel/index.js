@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import ScrollAutomaticallyDemo from './ScrollAutomaticallyDemo.js'
+    import ScrollAutomaticallyDemo from './ScrollAutomaticallyDemo.js'
+import BasicDemo from './BasicDemo.js'
 import FadeInDemo from './FadeInDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -21,12 +21,12 @@ A carousel component. Scales with its container.
 | Property | Description | Type | Default |
 | -------- | ----------- | ---- | ------- |
 | afterChange | Callback function called after the current index changes | function(current) | - |
-| autoplay | Whether to scroll automatically | boolean | \`\`\`false\`\`\` |
+| autoplay | Whether to scroll automatically | boolean | \`false\` |
 | beforeChange | Callback function called before the current index changes | function(from, to) | - |
-| dots | Whether to show the dots at the bottom of the gallery | boolean | \`\`\`true\`\`\` |
-| easing | Transition interpolation function name | string | \`\`\`linear\`\`\` |
-| effect | Transition effect | \`\`\`scrollx\`\`\` | \`\`\`fade\`\`\` | \`\`\`scrollx\`\`\` |
-| vertical | Whether to use a vertical display | boolean | \`\`\`false\`\`\` |
+| dots | Whether to show the dots at the bottom of the gallery | boolean | \`true\` |
+| easing | Transition interpolation function name | string | \`linear\` |
+| effect | Transition effect | \`scrollx\` \| \`fade\` | \`scrollx\` |
+| vertical | Whether to use a vertical display | boolean | \`false\` |
 
 ## Methods
 
@@ -36,7 +36,7 @@ A carousel component. Scales with its container.
 | next() | Change current slide to next slide |
 | prev() | Change current slide to previous slide |
 
-For more info on the parameters, refer to the <a href="https://github.com/akiran/react-slick">https://github.com/akiran/react-slick</a>
+For more info on the parameters, refer to the <https://github.com/akiran/react-slick>
 `
 const expComponent = () => (
         <div>
@@ -48,24 +48,12 @@ A carousel component. Scales with its container.
 </p>
 
             <Card bordered={false}>
-                <Row gutter={16}>
-        <Col span={12}>
+                        <Card title="Scroll Automatically" bordered={true}><ScrollAutomaticallyDemo /></Card>
         <Card title="Basic" bordered={true}><BasicDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Scroll Automatically" bordered={true}><ScrollAutomaticallyDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Fade In" bordered={true}><FadeInDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
-        </Col>
-</Row>
 
-                <ReactMarkdown source={markDownInput} />
+                <ReactMarkdown source={markDownInput} escapeHtml={false} />
             </Card>
         </div>
     )
