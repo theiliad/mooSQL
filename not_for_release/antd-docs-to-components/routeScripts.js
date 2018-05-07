@@ -22,5 +22,5 @@ String.prototype.capitalize = function() {
 const demoDirectories = getDirectories('../../_pages/components').map(dir => dir.replace('../../_pages/components/', ''))
 demoDirectories.map(dir => {
     const trimmedDirName = dir.split('-').map(item => item == '-' ? undefined : item.capitalize()).join('')
-    console.log(`import ${trimmedDirName}Demo from '../_pages/components/${dir}/index.js'`)
+    console.log(`<Route path={match.url + '/${dir}'} component={${trimmedDirName}Demo} exact={true} />`)
 })

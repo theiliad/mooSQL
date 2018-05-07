@@ -4,8 +4,8 @@ import React from 'react'
 import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
 import DelayDemo from './DelayDemo.js'
 import InsideAContainerDemo from './InsideAContainerDemo.js'
-import EmbeddedModeDemo from './EmbeddedModeDemo.js'
 import SizeDemo from './SizeDemo.js'
+import EmbeddedModeDemo from './EmbeddedModeDemo.js'
 import CustomizedDescriptionDemo from './CustomizedDescriptionDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -57,10 +57,10 @@ A spinner for displaying loading state of a page or a section.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Embedded Mode" bordered={true}><EmbeddedModeDemo /></Card>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        <Card title="Embedded Mode" bordered={true}><EmbeddedModeDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>

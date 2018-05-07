@@ -1,8 +1,8 @@
 import React from 'react'
 
     import ArrowPointingDemo from './ArrowPointingDemo.js'
-import BasicDemo from './BasicDemo.js'
 import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
+import BasicDemo from './BasicDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import ThreeWaysToTriggerDemo from './ThreeWaysToTriggerDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -46,12 +46,12 @@ The floating card popped by clicking or hovering.
         <Card title="Arrow Pointing" bordered={true}><ArrowPointingDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Controlling The Close Of The Dialog" bordered={true}><ControllingTheCloseOfTheDialogDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Controlling The Close Of The Dialog" bordered={true}><ControllingTheCloseOfTheDialogDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Placement" bordered={true}><PlacementDemo /></Card>

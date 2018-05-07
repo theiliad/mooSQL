@@ -2,8 +2,8 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import CheckableDemo from './CheckableDemo.js'
-import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import GenerateFormTreeDataDemo from './GenerateFormTreeDataDemo.js'
+import MultipleSelectionDemo from './MultipleSelectionDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -90,10 +90,10 @@ Tree selection control.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
+        <Card title="Generate Form Tree Data" bordered={true}><GenerateFormTreeDataDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Generate Form Tree Data" bordered={true}><GenerateFormTreeDataDemo /></Card>
+        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
         </Col>
 </Row>
 

@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import CustomTriggerDemo from './CustomTriggerDemo.js'
+    import BasicStructureDemo from './BasicStructureDemo.js'
+import CustomTriggerDemo from './CustomTriggerDemo.js'
 import FixedSiderDemo from './FixedSiderDemo.js'
-import BasicStructureDemo from './BasicStructureDemo.js'
-import FixedHeaderDemo from './FixedHeaderDemo.js'
-import ResponsiveDemo from './ResponsiveDemo.js'
 import SiderDemo from './SiderDemo.js'
+import FixedHeaderDemo from './FixedHeaderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
+import ResponsiveDemo from './ResponsiveDemo.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -114,23 +114,15 @@ Handling the overall layout of a page.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Fixed Sider" bordered={true}><FixedSiderDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Basic Structure" bordered={true}><BasicStructureDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Fixed Header" bordered={true}><FixedHeaderDemo /></Card>
+        <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
+        <Card title="Fixed Sider" bordered={true}><FixedSiderDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Sider" bordered={true}><SiderDemo /></Card>
@@ -138,10 +130,18 @@ Handling the overall layout of a page.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Header Sider" bordered={true}><HeaderSiderDemo /></Card>
+        <Card title="Fixed Header" bordered={true}><FixedHeaderDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Header Sider" bordered={true}><HeaderSiderDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Header Sider" bordered={true}><HeaderSiderDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>

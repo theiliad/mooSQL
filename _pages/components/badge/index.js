@@ -3,8 +3,8 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import DynamicDemo from './DynamicDemo.js'
 import RedBadgeDemo from './RedBadgeDemo.js'
-import ClickableDemo from './ClickableDemo.js'
 import StandaloneDemo from './StandaloneDemo.js'
+import ClickableDemo from './ClickableDemo.js'
 import OverflowCountDemo from './OverflowCountDemo.js'
 import StatusDemo from './StatusDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -57,12 +57,12 @@ Small numerical value or status descriptor for UI elements.
         <Card title="Red Badge" bordered={true}><RedBadgeDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Clickable" bordered={true}><ClickableDemo /></Card>
+        <Card title="Standalone" bordered={true}><StandaloneDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Standalone" bordered={true}><StandaloneDemo /></Card>
+        <Card title="Clickable" bordered={true}><ClickableDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Overflow Count" bordered={true}><OverflowCountDemo /></Card>

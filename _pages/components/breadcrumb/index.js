@@ -1,10 +1,10 @@
 import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
-import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
 import ReactRouterIntegrationDemo from './ReactRouterIntegrationDemo.js'
-import ConfiguringTheSeparatorDemo from './ConfiguringTheSeparatorDemo.js'
 import WithAnIconDemo from './WithAnIconDemo.js'
+import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
+import ConfiguringTheSeparatorDemo from './ConfiguringTheSeparatorDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -50,20 +50,20 @@ A breadcrumb displays the current location within a hierarchy. It allows going b
         <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Other Router Integration" bordered={true}><OtherRouterIntegrationDemo /></Card>
+        <Card title="React Router Integration" bordered={true}><ReactRouterIntegrationDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="React Router Integration" bordered={true}><ReactRouterIntegrationDemo /></Card>
+        <Card title="With An Icon" bordered={true}><WithAnIconDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Configuring The Separator" bordered={true}><ConfiguringTheSeparatorDemo /></Card>
+        <Card title="Other Router Integration" bordered={true}><OtherRouterIntegrationDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>
         <Col span={12}>
-        <Card title="With An Icon" bordered={true}><WithAnIconDemo /></Card>
+        <Card title="Configuring The Separator" bordered={true}><ConfiguringTheSeparatorDemo /></Card>
         </Col>
 </Row>
 

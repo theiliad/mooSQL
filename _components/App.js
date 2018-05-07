@@ -40,57 +40,7 @@ import { updateAuth } from "../__actions/auth";
 import { updateLang } from "../__actions/localization";
 
 // Pages
-import AffixDemo from '../_pages/components/affix/index.js'
-import AlertDemo from '../_pages/components/alert/index.js'
-import AnchorDemo from '../_pages/components/anchor/index.js'
-import AutoCompleteDemo from '../_pages/components/auto-complete/index.js'
-import AvatarDemo from '../_pages/components/avatar/index.js'
-import BackTopDemo from '../_pages/components/back-top/index.js'
-import BadgeDemo from '../_pages/components/badge/index.js'
-// import BreadcrumbDemo from '../_pages/components/breadcrumb/index.js'
-import ButtonDemo from '../_pages/components/button/index.js'
-import CalendarDemo from '../_pages/components/calendar/index.js'
-import CardDemo from '../_pages/components/card/index.js'
-import CarouselDemo from '../_pages/components/carousel/index.js'
-// import CascaderDemo from '../_pages/components/cascader/index.js'
-import CheckboxDemo from '../_pages/components/checkbox/index.js'
-import CollapseDemo from '../_pages/components/collapse/index.js'
-// import DatePickerDemo from '../_pages/components/date-picker/index.js'
-import DividerDemo from '../_pages/components/divider/index.js'
-import DropdownDemo from '../_pages/components/dropdown/index.js'
-import FormDemo from '../_pages/components/form/index.js'
-import GridDemo from '../_pages/components/grid/index.js'
-import InputDemo from '../_pages/components/input/index.js'
-import InputNumberDemo from '../_pages/components/input-number/index.js'
-// import LayoutDemo from '../_pages/components/layout/index.js'
-import ListDemo from '../_pages/components/list/index.js'
-import LocaleProviderDemo from '../_pages/components/locale-provider/index.js'
-import MentionDemo from '../_pages/components/mention/index.js'
-import MenuDemo from '../_pages/components/menu/index.js'
-import MessageDemo from '../_pages/components/message/index.js'
-// import ModalDemo from '../_pages/components/modal/index.js'
-// import NotificationDemo from '../_pages/components/notification/index.js'
-import PaginationDemo from '../_pages/components/pagination/index.js'
-import PopconfirmDemo from '../_pages/components/popconfirm/index.js'
-import PopoverDemo from '../_pages/components/popover/index.js'
-import ProgressDemo from '../_pages/components/progress/index.js'
-import RadioDemo from '../_pages/components/radio/index.js'
-import RateDemo from '../_pages/components/rate/index.js'
-import SelectDemo from '../_pages/components/select/index.js'
-import SliderDemo from '../_pages/components/slider/index.js'
-import SpinDemo from '../_pages/components/spin/index.js'
-import StepsDemo from '../_pages/components/steps/index.js'
-import SwitchDemo from '../_pages/components/switch/index.js'
-import TableDemo from '../_pages/components/table/index.js'
-import TabsDemo from '../_pages/components/tabs/index.js'
-import TagDemo from '../_pages/components/tag/index.js'
-import TimePickerDemo from '../_pages/components/time-picker/index.js'
-import TimelineDemo from '../_pages/components/timeline/index.js'
-import TooltipDemo from '../_pages/components/tooltip/index.js'
-// import TransferDemo from '../_pages/components/transfer/index.js'
-import TreeDemo from '../_pages/components/tree/index.js'
-import TreeSelectDemo from '../_pages/components/tree-select/index.js'
-import UploadDemo from '../_pages/components/upload/index.js'
+import ComponentsPage from '../_pages/Components'
 
 import WebFont from 'webfontloader';
 
@@ -282,6 +232,8 @@ class App extends React.Component {
               <div className="container">
                 <Switch>
                   <Route path="/" component={HomeComponent} exact={true} />
+
+                  <Route path="/components" component={ComponentsPage} exact={false} />
 
                   {/* <Route
                     path="/form/create"

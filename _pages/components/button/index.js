@@ -1,13 +1,13 @@
 import React from 'react'
 
     import TypeDemo from './TypeDemo.js'
-import ButtonGroupDemo from './ButtonGroupDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import GhostButtonDemo from './GhostButtonDemo.js'
+import ButtonGroupDemo from './ButtonGroupDemo.js'
 import IconDemo from './IconDemo.js'
-import LoadingDemo from './LoadingDemo.js'
+import GhostButtonDemo from './GhostButtonDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
 import SizeDemo from './SizeDemo.js'
+import LoadingDemo from './LoadingDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -66,31 +66,31 @@ To trigger an operation.
         <Card title="Type" bordered={true}><TypeDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Button Group" bordered={true}><ButtonGroupDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
         </Col>
-        <Col span={12}>
-        <Card title="Ghost Button" bordered={true}><GhostButtonDemo /></Card>
-        </Col>
 </Row>
 <Row gutter={16}>
+        <Col span={12}>
+        <Card title="Button Group" bordered={true}><ButtonGroupDemo /></Card>
+        </Col>
         <Col span={12}>
         <Card title="Icon" bordered={true}><IconDemo /></Card>
         </Col>
+</Row>
+<Row gutter={16}>
         <Col span={12}>
-        <Card title="Loading" bordered={true}><LoadingDemo /></Card>
+        <Card title="Ghost Button" bordered={true}><GhostButtonDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Multiple Buttons" bordered={true}><MultipleButtonsDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Multiple Buttons" bordered={true}><MultipleButtonsDemo /></Card>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        <Card title="Loading" bordered={true}><LoadingDemo /></Card>
         </Col>
 </Row>
 

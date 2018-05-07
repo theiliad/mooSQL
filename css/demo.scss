@@ -1,0 +1,52 @@
+.components-demo {
+    div.ant-card-body {
+        overflow-x: auto;
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
+
+    h3 {
+        margin-top: 30px;
+
+        &.title {
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+
+    table {
+        width: 100%;
+
+        tr {
+            border-bottom: 1px solid #efeff2;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+        thead {
+            font-weight: 900;
+
+            tr {
+                border-bottom: 1px solid #dfdfe4 !important;
+            }
+        }
+
+        th, td {
+            padding: 10px 0;
+        }
+    }
+
+    hr {
+        display: block;
+        margin-top: 45px;
+        border: none;
+    }
+}

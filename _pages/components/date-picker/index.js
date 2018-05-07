@@ -1,16 +1,16 @@
 import React from 'react'
 
-    import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
-import DateFormatDemo from './DateFormatDemo.js'
 import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import PresettedRangesDemo from './PresettedRangesDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
+import DateFormatDemo from './DateFormatDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -132,10 +132,10 @@ To select or input a date.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Customized Date Rendering" bordered={true}><CustomizedDateRenderingDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Customized Date Rendering" bordered={true}><CustomizedDateRenderingDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -151,28 +151,28 @@ To select or input a date.
         <Card title="Extra Footer" bordered={true}><ExtraFooterDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Date Format" bordered={true}><DateFormatDemo /></Card>
+        <Card title="Controlled Panels" bordered={true}><ControlledPanelsDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Controlled Panels" bordered={true}><ControlledPanelsDemo /></Card>
-        </Col>
         <Col span={12}>
         <Card title="Presetted Ranges" bordered={true}><PresettedRangesDemo /></Card>
         </Col>
-</Row>
-<Row gutter={16}>
         <Col span={12}>
         <Card title="Three Sizes" bordered={true}><ThreeSizesDemo /></Card>
         </Col>
+</Row>
+<Row gutter={16}>
         <Col span={12}>
         <Card title="Customized Range Picker" bordered={true}><CustomizedRangePickerDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Choose Time" bordered={true}><ChooseTimeDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>
         <Col span={12}>
-        <Card title="Choose Time" bordered={true}><ChooseTimeDemo /></Card>
+        <Card title="Date Format" bordered={true}><DateFormatDemo /></Card>
         </Col>
 </Row>
 

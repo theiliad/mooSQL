@@ -3,11 +3,11 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
 import CustomRenderDemo from './CustomRenderDemo.js'
-import CustomTriggerDemo from './CustomTriggerDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
+import CustomTriggerDemo from './CustomTriggerDemo.js'
+import DisabledOptionDemo from './DisabledOptionDemo.js'
 import HoverDemo from './HoverDemo.js'
 import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
-import DisabledOptionDemo from './DisabledOptionDemo.js'
 import SearchDemo from './SearchDemo.js'
 import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -96,23 +96,23 @@ Cascade selection box.
         <Card title="Custom Render" bordered={true}><CustomRenderDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Default Value" bordered={true}><DefaultValueDemo /></Card>
         </Col>
-        <Col span={12}>
-        <Card title="Hover" bordered={true}><HoverDemo /></Card>
-        </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Load Options Lazily" bordered={true}><LoadOptionsLazilyDemo /></Card>
+        <Card title="Custom Trigger" bordered={true}><CustomTriggerDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Disabled Option" bordered={true}><DisabledOptionDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Hover" bordered={true}><HoverDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Load Options Lazily" bordered={true}><LoadOptionsLazilyDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

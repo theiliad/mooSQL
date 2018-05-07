@@ -3,11 +3,11 @@ import React from 'react'
     import BasicListDemo from './BasicListDemo.js'
 import GridDemo from './GridDemo.js'
 import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
-import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
 import LoadMoreDemo from './LoadMoreDemo.js'
 import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
 import SimpleListDemo from './SimpleListDemo.js'
 import VerticalDemo from './VerticalDemo.js'
+import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -87,23 +87,23 @@ Simple List.
         <Card title="Scrolling Loaded" bordered={true}><ScrollingLoadedDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Infinite Virtualized" bordered={true}><InfiniteVirtualizedDemo /></Card>
+        <Card title="Load More" bordered={true}><LoadMoreDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Load More" bordered={true}><LoadMoreDemo /></Card>
-        </Col>
         <Col span={12}>
         <Card title="Responsive Grid List" bordered={true}><ResponsiveGridListDemo /></Card>
         </Col>
-</Row>
-<Row gutter={16}>
         <Col span={12}>
         <Card title="Simple List" bordered={true}><SimpleListDemo /></Card>
         </Col>
+</Row>
+<Row gutter={16}>
         <Col span={12}>
         <Card title="Vertical" bordered={true}><VerticalDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Infinite Virtualized" bordered={true}><InfiniteVirtualizedDemo /></Card>
         </Col>
 </Row>
 

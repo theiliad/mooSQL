@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import AvatarDemo from './AvatarDemo.js'
-import UploadByClickingDemo from './UploadByClickingDemo.js'
-import DefaultFilesDemo from './DefaultFilesDemo.js'
-import DragAndDropDemo from './DragAndDropDemo.js'
+    import UploadByClickingDemo from './UploadByClickingDemo.js'
 import CompleteControlOverFileListDemo from './CompleteControlOverFileListDemo.js'
+import DragAndDropDemo from './DragAndDropDemo.js'
 import PicturesWallDemo from './PicturesWallDemo.js'
 import PicturesWithListStyleDemo from './PicturesWithListStyleDemo.js'
+import DefaultFilesDemo from './DefaultFilesDemo.js'
 import UploadManuallyDemo from './UploadManuallyDemo.js'
+import AvatarDemo from './AvatarDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -88,23 +88,15 @@ Upload file by selecting or dragging.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Avatar" bordered={true}><AvatarDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Upload By Clicking" bordered={true}><UploadByClickingDemo /></Card>
         </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Default Files" bordered={true}><DefaultFilesDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Drag And Drop" bordered={true}><DragAndDropDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
         <Col span={12}>
         <Card title="Complete Control Over File List" bordered={true}><CompleteControlOverFileListDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Drag And Drop" bordered={true}><DragAndDropDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Pictures Wall" bordered={true}><PicturesWallDemo /></Card>
@@ -115,7 +107,15 @@ Upload file by selecting or dragging.
         <Card title="Pictures With List Style" bordered={true}><PicturesWithListStyleDemo /></Card>
         </Col>
         <Col span={12}>
+        <Card title="Default Files" bordered={true}><DefaultFilesDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
         <Card title="Upload Manually" bordered={true}><UploadManuallyDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Avatar" bordered={true}><AvatarDemo /></Card>
         </Col>
 </Row>
 

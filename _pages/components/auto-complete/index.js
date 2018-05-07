@@ -1,11 +1,11 @@
 import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
-import LookupPatternsCertainCategoryDemo from './LookupPatternsCertainCategoryDemo.js'
-import NoncasesensitiveAutoCompleteDemo from './NoncasesensitiveAutoCompleteDemo.js'
 import CustomizeInputComponentDemo from './CustomizeInputComponentDemo.js'
+import LookupPatternsCertainCategoryDemo from './LookupPatternsCertainCategoryDemo.js'
 import CustomizedDemo from './CustomizedDemo.js'
 import LookupPatternsUncertainCategoryDemo from './LookupPatternsUncertainCategoryDemo.js'
+import NoncasesensitiveAutoCompleteDemo from './NoncasesensitiveAutoCompleteDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -61,23 +61,23 @@ Autocomplete function of input field.
         <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Lookup Patterns Certain Category" bordered={true}><LookupPatternsCertainCategoryDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Noncasesensitive Auto Complete" bordered={true}><NoncasesensitiveAutoCompleteDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Customize Input Component" bordered={true}><CustomizeInputComponentDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Customized" bordered={true}><CustomizedDemo /></Card>
+        <Card title="Lookup Patterns Certain Category" bordered={true}><LookupPatternsCertainCategoryDemo /></Card>
         </Col>
         <Col span={12}>
+        <Card title="Customized" bordered={true}><CustomizedDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
         <Card title="Lookup Patterns Uncertain Category" bordered={true}><LookupPatternsUncertainCategoryDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Noncasesensitive Auto Complete" bordered={true}><NoncasesensitiveAutoCompleteDemo /></Card>
         </Col>
 </Row>
 

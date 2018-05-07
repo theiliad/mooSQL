@@ -1,12 +1,12 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
+    import CustomizedStyleDemo from './CustomizedStyleDemo.js'
+import BasicDemo from './BasicDemo.js'
 import CustomizedIconDemo from './CustomizedIconDemo.js'
-import CustomizedStyleDemo from './CustomizedStyleDemo.js'
 import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
 import PlacementDemo from './PlacementDemo.js'
-import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
+import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -75,15 +75,15 @@ Display a notification message globally.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Customized Style" bordered={true}><CustomizedStyleDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Customized Icon" bordered={true}><CustomizedIconDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Customized Style" bordered={true}><CustomizedStyleDemo /></Card>
+        <Card title="Customized Icon" bordered={true}><CustomizedIconDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Duration After Which The Notification Box Is Closed" bordered={true}><DurationAfterWhichTheNotificationBoxIsClosedDemo /></Card>
@@ -94,12 +94,12 @@ Display a notification message globally.
         <Card title="Placement" bordered={true}><PlacementDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Custom Close Button" bordered={true}><CustomCloseButtonDemo /></Card>
+        <Card title="Notification With Icon" bordered={true}><NotificationWithIconDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>
         <Col span={12}>
-        <Card title="Notification With Icon" bordered={true}><NotificationWithIconDemo /></Card>
+        <Card title="Custom Close Button" bordered={true}><CustomCloseButtonDemo /></Card>
         </Col>
 </Row>
 

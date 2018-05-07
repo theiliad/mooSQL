@@ -4,8 +4,8 @@ import React from 'react'
 import CheckAllDemo from './CheckAllDemo.js'
 import ControlledCheckboxDemo from './ControlledCheckboxDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import CheckboxGroupDemo from './CheckboxGroupDemo.js'
 import UseWithGridDemo from './UseWithGridDemo.js'
+import CheckboxGroupDemo from './CheckboxGroupDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -76,10 +76,10 @@ Checkbox.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Checkbox Group" bordered={true}><CheckboxGroupDemo /></Card>
+        <Card title="Use With Grid" bordered={true}><UseWithGridDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Use With Grid" bordered={true}><UseWithGridDemo /></Card>
+        <Card title="Checkbox Group" bordered={true}><CheckboxGroupDemo /></Card>
         </Col>
 </Row>
 

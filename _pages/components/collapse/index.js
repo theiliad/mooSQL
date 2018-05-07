@@ -2,8 +2,8 @@ import React from 'react'
 
     import AccordionDemo from './AccordionDemo.js'
 import CollapseDemo from './CollapseDemo.js'
-import BorderlessDemo from './BorderlessDemo.js'
 import CustomPanelDemo from './CustomPanelDemo.js'
+import BorderlessDemo from './BorderlessDemo.js'
 import NestedPanelDemo from './NestedPanelDemo.js'
 import NoArrowDemo from './NoArrowDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -58,10 +58,10 @@ A content area which can be collapsed and expanded.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Borderless" bordered={true}><BorderlessDemo /></Card>
+        <Card title="Custom Panel" bordered={true}><CustomPanelDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Custom Panel" bordered={true}><CustomPanelDemo /></Card>
+        <Card title="Borderless" bordered={true}><BorderlessDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

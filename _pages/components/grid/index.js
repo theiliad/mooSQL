@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import BasicGridDemo from './BasicGridDemo.js'
-import FlexAlignmentDemo from './FlexAlignmentDemo.js'
+    import FlexAlignmentDemo from './FlexAlignmentDemo.js'
 import FlexOrderDemo from './FlexOrderDemo.js'
 import FlexLayoutDemo from './FlexLayoutDemo.js'
+import BasicGridDemo from './BasicGridDemo.js'
 import GridGutterDemo from './GridGutterDemo.js'
-import ColumnOffsetDemo from './ColumnOffsetDemo.js'
 import PlaygroundDemo from './PlaygroundDemo.js'
 import MoreResponsiveDemo from './MoreResponsiveDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
+import ColumnOffsetDemo from './ColumnOffsetDemo.js'
 import GridSortDemo from './GridSortDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -134,18 +134,18 @@ const expComponent = () => (
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Basic Grid" bordered={true}><BasicGridDemo /></Card>
+        <Card title="Flex Alignment" bordered={true}><FlexAlignmentDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Flex Alignment" bordered={true}><FlexAlignmentDemo /></Card>
+        <Card title="Flex Order" bordered={true}><FlexOrderDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Flex Order" bordered={true}><FlexOrderDemo /></Card>
+        <Card title="Flex Layout" bordered={true}><FlexLayoutDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Flex Layout" bordered={true}><FlexLayoutDemo /></Card>
+        <Card title="Basic Grid" bordered={true}><BasicGridDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -153,20 +153,20 @@ const expComponent = () => (
         <Card title="Grid Gutter" bordered={true}><GridGutterDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Column Offset" bordered={true}><ColumnOffsetDemo /></Card>
+        <Card title="Playground" bordered={true}><PlaygroundDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
-        <Col span={12}>
-        <Card title="Playground" bordered={true}><PlaygroundDemo /></Card>
-        </Col>
         <Col span={12}>
         <Card title="More Responsive" bordered={true}><MoreResponsiveDemo /></Card>
         </Col>
+        <Col span={12}>
+        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
+        </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Responsive" bordered={true}><ResponsiveDemo /></Card>
+        <Card title="Column Offset" bordered={true}><ColumnOffsetDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Grid Sort" bordered={true}><GridSortDemo /></Card>

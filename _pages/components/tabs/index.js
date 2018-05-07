@@ -7,10 +7,10 @@ import CustomizedTriggerOfNewTabDemo from './CustomizedTriggerOfNewTabDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import AddCloseTabDemo from './AddCloseTabDemo.js'
 import ExtraContentDemo from './ExtraContentDemo.js'
-import PositionDemo from './PositionDemo.js'
 import IconDemo from './IconDemo.js'
-import SizeDemo from './SizeDemo.js'
+import PositionDemo from './PositionDemo.js'
 import SlideDemo from './SlideDemo.js'
+import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -95,20 +95,20 @@ Tabs make it easy to switch between different views.
         <Card title="Extra Content" bordered={true}><ExtraContentDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Position" bordered={true}><PositionDemo /></Card>
+        <Card title="Icon" bordered={true}><IconDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Icon" bordered={true}><IconDemo /></Card>
+        <Card title="Position" bordered={true}><PositionDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
+        <Card title="Slide" bordered={true}><SlideDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>
         <Col span={12}>
-        <Card title="Slide" bordered={true}><SlideDemo /></Card>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
         </Col>
 </Row>
 

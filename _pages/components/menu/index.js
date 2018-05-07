@@ -2,10 +2,10 @@ import React from 'react'
 
     import TopNavigationDemo from './TopNavigationDemo.js'
 import CollapsedInlineMenuDemo from './CollapsedInlineMenuDemo.js'
-import InlineMenuDemo from './InlineMenuDemo.js'
 import OpenCurrentSubmenuOnlyDemo from './OpenCurrentSubmenuOnlyDemo.js'
 import SwitchTheMenuTypeDemo from './SwitchTheMenuTypeDemo.js'
 import MenuThemesDemo from './MenuThemesDemo.js'
+import InlineMenuDemo from './InlineMenuDemo.js'
 import VerticalMenuDemo from './VerticalMenuDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -96,18 +96,18 @@ Menu list of Navigation.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Inline Menu" bordered={true}><InlineMenuDemo /></Card>
+        <Card title="Open Current Submenu Only" bordered={true}><OpenCurrentSubmenuOnlyDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Open Current Submenu Only" bordered={true}><OpenCurrentSubmenuOnlyDemo /></Card>
+        <Card title="Switch The Menu Type" bordered={true}><SwitchTheMenuTypeDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Switch The Menu Type" bordered={true}><SwitchTheMenuTypeDemo /></Card>
+        <Card title="Menu Themes" bordered={true}><MenuThemesDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Menu Themes" bordered={true}><MenuThemesDemo /></Card>
+        <Card title="Inline Menu" bordered={true}><InlineMenuDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>

@@ -1,8 +1,8 @@
 import React from 'react'
 
     import WithBadgeDemo from './WithBadgeDemo.js'
-import BasicDemo from './BasicDemo.js'
 import AutosetFontSizeDemo from './AutosetFontSizeDemo.js'
+import BasicDemo from './BasicDemo.js'
 import TypeDemo from './TypeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -35,12 +35,12 @@ Avatars can be used to represent people or objects. It supports images, `Icon`s,
         <Card title="With Badge" bordered={true}><WithBadgeDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Autoset Font Size" bordered={true}><AutosetFontSizeDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Autoset Font Size" bordered={true}><AutosetFontSizeDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Type" bordered={true}><TypeDemo /></Card>

@@ -2,12 +2,12 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import RadioStyleDemo from './RadioStyleDemo.js'
 import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
-import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
+import RadioStyleDemo from './RadioStyleDemo.js'
 import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
-import RadioGroupDemo from './RadioGroupDemo.js'
 import SizeDemo from './SizeDemo.js'
+import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
+import RadioGroupDemo from './RadioGroupDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -74,10 +74,18 @@ Radio.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Radio Style" bordered={true}><RadioStyleDemo /></Card>
+        <Card title="Vertical Radio Group" bordered={true}><VerticalRadioGroupDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Vertical Radio Group" bordered={true}><VerticalRadioGroupDemo /></Card>
+        <Card title="Radio Style" bordered={true}><RadioStyleDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Radio Group Group Optional" bordered={true}><RadioGroupGroupOptionalDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Size" bordered={true}><SizeDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -85,15 +93,7 @@ Radio.
         <Card title="Radio Group With Name" bordered={true}><RadioGroupWithNameDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Radio Group Group Optional" bordered={true}><RadioGroupGroupOptionalDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Radio Group" bordered={true}><RadioGroupDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Size" bordered={true}><SizeDemo /></Card>
         </Col>
 </Row>
 

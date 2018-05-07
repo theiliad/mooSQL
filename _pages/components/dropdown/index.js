@@ -2,13 +2,13 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import ContextMenuDemo from './ContextMenuDemo.js'
-import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
 import ClickEventDemo from './ClickEventDemo.js'
-import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
+import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
 import OtherElementsDemo from './OtherElementsDemo.js'
 import PlacementDemo from './PlacementDemo.js'
-import CascadingMenuDemo from './CascadingMenuDemo.js'
 import TriggerModeDemo from './TriggerModeDemo.js'
+import CascadingMenuDemo from './CascadingMenuDemo.js'
+import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -73,23 +73,23 @@ A dropdown list.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Button With Dropdown Menu" bordered={true}><ButtonWithDropdownMenuDemo /></Card>
+        <Card title="Click Event" bordered={true}><ClickEventDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Click Event" bordered={true}><ClickEventDemo /></Card>
+        <Card title="Button With Dropdown Menu" bordered={true}><ButtonWithDropdownMenuDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
-        <Col span={12}>
-        <Card title="The Way Of Hiding Menu" bordered={true}><TheWayOfHidingMenuDemo /></Card>
-        </Col>
         <Col span={12}>
         <Card title="Other Elements" bordered={true}><OtherElementsDemo /></Card>
         </Col>
+        <Col span={12}>
+        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Placement" bordered={true}><PlacementDemo /></Card>
+        <Card title="Trigger Mode" bordered={true}><TriggerModeDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Cascading Menu" bordered={true}><CascadingMenuDemo /></Card>
@@ -97,7 +97,7 @@ A dropdown list.
 </Row>
 <Row gutter={30}>
         <Col span={12}>
-        <Card title="Trigger Mode" bordered={true}><TriggerModeDemo /></Card>
+        <Card title="The Way Of Hiding Menu" bordered={true}><TheWayOfHidingMenuDemo /></Card>
         </Col>
 </Row>
 

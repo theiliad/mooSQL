@@ -1,8 +1,8 @@
 import React from 'react'
 
     import PrePostTabDemo from './PrePostTabDemo.js'
-import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
 import BasicUsageDemo from './BasicUsageDemo.js'
+import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
 import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
@@ -93,12 +93,12 @@ Keyboard and mouse can be used for providing or changing data.
         <Card title="Pre Post Tab" bordered={true}><PrePostTabDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Autosizing The Height To Fit The Content" bordered={true}><AutosizingTheHeightToFitTheContentDemo /></Card>
+        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
+        <Card title="Autosizing The Height To Fit The Content" bordered={true}><AutosizingTheHeightToFitTheContentDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Input Group" bordered={true}><InputGroupDemo /></Card>

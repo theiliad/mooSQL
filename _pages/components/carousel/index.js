@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import ScrollAutomaticallyDemo from './ScrollAutomaticallyDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import ScrollAutomaticallyDemo from './ScrollAutomaticallyDemo.js'
 import FadeInDemo from './FadeInDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -50,10 +50,10 @@ A carousel component. Scales with its container.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Scroll Automatically" bordered={true}><ScrollAutomaticallyDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Scroll Automatically" bordered={true}><ScrollAutomaticallyDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

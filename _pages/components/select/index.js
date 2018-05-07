@@ -4,13 +4,13 @@ import React from 'react'
 import BasicUsageDemo from './BasicUsageDemo.js'
 import AutomaticCompletionDemo from './AutomaticCompletionDemo.js'
 import CoordinateDemo from './CoordinateDemo.js'
-import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
-import OptionGroupDemo from './OptionGroupDemo.js'
+import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
 import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
+import OptionGroupDemo from './OptionGroupDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
-import SizesDemo from './SizesDemo.js'
 import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
+import SizesDemo from './SizesDemo.js'
 import TagsDemo from './TagsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -117,18 +117,18 @@ Select component to select value from options.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Get Value Of Selected Item" bordered={true}><GetValueOfSelectedItemDemo /></Card>
+        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Multiple Selection" bordered={true}><MultipleSelectionDemo /></Card>
+        <Card title="Get Value Of Selected Item" bordered={true}><GetValueOfSelectedItemDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Option Group" bordered={true}><OptionGroupDemo /></Card>
+        <Card title="Select With Search Field" bordered={true}><SelectWithSearchFieldDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Select With Search Field" bordered={true}><SelectWithSearchFieldDemo /></Card>
+        <Card title="Option Group" bordered={true}><OptionGroupDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -136,12 +136,12 @@ Select component to select value from options.
         <Card title="Search Box" bordered={true}><SearchBoxDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Sizes" bordered={true}><SizesDemo /></Card>
+        <Card title="Search And Select Users" bordered={true}><SearchAndSelectUsersDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Search And Select Users" bordered={true}><SearchAndSelectUsersDemo /></Card>
+        <Card title="Sizes" bordered={true}><SizesDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Tags" bordered={true}><TagsDemo /></Card>

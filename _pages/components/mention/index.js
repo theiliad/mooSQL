@@ -2,8 +2,8 @@ import React from 'react'
 
     import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
 import IconImageDemo from './IconImageDemo.js'
-import ControlledDemo from './ControlledDemo.js'
 import BasicDemo from './BasicDemo.js'
+import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
@@ -91,10 +91,10 @@ Mention component.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

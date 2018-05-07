@@ -1,3 +1,19 @@
+.ant-card {
+    box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.1);
+    transition: $generic_transition;
+
+    &.hoverable {
+        &:hover {
+            box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.3);
+            transition: $generic_transition;
+        }
+    }
+
+    div.ant-card-head {
+        border-bottom: 1px solid rgba(239, 240, 251, 1);
+    }
+}
+
 .ant-card.gradient-primary, .ant-card.ant-card.gradient-secondary {
     margin-bottom: 15px;
 }

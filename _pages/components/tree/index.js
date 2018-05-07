@@ -1,9 +1,9 @@
 import React from 'react'
 
     import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
-import BasicDemo from './BasicDemo.js'
 import CustomizeIconDemo from './CustomizeIconDemo.js'
 import DraggableDemo from './DraggableDemo.js'
+import BasicDemo from './BasicDemo.js'
 import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
 import TreeWithLineDemo from './TreeWithLineDemo.js'
 import SearchableDemo from './SearchableDemo.js'
@@ -85,15 +85,15 @@ const expComponent = () => (
         <Card title="Basic Controlled Example" bordered={true}><BasicControlledExampleDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Customize Icon" bordered={true}><CustomizeIconDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Customize Icon" bordered={true}><CustomizeIconDemo /></Card>
+        <Card title="Draggable" bordered={true}><DraggableDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Draggable" bordered={true}><DraggableDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

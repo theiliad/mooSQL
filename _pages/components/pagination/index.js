@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import ChangerDemo from './ChangerDemo.js'
-import BasicDemo from './BasicDemo.js'
-import PrevAndNextDemo from './PrevAndNextDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import ChangerDemo from './ChangerDemo.js'
 import ControlledDemo from './ControlledDemo.js'
+import PrevAndNextDemo from './PrevAndNextDemo.js'
 import JumperDemo from './JumperDemo.js'
 import MiniSizeDemo from './MiniSizeDemo.js'
-import SimpleModeDemo from './SimpleModeDemo.js'
 import MoreDemo from './MoreDemo.js'
+import SimpleModeDemo from './SimpleModeDemo.js'
 import TotalNumberDemo from './TotalNumberDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -55,18 +55,18 @@ A long list can be divided into several pages by `Pagination`, and only one page
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Changer" bordered={true}><ChangerDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Changer" bordered={true}><ChangerDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Prev And Next" bordered={true}><PrevAndNextDemo /></Card>
+        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Controlled" bordered={true}><ControlledDemo /></Card>
+        <Card title="Prev And Next" bordered={true}><PrevAndNextDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -79,10 +79,10 @@ A long list can be divided into several pages by `Pagination`, and only one page
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Simple Mode" bordered={true}><SimpleModeDemo /></Card>
+        <Card title="More" bordered={true}><MoreDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="More" bordered={true}><MoreDemo /></Card>
+        <Card title="Simple Mode" bordered={true}><SimpleModeDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>

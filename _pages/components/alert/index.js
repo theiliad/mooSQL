@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import BannerDemo from './BannerDemo.js'
+    import BannerDemo from './BannerDemo.js'
+import BasicDemo from './BasicDemo.js'
 import ClosableDemo from './ClosableDemo.js'
-import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
-import DescriptionDemo from './DescriptionDemo.js'
 import IconDemo from './IconDemo.js'
+import DescriptionDemo from './DescriptionDemo.js'
+import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
 import SmoothlyUnmountDemo from './SmoothlyUnmountDemo.js'
 import MoreTypesDemo from './MoreTypesDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -47,10 +47,10 @@ Alert component for feedback.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Banner" bordered={true}><BannerDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Banner" bordered={true}><BannerDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -58,7 +58,7 @@ Alert component for feedback.
         <Card title="Closable" bordered={true}><ClosableDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Customized Close Text" bordered={true}><CustomizedCloseTextDemo /></Card>
+        <Card title="Icon" bordered={true}><IconDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -66,7 +66,7 @@ Alert component for feedback.
         <Card title="Description" bordered={true}><DescriptionDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Icon" bordered={true}><IconDemo /></Card>
+        <Card title="Customized Close Text" bordered={true}><CustomizedCloseTextDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

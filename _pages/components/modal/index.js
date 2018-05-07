@@ -2,13 +2,13 @@ import React from 'react'
 
     import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
 import BasicDemo from './BasicDemo.js'
-import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
-import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
 import CustomizedFooterDemo from './CustomizedFooterDemo.js'
-import InformationModalDialogDemo from './InformationModalDialogDemo.js'
+import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
 import InternationalizationDemo from './InternationalizationDemo.js'
-import ManualToDestroyDemo from './ManualToDestroyDemo.js'
+import InformationModalDialogDemo from './InformationModalDialogDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
+import ManualToDestroyDemo from './ManualToDestroyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -113,31 +113,31 @@ Modal dialogs.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
         <Card title="Customized Footer" bordered={true}><CustomizedFooterDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Information Modal Dialog" bordered={true}><InformationModalDialogDemo /></Card>
+        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Internationalization" bordered={true}><InternationalizationDemo /></Card>
+        <Card title="Confirmation Modal Dialog" bordered={true}><ConfirmationModalDialogDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Manual To Destroy" bordered={true}><ManualToDestroyDemo /></Card>
+        <Card title="Internationalization" bordered={true}><InternationalizationDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Information Modal Dialog" bordered={true}><InformationModalDialogDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="To Customize The Position Of Modal" bordered={true}><ToCustomizeThePositionOfModalDemo /></Card>
         </Col>
 </Row>
 <Row gutter={30}>
         <Col span={12}>
-        <Card title="To Customize The Position Of Modal" bordered={true}><ToCustomizeThePositionOfModalDemo /></Card>
+        <Card title="Manual To Destroy" bordered={true}><ManualToDestroyDemo /></Card>
         </Col>
 </Row>
 

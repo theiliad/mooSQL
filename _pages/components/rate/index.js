@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
+    import ClearStarDemo from './ClearStarDemo.js'
 import OtherCharacterDemo from './OtherCharacterDemo.js'
-import ClearStarDemo from './ClearStarDemo.js'
 import ReadOnlyDemo from './ReadOnlyDemo.js'
+import BasicDemo from './BasicDemo.js'
 import HalfStarDemo from './HalfStarDemo.js'
 import ShowCopywritingDemo from './ShowCopywritingDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -56,7 +56,7 @@ Rate component.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Clear Star" bordered={true}><ClearStarDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Other Character" bordered={true}><OtherCharacterDemo /></Card>
@@ -64,10 +64,10 @@ Rate component.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Clear Star" bordered={true}><ClearStarDemo /></Card>
+        <Card title="Read Only" bordered={true}><ReadOnlyDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Read Only" bordered={true}><ReadOnlyDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

@@ -1,10 +1,10 @@
 import React from 'react'
 
-    import AjaxDemo from './AjaxDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
+    import BasicUsageDemo from './BasicUsageDemo.js'
+import AjaxDemo from './AjaxDemo.js'
 import BorderTitleAndFooterDemo from './BorderTitleAndFooterDemo.js'
-import ColSpanAndRowSpanDemo from './ColSpanAndRowSpanDemo.js'
 import CustomizedFilterPanelDemo from './CustomizedFilterPanelDemo.js'
+import ColSpanAndRowSpanDemo from './ColSpanAndRowSpanDemo.js'
 import DragSortingDemo from './DragSortingDemo.js'
 import DynamicSettingsDemo from './DynamicSettingsDemo.js'
 import EditableCellsDemo from './EditableCellsDemo.js'
@@ -12,15 +12,15 @@ import EditableRowsDemo from './EditableRowsDemo.js'
 import TreeDataDemo from './TreeDataDemo.js'
 import ExpandableRowDemo from './ExpandableRowDemo.js'
 import FixedColumnsAndHeaderDemo from './FixedColumnsAndHeaderDemo.js'
-import FixedColumnsDemo from './FixedColumnsDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
+import FixedColumnsDemo from './FixedColumnsDemo.js'
 import GroupingTableHeadDemo from './GroupingTableHeadDemo.js'
-import FilterAndSorterDemo from './FilterAndSorterDemo.js'
 import JSXStyleAPIDemo from './JSXStyleAPIDemo.js'
 import NestedTablesDemo from './NestedTablesDemo.js'
-import ResetFiltersAndSortersDemo from './ResetFiltersAndSortersDemo.js'
+import FilterAndSorterDemo from './FilterAndSorterDemo.js'
 import SelectionAndOperationDemo from './SelectionAndOperationDemo.js'
 import CustomSelectionDemo from './CustomSelectionDemo.js'
+import ResetFiltersAndSortersDemo from './ResetFiltersAndSortersDemo.js'
 import SelectionDemo from './SelectionDemo.js'
 import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -179,10 +179,10 @@ A table displays rows of data.
             <Card bordered={false}>
                 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Ajax" bordered={true}><AjaxDemo /></Card>
+        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic Usage" bordered={true}><BasicUsageDemo /></Card>
+        <Card title="Ajax" bordered={true}><AjaxDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -190,12 +190,12 @@ A table displays rows of data.
         <Card title="Border Title And Footer" bordered={true}><BorderTitleAndFooterDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Col Span And Row Span" bordered={true}><ColSpanAndRowSpanDemo /></Card>
+        <Card title="Customized Filter Panel" bordered={true}><CustomizedFilterPanelDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Customized Filter Panel" bordered={true}><CustomizedFilterPanelDemo /></Card>
+        <Card title="Col Span And Row Span" bordered={true}><ColSpanAndRowSpanDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Drag Sorting" bordered={true}><DragSortingDemo /></Card>
@@ -227,10 +227,10 @@ A table displays rows of data.
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Fixed Columns" bordered={true}><FixedColumnsDemo /></Card>
+        <Card title="Fixed Header" bordered={true}><FixedHeaderDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Fixed Header" bordered={true}><FixedHeaderDemo /></Card>
+        <Card title="Fixed Columns" bordered={true}><FixedColumnsDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -238,28 +238,28 @@ A table displays rows of data.
         <Card title="Grouping Table Head" bordered={true}><GroupingTableHeadDemo /></Card>
         </Col>
         <Col span={12}>
+        <Card title="J S X Style A P I" bordered={true}><JSXStyleAPIDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={16}>
+        <Col span={12}>
+        <Card title="Nested Tables" bordered={true}><NestedTablesDemo /></Card>
+        </Col>
+        <Col span={12}>
         <Card title="Filter And Sorter" bordered={true}><FilterAndSorterDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="J S X Style A P I" bordered={true}><JSXStyleAPIDemo /></Card>
+        <Card title="Selection And Operation" bordered={true}><SelectionAndOperationDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Nested Tables" bordered={true}><NestedTablesDemo /></Card>
+        <Card title="Custom Selection" bordered={true}><CustomSelectionDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
         <Card title="Reset Filters And Sorters" bordered={true}><ResetFiltersAndSortersDemo /></Card>
-        </Col>
-        <Col span={12}>
-        <Card title="Selection And Operation" bordered={true}><SelectionAndOperationDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Custom Selection" bordered={true}><CustomSelectionDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Selection" bordered={true}><SelectionDemo /></Card>

@@ -1,13 +1,13 @@
 import React from 'react'
 
     import HoursDemo from './HoursDemo.js'
-import BasicDemo from './BasicDemo.js'
 import AddonDemo from './AddonDemo.js'
+import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import HourAndMinuteDemo from './HourAndMinuteDemo.js'
-import IntervalOptionDemo from './IntervalOptionDemo.js'
-import UnderControlDemo from './UnderControlDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
+import UnderControlDemo from './UnderControlDemo.js'
+import IntervalOptionDemo from './IntervalOptionDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -78,12 +78,12 @@ To select/input a time.
         <Card title="Hours" bordered={true}><HoursDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Addon" bordered={true}><AddonDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Addon" bordered={true}><AddonDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Disabled" bordered={true}><DisabledDemo /></Card>
@@ -94,7 +94,7 @@ To select/input a time.
         <Card title="Hour And Minute" bordered={true}><HourAndMinuteDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Interval Option" bordered={true}><IntervalOptionDemo /></Card>
+        <Card title="Three Sizes" bordered={true}><ThreeSizesDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
@@ -102,7 +102,7 @@ To select/input a time.
         <Card title="Under Control" bordered={true}><UnderControlDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Three Sizes" bordered={true}><ThreeSizesDemo /></Card>
+        <Card title="Interval Option" bordered={true}><IntervalOptionDemo /></Card>
         </Col>
 </Row>
 

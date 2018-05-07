@@ -4,17 +4,17 @@ import React from 'react'
 import CoordinatedControlsDemo from './CoordinatedControlsDemo.js'
 import CustomizedFormControlsDemo from './CustomizedFormControlsDemo.js'
 import DynamicFormItemDemo from './DynamicFormItemDemo.js'
-import DynamicRulesDemo from './DynamicRulesDemo.js'
 import FormInModalToCreateDemo from './FormInModalToCreateDemo.js'
 import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperComponentDemo.js'
+import DynamicRulesDemo from './DynamicRulesDemo.js'
 import HorizontalLoginFormDemo from './HorizontalLoginFormDemo.js'
 import FormLayoutDemo from './FormLayoutDemo.js'
 import LoginFormDemo from './LoginFormDemo.js'
-import RegistrationDemo from './RegistrationDemo.js'
 import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
-import OtherFormControlsDemo from './OtherFormControlsDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
+import RegistrationDemo from './RegistrationDemo.js'
+import OtherFormControlsDemo from './OtherFormControlsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -203,15 +203,15 @@ Form is used to collect, validate, and submit the user input, usually contains v
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Dynamic Rules" bordered={true}><DynamicRulesDemo /></Card>
+        <Card title="Form In Modal To Create" bordered={true}><FormInModalToCreateDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Form In Modal To Create" bordered={true}><FormInModalToCreateDemo /></Card>
+        <Card title="Store Form Data Into Upper Component" bordered={true}><StoreFormDataIntoUpperComponentDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Store Form Data Into Upper Component" bordered={true}><StoreFormDataIntoUpperComponentDemo /></Card>
+        <Card title="Dynamic Rules" bordered={true}><DynamicRulesDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Horizontal Login Form" bordered={true}><HorizontalLoginFormDemo /></Card>
@@ -227,23 +227,23 @@ Form is used to collect, validate, and submit the user input, usually contains v
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Registration" bordered={true}><RegistrationDemo /></Card>
-        </Col>
-        <Col span={12}>
         <Card title="Timerelated Controls" bordered={true}><TimerelatedControlsDemo /></Card>
-        </Col>
-</Row>
-<Row gutter={16}>
-        <Col span={12}>
-        <Card title="Other Form Controls" bordered={true}><OtherFormControlsDemo /></Card>
         </Col>
         <Col span={12}>
         <Card title="Customized Validation" bordered={true}><CustomizedValidationDemo /></Card>
         </Col>
 </Row>
-<Row gutter={30}>
+<Row gutter={16}>
         <Col span={12}>
         <Card title="Handle Form Data Manually" bordered={true}><HandleFormDataManuallyDemo /></Card>
+        </Col>
+        <Col span={12}>
+        <Card title="Registration" bordered={true}><RegistrationDemo /></Card>
+        </Col>
+</Row>
+<Row gutter={30}>
+        <Col span={12}>
+        <Card title="Other Form Controls" bordered={true}><OtherFormControlsDemo /></Card>
         </Col>
 </Row>
 

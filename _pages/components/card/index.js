@@ -5,9 +5,9 @@ import NoBorderDemo from './NoBorderDemo.js'
 import CustomizedContentDemo from './CustomizedContentDemo.js'
 import GridCardDemo from './GridCardDemo.js'
 import CardInColumnDemo from './CardInColumnDemo.js'
+import LoadingCardDemo from './LoadingCardDemo.js'
 import InnerCardDemo from './InnerCardDemo.js'
 import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
-import LoadingCardDemo from './LoadingCardDemo.js'
 import SimpleCardDemo from './SimpleCardDemo.js'
 import WithTabsDemo from './WithTabsDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -91,15 +91,15 @@ Simple rectangular container.
         <Card title="Card In Column" bordered={true}><CardInColumnDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Inner Card" bordered={true}><InnerCardDemo /></Card>
+        <Card title="Loading Card" bordered={true}><LoadingCardDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Support More Content Configuration" bordered={true}><SupportMoreContentConfigurationDemo /></Card>
+        <Card title="Inner Card" bordered={true}><InnerCardDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Loading Card" bordered={true}><LoadingCardDemo /></Card>
+        <Card title="Support More Content Configuration" bordered={true}><SupportMoreContentConfigurationDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>

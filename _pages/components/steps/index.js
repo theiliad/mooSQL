@@ -4,8 +4,8 @@ import React from 'react'
 import ErrorStatusDemo from './ErrorStatusDemo.js'
 import WithIconDemo from './WithIconDemo.js'
 import DotStyleDemo from './DotStyleDemo.js'
-import BasicDemo from './BasicDemo.js'
 import MiniVersionDemo from './MiniVersionDemo.js'
+import BasicDemo from './BasicDemo.js'
 import SwitchStepDemo from './SwitchStepDemo.js'
 import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import VerticalDemo from './VerticalDemo.js'
@@ -74,10 +74,10 @@ const expComponent = () => (
 </Row>
 <Row gutter={16}>
         <Col span={12}>
-        <Card title="Basic" bordered={true}><BasicDemo /></Card>
+        <Card title="Mini Version" bordered={true}><MiniVersionDemo /></Card>
         </Col>
         <Col span={12}>
-        <Card title="Mini Version" bordered={true}><MiniVersionDemo /></Card>
+        <Card title="Basic" bordered={true}><BasicDemo /></Card>
         </Col>
 </Row>
 <Row gutter={16}>
