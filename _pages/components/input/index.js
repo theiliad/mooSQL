@@ -1,10 +1,10 @@
 import React from 'react'
 
     import PrePostTabDemo from './PrePostTabDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
 import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
-import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
+import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
 import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import TextAreaDemo from './TextAreaDemo.js'
@@ -98,20 +98,20 @@ Keyboard and mouse can be used for providing or changing data.
         <PrePostTabDemo />
         </div>
 <div className="component-demo">
-        <h4>Basic Usage</h4>
-        <BasicUsageDemo />
-        </div>
-<div className="component-demo">
         <h4>Autosizing The Height To Fit The Content</h4>
         <AutosizingTheHeightToFitTheContentDemo />
         </div>
 <div className="component-demo">
-        <h4>Prefix And Suffix</h4>
-        <PrefixAndSuffixDemo />
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
         </div>
 <div className="component-demo">
         <h4>Input Group</h4>
         <InputGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Prefix And Suffix</h4>
+        <PrefixAndSuffixDemo />
         </div>
 <div className="component-demo">
         <h4>Search Box</h4>

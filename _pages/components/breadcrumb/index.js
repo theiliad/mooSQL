@@ -3,8 +3,8 @@ import React from 'react'
     import BasicUsageDemo from './BasicUsageDemo.js'
 import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
 import ReactRouterIntegrationDemo from './ReactRouterIntegrationDemo.js'
-import WithAnIconDemo from './WithAnIconDemo.js'
 import ConfiguringTheSeparatorDemo from './ConfiguringTheSeparatorDemo.js'
+import WithAnIconDemo from './WithAnIconDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -77,12 +77,12 @@ A breadcrumb displays the current location within a hierarchy. It allows going b
         <ReactRouterIntegrationDemo />
         </div>
 <div className="component-demo">
-        <h4>With An Icon</h4>
-        <WithAnIconDemo />
-        </div>
-<div className="component-demo">
         <h4>Configuring The Separator</h4>
         <ConfiguringTheSeparatorDemo />
+        </div>
+<div className="component-demo">
+        <h4>With An Icon</h4>
+        <WithAnIconDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

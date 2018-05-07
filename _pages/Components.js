@@ -62,7 +62,7 @@ import UploadDemo from './components/upload/index.js'
 
 const ComponentsPage = ({ match }) => (
   <div className="components-demo">
-    <h3 className="title">Components</h3>
+    {/* <h3 className="title">Components</h3> */}
     
     <Route path={match.url + '/affix'} component={AffixDemo} exact={true} />
     <Route path={match.url + '/alert'} component={AlertDemo} exact={true} />

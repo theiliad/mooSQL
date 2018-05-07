@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import IconImageDemo from './IconImageDemo.js'
-import ControlledDemo from './ControlledDemo.js'
+    import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
+import IconImageDemo from './IconImageDemo.js'
 import BasicDemo from './BasicDemo.js'
-import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
+import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
-import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
+import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
@@ -87,20 +87,20 @@ Mention component.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Icon Image</h4>
-        <IconImageDemo />
+        <h4>Asynchronous Loading</h4>
+        <AsynchronousLoadingDemo />
         </div>
 <div className="component-demo">
-        <h4>Controlled</h4>
-        <ControlledDemo />
+        <h4>Icon Image</h4>
+        <IconImageDemo />
         </div>
 <div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Asynchronous Loading</h4>
-        <AsynchronousLoadingDemo />
+        <h4>Controlled</h4>
+        <ControlledDemo />
         </div>
 <div className="component-demo">
         <h4>With Form</h4>
@@ -111,12 +111,12 @@ Mention component.
         <CustomizeSuggestionDemo />
         </div>
 <div className="component-demo">
-        <h4>Customize Trigger Token</h4>
-        <CustomizeTriggerTokenDemo />
-        </div>
-<div className="component-demo">
         <h4>Multilines Mode</h4>
         <MultilinesModeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Trigger Token</h4>
+        <CustomizeTriggerTokenDemo />
         </div>
 <div className="component-demo">
         <h4>Placement</h4>

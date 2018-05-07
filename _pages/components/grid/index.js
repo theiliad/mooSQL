@@ -3,12 +3,12 @@ import React from 'react'
     import BasicGridDemo from './BasicGridDemo.js'
 import FlexAlignmentDemo from './FlexAlignmentDemo.js'
 import FlexOrderDemo from './FlexOrderDemo.js'
-import GridGutterDemo from './GridGutterDemo.js'
 import FlexLayoutDemo from './FlexLayoutDemo.js'
+import GridGutterDemo from './GridGutterDemo.js'
 import ColumnOffsetDemo from './ColumnOffsetDemo.js'
+import PlaygroundDemo from './PlaygroundDemo.js'
 import MoreResponsiveDemo from './MoreResponsiveDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
-import PlaygroundDemo from './PlaygroundDemo.js'
 import GridSortDemo from './GridSortDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -145,16 +145,20 @@ const expComponent = () => (
         <FlexOrderDemo />
         </div>
 <div className="component-demo">
-        <h4>Grid Gutter</h4>
-        <GridGutterDemo />
-        </div>
-<div className="component-demo">
         <h4>Flex Layout</h4>
         <FlexLayoutDemo />
         </div>
 <div className="component-demo">
+        <h4>Grid Gutter</h4>
+        <GridGutterDemo />
+        </div>
+<div className="component-demo">
         <h4>Column Offset</h4>
         <ColumnOffsetDemo />
+        </div>
+<div className="component-demo">
+        <h4>Playground</h4>
+        <PlaygroundDemo />
         </div>
 <div className="component-demo">
         <h4>More Responsive</h4>
@@ -163,10 +167,6 @@ const expComponent = () => (
 <div className="component-demo">
         <h4>Responsive</h4>
         <ResponsiveDemo />
-        </div>
-<div className="component-demo">
-        <h4>Playground</h4>
-        <PlaygroundDemo />
         </div>
 <div className="component-demo">
         <h4>Grid Sort</h4>

@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import CustomDemo from './CustomDemo.js'
 import ColorDemo from './ColorDemo.js'
+import CustomDemo from './CustomDemo.js'
 import LastNodeDemo from './LastNodeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -59,12 +59,12 @@ Vertical display timeline.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Custom</h4>
-        <CustomDemo />
-        </div>
-<div className="component-demo">
         <h4>Color</h4>
         <ColorDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom</h4>
+        <CustomDemo />
         </div>
 <div className="component-demo">
         <h4>Last Node</h4>

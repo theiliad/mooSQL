@@ -3,8 +3,8 @@ import React from 'react'
     import BasicUsageDemo from './BasicUsageDemo.js'
 import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
 import DelayDemo from './DelayDemo.js'
-import EmbeddedModeDemo from './EmbeddedModeDemo.js'
 import InsideAContainerDemo from './InsideAContainerDemo.js'
+import EmbeddedModeDemo from './EmbeddedModeDemo.js'
 import SizeDemo from './SizeDemo.js'
 import CustomizedDescriptionDemo from './CustomizedDescriptionDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -52,12 +52,12 @@ A spinner for displaying loading state of a page or a section.
         <DelayDemo />
         </div>
 <div className="component-demo">
-        <h4>Embedded Mode</h4>
-        <EmbeddedModeDemo />
-        </div>
-<div className="component-demo">
         <h4>Inside A Container</h4>
         <InsideAContainerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Embedded Mode</h4>
+        <EmbeddedModeDemo />
         </div>
 <div className="component-demo">
         <h4>Size</h4>

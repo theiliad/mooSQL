@@ -3,11 +3,11 @@ import React from 'react'
     import AvatarDemo from './AvatarDemo.js'
 import UploadByClickingDemo from './UploadByClickingDemo.js'
 import DefaultFilesDemo from './DefaultFilesDemo.js'
+import DragAndDropDemo from './DragAndDropDemo.js'
 import CompleteControlOverFileListDemo from './CompleteControlOverFileListDemo.js'
 import PicturesWallDemo from './PicturesWallDemo.js'
 import PicturesWithListStyleDemo from './PicturesWithListStyleDemo.js'
 import UploadManuallyDemo from './UploadManuallyDemo.js'
-import DragAndDropDemo from './DragAndDropDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -113,6 +113,10 @@ Upload file by selecting or dragging.
         <DefaultFilesDemo />
         </div>
 <div className="component-demo">
+        <h4>Drag And Drop</h4>
+        <DragAndDropDemo />
+        </div>
+<div className="component-demo">
         <h4>Complete Control Over File List</h4>
         <CompleteControlOverFileListDemo />
         </div>
@@ -127,10 +131,6 @@ Upload file by selecting or dragging.
 <div className="component-demo">
         <h4>Upload Manually</h4>
         <UploadManuallyDemo />
-        </div>
-<div className="component-demo">
-        <h4>Drag And Drop</h4>
-        <DragAndDropDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

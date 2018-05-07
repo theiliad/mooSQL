@@ -2,12 +2,12 @@ import React from 'react'
 
     import CustomizedDotStyleDemo from './CustomizedDotStyleDemo.js'
 import ErrorStatusDemo from './ErrorStatusDemo.js'
-import DotStyleDemo from './DotStyleDemo.js'
 import WithIconDemo from './WithIconDemo.js'
+import DotStyleDemo from './DotStyleDemo.js'
 import BasicDemo from './BasicDemo.js'
 import MiniVersionDemo from './MiniVersionDemo.js'
-import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import SwitchStepDemo from './SwitchStepDemo.js'
+import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -71,12 +71,12 @@ const expComponent = () => (
         <ErrorStatusDemo />
         </div>
 <div className="component-demo">
-        <h4>Dot Style</h4>
-        <DotStyleDemo />
-        </div>
-<div className="component-demo">
         <h4>With Icon</h4>
         <WithIconDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dot Style</h4>
+        <DotStyleDemo />
         </div>
 <div className="component-demo">
         <h4>Basic</h4>
@@ -87,12 +87,12 @@ const expComponent = () => (
         <MiniVersionDemo />
         </div>
 <div className="component-demo">
-        <h4>Vertical Mini Version</h4>
-        <VerticalMiniVersionDemo />
-        </div>
-<div className="component-demo">
         <h4>Switch Step</h4>
         <SwitchStepDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical Mini Version</h4>
+        <VerticalMiniVersionDemo />
         </div>
 <div className="component-demo">
         <h4>Vertical</h4>

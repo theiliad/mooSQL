@@ -9,8 +9,8 @@ import AddCloseTabDemo from './AddCloseTabDemo.js'
 import ExtraContentDemo from './ExtraContentDemo.js'
 import IconDemo from './IconDemo.js'
 import PositionDemo from './PositionDemo.js'
-import SlideDemo from './SlideDemo.js'
 import SizeDemo from './SizeDemo.js'
+import SlideDemo from './SlideDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -103,12 +103,12 @@ Tabs make it easy to switch between different views.
         <PositionDemo />
         </div>
 <div className="component-demo">
-        <h4>Slide</h4>
-        <SlideDemo />
-        </div>
-<div className="component-demo">
         <h4>Size</h4>
         <SizeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Slide</h4>
+        <SlideDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

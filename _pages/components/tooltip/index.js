@@ -1,9 +1,9 @@
 import React from 'react'
 
     import ArrowPointingAtTheCenterDemo from './ArrowPointingAtTheCenterDemo.js'
-import PlacementDemo from './PlacementDemo.js'
 import AdjustPlacementAutomaticallyDemo from './AdjustPlacementAutomaticallyDemo.js'
 import BasicDemo from './BasicDemo.js'
+import PlacementDemo from './PlacementDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -60,16 +60,16 @@ A simple text popup tip.
         <ArrowPointingAtTheCenterDemo />
         </div>
 <div className="component-demo">
-        <h4>Placement</h4>
-        <PlacementDemo />
-        </div>
-<div className="component-demo">
         <h4>Adjust Placement Automatically</h4>
         <AdjustPlacementAutomaticallyDemo />
         </div>
 <div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Placement</h4>
+        <PlacementDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

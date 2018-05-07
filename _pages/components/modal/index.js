@@ -1,13 +1,13 @@
 import React from 'react'
 
     import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
-import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
 import BasicDemo from './BasicDemo.js'
-import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import InformationModalDialogDemo from './InformationModalDialogDemo.js'
-import ManualToDestroyDemo from './ManualToDestroyDemo.js'
 import InternationalizationDemo from './InternationalizationDemo.js'
+import ManualToDestroyDemo from './ManualToDestroyDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -111,32 +111,32 @@ Modal dialogs.
         <AsynchronouslyCloseDemo />
         </div>
 <div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo">
         <h4>Confirmation Modal Dialog</h4>
         <ConfirmationModalDialogDemo />
         </div>
 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
+        <h4>Confirmation Modal Dialog</h4>
+        <ConfirmationModalDialogDemo />
         </div>
 <div className="component-demo">
         <h4>Customized Footer</h4>
         <CustomizedFooterDemo />
         </div>
 <div className="component-demo">
-        <h4>Confirmation Modal Dialog</h4>
-        <ConfirmationModalDialogDemo />
-        </div>
-<div className="component-demo">
         <h4>Information Modal Dialog</h4>
         <InformationModalDialogDemo />
         </div>
 <div className="component-demo">
-        <h4>Manual To Destroy</h4>
-        <ManualToDestroyDemo />
-        </div>
-<div className="component-demo">
         <h4>Internationalization</h4>
         <InternationalizationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Manual To Destroy</h4>
+        <ManualToDestroyDemo />
         </div>
 <div className="component-demo">
         <h4>To Customize The Position Of Modal</h4>

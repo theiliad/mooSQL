@@ -2,9 +2,9 @@ import React from 'react'
 
     import TypeDemo from './TypeDemo.js'
 import ButtonGroupDemo from './ButtonGroupDemo.js'
-import IconDemo from './IconDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import GhostButtonDemo from './GhostButtonDemo.js'
+import IconDemo from './IconDemo.js'
 import LoadingDemo from './LoadingDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
 import SizeDemo from './SizeDemo.js'
@@ -70,16 +70,16 @@ To trigger an operation.
         <ButtonGroupDemo />
         </div>
 <div className="component-demo">
-        <h4>Icon</h4>
-        <IconDemo />
-        </div>
-<div className="component-demo">
         <h4>Disabled</h4>
         <DisabledDemo />
         </div>
 <div className="component-demo">
         <h4>Ghost Button</h4>
         <GhostButtonDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon</h4>
+        <IconDemo />
         </div>
 <div className="component-demo">
         <h4>Loading</h4>

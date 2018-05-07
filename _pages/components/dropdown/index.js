@@ -5,9 +5,9 @@ import ContextMenuDemo from './ContextMenuDemo.js'
 import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
 import ClickEventDemo from './ClickEventDemo.js'
 import OtherElementsDemo from './OtherElementsDemo.js'
+import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import CascadingMenuDemo from './CascadingMenuDemo.js'
-import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
 import TriggerModeDemo from './TriggerModeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -84,16 +84,16 @@ A dropdown list.
         <OtherElementsDemo />
         </div>
 <div className="component-demo">
+        <h4>The Way Of Hiding Menu</h4>
+        <TheWayOfHidingMenuDemo />
+        </div>
+<div className="component-demo">
         <h4>Placement</h4>
         <PlacementDemo />
         </div>
 <div className="component-demo">
         <h4>Cascading Menu</h4>
         <CascadingMenuDemo />
-        </div>
-<div className="component-demo">
-        <h4>The Way Of Hiding Menu</h4>
-        <TheWayOfHidingMenuDemo />
         </div>
 <div className="component-demo">
         <h4>Trigger Mode</h4>

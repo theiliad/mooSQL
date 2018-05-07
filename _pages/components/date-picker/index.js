@@ -1,14 +1,14 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
-import DisabledDemo from './DisabledDemo.js'
 import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
-import PresettedRangesDemo from './PresettedRangesDemo.js'
 import ControlledPanelsDemo from './ControlledPanelsDemo.js'
+import PresettedRangesDemo from './PresettedRangesDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
+import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -142,16 +142,12 @@ To select or input a date.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Customized Date Rendering</h4>
-        <CustomizedDateRenderingDemo />
+        <h4>Disabled Date Time</h4>
+        <DisabledDateTimeDemo />
         </div>
 <div className="component-demo">
         <h4>Disabled</h4>
         <DisabledDemo />
-        </div>
-<div className="component-demo">
-        <h4>Disabled Date Time</h4>
-        <DisabledDateTimeDemo />
         </div>
 <div className="component-demo">
         <h4>Extra Footer</h4>
@@ -162,16 +158,20 @@ To select or input a date.
         <DateFormatDemo />
         </div>
 <div className="component-demo">
-        <h4>Presetted Ranges</h4>
-        <PresettedRangesDemo />
-        </div>
-<div className="component-demo">
         <h4>Controlled Panels</h4>
         <ControlledPanelsDemo />
         </div>
 <div className="component-demo">
+        <h4>Presetted Ranges</h4>
+        <PresettedRangesDemo />
+        </div>
+<div className="component-demo">
         <h4>Three Sizes</h4>
         <ThreeSizesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Date Rendering</h4>
+        <CustomizedDateRenderingDemo />
         </div>
 <div className="component-demo">
         <h4>Customized Range Picker</h4>

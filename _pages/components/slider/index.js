@@ -5,8 +5,8 @@ import EventDemo from './EventDemo.js'
 import SliderWithIconDemo from './SliderWithIconDemo.js'
 import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
 import GraduatedSliderDemo from './GraduatedSliderDemo.js'
-import VerticalDemo from './VerticalDemo.js'
 import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
+import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -76,12 +76,12 @@ A Slider component for displaying current value and intervals in range.
         <GraduatedSliderDemo />
         </div>
 <div className="component-demo">
-        <h4>Vertical</h4>
-        <VerticalDemo />
-        </div>
-<div className="component-demo">
         <h4>Customize Tooltip</h4>
         <CustomizeTooltipDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical</h4>
+        <VerticalDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

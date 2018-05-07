@@ -2,12 +2,12 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
 import RadioStyleDemo from './RadioStyleDemo.js'
+import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
 import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
 import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
-import SizeDemo from './SizeDemo.js'
 import RadioGroupDemo from './RadioGroupDemo.js'
+import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -73,12 +73,12 @@ Radio.
         <DisabledDemo />
         </div>
 <div className="component-demo">
-        <h4>Vertical Radio Group</h4>
-        <VerticalRadioGroupDemo />
-        </div>
-<div className="component-demo">
         <h4>Radio Style</h4>
         <RadioStyleDemo />
+        </div>
+<div className="component-demo">
+        <h4>Vertical Radio Group</h4>
+        <VerticalRadioGroupDemo />
         </div>
 <div className="component-demo">
         <h4>Radio Group Group Optional</h4>
@@ -89,12 +89,12 @@ Radio.
         <RadioGroupWithNameDemo />
         </div>
 <div className="component-demo">
-        <h4>Size</h4>
-        <SizeDemo />
-        </div>
-<div className="component-demo">
         <h4>Radio Group</h4>
         <RadioGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Size</h4>
+        <SizeDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

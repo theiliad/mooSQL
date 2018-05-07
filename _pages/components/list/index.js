@@ -3,11 +3,11 @@ import React from 'react'
     import BasicListDemo from './BasicListDemo.js'
 import GridDemo from './GridDemo.js'
 import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
-import LoadMoreDemo from './LoadMoreDemo.js'
-import SimpleListDemo from './SimpleListDemo.js'
-import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
-import VerticalDemo from './VerticalDemo.js'
 import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
+import LoadMoreDemo from './LoadMoreDemo.js'
+import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
+import SimpleListDemo from './SimpleListDemo.js'
+import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -87,24 +87,24 @@ Simple List.
         <ScrollingLoadedDemo />
         </div>
 <div className="component-demo">
-        <h4>Load More</h4>
-        <LoadMoreDemo />
+        <h4>Infinite Virtualized</h4>
+        <InfiniteVirtualizedDemo />
         </div>
 <div className="component-demo">
-        <h4>Simple List</h4>
-        <SimpleListDemo />
+        <h4>Load More</h4>
+        <LoadMoreDemo />
         </div>
 <div className="component-demo">
         <h4>Responsive Grid List</h4>
         <ResponsiveGridListDemo />
         </div>
 <div className="component-demo">
-        <h4>Vertical</h4>
-        <VerticalDemo />
+        <h4>Simple List</h4>
+        <SimpleListDemo />
         </div>
 <div className="component-demo">
-        <h4>Infinite Virtualized</h4>
-        <InfiniteVirtualizedDemo />
+        <h4>Vertical</h4>
+        <VerticalDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

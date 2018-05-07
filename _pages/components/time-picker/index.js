@@ -1,12 +1,12 @@
 import React from 'react'
 
-    import AddonDemo from './AddonDemo.js'
+    import HoursDemo from './HoursDemo.js'
+import AddonDemo from './AddonDemo.js'
 import BasicDemo from './BasicDemo.js'
-import HoursDemo from './HoursDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import HourAndMinuteDemo from './HourAndMinuteDemo.js'
-import ThreeSizesDemo from './ThreeSizesDemo.js'
 import IntervalOptionDemo from './IntervalOptionDemo.js'
+import ThreeSizesDemo from './ThreeSizesDemo.js'
 import UnderControlDemo from './UnderControlDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -77,16 +77,16 @@ To select/input a time.
 
             <Card bordered={false}>
                 <div className="component-demo">
+        <h4>Hours</h4>
+        <HoursDemo />
+        </div>
+<div className="component-demo">
         <h4>Addon</h4>
         <AddonDemo />
         </div>
 <div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
-        </div>
-<div className="component-demo">
-        <h4>Hours</h4>
-        <HoursDemo />
         </div>
 <div className="component-demo">
         <h4>Disabled</h4>
@@ -97,12 +97,12 @@ To select/input a time.
         <HourAndMinuteDemo />
         </div>
 <div className="component-demo">
-        <h4>Three Sizes</h4>
-        <ThreeSizesDemo />
-        </div>
-<div className="component-demo">
         <h4>Interval Option</h4>
         <IntervalOptionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Three Sizes</h4>
+        <ThreeSizesDemo />
         </div>
 <div className="component-demo">
         <h4>Under Control</h4>

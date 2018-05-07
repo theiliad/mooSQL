@@ -1,28 +1,28 @@
 import React from 'react'
 
-    import BasicUsageDemo from './BasicUsageDemo.js'
+    import AjaxDemo from './AjaxDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import BorderTitleAndFooterDemo from './BorderTitleAndFooterDemo.js'
-import AjaxDemo from './AjaxDemo.js'
 import ColSpanAndRowSpanDemo from './ColSpanAndRowSpanDemo.js'
 import CustomizedFilterPanelDemo from './CustomizedFilterPanelDemo.js'
 import DragSortingDemo from './DragSortingDemo.js'
-import EditableRowsDemo from './EditableRowsDemo.js'
 import DynamicSettingsDemo from './DynamicSettingsDemo.js'
 import EditableCellsDemo from './EditableCellsDemo.js'
+import EditableRowsDemo from './EditableRowsDemo.js'
 import TreeDataDemo from './TreeDataDemo.js'
 import ExpandableRowDemo from './ExpandableRowDemo.js'
-import FixedColumnsDemo from './FixedColumnsDemo.js'
 import FixedColumnsAndHeaderDemo from './FixedColumnsAndHeaderDemo.js'
+import FixedColumnsDemo from './FixedColumnsDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
-import FilterAndSorterDemo from './FilterAndSorterDemo.js'
 import GroupingTableHeadDemo from './GroupingTableHeadDemo.js'
-import NestedTablesDemo from './NestedTablesDemo.js'
-import SelectionAndOperationDemo from './SelectionAndOperationDemo.js'
+import FilterAndSorterDemo from './FilterAndSorterDemo.js'
 import JSXStyleAPIDemo from './JSXStyleAPIDemo.js'
-import SelectionDemo from './SelectionDemo.js'
-import CustomSelectionDemo from './CustomSelectionDemo.js'
-import SizeDemo from './SizeDemo.js'
+import NestedTablesDemo from './NestedTablesDemo.js'
 import ResetFiltersAndSortersDemo from './ResetFiltersAndSortersDemo.js'
+import SelectionAndOperationDemo from './SelectionAndOperationDemo.js'
+import CustomSelectionDemo from './CustomSelectionDemo.js'
+import SelectionDemo from './SelectionDemo.js'
+import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -256,16 +256,16 @@ A table displays rows of data.
 
             <Card bordered={false}>
                 <div className="component-demo">
+        <h4>Ajax</h4>
+        <AjaxDemo />
+        </div>
+<div className="component-demo">
         <h4>Basic Usage</h4>
         <BasicUsageDemo />
         </div>
 <div className="component-demo">
         <h4>Border Title And Footer</h4>
         <BorderTitleAndFooterDemo />
-        </div>
-<div className="component-demo">
-        <h4>Ajax</h4>
-        <AjaxDemo />
         </div>
 <div className="component-demo">
         <h4>Col Span And Row Span</h4>
@@ -280,16 +280,16 @@ A table displays rows of data.
         <DragSortingDemo />
         </div>
 <div className="component-demo">
-        <h4>Editable Rows</h4>
-        <EditableRowsDemo />
-        </div>
-<div className="component-demo">
         <h4>Dynamic Settings</h4>
         <DynamicSettingsDemo />
         </div>
 <div className="component-demo">
         <h4>Editable Cells</h4>
         <EditableCellsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Editable Rows</h4>
+        <EditableRowsDemo />
         </div>
 <div className="component-demo">
         <h4>Tree Data</h4>
@@ -300,52 +300,52 @@ A table displays rows of data.
         <ExpandableRowDemo />
         </div>
 <div className="component-demo">
-        <h4>Fixed Columns</h4>
-        <FixedColumnsDemo />
-        </div>
-<div className="component-demo">
         <h4>Fixed Columns And Header</h4>
         <FixedColumnsAndHeaderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Fixed Columns</h4>
+        <FixedColumnsDemo />
         </div>
 <div className="component-demo">
         <h4>Fixed Header</h4>
         <FixedHeaderDemo />
         </div>
 <div className="component-demo">
-        <h4>Filter And Sorter</h4>
-        <FilterAndSorterDemo />
-        </div>
-<div className="component-demo">
         <h4>Grouping Table Head</h4>
         <GroupingTableHeadDemo />
         </div>
 <div className="component-demo">
-        <h4>Nested Tables</h4>
-        <NestedTablesDemo />
-        </div>
-<div className="component-demo">
-        <h4>Selection And Operation</h4>
-        <SelectionAndOperationDemo />
+        <h4>Filter And Sorter</h4>
+        <FilterAndSorterDemo />
         </div>
 <div className="component-demo">
         <h4>J S X Style A P I</h4>
         <JSXStyleAPIDemo />
         </div>
 <div className="component-demo">
-        <h4>Selection</h4>
-        <SelectionDemo />
+        <h4>Nested Tables</h4>
+        <NestedTablesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Reset Filters And Sorters</h4>
+        <ResetFiltersAndSortersDemo />
+        </div>
+<div className="component-demo">
+        <h4>Selection And Operation</h4>
+        <SelectionAndOperationDemo />
         </div>
 <div className="component-demo">
         <h4>Custom Selection</h4>
         <CustomSelectionDemo />
         </div>
 <div className="component-demo">
-        <h4>Size</h4>
-        <SizeDemo />
+        <h4>Selection</h4>
+        <SelectionDemo />
         </div>
 <div className="component-demo">
-        <h4>Reset Filters And Sorters</h4>
-        <ResetFiltersAndSortersDemo />
+        <h4>Size</h4>
+        <SizeDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

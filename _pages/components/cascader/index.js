@@ -6,8 +6,8 @@ import CustomRenderDemo from './CustomRenderDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
 import DisabledOptionDemo from './DisabledOptionDemo.js'
-import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
 import HoverDemo from './HoverDemo.js'
+import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
 import SearchDemo from './SearchDemo.js'
 import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -110,12 +110,12 @@ Cascade selection box.
         <DisabledOptionDemo />
         </div>
 <div className="component-demo">
-        <h4>Load Options Lazily</h4>
-        <LoadOptionsLazilyDemo />
-        </div>
-<div className="component-demo">
         <h4>Hover</h4>
         <HoverDemo />
+        </div>
+<div className="component-demo">
+        <h4>Load Options Lazily</h4>
+        <LoadOptionsLazilyDemo />
         </div>
 <div className="component-demo">
         <h4>Search</h4>

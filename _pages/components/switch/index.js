@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import LoadingDemo from './LoadingDemo.js'
-import BasicDemo from './BasicDemo.js'
-import TwoSizesDemo from './TwoSizesDemo.js'
+    import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
+import LoadingDemo from './LoadingDemo.js'
+import TwoSizesDemo from './TwoSizesDemo.js'
 import TextIconDemo from './TextIconDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -49,20 +49,20 @@ Switching Selector.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Loading</h4>
-        <LoadingDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Two Sizes</h4>
-        <TwoSizesDemo />
-        </div>
-<div className="component-demo">
         <h4>Disabled</h4>
         <DisabledDemo />
+        </div>
+<div className="component-demo">
+        <h4>Loading</h4>
+        <LoadingDemo />
+        </div>
+<div className="component-demo">
+        <h4>Two Sizes</h4>
+        <TwoSizesDemo />
         </div>
 <div className="component-demo">
         <h4>Text Icon</h4>

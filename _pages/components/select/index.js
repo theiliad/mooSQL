@@ -2,16 +2,16 @@ import React from 'react'
 
     import AutomaticTokenizationDemo from './AutomaticTokenizationDemo.js'
 import BasicUsageDemo from './BasicUsageDemo.js'
-import CoordinateDemo from './CoordinateDemo.js'
 import AutomaticCompletionDemo from './AutomaticCompletionDemo.js'
+import CoordinateDemo from './CoordinateDemo.js'
 import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
-import SearchBoxDemo from './SearchBoxDemo.js'
-import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import OptionGroupDemo from './OptionGroupDemo.js'
+import SearchBoxDemo from './SearchBoxDemo.js'
+import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
+import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
 import SizesDemo from './SizesDemo.js'
 import TagsDemo from './TagsDemo.js'
-import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -112,24 +112,16 @@ Select component to select value from options.
         <BasicUsageDemo />
         </div>
 <div className="component-demo">
-        <h4>Coordinate</h4>
-        <CoordinateDemo />
-        </div>
-<div className="component-demo">
         <h4>Automatic Completion</h4>
         <AutomaticCompletionDemo />
         </div>
 <div className="component-demo">
+        <h4>Coordinate</h4>
+        <CoordinateDemo />
+        </div>
+<div className="component-demo">
         <h4>Get Value Of Selected Item</h4>
         <GetValueOfSelectedItemDemo />
-        </div>
-<div className="component-demo">
-        <h4>Search Box</h4>
-        <SearchBoxDemo />
-        </div>
-<div className="component-demo">
-        <h4>Select With Search Field</h4>
-        <SelectWithSearchFieldDemo />
         </div>
 <div className="component-demo">
         <h4>Multiple Selection</h4>
@@ -140,16 +132,24 @@ Select component to select value from options.
         <OptionGroupDemo />
         </div>
 <div className="component-demo">
+        <h4>Search Box</h4>
+        <SearchBoxDemo />
+        </div>
+<div className="component-demo">
+        <h4>Select With Search Field</h4>
+        <SelectWithSearchFieldDemo />
+        </div>
+<div className="component-demo">
+        <h4>Search And Select Users</h4>
+        <SearchAndSelectUsersDemo />
+        </div>
+<div className="component-demo">
         <h4>Sizes</h4>
         <SizesDemo />
         </div>
 <div className="component-demo">
         <h4>Tags</h4>
         <TagsDemo />
-        </div>
-<div className="component-demo">
-        <h4>Search And Select Users</h4>
-        <SearchAndSelectUsersDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />
