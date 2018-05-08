@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
-import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
 import ReactRouterIntegrationDemo from './ReactRouterIntegrationDemo.js'
+import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
 import ConfiguringTheSeparatorDemo from './ConfiguringTheSeparatorDemo.js'
 import WithAnIconDemo from './WithAnIconDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -69,12 +69,12 @@ A breadcrumb displays the current location within a hierarchy. It allows going b
         <BasicUsageDemo />
         </div>
 <div className="component-demo">
-        <h4>Other Router Integration</h4>
-        <OtherRouterIntegrationDemo />
-        </div>
-<div className="component-demo">
         <h4>React Router Integration</h4>
         <ReactRouterIntegrationDemo />
+        </div>
+<div className="component-demo">
+        <h4>Other Router Integration</h4>
+        <OtherRouterIntegrationDemo />
         </div>
 <div className="component-demo">
         <h4>Configuring The Separator</h4>

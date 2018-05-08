@@ -4,9 +4,9 @@ import React from 'react'
 import DynamicDemo from './DynamicDemo.js'
 import RedBadgeDemo from './RedBadgeDemo.js'
 import ClickableDemo from './ClickableDemo.js'
-import OverflowCountDemo from './OverflowCountDemo.js'
 import StandaloneDemo from './StandaloneDemo.js'
 import StatusDemo from './StatusDemo.js'
+import OverflowCountDemo from './OverflowCountDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -67,16 +67,16 @@ Small numerical value or status descriptor for UI elements.
         <ClickableDemo />
         </div>
 <div className="component-demo">
-        <h4>Overflow Count</h4>
-        <OverflowCountDemo />
-        </div>
-<div className="component-demo">
         <h4>Standalone</h4>
         <StandaloneDemo />
         </div>
 <div className="component-demo">
         <h4>Status</h4>
         <StatusDemo />
+        </div>
+<div className="component-demo">
+        <h4>Overflow Count</h4>
+        <OverflowCountDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

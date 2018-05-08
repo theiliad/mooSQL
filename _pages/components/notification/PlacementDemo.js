@@ -19,7 +19,7 @@ const expComponent = () => (
       onChange={(val) => {
         notification.config({
           placement: val,
-        }
+        });
       }}
     >
       {options.map(val => <Option key={val} value={val}>{val}</Option>)}
@@ -31,6 +31,5 @@ const expComponent = () => (
       Open the notification box
     </Button>
   </div>
-);
 )
 export default expComponent

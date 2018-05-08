@@ -16,6 +16,7 @@ const expComponent = () => (
           <div className="ant-calendar-date" style={style}>
             {current.date()}
           </div>
+        );
       }}
     />
     <RangePicker
@@ -33,6 +34,5 @@ const expComponent = () => (
       }}
     />
   </div>
-);
 )
 export default expComponent

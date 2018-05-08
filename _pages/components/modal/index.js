@@ -3,7 +3,7 @@ import React from 'react'
     import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
 import BasicDemo from './BasicDemo.js'
 import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
-import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import ConfirmationModalDialogDemo28 from './ConfirmationModalDialogDemo28.js'
 import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import InformationModalDialogDemo from './InformationModalDialogDemo.js'
 import InternationalizationDemo from './InternationalizationDemo.js'
@@ -119,8 +119,8 @@ Modal dialogs.
         <ConfirmationModalDialogDemo />
         </div>
 <div className="component-demo">
-        <h4>Confirmation Modal Dialog</h4>
-        <ConfirmationModalDialogDemo />
+        <h4>Confirmation Modal Dialog28</h4>
+        <ConfirmationModalDialogDemo28 />
         </div>
 <div className="component-demo">
         <h4>Customized Footer</h4>

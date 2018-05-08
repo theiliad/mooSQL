@@ -122,7 +122,9 @@ initialPromise.then(() => {
 
                 let indexFileString = `import React from 'react'\n`
                 , importFileNames = []
-                
+                , varietyIndex = 1
+                , componentFileNames = []
+
                 subDirectories.map(subDirectory => {
                     const newPromise = fs.readFileAsync(subDirectory, (err, data, resolve, reject) => {
                         if (err) {
@@ -133,7 +135,9 @@ initialPromise.then(() => {
                         const classComponent = data.indexOf('extends React.Component') > -1
                             , title = data.substring(data.indexOf('en-US: ') + 'en-US: '.length).split("\n")[0]
                             , description = data.substring(data.indexOf('## en-US') + '## en-US'.length, data.indexOf('````jsx')).trim()
-                            , componentName = title.replace(/[^a-zA-Z ]/g, "").split(' ').map(item => item == ' ' ? undefined : item.capitalize()).join("") + "Demo"
+                        
+                        let componentName = title.replace(/[^a-zA-Z ]/g, "").split(' ').map(item => item == ' ' ? undefined : item.capitalize()).join("") + "Demo"
+                        if (componentFileNames.indexOf(componentName) > -1) componentName += `${index++}`
 
                         let finalString = ''
                         if (title) finalString += `<h3>${title}<h3>\n`
@@ -145,8 +149,11 @@ initialPromise.then(() => {
                             , JSXStartPos = data.indexOf('````jsx') === -1 ? data.indexOf('```jsx') : data.indexOf('````jsx')
                             , JSXEndPos = reacDomMountSubstring.indexOf('````') === -1 ? reacDomMountSubstring.indexOf('```') : reacDomMountSubstring.indexOf('````')
                             , insideDomMountBracket = reacDomMountSubstring.substring('ReactDOM.render('.length, JSXEndPos)
-                                                                        .replace(', mountNode', '').replace(');', '')
+                                                                        .replace(', mountNode);', '')
+                                                                        .replace(', mountNode', '')
+                                                                        .replace(',\n  mountNode\n);', '')
                                                                         .replace(',\n  mountNode', '')
+                                                                        // .replace(');', '')
 
                         finalComponent += `
 const expComponent = () => (
@@ -157,6 +164,13 @@ export default expComponent
 
                         let fileString = `import React from 'react'\n`
                         const jsxCode = data.substring(JSXStartPos, data.indexOf('ReactDOM.render'))
+
+                        if (componentName == 'ConfirmationModalDialogDemo') {
+                            console.log("FINAL COMPONENT", finalComponent)
+                            console.log("SUB", subDirectory)
+                            console.log("insideDomMountBracket", insideDomMountBracket)
+                            console.log("JSXCODE", jsxCode)
+                        }
 
                         fileString += jsxCode.substring(jsxCode.indexOf("\n") + 1) + "\n" + finalComponent
                         fs.writeFile(`../../_pages/components/${antdComponentName}/${componentName}.js`, fileString, function (err) {
@@ -169,6 +183,7 @@ export default expComponent
                             styles.push(data.substring(data.indexOf('<style>') + '<style>'.length, data.indexOf('</style>')))
                         }
 
+                        componentFileNames.push(componentName)
                         importFileNames.push(componentName)
                         resolve(true)
                     })
@@ -179,9 +194,10 @@ export default expComponent
                 Promise.all(demoComponentPromises).then(() => {
                     fs.readFileAsync(`${directory}/index.en-US.md`, (err, data, resolve, reject) => {
                         const markDownData = data.substring(locations('---', data)[1]).replaceAll('\`', '\\`')
+                            , componentDescription = markDownData.substring(3, markDownData.indexOf('##'))
                         // readmeHTML = md.renderInline(markDownData)
                         
-                        const componentDescription = markDownData.substring(3, markDownData.indexOf('##'))
+                        importFileNames = removeArrayDuplicates(importFileNames)
 
                         indexFileString += `
     ${importFileNames.map(filename => `import ${filename} from './${filename}.js'`).join('\n')}

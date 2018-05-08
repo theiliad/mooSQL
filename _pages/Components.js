@@ -20,24 +20,24 @@ import ButtonDemo from './components/button/index.js'
 import CalendarDemo from './components/calendar/index.js'
 import CardDemo from './components/card/index.js'
 import CarouselDemo from './components/carousel/index.js'
-// import CascaderDemo from './components/cascader/index.js'
+import CascaderDemo from './components/cascader/index.js'
 import CheckboxDemo from './components/checkbox/index.js'
 import CollapseDemo from './components/collapse/index.js'
-// import DatePickerDemo from './components/date-picker/index.js'
+import DatePickerDemo from './components/date-picker/index.js'
 import DividerDemo from './components/divider/index.js'
 import DropdownDemo from './components/dropdown/index.js'
 import FormDemo from './components/form/index.js'
 import GridDemo from './components/grid/index.js'
 import InputDemo from './components/input/index.js'
 import InputNumberDemo from './components/input-number/index.js'
-// import LayoutDemo from './components/layout/index.js'
+import LayoutDemo from './components/layout/index.js'
 import ListDemo from './components/list/index.js'
 import LocaleProviderDemo from './components/locale-provider/index.js'
 import MentionDemo from './components/mention/index.js'
 import MenuDemo from './components/menu/index.js'
 import MessageDemo from './components/message/index.js'
-// import ModalDemo from './components/modal/index.js'
-// import NotificationDemo from './components/notification/index.js'
+import ModalDemo from './components/modal/index.js'
+import NotificationDemo from './components/notification/index.js'
 import PaginationDemo from './components/pagination/index.js'
 import PopconfirmDemo from './components/popconfirm/index.js'
 import PopoverDemo from './components/popover/index.js'
@@ -55,7 +55,7 @@ import TagDemo from './components/tag/index.js'
 import TimePickerDemo from './components/time-picker/index.js'
 import TimelineDemo from './components/timeline/index.js'
 import TooltipDemo from './components/tooltip/index.js'
-// import TransferDemo from './components/transfer/index.js'
+import TransferDemo from './components/transfer/index.js'
 import TreeDemo from './components/tree/index.js'
 import TreeSelectDemo from './components/tree-select/index.js'
 import UploadDemo from './components/upload/index.js'
@@ -76,24 +76,24 @@ const ComponentsPage = ({ match }) => (
     <Route path={match.url + '/calendar'} component={CalendarDemo} exact={true} />
     <Route path={match.url + '/card'} component={CardDemo} exact={true} />
     <Route path={match.url + '/carousel'} component={CarouselDemo} exact={true} />
-    {/* <Route path={match.url + '/cascader'} component={CascaderDemo} exact={true} /> */}
+    <Route path={match.url + '/cascader'} component={CascaderDemo} exact={true} />
     <Route path={match.url + '/checkbox'} component={CheckboxDemo} exact={true} />
     <Route path={match.url + '/collapse'} component={CollapseDemo} exact={true} />
-    {/* <Route path={match.url + '/date-picker'} component={DatePickerDemo} exact={true} /> */}
+    <Route path={match.url + '/date-picker'} component={DatePickerDemo} exact={true} />
     <Route path={match.url + '/divider'} component={DividerDemo} exact={true} />
     <Route path={match.url + '/dropdown'} component={DropdownDemo} exact={true} />
     <Route path={match.url + '/form'} component={FormDemo} exact={true} />
     <Route path={match.url + '/grid'} component={GridDemo} exact={true} />
     <Route path={match.url + '/input'} component={InputDemo} exact={true} />
     <Route path={match.url + '/input-number'} component={InputNumberDemo} exact={true} />
-    {/* <Route path={match.url + '/layout'} component={LayoutDemo} exact={true} /> */}
+    <Route path={match.url + '/layout'} component={LayoutDemo} exact={true} />
     <Route path={match.url + '/list'} component={ListDemo} exact={true} />
     <Route path={match.url + '/locale-provider'} component={LocaleProviderDemo} exact={true} />
     <Route path={match.url + '/mention'} component={MentionDemo} exact={true} />
     <Route path={match.url + '/menu'} component={MenuDemo} exact={true} />
     <Route path={match.url + '/message'} component={MessageDemo} exact={true} />
-    {/* <Route path={match.url + '/modal'} component={ModalDemo} exact={true} /> */}
-    {/* <Route path={match.url + '/notification'} component={NotificationDemo} exact={true} /> */}
+    <Route path={match.url + '/modal'} component={ModalDemo} exact={true} />
+    <Route path={match.url + '/notification'} component={NotificationDemo} exact={true} />
     <Route path={match.url + '/pagination'} component={PaginationDemo} exact={true} />
     <Route path={match.url + '/popconfirm'} component={PopconfirmDemo} exact={true} />
     <Route path={match.url + '/popover'} component={PopoverDemo} exact={true} />
@@ -111,7 +111,7 @@ const ComponentsPage = ({ match }) => (
     <Route path={match.url + '/time-picker'} component={TimePickerDemo} exact={true} />
     <Route path={match.url + '/timeline'} component={TimelineDemo} exact={true} />
     <Route path={match.url + '/tooltip'} component={TooltipDemo} exact={true} />
-    {/* <Route path={match.url + '/transfer'} component={TransferDemo} exact={true} /> */}
+    <Route path={match.url + '/transfer'} component={TransferDemo} exact={true} />
     <Route path={match.url + '/tree'} component={TreeDemo} exact={true} />
     <Route path={match.url + '/tree-select'} component={TreeSelectDemo} exact={true} />
     <Route path={match.url + '/upload'} component={UploadDemo} exact={true} />

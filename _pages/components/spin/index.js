@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicUsageDemo from './BasicUsageDemo.js'
-import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
+    import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import DelayDemo from './DelayDemo.js'
 import InsideAContainerDemo from './InsideAContainerDemo.js'
 import EmbeddedModeDemo from './EmbeddedModeDemo.js'
@@ -40,12 +40,12 @@ A spinner for displaying loading state of a page or a section.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic Usage</h4>
-        <BasicUsageDemo />
-        </div>
-<div className="component-demo">
         <h4>Custom Spinning Indicator</h4>
         <CustomSpinningIndicatorDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
         </div>
 <div className="component-demo">
         <h4>Delay</h4>

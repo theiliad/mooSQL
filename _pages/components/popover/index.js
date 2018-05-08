@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import ArrowPointingDemo from './ArrowPointingDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import ArrowPointingDemo from './ArrowPointingDemo.js'
 import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import ThreeWaysToTriggerDemo from './ThreeWaysToTriggerDemo.js'
@@ -42,12 +42,12 @@ The floating card popped by clicking or hovering.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Arrow Pointing</h4>
-        <ArrowPointingDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Arrow Pointing</h4>
+        <ArrowPointingDemo />
         </div>
 <div className="component-demo">
         <h4>Controlling The Close Of The Dialog</h4>

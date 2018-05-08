@@ -2,7 +2,6 @@ import React from 'react'
 
     import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
 import IconImageDemo from './IconImageDemo.js'
-import BasicDemo from './BasicDemo.js'
 import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
@@ -11,6 +10,7 @@ import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
+import BasicDemo from './BasicDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -95,10 +95,6 @@ Mention component.
         <IconImageDemo />
         </div>
 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
         <h4>Controlled</h4>
         <ControlledDemo />
         </div>
@@ -129,6 +125,10 @@ Mention component.
 <div className="component-demo">
         <h4>Disabled Or Read Only</h4>
         <DisabledOrReadOnlyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

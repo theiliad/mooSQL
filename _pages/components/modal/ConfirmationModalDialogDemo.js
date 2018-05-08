@@ -4,42 +4,21 @@ const confirm = Modal.confirm;
 
 function showConfirm() {
   confirm({
-    title: 'Do you Want to delete these items?',
-    content: 'Some descriptions',
+    title: 'Do you want to delete these items?',
+    content: 'When clicked the OK button, this dialog will be closed after 1 second',
     onOk() {
-      console.log('OK');
+      return new Promise((resolve, reject) => {
+        setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+      }).catch(() => console.log('Oops errors!'));
     },
-    onCancel() {
-      console.log('Cancel');
-    },
-  });
-}
-
-function showDeleteConfirm() {
-  confirm({
-    title: 'Are you sure delete this task?',
-    content: 'Some descriptions',
-    okText: 'Yes',
-    okType: 'danger',
-    cancelText: 'No',
-    onOk() {
-      console.log('OK');
-    },
-    onCancel() {
-      console.log('Cancel');
-    },
+    onCancel() {},
   });
 }
 
 
 const expComponent = () => (
-  <div>
-    <Button onClick={showConfirm}>
-      Confirm
-    </Button>
-    <Button onClick={showDeleteConfirm} type="dashed">
-      Delete
-    </Button>
-  </div>
+  <Button onClick={showConfirm}>
+    Confirm
+  </Button>
 )
 export default expComponent

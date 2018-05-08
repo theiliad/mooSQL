@@ -2,13 +2,13 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
+import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
 import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import PresettedRangesDemo from './PresettedRangesDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
-import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -146,6 +146,10 @@ To select or input a date.
         <DisabledDateTimeDemo />
         </div>
 <div className="component-demo">
+        <h4>Customized Date Rendering</h4>
+        <CustomizedDateRenderingDemo />
+        </div>
+<div className="component-demo">
         <h4>Disabled</h4>
         <DisabledDemo />
         </div>
@@ -168,10 +172,6 @@ To select or input a date.
 <div className="component-demo">
         <h4>Three Sizes</h4>
         <ThreeSizesDemo />
-        </div>
-<div className="component-demo">
-        <h4>Customized Date Rendering</h4>
-        <CustomizedDateRenderingDemo />
         </div>
 <div className="component-demo">
         <h4>Customized Range Picker</h4>
