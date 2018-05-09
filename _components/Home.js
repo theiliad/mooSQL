@@ -28,7 +28,7 @@ import { Spin, message } from 'antd'
 import { Card } from 'antd';
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
-import { Table } from 'antd';
+import { List, Table } from 'antd';
 
 // Charts
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
@@ -42,6 +42,30 @@ const data = [
   { name: 'Page F', users: 2390, pv: 3800, amt: 2500 },
   { name: 'Page G', users: 3490, pv: 4800, amt: 2100 },
 ]
+
+const listData = [];
+for (let i = 0; i < 2; i++) {
+  listData.push({
+    href: 'http://ant.design',
+    title: `ant design part ${i}`,
+    description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+    content: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+  });
+}
+
+const pagination = {
+  pageSize: 1,
+  current: 1,
+  total: listData.length,
+  onChange: (() => {}),
+};
+
+const IconText = ({ type, text }) => (
+  <span>
+    <Icon type={type} style={{ marginRight: 8 }} />
+    {text}
+  </span>
+);
 
 const widgetActionsMenu = (
     <Menu>
@@ -327,6 +351,35 @@ class HomeComponent extends React.Component {
                         </Row>
                     </div>
                 </Spin>
+
+                <h4 className="marginTop-30 marginBottom-20">Top User Posts this Week</h4>
+                <Card bordered={false}>
+                    <List
+                        itemLayout="vertical"
+                        size="large"
+                        footer={<div><b>ant design</b> footer part</div>}
+                    >
+                        {listData.map(
+                            item => {
+                                const randomNum = () => parseInt(Math.random() * 100)
+                                return (
+                                    <List.Item
+                                        key={item.title}
+                                        actions={[<IconText type="star-o" text={randomNum()} />, <IconText type="like-o" text={randomNum()} />, <IconText type="message" text={randomNum()} />]}
+                                        extra={<img width={180} alt="logo" src="https://source.unsplash.com/collection/1394721/300x300" />}
+                                    >
+                                        <List.Item.Meta
+                                            title={<a href={item.href}>{item.title}</a>}
+                                            description={item.description}
+                                        />
+                                        <Avatar src={'https://api.adorable.io/avatars/285/happy@adorable.io.png'} />
+                                        {item.content}
+                                    </List.Item>
+                                )
+                            }
+                        )}
+                    </List>
+                </Card>
             </div>
         )
     }
