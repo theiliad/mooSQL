@@ -24,11 +24,11 @@ const { Header, Content, Footer, Sider } = Layout
 import { Menu, Dropdown, Button } from 'antd'
 const SubMenu = Menu.SubMenu
 const MenuItemGroup = Menu.ItemGroup
-import { Spin, message } from 'antd'
+import { Spin, Progress, message } from 'antd'
 import { Card } from 'antd';
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
-import { List, Table } from 'antd';
+import { List, Table, Carousel } from 'antd';
 
 // Charts
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
@@ -352,34 +352,32 @@ class HomeComponent extends React.Component {
                     </div>
                 </Spin>
 
-                <h4 className="marginTop-30 marginBottom-20">Top User Posts this Week</h4>
-                <Card bordered={false}>
-                    <List
-                        itemLayout="vertical"
-                        size="large"
-                        footer={<div><b>ant design</b> footer part</div>}
-                    >
-                        {listData.map(
-                            item => {
-                                const randomNum = () => parseInt(Math.random() * 100)
-                                return (
-                                    <List.Item
-                                        key={item.title}
-                                        actions={[<IconText type="star-o" text={randomNum()} />, <IconText type="like-o" text={randomNum()} />, <IconText type="message" text={randomNum()} />]}
-                                        extra={<img width={180} alt="logo" src="https://source.unsplash.com/collection/1394721/300x300" />}
-                                    >
-                                        <List.Item.Meta
-                                            title={<a href={item.href}>{item.title}</a>}
-                                            description={item.description}
-                                        />
-                                        <Avatar src={'https://api.adorable.io/avatars/285/happy@adorable.io.png'} />
-                                        {item.content}
-                                    </List.Item>
-                                )
-                            }
-                        )}
-                    </List>
-                </Card>
+                <Row gutter={16} className="marginTop-30">
+                    <Col className="gutter-row" xs={24} md={12} lg={8}>
+                        <h4 className="marginTop-30 marginBottom-20">Post Views</h4>
+                        
+                        <Card
+                            bordered={false}
+                            className="widget"
+                        >
+                            <Carousel className="light goals marginTop-30">
+                                <div class>
+                                    <Progress type="circle" percent={75} />
+
+                                    <p>Total views today</p>
+                                    <h4>{this.formatNumbers(2700)}</h4>
+                                </div>
+
+                                <div>
+                                    <Progress type="circle" percent={90} />
+
+                                    <p>Total views this week</p>
+                                    <h4>{this.formatNumbers(17000)}</h4>
+                                </div>
+                            </Carousel>
+                        </Card>
+                    </Col>
+                </Row>
             </div>
         )
     }

@@ -174,3 +174,24 @@ div.ant-layout-has-sider div.ant-layout-sider {
 .ant-menu {
     user-select: none;
 }
+
+// Carousel
+.ant-carousel {
+    .slick-slider.light {
+        text-align: center;
+        height: auto;
+        line-height: 18px;
+        overflow: hidden;
+
+        ul.slick-dots {
+            position: static;
+            margin-top: 15px;
+
+            li {
+                button {
+                    background: $primary_color;
+                }
+            }
+        }
+    }
+}
