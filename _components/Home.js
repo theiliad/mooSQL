@@ -31,7 +31,10 @@ import { Avatar } from 'antd';
 import { List, Table, Carousel } from 'antd';
 
 // Charts
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import {
+    AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+    BarChart, Bar, Legend
+} from 'recharts'
 
 const data = [
   { name: 'Page A', users: 4800, pv: 4900, amt: 2400 },
@@ -42,6 +45,13 @@ const data = [
   { name: 'Page F', users: 2390, pv: 3800, amt: 2500 },
   { name: 'Page G', users: 3490, pv: 4800, amt: 2100 },
 ]
+
+const followersData = [
+    {name: 'Week 1', follow: 4000, unfollow: 2400},
+    {name: 'Week 2', follow: 3000, unfollow: 1398},
+    {name: 'Week 3', follow: 2000, unfollow: 9800},
+    {name: 'Week 4', follow: 2780, unfollow: 3908}
+];
 
 const listData = [];
 for (let i = 0; i < 2; i++) {
@@ -180,7 +190,7 @@ class HomeComponent extends React.Component {
                     <Col className="gutter-row" xs={24} md={12} lg={9}>
                         <Card
                             title={
-                                <div>
+                                <div className="head-container">
                                     <div className="title">
                                         <p>Active Users</p>
                                         <h4>{this.formatNumbers(7000)}</h4>
@@ -227,7 +237,7 @@ class HomeComponent extends React.Component {
                     <Col className="gutter-row" xs={24} md={12} lg={9}>
                         <Card
                             title={
-                                <div>
+                                <div className="head-container">
                                     <div className="title">
                                         <p>Job Applicants this Week</p>
                                         <h4>{this.formatNumbers(21379)}</h4>
@@ -352,16 +362,31 @@ class HomeComponent extends React.Component {
                     </div>
                 </Spin>
 
-                <Row gutter={16} className="marginTop-30">
+                <Row gutter={16} className="marginTop-60">
                     <Col className="gutter-row" xs={24} md={12} lg={8}>
-                        <h4 className="marginTop-30 marginBottom-20">Post Views</h4>
+                        <h4 className="marginBottom-20">Post Views</h4>
                         
                         <Card
                             bordered={false}
-                            className="widget"
+                            className="widget bordered"
+                            title={
+                                <div className="head-container">
+                                    <div className="title center-vertical">
+                                        <a href="#">
+                                            Change goal
+                                        </a>
+                                    </div>
+
+                                    <div className="actions">
+                                        <Button type='primary' size='large'>
+                                            View Goal
+                                        </Button>
+                                    </div>
+                                </div>
+                            }
                         >
                             <Carousel className="light goals marginTop-30">
-                                <div class>
+                                <div>
                                     <Progress type="circle" percent={75} />
 
                                     <p>Total views today</p>
@@ -375,6 +400,85 @@ class HomeComponent extends React.Component {
                                     <h4>{this.formatNumbers(17000)}</h4>
                                 </div>
                             </Carousel>
+                        </Card>
+                    </Col>
+
+                    {/* <Col className="gutter-row" xs={24} md={12} lg={8}>
+                        <h4 className="marginBottom-20">Follow Trends</h4>
+                        
+                        <Card
+                            title={
+                                <div className="head-container">
+                                    <div className="title">
+                                        <Dropdown overlay={
+                                            <Menu>
+                                                <Menu.Item key="0">
+                                                    <a href="http://www.alipay.com/">1st menu item</a>
+                                                </Menu.Item>
+
+                                                <Menu.Item key="1">
+                                                    <a href="http://www.taobao.com/">2nd menu item</a>
+                                                </Menu.Item>
+
+                                                <Menu.Divider />
+                                                
+                                                <Menu.Item key="3">3rd menu item</Menu.Item>
+                                            </Menu>
+                                        } trigger={['click']}>
+                                            <a className="ant-dropdown-link" href="#">
+                                                December 2017 <Icon type="down" />
+                                            </a>
+                                        </Dropdown>
+                                    </div>
+
+                                    <div className="actions">
+                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger={['click']}>
+                                            <a className="ant-dropdown-link" href="#">
+                                                <Icon type="setting" />
+                                            </a>
+                                        </Dropdown>
+                                    </div>
+                                </div>
+                            }
+                            bordered={false}
+                            className="widget bordered"
+                        >
+                            <ResponsiveContainer width="100%" height={200}>
+                                <BarChart
+                                    width={500} height={300} data={followersData}
+                                >
+                                    <XAxis dataKey="name" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+
+                                    <Bar dataKey="follow" stackId="a" fill="#353d81" />
+                                    <Bar dataKey="unfollow" stackId="a" fill="rgba(53, 61, 129, 0.6)" />
+                                </BarChart>
+                            </ResponsiveContainer>
+
+                            <div className="spaced">
+                                <p>
+                                    <Icon type="sync" style={{ marginRight: 5 }} /> Just updated
+                                </p>
+                            </div>
+                        </Card>
+                    </Col> */}
+
+                    <Col className="gutter-row" xs={24} md={12} lg={16}>
+                        <h4 className="marginBottom-20">Sales</h4>
+                        
+                        <Card
+                            bordered={false} style={{ height: 332 }}
+                            className="gradient-secondary center-absolute narrow dark marginTop-15"
+                        >
+                            <h3>Congragulations Mike</h3>
+
+                            <p>You have gone 30% over your quotas this month! You've been added to this month's top artists page</p>
+
+                            <Button size='large'>
+                                Check it out
+                            </Button>
                         </Card>
                     </Col>
                 </Row>

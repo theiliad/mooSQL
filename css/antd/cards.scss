@@ -1,3 +1,5 @@
+@import "commons";
+
 .ant-card {
     box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.1);
     transition: $generic_transition;
@@ -11,6 +13,38 @@
 
     div.ant-card-head {
         border-bottom: 1px solid rgba(239, 240, 251, 1);
+    }
+
+    .ant-card-body {
+        h1, h2, h3, h4, h5, h6 {
+            color: #333;
+        }
+    }
+
+    &.dark {
+        .ant-card-body {
+            h1, h2, h3, h4, h5, h6 {
+                color: #fff;
+            }
+
+            p {
+                opacity: 0.8;
+            }
+
+            button {
+                background: transparent;
+                color: #fff;
+                font-weight: 900;
+                border-color: rgba(256, 256, 256, 0.3);
+                padding: 5px 18px;
+
+                &:hover {
+                    background: #fff;
+                    border-color: #fff;
+                    color: $primary_color;
+                }
+            }
+        }
     }
 }
 
@@ -36,12 +70,6 @@
     color: #fff;
 }
 
-.ant-card .ant-body {
-    h1, h2, h3, h4, h5, h6 {
-        color: #333;
-    }
-}
-
 // Widget
 .ant-card.widget {
     margin-bottom: 15px;
@@ -50,28 +78,45 @@
         border: none;
     }
 
+    &.bordered {
+        div.ant-card-head {
+            padding: 0 24px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eff0fb;
+        }
+    }
+
     div.ant-card-head-title {
         padding-bottom: 0;
 
-        div.title {
-            float: left;
+        div.head-container {
+            display: table;
+            width: 100%;
 
-            p {
-                font-size: 14px;
-                margin: 0;
-                margin-top: 3px;
+            div.title {
+                float: left;
+    
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                    margin-top: 3px;
+                }
+        
+                h4 {
+                    font-size: 32px;
+                    margin: 0;
+                    margin-top: -4px;
+                }
+
+                &.center-vertical {
+                    margin-top: 8px;
+                }
             }
     
-            h4 {
-                font-size: 32px;
-                margin: 0;
-                margin-top: -4px;
+            div.actions {
+                float: right;
+                font-size: 21px;
             }
-        }
-
-        div.actions {
-            float: right;
-            font-size: 21px;
         }
     }
 
@@ -84,6 +129,33 @@
             p {
                 margin: 0;
             }
+        }
+    }
+}
+
+.ant-card.center-absolute {
+    position: relative;
+
+    div.ant-card-body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        text-align: center;
+
+        h3 {
+            margin: 0 0 5px 0;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    }
+
+    &.narrow {
+        div.ant-card-body {
+            max-width: 350px;
         }
     }
 }
