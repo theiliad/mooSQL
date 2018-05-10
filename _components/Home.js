@@ -470,7 +470,7 @@ class HomeComponent extends React.Component {
                         
                         <Card
                             bordered={false} style={{ height: 332 }}
-                            className="gradient-secondary center-absolute narrow dark marginTop-15"
+                            className="gradient-primary center-absolute narrow dark marginTop-15"
                         >
                             <h3>Congragulations Mike</h3>
 
