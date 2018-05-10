@@ -19,7 +19,7 @@ import axios from "axios";
 
 // Antd
 import { Layout, Breadcrumb } from "antd";
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 import { Menu, Dropdown, Icon } from "antd";
 import { Input } from "antd";
 import { Button, Radio } from "antd";
@@ -30,6 +30,7 @@ const SubMenu = Menu.SubMenu;
 
 // Components
 import HomeComponent from "./Home"
+import FooterComponent from './Footer'
 
 // Assets
 import LOGO from "../img/logo.svg";
@@ -251,7 +252,7 @@ class App extends React.Component {
             </Content>
           </Layout>
 
-          <Footer id="app-footer">Footer</Footer>
+          <FooterComponent />
         </Layout>
       );
     else
