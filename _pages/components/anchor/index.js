@@ -45,11 +45,11 @@ Hyperlinks to scroll on one page.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo static-anchor">
         <h4>Static Anchor</h4>
         <StaticAnchorDemo />
         </div>

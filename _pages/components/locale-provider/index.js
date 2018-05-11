@@ -60,11 +60,11 @@ const expComponent = () => (
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo all-components">
         <h4>All Components</h4>
         <AllComponentsDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo localization">
         <h4>Localization</h4>
         <LocalizationDemo />
         </div>

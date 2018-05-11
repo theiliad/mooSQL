@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import DisabledDemo from './DisabledDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
 import RadioStyleDemo from './RadioStyleDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
-import RadioGroupDemo from './RadioGroupDemo.js'
-import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
 import SizeDemo from './SizeDemo.js'
 import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
+import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
+import RadioGroupDemo from './RadioGroupDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -66,37 +66,37 @@ Radio.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Disabled</h4>
-        <DisabledDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo radio-style">
         <h4>Radio Style</h4>
         <RadioStyleDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo disabled">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo vertical-radio-group">
         <h4>Vertical Radio Group</h4>
         <VerticalRadioGroupDemo />
         </div>
-<div className="component-demo">
-        <h4>Radio Group</h4>
-        <RadioGroupDemo />
-        </div>
-<div className="component-demo">
-        <h4>Radio Group Group Optional</h4>
-        <RadioGroupGroupOptionalDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo size">
         <h4>Size</h4>
         <SizeDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo radio-group-with-name">
         <h4>Radio Group With Name</h4>
         <RadioGroupWithNameDemo />
+        </div>
+<div className="component-demo radio-group-group-optional">
+        <h4>Radio Group Group Optional</h4>
+        <RadioGroupGroupOptionalDemo />
+        </div>
+<div className="component-demo radio-group">
+        <h4>Radio Group</h4>
+        <RadioGroupDemo />
         </div>
 
                 <div id="demo-documentation">

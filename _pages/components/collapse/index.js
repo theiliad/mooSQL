@@ -1,11 +1,11 @@
 import React from 'react'
 
     import AccordionDemo from './AccordionDemo.js'
-import CollapseDemo from './CollapseDemo.js'
 import BorderlessDemo from './BorderlessDemo.js'
+import CollapseDemo from './CollapseDemo.js'
+import CustomPanelDemo from './CustomPanelDemo.js'
 import NestedPanelDemo from './NestedPanelDemo.js'
 import NoArrowDemo from './NoArrowDemo.js'
-import CustomPanelDemo from './CustomPanelDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -50,29 +50,29 @@ A content area which can be collapsed and expanded.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo accordion">
         <h4>Accordion</h4>
         <AccordionDemo />
         </div>
-<div className="component-demo">
-        <h4>Collapse</h4>
-        <CollapseDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo borderless">
         <h4>Borderless</h4>
         <BorderlessDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo collapse">
+        <h4>Collapse</h4>
+        <CollapseDemo />
+        </div>
+<div className="component-demo custom-panel">
+        <h4>Custom Panel</h4>
+        <CustomPanelDemo />
+        </div>
+<div className="component-demo nested-panel">
         <h4>Nested Panel</h4>
         <NestedPanelDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo no-arrow">
         <h4>No Arrow</h4>
         <NoArrowDemo />
-        </div>
-<div className="component-demo">
-        <h4>Custom Panel</h4>
-        <CustomPanelDemo />
         </div>
 
                 <div id="demo-documentation">

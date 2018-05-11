@@ -81,12 +81,61 @@ div.component-demo {
 
 div {
     #component-demos {
+        // Data Entry
+        &-auto-complete {
+            div.lookup-patterns-uncertain-category {
+                .ant-input-affix-wrapper .ant-input-suffix {
+                    right: 0;
+                }
+            }
+        }
+
+        &-date-picker {
+            span.ant-calendar-picker {
+                margin: 0 10px 10px 0;
+            }
+        }
+
+        &-input-number {
+            div.ant-input-number {
+                margin-right: 10px;
+            }
+        }
+
+        &-select {
+            div.ant-select {
+                margin: 0 10px 10px 0;
+            }
+        }
+
+        &-switch {
+            span.ant-switch {
+                margin: 0 10px 10px 0;
+            }
+        }
+
+        &-time-picker {
+            span.ant-time-picker {
+                margin: 0 10px 10px 0;
+            }
+        }
+
+        &-upload {
+            div.upload-manually {
+                button {
+                    margin: 0 10px 10px 0;
+                }
+            }
+        }
+
+        // Data Display
         &-avatar {
             span.ant-avatar {
                 margin: 0 10px 10px 0;
             }
         }
 
+        // Feedback
         &-alert {
             br {
                 display: none;
@@ -116,6 +165,7 @@ div {
             margin-right: 10px;
         }
 
+        // Other
         &-button {
             div.component-demo {
                 div h4 {

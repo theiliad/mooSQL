@@ -50,19 +50,19 @@ A carousel component. Scales with its container.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo scroll-automatically">
         <h4>Scroll Automatically</h4>
         <ScrollAutomaticallyDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo fade-in">
         <h4>Fade In</h4>
         <FadeInDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo vertical">
         <h4>Vertical</h4>
         <VerticalDemo />
         </div>

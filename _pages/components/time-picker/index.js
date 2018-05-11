@@ -2,10 +2,10 @@ import React from 'react'
 
     import HoursDemo from './HoursDemo.js'
 import AddonDemo from './AddonDemo.js'
-import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import HourAndMinuteDemo from './HourAndMinuteDemo.js'
+import BasicDemo from './BasicDemo.js'
 import IntervalOptionDemo from './IntervalOptionDemo.js'
+import HourAndMinuteDemo from './HourAndMinuteDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
 import UnderControlDemo from './UnderControlDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -78,35 +78,35 @@ To select/input a time.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo hours">
         <h4>Hours</h4>
         <HoursDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo addon">
         <h4>Addon</h4>
         <AddonDemo />
         </div>
-<div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo disabled">
         <h4>Disabled</h4>
         <DisabledDemo />
         </div>
-<div className="component-demo">
-        <h4>Hour And Minute</h4>
-        <HourAndMinuteDemo />
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo interval-option">
         <h4>Interval Option</h4>
         <IntervalOptionDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo hour-and-minute">
+        <h4>Hour And Minute</h4>
+        <HourAndMinuteDemo />
+        </div>
+<div className="component-demo three-sizes">
         <h4>Three Sizes</h4>
         <ThreeSizesDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo under-control">
         <h4>Under Control</h4>
         <UnderControlDemo />
         </div>

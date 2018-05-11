@@ -5,9 +5,9 @@ import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
 import GridDemo from './GridDemo.js'
 import LoadMoreDemo from './LoadMoreDemo.js'
 import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
+import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
 import SimpleListDemo from './SimpleListDemo.js'
 import VerticalDemo from './VerticalDemo.js'
-import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -76,37 +76,37 @@ Simple List.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic-list">
         <h4>Basic List</h4>
         <BasicListDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo scrolling-loaded">
         <h4>Scrolling Loaded</h4>
         <ScrollingLoadedDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo grid">
         <h4>Grid</h4>
         <GridDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo load-more">
         <h4>Load More</h4>
         <LoadMoreDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo responsive-grid-list">
         <h4>Responsive Grid List</h4>
         <ResponsiveGridListDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo infinite-virtualized">
+        <h4>Infinite Virtualized</h4>
+        <InfiniteVirtualizedDemo />
+        </div>
+<div className="component-demo simple-list">
         <h4>Simple List</h4>
         <SimpleListDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo vertical">
         <h4>Vertical</h4>
         <VerticalDemo />
-        </div>
-<div className="component-demo">
-        <h4>Infinite Virtualized</h4>
-        <InfiniteVirtualizedDemo />
         </div>
 
                 <div id="demo-documentation">

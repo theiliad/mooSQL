@@ -65,19 +65,19 @@ Display global messages as feedback in response to user operations.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo customize-duration">
         <h4>Customize Duration</h4>
         <CustomizeDurationDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo normal-prompt">
         <h4>Normal Prompt</h4>
         <NormalPromptDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo message-of-loading">
         <h4>Message Of Loading</h4>
         <MessageOfLoadingDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo other-types-of-message">
         <h4>Other Types Of Message</h4>
         <OtherTypesOfMessageDemo />
         </div>

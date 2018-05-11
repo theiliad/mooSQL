@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import CheckableDemo from './CheckableDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CheckableDemo from './CheckableDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import GenerateFormTreeDataDemo from './GenerateFormTreeDataDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -82,19 +82,19 @@ Tree selection control.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Checkable</h4>
-        <CheckableDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo checkable">
+        <h4>Checkable</h4>
+        <CheckableDemo />
+        </div>
+<div className="component-demo multiple-selection">
         <h4>Multiple Selection</h4>
         <MultipleSelectionDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo generate-form-tree-data">
         <h4>Generate Form Tree Data</h4>
         <GenerateFormTreeDataDemo />
         </div>

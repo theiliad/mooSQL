@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import ClosableDemo from './ClosableDemo.js'
-import BannerDemo from './BannerDemo.js'
+    import BannerDemo from './BannerDemo.js'
 import BasicDemo from './BasicDemo.js'
+import ClosableDemo from './ClosableDemo.js'
 import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
 import DescriptionDemo from './DescriptionDemo.js'
 import IconDemo from './IconDemo.js'
-import MoreTypesDemo from './MoreTypesDemo.js'
 import SmoothlyUnmountDemo from './SmoothlyUnmountDemo.js'
+import MoreTypesDemo from './MoreTypesDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -47,37 +47,37 @@ Alert component for feedback.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Closable</h4>
-        <ClosableDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo banner">
         <h4>Banner</h4>
         <BannerDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo closable">
+        <h4>Closable</h4>
+        <ClosableDemo />
+        </div>
+<div className="component-demo customized-close-text">
         <h4>Customized Close Text</h4>
         <CustomizedCloseTextDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo description">
         <h4>Description</h4>
         <DescriptionDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo icon">
         <h4>Icon</h4>
         <IconDemo />
         </div>
-<div className="component-demo">
-        <h4>More Types</h4>
-        <MoreTypesDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo smoothly-unmount">
         <h4>Smoothly Unmount</h4>
         <SmoothlyUnmountDemo />
+        </div>
+<div className="component-demo more-types">
+        <h4>More Types</h4>
+        <MoreTypesDemo />
         </div>
 
                 <div id="demo-documentation">

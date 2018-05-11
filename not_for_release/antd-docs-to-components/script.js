@@ -48,6 +48,10 @@ String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+String.prototype.unCapitalize = function() {
+    return this.charAt(0).toLowerCase() + this.slice(1);
+}
+
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
@@ -216,7 +220,7 @@ export default expComponent
             <Card bordered={false}>
                 ${
                     importFileNames.map((filename, index) => {
-                        const JSXTag = `<div className="component-demo">\n        <h4>${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}</h4>\n        <${filename} />\n        </div>`
+                        const JSXTag = `<div className="component-demo ${filename.replace('Demo', '').split(/(?=[A-Z])/).map(word => word.unCapitalize()).join('-')}">\n        <h4>${filename.replace('Demo', '').split(/(?=[A-Z])/).join(' ')}</h4>\n        <${filename} />\n        </div>`
                         
                         return JSXTag
                     }).join('\n')

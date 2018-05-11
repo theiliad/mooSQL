@@ -4,8 +4,8 @@ import React from 'react'
 import DynamicDemo from './DynamicDemo.js'
 import RedBadgeDemo from './RedBadgeDemo.js'
 import ClickableDemo from './ClickableDemo.js'
-import OverflowCountDemo from './OverflowCountDemo.js'
 import StandaloneDemo from './StandaloneDemo.js'
+import OverflowCountDemo from './OverflowCountDemo.js'
 import StatusDemo from './StatusDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -52,31 +52,31 @@ Small numerical value or status descriptor for UI elements.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo dynamic">
         <h4>Dynamic</h4>
         <DynamicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo red-badge">
         <h4>Red Badge</h4>
         <RedBadgeDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo clickable">
         <h4>Clickable</h4>
         <ClickableDemo />
         </div>
-<div className="component-demo">
-        <h4>Overflow Count</h4>
-        <OverflowCountDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo standalone">
         <h4>Standalone</h4>
         <StandaloneDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo overflow-count">
+        <h4>Overflow Count</h4>
+        <OverflowCountDemo />
+        </div>
+<div className="component-demo status">
         <h4>Status</h4>
         <StatusDemo />
         </div>

@@ -37,11 +37,11 @@ const expComponent = () => (
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo custom-style">
         <h4>Custom Style</h4>
         <CustomStyleDemo />
         </div>

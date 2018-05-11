@@ -36,15 +36,15 @@ A divider line separates different content.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo horizontal">
         <h4>Horizontal</h4>
         <HorizontalDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo vertical">
         <h4>Vertical</h4>
         <VerticalDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo orientation-of-title">
         <h4>Orientation Of Title</h4>
         <OrientationOfTitleDemo />
         </div>

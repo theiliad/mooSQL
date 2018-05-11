@@ -6,9 +6,9 @@ import CustomTriggerDemo from './CustomTriggerDemo.js'
 import CustomRenderDemo from './CustomRenderDemo.js'
 import DisabledOptionDemo from './DisabledOptionDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
-import HoverDemo from './HoverDemo.js'
 import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
 import SearchDemo from './SearchDemo.js'
+import HoverDemo from './HoverDemo.js'
 import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -87,43 +87,43 @@ Cascade selection box.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo change-on-select">
         <h4>Change On Select</h4>
         <ChangeOnSelectDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo custom-trigger">
         <h4>Custom Trigger</h4>
         <CustomTriggerDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo custom-render">
         <h4>Custom Render</h4>
         <CustomRenderDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo disabled-option">
         <h4>Disabled Option</h4>
         <DisabledOptionDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo default-value">
         <h4>Default Value</h4>
         <DefaultValueDemo />
         </div>
-<div className="component-demo">
-        <h4>Hover</h4>
-        <HoverDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo load-options-lazily">
         <h4>Load Options Lazily</h4>
         <LoadOptionsLazilyDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo search">
         <h4>Search</h4>
         <SearchDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo hover">
+        <h4>Hover</h4>
+        <HoverDemo />
+        </div>
+<div className="component-demo size">
         <h4>Size</h4>
         <SizeDemo />
         </div>

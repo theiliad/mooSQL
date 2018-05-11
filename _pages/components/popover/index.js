@@ -1,10 +1,10 @@
 import React from 'react'
 
-    import ArrowPointingDemo from './ArrowPointingDemo.js'
-import BasicDemo from './BasicDemo.js'
-import PlacementDemo from './PlacementDemo.js'
+    import BasicDemo from './BasicDemo.js'
 import ThreeWaysToTriggerDemo from './ThreeWaysToTriggerDemo.js'
+import PlacementDemo from './PlacementDemo.js'
 import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
+import ArrowPointingDemo from './ArrowPointingDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -43,25 +43,25 @@ The floating card popped by clicking or hovering.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Arrow Pointing</h4>
-        <ArrowPointingDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
-        <h4>Placement</h4>
-        <PlacementDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo three-ways-to-trigger">
         <h4>Three Ways To Trigger</h4>
         <ThreeWaysToTriggerDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo placement">
+        <h4>Placement</h4>
+        <PlacementDemo />
+        </div>
+<div className="component-demo controlling-the-close-of-the-dialog">
         <h4>Controlling The Close Of The Dialog</h4>
         <ControllingTheCloseOfTheDialogDemo />
+        </div>
+<div className="component-demo arrow-pointing">
+        <h4>Arrow Pointing</h4>
+        <ArrowPointingDemo />
         </div>
 
                 <div id="demo-documentation">

@@ -2,17 +2,17 @@ import React from 'react'
 
     import AdvancedSearchDemo from './AdvancedSearchDemo.js'
 import CoordinatedControlsDemo from './CoordinatedControlsDemo.js'
-import DynamicFormItemDemo from './DynamicFormItemDemo.js'
-import DynamicRulesDemo from './DynamicRulesDemo.js'
 import CustomizedFormControlsDemo from './CustomizedFormControlsDemo.js'
+import DynamicRulesDemo from './DynamicRulesDemo.js'
 import FormInModalToCreateDemo from './FormInModalToCreateDemo.js'
+import DynamicFormItemDemo from './DynamicFormItemDemo.js'
 import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperComponentDemo.js'
 import HorizontalLoginFormDemo from './HorizontalLoginFormDemo.js'
 import FormLayoutDemo from './FormLayoutDemo.js'
 import LoginFormDemo from './LoginFormDemo.js'
 import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
-import RegistrationDemo from './RegistrationDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
+import RegistrationDemo from './RegistrationDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
 import OtherFormControlsDemo from './OtherFormControlsDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -207,63 +207,63 @@ Form is used to collect, validate, and submit the user input, usually contains v
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo advanced-search">
         <h4>Advanced Search</h4>
         <AdvancedSearchDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo coordinated-controls">
         <h4>Coordinated Controls</h4>
         <CoordinatedControlsDemo />
         </div>
-<div className="component-demo">
-        <h4>Dynamic Form Item</h4>
-        <DynamicFormItemDemo />
-        </div>
-<div className="component-demo">
-        <h4>Dynamic Rules</h4>
-        <DynamicRulesDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo customized-form-controls">
         <h4>Customized Form Controls</h4>
         <CustomizedFormControlsDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo dynamic-rules">
+        <h4>Dynamic Rules</h4>
+        <DynamicRulesDemo />
+        </div>
+<div className="component-demo form-in-modal-to-create">
         <h4>Form In Modal To Create</h4>
         <FormInModalToCreateDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo dynamic-form-item">
+        <h4>Dynamic Form Item</h4>
+        <DynamicFormItemDemo />
+        </div>
+<div className="component-demo store-form-data-into-upper-component">
         <h4>Store Form Data Into Upper Component</h4>
         <StoreFormDataIntoUpperComponentDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo horizontal-login-form">
         <h4>Horizontal Login Form</h4>
         <HorizontalLoginFormDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo form-layout">
         <h4>Form Layout</h4>
         <FormLayoutDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo login-form">
         <h4>Login Form</h4>
         <LoginFormDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo timerelated-controls">
         <h4>Timerelated Controls</h4>
         <TimerelatedControlsDemo />
         </div>
-<div className="component-demo">
-        <h4>Registration</h4>
-        <RegistrationDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo customized-validation">
         <h4>Customized Validation</h4>
         <CustomizedValidationDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo registration">
+        <h4>Registration</h4>
+        <RegistrationDemo />
+        </div>
+<div className="component-demo handle-form-data-manually">
         <h4>Handle Form Data Manually</h4>
         <HandleFormDataManuallyDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo other-form-controls">
         <h4>Other Form Controls</h4>
         <OtherFormControlsDemo />
         </div>

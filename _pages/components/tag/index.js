@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import CheckableDemo from './CheckableDemo.js'
-import BasicDemo from './BasicDemo.js'
-import AddRemoveDynamicallyDemo from './AddRemoveDynamicallyDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CheckableDemo from './CheckableDemo.js'
 import ColorfulTagDemo from './ColorfulTagDemo.js'
+import AddRemoveDynamicallyDemo from './AddRemoveDynamicallyDemo.js'
 import HotTagsDemo from './HotTagsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -47,23 +47,23 @@ Tag for categorizing or markup.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Checkable</h4>
-        <CheckableDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
-        <h4>Add Remove Dynamically</h4>
-        <AddRemoveDynamicallyDemo />
+<div className="component-demo checkable">
+        <h4>Checkable</h4>
+        <CheckableDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo colorful-tag">
         <h4>Colorful Tag</h4>
         <ColorfulTagDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo add-remove-dynamically">
+        <h4>Add Remove Dynamically</h4>
+        <AddRemoveDynamicallyDemo />
+        </div>
+<div className="component-demo hot-tags">
         <h4>Hot Tags</h4>
         <HotTagsDemo />
         </div>

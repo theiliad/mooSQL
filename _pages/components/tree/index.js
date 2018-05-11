@@ -1,12 +1,12 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
+    import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
 import CustomizeIconDemo from './CustomizeIconDemo.js'
 import DraggableDemo from './DraggableDemo.js'
-import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
+import BasicDemo from './BasicDemo.js'
 import TreeWithLineDemo from './TreeWithLineDemo.js'
 import SearchableDemo from './SearchableDemo.js'
+import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -86,33 +86,33 @@ const expComponent = () => (
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo basic-controlled-example">
         <h4>Basic Controlled Example</h4>
         <BasicControlledExampleDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo customize-icon">
         <h4>Customize Icon</h4>
         <CustomizeIconDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo draggable">
         <h4>Draggable</h4>
         <DraggableDemo />
         </div>
-<div className="component-demo">
-        <h4>Load Data Asynchronously</h4>
-        <LoadDataAsynchronouslyDemo />
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo tree-with-line">
         <h4>Tree With Line</h4>
         <TreeWithLineDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo searchable">
         <h4>Searchable</h4>
         <SearchableDemo />
+        </div>
+<div className="component-demo load-data-asynchronously">
+        <h4>Load Data Asynchronously</h4>
+        <LoadDataAsynchronouslyDemo />
         </div>
 
                 <div id="demo-documentation">

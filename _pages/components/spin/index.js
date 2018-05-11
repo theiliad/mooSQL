@@ -41,31 +41,31 @@ A spinner for displaying loading state of a page or a section.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic-usage">
         <h4>Basic Usage</h4>
         <BasicUsageDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo custom-spinning-indicator">
         <h4>Custom Spinning Indicator</h4>
         <CustomSpinningIndicatorDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo delay">
         <h4>Delay</h4>
         <DelayDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo inside-a-container">
         <h4>Inside A Container</h4>
         <InsideAContainerDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo embedded-mode">
         <h4>Embedded Mode</h4>
         <EmbeddedModeDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo size">
         <h4>Size</h4>
         <SizeDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo customized-description">
         <h4>Customized Description</h4>
         <CustomizedDescriptionDemo />
         </div>

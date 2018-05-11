@@ -2,12 +2,12 @@ import React from 'react'
 
     import TypeDemo from './TypeDemo.js'
 import ButtonGroupDemo from './ButtonGroupDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import GhostButtonDemo from './GhostButtonDemo.js'
 import IconDemo from './IconDemo.js'
+import SizeDemo from './SizeDemo.js'
 import LoadingDemo from './LoadingDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
-import SizeDemo from './SizeDemo.js'
-import DisabledDemo from './DisabledDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -63,37 +63,37 @@ To trigger an operation.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo type">
         <h4>Type</h4>
         <TypeDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo button-group">
         <h4>Button Group</h4>
         <ButtonGroupDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo disabled">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
+<div className="component-demo ghost-button">
         <h4>Ghost Button</h4>
         <GhostButtonDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo icon">
         <h4>Icon</h4>
         <IconDemo />
         </div>
-<div className="component-demo">
-        <h4>Loading</h4>
-        <LoadingDemo />
-        </div>
-<div className="component-demo">
-        <h4>Multiple Buttons</h4>
-        <MultipleButtonsDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo size">
         <h4>Size</h4>
         <SizeDemo />
         </div>
-<div className="component-demo">
-        <h4>Disabled</h4>
-        <DisabledDemo />
+<div className="component-demo loading">
+        <h4>Loading</h4>
+        <LoadingDemo />
+        </div>
+<div className="component-demo multiple-buttons">
+        <h4>Multiple Buttons</h4>
+        <MultipleButtonsDemo />
         </div>
 
                 <div id="demo-documentation">

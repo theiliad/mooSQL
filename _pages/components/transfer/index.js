@@ -1,8 +1,8 @@
 import React from 'react'
 
     import AdvancedDemo from './AdvancedDemo.js'
-import BasicDemo from './BasicDemo.js'
 import CustomDatasourceDemo from './CustomDatasourceDemo.js'
+import BasicDemo from './BasicDemo.js'
 import SearchDemo from './SearchDemo.js'
 import PerformanceTestDemo from './PerformanceTestDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -63,23 +63,23 @@ Double column transfer choice box.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo advanced">
         <h4>Advanced</h4>
         <AdvancedDemo />
         </div>
-<div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo custom-datasource">
         <h4>Custom Datasource</h4>
         <CustomDatasourceDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo search">
         <h4>Search</h4>
         <SearchDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo performance-test">
         <h4>Performance Test</h4>
         <PerformanceTestDemo />
         </div>

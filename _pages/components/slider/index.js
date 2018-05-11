@@ -57,31 +57,31 @@ A Slider component for displaying current value and intervals in range.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo event">
         <h4>Event</h4>
         <EventDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo slider-with-icon">
         <h4>Slider With Icon</h4>
         <SliderWithIconDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo slider-with-input-number">
         <h4>Slider With Input Number</h4>
         <SliderWithInputNumberDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo graduated-slider">
         <h4>Graduated Slider</h4>
         <GraduatedSliderDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo customize-tooltip">
         <h4>Customize Tooltip</h4>
         <CustomizeTooltipDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo vertical">
         <h4>Vertical</h4>
         <VerticalDemo />
         </div>

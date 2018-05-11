@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
-import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
-import DynamicDemo from './DynamicDemo.js'
-import DashboardDemo from './DashboardDemo.js'
+    import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
+import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
 import CircularProgressBarDemo from './CircularProgressBarDemo.js'
-import MiniSizeProgressBarDemo from './MiniSizeProgressBarDemo.js'
-import ProgressBarDemo from './ProgressBarDemo.js'
-import ProgressBarWithSuccessSegmentDemo from './ProgressBarWithSuccessSegmentDemo.js'
+import DashboardDemo from './DashboardDemo.js'
 import CustomTextFormatDemo from './CustomTextFormatDemo.js'
+import DynamicDemo from './DynamicDemo.js'
+import MiniSizeProgressBarDemo from './MiniSizeProgressBarDemo.js'
+import ProgressBarWithSuccessSegmentDemo from './ProgressBarWithSuccessSegmentDemo.js'
+import ProgressBarDemo from './ProgressBarDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -51,41 +51,41 @@ Display the current progress of an operation flow.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo">
-        <h4>Dynamic Circular Progress Bar</h4>
-        <DynamicCircularProgressBarDemo />
-        </div>
-<div className="component-demo">
+                <div className="component-demo mini-size-circular-progress-bar">
         <h4>Mini Size Circular Progress Bar</h4>
         <MiniSizeCircularProgressBarDemo />
         </div>
-<div className="component-demo">
-        <h4>Dynamic</h4>
-        <DynamicDemo />
+<div className="component-demo dynamic-circular-progress-bar">
+        <h4>Dynamic Circular Progress Bar</h4>
+        <DynamicCircularProgressBarDemo />
         </div>
-<div className="component-demo">
-        <h4>Dashboard</h4>
-        <DashboardDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo circular-progress-bar">
         <h4>Circular Progress Bar</h4>
         <CircularProgressBarDemo />
         </div>
-<div className="component-demo">
+<div className="component-demo dashboard">
+        <h4>Dashboard</h4>
+        <DashboardDemo />
+        </div>
+<div className="component-demo custom-text-format">
+        <h4>Custom Text Format</h4>
+        <CustomTextFormatDemo />
+        </div>
+<div className="component-demo dynamic">
+        <h4>Dynamic</h4>
+        <DynamicDemo />
+        </div>
+<div className="component-demo mini-size-progress-bar">
         <h4>Mini Size Progress Bar</h4>
         <MiniSizeProgressBarDemo />
         </div>
-<div className="component-demo">
-        <h4>Progress Bar</h4>
-        <ProgressBarDemo />
-        </div>
-<div className="component-demo">
+<div className="component-demo progress-bar-with-success-segment">
         <h4>Progress Bar With Success Segment</h4>
         <ProgressBarWithSuccessSegmentDemo />
         </div>
-<div className="component-demo">
-        <h4>Custom Text Format</h4>
-        <CustomTextFormatDemo />
+<div className="component-demo progress-bar">
+        <h4>Progress Bar</h4>
+        <ProgressBarDemo />
         </div>
 
                 <div id="demo-documentation">
