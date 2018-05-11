@@ -81,6 +81,21 @@ div.component-demo {
 
 div {
     #component-demos {
+        // Navigation
+        &-dropdown {
+            div.placement button {
+                margin: 0 10px 10px 0;
+            }
+        }
+
+        &-pagination {
+            div.mini-size {
+                ul {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
         // Data Entry
         &-auto-complete {
             div.lookup-patterns-uncertain-category {
