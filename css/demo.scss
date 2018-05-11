@@ -55,14 +55,6 @@
     }
 
     div {
-        &.ant-alert {
-            margin-bottom: 30px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        
         &.ant-row {
             margin-bottom: 15px;
 
@@ -78,5 +70,66 @@ div.component-demo {
 
     h4 {
         margin-bottom: 15px;
+    }
+}
+
+div {
+    #component-demos {
+        &-alert {
+            br {
+                display: none;
+            }
+
+            .ant-alert {
+                margin-bottom: 15px;
+    
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-modal, &-notification {
+            button {
+                margin-right: 10px;
+            }
+        }
+
+        &-button {
+            div.component-demo {
+                div h4 {
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                }
+
+                button {
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+
+                div.ant-btn-group {
+                    margin-right: 10px;
+
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &-grid {
+            .ant-col-1, .ant-col-2, .ant-col-3, .ant-col-4, .ant-col-5, .ant-col-6, .ant-col-7, .ant-col-8, .ant-col-9, .ant-col-10, .ant-col-11, .ant-col-12, .ant-col-13, .ant-col-14, .ant-col-15, .ant-col-16, .ant-col-17, .ant-col-18, .ant-col-19, .ant-col-20, .ant-col-21, .ant-col-22, .ant-col-23, .ant-col-24, .ant-col-lg-6, .ant-col-lg-8 {
+                background: #f6f6fb;
+                padding: 15px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .ant-row-flex {
+                margin-bottom: 30px;
+            }
+        }
     }
 }

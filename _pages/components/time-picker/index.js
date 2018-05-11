@@ -67,13 +67,15 @@ import moment from 'moment';
 <style>.code-box-demo .ant-time-picker { margin: 0 8px 12px 0; }</style>
 `
 const expComponent = () => (
-        <div>
-            <h4>Time Picker</h4>
-            <p>
+        <div id="component-demos-time-picker">
+            <div className="title-bar">
+                <h4>Time Picker</h4>
+                <p>
 
 To select/input a time.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

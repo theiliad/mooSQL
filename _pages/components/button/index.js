@@ -52,13 +52,15 @@ To get a customized button, just set \`type\`/\`shape\`/\`size\`/\`loading\`/\`d
 </style>
 `
 const expComponent = () => (
-        <div>
-            <h4>Button</h4>
-            <p>
+        <div id="component-demos-button">
+            <div className="title-bar">
+                <h4>Button</h4>
+                <p>
 
 To trigger an operation.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

@@ -35,13 +35,15 @@ Consult [Tooltip's documentation](https://ant.design/components/tooltip/#API) to
 Please ensure that the child node of \`Popconfirm\` accepts \`onMouseEnter\`, \`onMouseLeave\`, \`onFocus\`, \`onClick\` events.
 `
 const expComponent = () => (
-        <div>
-            <h4>Popconfirm</h4>
-            <p>
+        <div id="component-demos-popconfirm">
+            <div className="title-bar">
+                <h4>Popconfirm</h4>
+                <p>
 
 A simple and compact confirmation dialog of an action.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

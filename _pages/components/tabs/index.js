@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import CardTypeTabDemo from './CardTypeTabDemo.js'
 import ContainerOfCardTypeTabDemo from './ContainerOfCardTypeTabDemo.js'
+import CardTypeTabDemo from './CardTypeTabDemo.js'
 import CustomizedTriggerOfNewTabDemo from './CustomizedTriggerOfNewTabDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import AddCloseTabDemo from './AddCloseTabDemo.js'
@@ -57,13 +57,15 @@ Ant Design has 3 types of Tabs for different situations.
 | tab | Show text in TabPane's head | string\|ReactNode | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Tabs</h4>
-            <p>
+        <div id="component-demos-tabs">
+            <div className="title-bar">
+                <h4>Tabs</h4>
+                <p>
 
 Tabs make it easy to switch between different views.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -71,12 +73,12 @@ Tabs make it easy to switch between different views.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Card Type Tab</h4>
-        <CardTypeTabDemo />
-        </div>
-<div className="component-demo">
         <h4>Container Of Card Type Tab</h4>
         <ContainerOfCardTypeTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Card Type Tab</h4>
+        <CardTypeTabDemo />
         </div>
 <div className="component-demo">
         <h4>Customized Trigger Of New Tab</h4>

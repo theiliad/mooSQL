@@ -2,8 +2,8 @@ import React from 'react'
 
     import ScrollAutomaticallyDemo from './ScrollAutomaticallyDemo.js'
 import BasicDemo from './BasicDemo.js'
-import FadeInDemo from './FadeInDemo.js'
 import VerticalDemo from './VerticalDemo.js'
+import FadeInDemo from './FadeInDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -39,13 +39,15 @@ A carousel component. Scales with its container.
 For more info on the parameters, refer to the <https://github.com/akiran/react-slick>
 `
 const expComponent = () => (
-        <div>
-            <h4>Carousel</h4>
-            <p>
+        <div id="component-demos-carousel">
+            <div className="title-bar">
+                <h4>Carousel</h4>
+                <p>
 
 A carousel component. Scales with its container.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -57,12 +59,12 @@ A carousel component. Scales with its container.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Fade In</h4>
-        <FadeInDemo />
-        </div>
-<div className="component-demo">
         <h4>Vertical</h4>
         <VerticalDemo />
+        </div>
+<div className="component-demo">
+        <h4>Fade In</h4>
+        <FadeInDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

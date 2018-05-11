@@ -2,13 +2,13 @@ import React from 'react'
 
     import BasicCardDemo from './BasicCardDemo.js'
 import NoBorderDemo from './NoBorderDemo.js'
-import CustomizedContentDemo from './CustomizedContentDemo.js'
 import GridCardDemo from './GridCardDemo.js'
-import CardInColumnDemo from './CardInColumnDemo.js'
+import CustomizedContentDemo from './CustomizedContentDemo.js'
 import InnerCardDemo from './InnerCardDemo.js'
+import CardInColumnDemo from './CardInColumnDemo.js'
 import LoadingCardDemo from './LoadingCardDemo.js'
-import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
 import SimpleCardDemo from './SimpleCardDemo.js'
+import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
 import WithTabsDemo from './WithTabsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -63,13 +63,15 @@ A card can be used to display content related to a single subject. The content c
 | title | title content | ReactNode | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Card</h4>
-            <p>
+        <div id="component-demos-card">
+            <div className="title-bar">
+                <h4>Card</h4>
+                <p>
 
 Simple rectangular container.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -81,32 +83,32 @@ Simple rectangular container.
         <NoBorderDemo />
         </div>
 <div className="component-demo">
-        <h4>Customized Content</h4>
-        <CustomizedContentDemo />
-        </div>
-<div className="component-demo">
         <h4>Grid Card</h4>
         <GridCardDemo />
         </div>
 <div className="component-demo">
-        <h4>Card In Column</h4>
-        <CardInColumnDemo />
+        <h4>Customized Content</h4>
+        <CustomizedContentDemo />
         </div>
 <div className="component-demo">
         <h4>Inner Card</h4>
         <InnerCardDemo />
         </div>
 <div className="component-demo">
+        <h4>Card In Column</h4>
+        <CardInColumnDemo />
+        </div>
+<div className="component-demo">
         <h4>Loading Card</h4>
         <LoadingCardDemo />
         </div>
 <div className="component-demo">
-        <h4>Support More Content Configuration</h4>
-        <SupportMoreContentConfigurationDemo />
-        </div>
-<div className="component-demo">
         <h4>Simple Card</h4>
         <SimpleCardDemo />
+        </div>
+<div className="component-demo">
+        <h4>Support More Content Configuration</h4>
+        <SupportMoreContentConfigurationDemo />
         </div>
 <div className="component-demo">
         <h4>With Tabs</h4>

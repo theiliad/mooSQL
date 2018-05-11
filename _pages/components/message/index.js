@@ -1,8 +1,8 @@
 import React from 'react'
 
     import CustomizeDurationDemo from './CustomizeDurationDemo.js'
-import NormalPromptDemo from './NormalPromptDemo.js'
 import MessageOfLoadingDemo from './MessageOfLoadingDemo.js'
+import NormalPromptDemo from './NormalPromptDemo.js'
 import OtherTypesOfMessageDemo from './OtherTypesOfMessageDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -54,13 +54,15 @@ message.config({
 | top | distance from top | number | 24px |
 `
 const expComponent = () => (
-        <div>
-            <h4>Message</h4>
-            <p>
+        <div id="component-demos-message">
+            <div className="title-bar">
+                <h4>Message</h4>
+                <p>
 
 Display global messages as feedback in response to user operations.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -68,12 +70,12 @@ Display global messages as feedback in response to user operations.
         <CustomizeDurationDemo />
         </div>
 <div className="component-demo">
-        <h4>Normal Prompt</h4>
-        <NormalPromptDemo />
-        </div>
-<div className="component-demo">
         <h4>Message Of Loading</h4>
         <MessageOfLoadingDemo />
+        </div>
+<div className="component-demo">
+        <h4>Normal Prompt</h4>
+        <NormalPromptDemo />
         </div>
 <div className="component-demo">
         <h4>Other Types Of Message</h4>

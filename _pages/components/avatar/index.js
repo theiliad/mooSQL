@@ -21,13 +21,15 @@ Avatars can be used to represent people or objects. It supports images, \`Icon\`
 | src | the address of the image for an image avatar | string | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Avatar</h4>
-            <p>
+        <div id="component-demos-avatar">
+            <div className="title-bar">
+                <h4>Avatar</h4>
+                <p>
 
 Avatars can be used to represent people or objects. It supports images, \`Icon\`s, or letters.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

@@ -34,13 +34,15 @@ For displaying anchor hyperlinks on page and jumping between them.
 | title | content of  hyperlink | string\|ReactNode |  |
 `
 const expComponent = () => (
-        <div>
-            <h4>Anchor</h4>
-            <p>
+        <div id="component-demos-anchor">
+            <div className="title-bar">
+                <h4>Anchor</h4>
+                <p>
 
 Hyperlinks to scroll on one page.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

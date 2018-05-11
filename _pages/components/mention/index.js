@@ -2,15 +2,15 @@ import React from 'react'
 
     import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
 import IconImageDemo from './IconImageDemo.js'
+import BasicDemo from './BasicDemo.js'
 import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
 import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
-import PlacementDemo from './PlacementDemo.js'
 import SuggestionContainerDemo from './SuggestionContainerDemo.js'
+import PlacementDemo from './PlacementDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
-import BasicDemo from './BasicDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -77,13 +77,15 @@ When need to mention someone or something.
 | value | value of suggestion，the value will insert into input filed while selected | string | "" |
 `
 const expComponent = () => (
-        <div>
-            <h4>Mention</h4>
-            <p>
+        <div id="component-demos-mention">
+            <div className="title-bar">
+                <h4>Mention</h4>
+                <p>
 
 Mention component.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -93,6 +95,10 @@ Mention component.
 <div className="component-demo">
         <h4>Icon Image</h4>
         <IconImageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo">
         <h4>Controlled</h4>
@@ -115,20 +121,16 @@ Mention component.
         <CustomizeTriggerTokenDemo />
         </div>
 <div className="component-demo">
-        <h4>Placement</h4>
-        <PlacementDemo />
-        </div>
-<div className="component-demo">
         <h4>Suggestion Container</h4>
         <SuggestionContainerDemo />
         </div>
 <div className="component-demo">
-        <h4>Disabled Or Read Only</h4>
-        <DisabledOrReadOnlyDemo />
+        <h4>Placement</h4>
+        <PlacementDemo />
         </div>
 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
+        <h4>Disabled Or Read Only</h4>
+        <DisabledOrReadOnlyDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

@@ -46,13 +46,15 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
 | onShowSizeChange | a callback function, executed when \`pageSize\` is changed | Function(current, size) | noop |
 `
 const expComponent = () => (
-        <div>
-            <h4>Pagination</h4>
-            <p>
+        <div id="component-demos-pagination">
+            <div className="title-bar">
+                <h4>Pagination</h4>
+                <p>
 
 A long list can be divided into several pages by \`Pagination\`, and only one page will be loaded at a time.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

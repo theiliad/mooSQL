@@ -1,12 +1,12 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import DynamicDemo from './DynamicDemo.js'
 import RedBadgeDemo from './RedBadgeDemo.js'
+import DynamicDemo from './DynamicDemo.js'
 import ClickableDemo from './ClickableDemo.js'
 import StandaloneDemo from './StandaloneDemo.js'
-import StatusDemo from './StatusDemo.js'
 import OverflowCountDemo from './OverflowCountDemo.js'
+import StatusDemo from './StatusDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -41,13 +41,15 @@ Badge normally appears in proximity to notifications or user avatars with eye-ca
 | text | If \`status\` is set, \`text\` sets the display text of the status \`dot\` | string | \`''\` |
 `
 const expComponent = () => (
-        <div>
-            <h4>Badge</h4>
-            <p>
+        <div id="component-demos-badge">
+            <div className="title-bar">
+                <h4>Badge</h4>
+                <p>
 
 Small numerical value or status descriptor for UI elements.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -55,12 +57,12 @@ Small numerical value or status descriptor for UI elements.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Dynamic</h4>
-        <DynamicDemo />
-        </div>
-<div className="component-demo">
         <h4>Red Badge</h4>
         <RedBadgeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Dynamic</h4>
+        <DynamicDemo />
         </div>
 <div className="component-demo">
         <h4>Clickable</h4>
@@ -71,12 +73,12 @@ Small numerical value or status descriptor for UI elements.
         <StandaloneDemo />
         </div>
 <div className="component-demo">
-        <h4>Status</h4>
-        <StatusDemo />
-        </div>
-<div className="component-demo">
         <h4>Overflow Count</h4>
         <OverflowCountDemo />
+        </div>
+<div className="component-demo">
+        <h4>Status</h4>
+        <StatusDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

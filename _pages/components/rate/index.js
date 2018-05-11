@@ -45,13 +45,15 @@ Rate component.
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Rate</h4>
-            <p>
+        <div id="component-demos-rate">
+            <div className="title-bar">
+                <h4>Rate</h4>
+                <p>
 
 Rate component.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

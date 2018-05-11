@@ -4,8 +4,8 @@ import React from 'react'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
 import FixedSiderDemo from './FixedSiderDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
-import SiderDemo from './SiderDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
+import SiderDemo from './SiderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderSiderDemo22 from './HeaderSiderDemo22.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
@@ -122,13 +122,15 @@ The sidebar.
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Layout</h4>
-            <p>
+        <div id="component-demos-layout">
+            <div className="title-bar">
+                <h4>Layout</h4>
+                <p>
 
 Handling the overall layout of a page.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -148,12 +150,12 @@ Handling the overall layout of a page.
         <FixedHeaderDemo />
         </div>
 <div className="component-demo">
-        <h4>Sider</h4>
-        <SiderDemo />
-        </div>
-<div className="component-demo">
         <h4>Responsive</h4>
         <ResponsiveDemo />
+        </div>
+<div className="component-demo">
+        <h4>Sider</h4>
+        <SiderDemo />
         </div>
 <div className="component-demo">
         <h4>Header Sider</h4>

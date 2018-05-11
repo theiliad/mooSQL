@@ -15,7 +15,7 @@
   },
   "author": "Gopher Labs Ltd.",
   "dependencies": {
-    "antd": "^3.4.2",
+    "antd": "^3.5.1",
     "axios": "^0.18.0",
     "fetch-jsonp": "^1.1.3",
     "htmr": "^0.6.3",

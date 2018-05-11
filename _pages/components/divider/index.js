@@ -1,8 +1,8 @@
 import React from 'react'
 
     import HorizontalDemo from './HorizontalDemo.js'
-import OrientationOfTitleDemo from './OrientationOfTitleDemo.js'
 import VerticalDemo from './VerticalDemo.js'
+import OrientationOfTitleDemo from './OrientationOfTitleDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -25,13 +25,15 @@ A divider line separates different content.
 | orientation | position of title inside divider | enum: \`left\` \`right\` \`center\` | \`center\` |
 `
 const expComponent = () => (
-        <div>
-            <h4>Divider</h4>
-            <p>
+        <div id="component-demos-divider">
+            <div className="title-bar">
+                <h4>Divider</h4>
+                <p>
 
 A divider line separates different content.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -39,12 +41,12 @@ A divider line separates different content.
         <HorizontalDemo />
         </div>
 <div className="component-demo">
-        <h4>Orientation Of Title</h4>
-        <OrientationOfTitleDemo />
-        </div>
-<div className="component-demo">
         <h4>Vertical</h4>
         <VerticalDemo />
+        </div>
+<div className="component-demo">
+        <h4>Orientation Of Title</h4>
+        <OrientationOfTitleDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

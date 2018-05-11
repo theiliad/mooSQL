@@ -3,8 +3,8 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import ContextMenuDemo from './ContextMenuDemo.js'
 import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
-import ClickEventDemo from './ClickEventDemo.js'
 import OtherElementsDemo from './OtherElementsDemo.js'
+import ClickEventDemo from './ClickEventDemo.js'
 import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import CascadingMenuDemo from './CascadingMenuDemo.js'
@@ -54,13 +54,15 @@ You should use [Menu](/components/menu/) as \`overlay\`. The menu items and divi
 | onVisibleChange | a callback function takes an argument: \`visible\`, is executed when the visible state is changed | Function | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Dropdown</h4>
-            <p>
+        <div id="component-demos-dropdown">
+            <div className="title-bar">
+                <h4>Dropdown</h4>
+                <p>
 
 A dropdown list.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -76,12 +78,12 @@ A dropdown list.
         <ButtonWithDropdownMenuDemo />
         </div>
 <div className="component-demo">
-        <h4>Click Event</h4>
-        <ClickEventDemo />
-        </div>
-<div className="component-demo">
         <h4>Other Elements</h4>
         <OtherElementsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Click Event</h4>
+        <ClickEventDemo />
         </div>
 <div className="component-demo">
         <h4>The Way Of Hiding Menu</h4>

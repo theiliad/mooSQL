@@ -5,8 +5,8 @@ import EventDemo from './EventDemo.js'
 import SliderWithIconDemo from './SliderWithIconDemo.js'
 import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
 import GraduatedSliderDemo from './GraduatedSliderDemo.js'
-import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
 import VerticalDemo from './VerticalDemo.js'
+import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -46,13 +46,15 @@ To input a value in a range.
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Slider</h4>
-            <p>
+        <div id="component-demos-slider">
+            <div className="title-bar">
+                <h4>Slider</h4>
+                <p>
 
 A Slider component for displaying current value and intervals in range.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -76,12 +78,12 @@ A Slider component for displaying current value and intervals in range.
         <GraduatedSliderDemo />
         </div>
 <div className="component-demo">
-        <h4>Customize Tooltip</h4>
-        <CustomizeTooltipDemo />
-        </div>
-<div className="component-demo">
         <h4>Vertical</h4>
         <VerticalDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Tooltip</h4>
+        <CustomizeTooltipDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

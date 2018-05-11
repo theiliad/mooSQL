@@ -94,13 +94,15 @@ Select component to select value from options.
 | label | Group label | string\|React.Element | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Select</h4>
-            <p>
+        <div id="component-demos-select">
+            <div className="title-bar">
+                <h4>Select</h4>
+                <p>
 
 Select component to select value from options.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

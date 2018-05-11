@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import LocalizationDemo from './LocalizationDemo.js'
-import AllComponentsDemo from './AllComponentsDemo.js'
+    import AllComponentsDemo from './AllComponentsDemo.js'
+import LocalizationDemo from './LocalizationDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -49,22 +49,24 @@ This component aims for localization of the built-in text, if you want to suppor
 | locale | language package setting, you can find the packages in this path: \`antd/lib/locale-provider/\` | object | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Locale Provider</h4>
-            <p>
+        <div id="component-demos-locale-provider">
+            <div className="title-bar">
+                <h4>Locale Provider</h4>
+                <p>
 
 \`LocaleProvider\` provides a uniform localization support for built-in text of components.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Localization</h4>
-        <LocalizationDemo />
-        </div>
-<div className="component-demo">
         <h4>All Components</h4>
         <AllComponentsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Localization</h4>
+        <LocalizationDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

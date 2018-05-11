@@ -9,14 +9,14 @@ import DragSortingDemo from './DragSortingDemo.js'
 import DynamicSettingsDemo from './DynamicSettingsDemo.js'
 import EditableCellsDemo from './EditableCellsDemo.js'
 import EditableRowsDemo from './EditableRowsDemo.js'
-import TreeDataDemo from './TreeDataDemo.js'
 import ExpandableRowDemo from './ExpandableRowDemo.js'
+import TreeDataDemo from './TreeDataDemo.js'
 import FixedColumnsAndHeaderDemo from './FixedColumnsAndHeaderDemo.js'
 import FixedColumnsDemo from './FixedColumnsDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
 import GroupingTableHeadDemo from './GroupingTableHeadDemo.js'
-import FilterAndSorterDemo from './FilterAndSorterDemo.js'
 import JSXStyleAPIDemo from './JSXStyleAPIDemo.js'
+import FilterAndSorterDemo from './FilterAndSorterDemo.js'
 import NestedTablesDemo from './NestedTablesDemo.js'
 import ResetFiltersAndSortersDemo from './ResetFiltersAndSortersDemo.js'
 import SelectionAndOperationDemo from './SelectionAndOperationDemo.js'
@@ -246,13 +246,15 @@ return <Table rowKey={record => record.uid} />;
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Table</h4>
-            <p>
+        <div id="component-demos-table">
+            <div className="title-bar">
+                <h4>Table</h4>
+                <p>
 
 A table displays rows of data.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -292,12 +294,12 @@ A table displays rows of data.
         <EditableRowsDemo />
         </div>
 <div className="component-demo">
-        <h4>Tree Data</h4>
-        <TreeDataDemo />
-        </div>
-<div className="component-demo">
         <h4>Expandable Row</h4>
         <ExpandableRowDemo />
+        </div>
+<div className="component-demo">
+        <h4>Tree Data</h4>
+        <TreeDataDemo />
         </div>
 <div className="component-demo">
         <h4>Fixed Columns And Header</h4>
@@ -316,12 +318,12 @@ A table displays rows of data.
         <GroupingTableHeadDemo />
         </div>
 <div className="component-demo">
-        <h4>Filter And Sorter</h4>
-        <FilterAndSorterDemo />
-        </div>
-<div className="component-demo">
         <h4>J S X Style A P I</h4>
         <JSXStyleAPIDemo />
+        </div>
+<div className="component-demo">
+        <h4>Filter And Sorter</h4>
+        <FilterAndSorterDemo />
         </div>
 <div className="component-demo">
         <h4>Nested Tables</h4>

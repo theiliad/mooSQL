@@ -8,10 +8,10 @@ import DynamicRulesDemo from './DynamicRulesDemo.js'
 import FormInModalToCreateDemo from './FormInModalToCreateDemo.js'
 import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperComponentDemo.js'
 import HorizontalLoginFormDemo from './HorizontalLoginFormDemo.js'
-import FormLayoutDemo from './FormLayoutDemo.js'
 import LoginFormDemo from './LoginFormDemo.js'
 import RegistrationDemo from './RegistrationDemo.js'
 import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
+import FormLayoutDemo from './FormLayoutDemo.js'
 import OtherFormControlsDemo from './OtherFormControlsDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
@@ -196,13 +196,15 @@ class UserForm extends React.Component<UserFormProps, any> {
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Form</h4>
-            <p>
+        <div id="component-demos-form">
+            <div className="title-bar">
+                <h4>Form</h4>
+                <p>
 
 Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -238,10 +240,6 @@ Form is used to collect, validate, and submit the user input, usually contains v
         <HorizontalLoginFormDemo />
         </div>
 <div className="component-demo">
-        <h4>Form Layout</h4>
-        <FormLayoutDemo />
-        </div>
-<div className="component-demo">
         <h4>Login Form</h4>
         <LoginFormDemo />
         </div>
@@ -252,6 +250,10 @@ Form is used to collect, validate, and submit the user input, usually contains v
 <div className="component-demo">
         <h4>Timerelated Controls</h4>
         <TimerelatedControlsDemo />
+        </div>
+<div className="component-demo">
+        <h4>Form Layout</h4>
+        <FormLayoutDemo />
         </div>
 <div className="component-demo">
         <h4>Other Form Controls</h4>

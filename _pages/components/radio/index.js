@@ -55,13 +55,15 @@ radio group，wrap a group of \`Radio\`。
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Radio</h4>
-            <p>
+        <div id="component-demos-radio">
+            <div className="title-bar">
+                <h4>Radio</h4>
+                <p>
 
 Radio.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

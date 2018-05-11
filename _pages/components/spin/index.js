@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
+    import BasicUsageDemo from './BasicUsageDemo.js'
+import CustomSpinningIndicatorDemo from './CustomSpinningIndicatorDemo.js'
 import DelayDemo from './DelayDemo.js'
 import InsideAContainerDemo from './InsideAContainerDemo.js'
 import EmbeddedModeDemo from './EmbeddedModeDemo.js'
@@ -30,22 +30,24 @@ When part of the page is waiting for asynchronous data or during a rendering pro
 | wrapperClassName | className of wrapper when Spin has children | string | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Spin</h4>
-            <p>
+        <div id="component-demos-spin">
+            <div className="title-bar">
+                <h4>Spin</h4>
+                <p>
 
 A spinner for displaying loading state of a page or a section.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Custom Spinning Indicator</h4>
-        <CustomSpinningIndicatorDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic Usage</h4>
         <BasicUsageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Custom Spinning Indicator</h4>
+        <CustomSpinningIndicatorDemo />
         </div>
 <div className="component-demo">
         <h4>Delay</h4>

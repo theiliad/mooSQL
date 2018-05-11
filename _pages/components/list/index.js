@@ -4,8 +4,8 @@ import React from 'react'
 import GridDemo from './GridDemo.js'
 import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
 import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
-import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
 import LoadMoreDemo from './LoadMoreDemo.js'
+import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
 import SimpleListDemo from './SimpleListDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -65,13 +65,15 @@ A list can be used to display content related to a single subject. The content c
 | title | The title of list item | string\|ReactNode | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>List</h4>
-            <p>
+        <div id="component-demos-list">
+            <div className="title-bar">
+                <h4>List</h4>
+                <p>
 
 Simple List.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -91,12 +93,12 @@ Simple List.
         <InfiniteVirtualizedDemo />
         </div>
 <div className="component-demo">
-        <h4>Responsive Grid List</h4>
-        <ResponsiveGridListDemo />
-        </div>
-<div className="component-demo">
         <h4>Load More</h4>
         <LoadMoreDemo />
+        </div>
+<div className="component-demo">
+        <h4>Responsive Grid List</h4>
+        <ResponsiveGridListDemo />
         </div>
 <div className="component-demo">
         <h4>Simple List</h4>

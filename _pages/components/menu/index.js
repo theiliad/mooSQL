@@ -84,13 +84,15 @@ More layouts with navigation: [layout](/components/layout).
 Divider line in between menu items, only used in vertical popup Menu or Dropdown Menu.
 `
 const expComponent = () => (
-        <div>
-            <h4>Menu</h4>
-            <p>
+        <div id="component-demos-menu">
+            <div className="title-bar">
+                <h4>Menu</h4>
+                <p>
 
 Menu list of Navigation.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

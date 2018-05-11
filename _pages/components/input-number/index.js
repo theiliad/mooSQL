@@ -40,13 +40,15 @@ When a numeric value needs to be provided.
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Input Number</h4>
-            <p>
+        <div id="component-demos-input-number">
+            <div className="title-bar">
+                <h4>Input Number</h4>
+                <p>
 
 Enter a number within certain range with the mouse or keyboard.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

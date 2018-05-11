@@ -36,13 +36,15 @@ Tag for categorizing or markup.
 | onChange | Callback executed when Tag is checked/unchecked | (checked) => void | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Tag</h4>
-            <p>
+        <div id="component-demos-tag">
+            <div className="title-bar">
+                <h4>Tag</h4>
+                <p>
 
 Tag for categorizing or markup.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

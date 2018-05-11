@@ -207,9 +207,11 @@ export default expComponent
     // .replaceAll('`', '\\`').replaceAll('<code>', '\\`\\`\\`').replaceAll('</code>', '\\`\\`\\`')
     "const markDownInput = `" + unescape(markDownData) + "`" +
     `\nconst expComponent = () => (
-        <div>
-            <h4>${antdComponentName.split('-').map(item => item == '-' ? undefined : item.capitalize()).join(' ')}</h4>
-            <p>${componentDescription}</p>
+        <div id="component-demos-${antdComponentName}">
+            <div className="title-bar">
+                <h4>${antdComponentName.split('-').map(item => item == '-' ? undefined : item.capitalize()).join(' ')}</h4>
+                <p>${componentDescription}</p>
+            </div>
 
             <Card bordered={false}>
                 ${

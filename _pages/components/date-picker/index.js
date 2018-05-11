@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
+import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
@@ -128,13 +128,15 @@ The following APIs are shared by DatePicker, MonthPicker, RangePicker, WeekPicke
 </style>
 `
 const expComponent = () => (
-        <div>
-            <h4>Date Picker</h4>
-            <p>
+        <div id="component-demos-date-picker">
+            <div className="title-bar">
+                <h4>Date Picker</h4>
+                <p>
 
 To select or input a date.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -142,12 +144,12 @@ To select or input a date.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Disabled Date Time</h4>
-        <DisabledDateTimeDemo />
-        </div>
-<div className="component-demo">
         <h4>Customized Date Rendering</h4>
         <CustomizedDateRenderingDemo />
+        </div>
+<div className="component-demo">
+        <h4>Disabled Date Time</h4>
+        <DisabledDateTimeDemo />
         </div>
 <div className="component-demo">
         <h4>Disabled</h4>

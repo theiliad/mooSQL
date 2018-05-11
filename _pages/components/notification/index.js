@@ -3,8 +3,8 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import CustomizedIconDemo from './CustomizedIconDemo.js'
 import CustomizedStyleDemo from './CustomizedStyleDemo.js'
-import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
 import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -70,13 +70,15 @@ notification.config({
 | top | Distance from the top of the viewport, when \`placement\` is \`topRight\` or \`topLeft\` (unit: pixels). | number | 24 |
 `
 const expComponent = () => (
-        <div>
-            <h4>Notification</h4>
-            <p>
+        <div id="component-demos-notification">
+            <div className="title-bar">
+                <h4>Notification</h4>
+                <p>
 
 Display a notification message globally.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -92,12 +94,12 @@ Display a notification message globally.
         <CustomizedStyleDemo />
         </div>
 <div className="component-demo">
-        <h4>Duration After Which The Notification Box Is Closed</h4>
-        <DurationAfterWhichTheNotificationBoxIsClosedDemo />
-        </div>
-<div className="component-demo">
         <h4>Placement</h4>
         <PlacementDemo />
+        </div>
+<div className="component-demo">
+        <h4>Duration After Which The Notification Box Is Closed</h4>
+        <DurationAfterWhichTheNotificationBoxIsClosedDemo />
         </div>
 <div className="component-demo">
         <h4>Custom Close Button</h4>

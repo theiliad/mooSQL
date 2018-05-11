@@ -39,13 +39,15 @@ Switching Selector.
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Switch</h4>
-            <p>
+        <div id="component-demos-switch">
+            <div className="title-bar">
+                <h4>Switch</h4>
+                <p>
 
 Switching Selector.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

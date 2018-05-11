@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
-import ReactRouterIntegrationDemo from './ReactRouterIntegrationDemo.js'
 import OtherRouterIntegrationDemo from './OtherRouterIntegrationDemo.js'
+import ReactRouterIntegrationDemo from './ReactRouterIntegrationDemo.js'
 import ConfiguringTheSeparatorDemo from './ConfiguringTheSeparatorDemo.js'
 import WithAnIconDemo from './WithAnIconDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -55,13 +55,15 @@ return <Breadcrumb itemRender={itemRender} routes={routes} />;
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Breadcrumb</h4>
-            <p>
+        <div id="component-demos-breadcrumb">
+            <div className="title-bar">
+                <h4>Breadcrumb</h4>
+                <p>
 
 A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -69,12 +71,12 @@ A breadcrumb displays the current location within a hierarchy. It allows going b
         <BasicUsageDemo />
         </div>
 <div className="component-demo">
-        <h4>React Router Integration</h4>
-        <ReactRouterIntegrationDemo />
-        </div>
-<div className="component-demo">
         <h4>Other Router Integration</h4>
         <OtherRouterIntegrationDemo />
+        </div>
+<div className="component-demo">
+        <h4>React Router Integration</h4>
+        <ReactRouterIntegrationDemo />
         </div>
 <div className="component-demo">
         <h4>Configuring The Separator</h4>

@@ -2,8 +2,8 @@ import React from 'react'
 
     import PrePostTabDemo from './PrePostTabDemo.js'
 import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
 import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
@@ -83,14 +83,16 @@ Supports all props of \`Input\`.
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Input</h4>
-            <p>
+        <div id="component-demos-input">
+            <div className="title-bar">
+                <h4>Input</h4>
+                <p>
 
 A basic widget for getting the user input is a text field.
 Keyboard and mouse can be used for providing or changing data.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
@@ -102,12 +104,12 @@ Keyboard and mouse can be used for providing or changing data.
         <AutosizingTheHeightToFitTheContentDemo />
         </div>
 <div className="component-demo">
-        <h4>Basic Usage</h4>
-        <BasicUsageDemo />
-        </div>
-<div className="component-demo">
         <h4>Input Group</h4>
         <InputGroupDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
         </div>
 <div className="component-demo">
         <h4>Prefix And Suffix</h4>

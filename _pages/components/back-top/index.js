@@ -26,13 +26,15 @@ import CustomStyleDemo from './CustomStyleDemo.js'
 | onClick | a callback function, which can be executed when you click the button | Function | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Back Top</h4>
-            <p>
+        <div id="component-demos-back-top">
+            <div className="title-bar">
+                <h4>Back Top</h4>
+                <p>
 
 \`BackTop\` makes it easy to go back to the top of the page.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import CardDemo from './CardDemo.js'
+    import CardDemo from './CardDemo.js'
+import BasicDemo from './BasicDemo.js'
 import NoticeCalendarDemo from './NoticeCalendarDemo.js'
 import SelectableCalendarDemo from './SelectableCalendarDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -49,22 +49,24 @@ When data is in the form of dates, such as schedules, timetables, prices calenda
 | onSelect | Callback for when a date is selected | function(date: moment） | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Calendar</h4>
-            <p>
+        <div id="component-demos-calendar">
+            <div className="title-bar">
+                <h4>Calendar</h4>
+                <p>
 
 Container for displaying data in calendar form.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
         <h4>Card</h4>
         <CardDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo">
         <h4>Notice Calendar</h4>

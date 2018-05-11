@@ -71,13 +71,15 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
 | value | Will be treated as \`treeNodeFilterProp\` by default, should be unique in the tree | string | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Tree Select</h4>
-            <p>
+        <div id="component-demos-tree-select">
+            <div className="title-bar">
+                <h4>Tree Select</h4>
+                <p>
 
 Tree selection control.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

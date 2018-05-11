@@ -1,9 +1,9 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import ColorDemo from './ColorDemo.js'
 import CustomDemo from './CustomDemo.js'
 import LastNodeDemo from './LastNodeDemo.js'
+import ColorDemo from './ColorDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -45,22 +45,20 @@ Node of timeline
 | dot | Customize timeline dot | string\|ReactNode | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Timeline</h4>
-            <p>
+        <div id="component-demos-timeline">
+            <div className="title-bar">
+                <h4>Timeline</h4>
+                <p>
 
 Vertical display timeline.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
-        </div>
-<div className="component-demo">
-        <h4>Color</h4>
-        <ColorDemo />
         </div>
 <div className="component-demo">
         <h4>Custom</h4>
@@ -69,6 +67,10 @@ Vertical display timeline.
 <div className="component-demo">
         <h4>Last Node</h4>
         <LastNodeDemo />
+        </div>
+<div className="component-demo">
+        <h4>Color</h4>
+        <ColorDemo />
         </div>
 
                 <ReactMarkdown source={markDownInput} escapeHtml={false} />

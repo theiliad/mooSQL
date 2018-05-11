@@ -52,13 +52,15 @@ return <Transfer rowKey={record => record.uid} />;
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Transfer</h4>
-            <p>
+        <div id="component-demos-transfer">
+            <div className="title-bar">
+                <h4>Transfer</h4>
+                <p>
 
 Double column transfer choice box.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

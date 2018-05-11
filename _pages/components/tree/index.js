@@ -77,11 +77,13 @@ to avoid double computing. But, this brings some restrictions.
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Tree</h4>
-            <p>
+        <div id="component-demos-tree">
+            <div className="title-bar">
+                <h4>Tree</h4>
+                <p>
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

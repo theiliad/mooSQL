@@ -40,13 +40,15 @@ If it will take a long time to complete an operation, you can use \`Progress\` t
 | successPercent | segmented success percent, works when \`type="line"\` | number | 0 |
 `
 const expComponent = () => (
-        <div>
-            <h4>Progress</h4>
-            <p>
+        <div id="component-demos-progress">
+            <div className="title-bar">
+                <h4>Progress</h4>
+                <p>
 
 Display the current progress of an operation flow.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

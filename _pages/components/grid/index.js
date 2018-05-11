@@ -123,13 +123,15 @@ If the Ant Design grid layout component does not meet your needs, you can use th
 The breakpoints of responsive grid follow [BootStrap 4 media queries rules](https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints)(not including \`occasionally part\`).
 `
 const expComponent = () => (
-        <div>
-            <h4>Grid</h4>
-            <p>
+        <div id="component-demos-grid">
+            <div className="title-bar">
+                <h4>Grid</h4>
+                <p>
 
 24 Grids System。
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

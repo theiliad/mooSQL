@@ -97,13 +97,15 @@ ref.destroy();
 </style>
 `
 const expComponent = () => (
-        <div>
-            <h4>Modal</h4>
-            <p>
+        <div id="component-demos-modal">
+            <div className="title-bar">
+                <h4>Modal</h4>
+                <p>
 
 Modal dialogs.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

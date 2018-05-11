@@ -1,9 +1,9 @@
 import React from 'react'
 
     import AvatarDemo from './AvatarDemo.js'
-import UploadByClickingDemo from './UploadByClickingDemo.js'
 import DefaultFilesDemo from './DefaultFilesDemo.js'
 import DragAndDropDemo from './DragAndDropDemo.js'
+import UploadByClickingDemo from './UploadByClickingDemo.js'
 import CompleteControlOverFileListDemo from './CompleteControlOverFileListDemo.js'
 import PicturesWallDemo from './PicturesWallDemo.js'
 import PicturesWithListStyleDemo from './PicturesWithListStyleDemo.js'
@@ -91,22 +91,20 @@ Please set property \`url\` of property \`fileList\` to control content of link
 - <https://github.com/react-component/upload#ie89-note>
 `
 const expComponent = () => (
-        <div>
-            <h4>Upload</h4>
-            <p>
+        <div id="component-demos-upload">
+            <div className="title-bar">
+                <h4>Upload</h4>
+                <p>
 
 Upload file by selecting or dragging.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
         <h4>Avatar</h4>
         <AvatarDemo />
-        </div>
-<div className="component-demo">
-        <h4>Upload By Clicking</h4>
-        <UploadByClickingDemo />
         </div>
 <div className="component-demo">
         <h4>Default Files</h4>
@@ -115,6 +113,10 @@ Upload file by selecting or dragging.
 <div className="component-demo">
         <h4>Drag And Drop</h4>
         <DragAndDropDemo />
+        </div>
+<div className="component-demo">
+        <h4>Upload By Clicking</h4>
+        <UploadByClickingDemo />
         </div>
 <div className="component-demo">
         <h4>Complete Control Over File List</h4>

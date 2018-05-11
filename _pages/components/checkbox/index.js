@@ -49,13 +49,15 @@ Checkbox.
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Checkbox</h4>
-            <p>
+        <div id="component-demos-checkbox">
+            <div className="title-bar">
+                <h4>Checkbox</h4>
+                <p>
 
 Checkbox.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

@@ -34,13 +34,15 @@ Please note that Affix should not cover other content on the page, especially wh
 \`\`\`
 `
 const expComponent = () => (
-        <div>
-            <h4>Affix</h4>
-            <p>
+        <div id="component-demos-affix">
+            <div className="title-bar">
+                <h4>Affix</h4>
+                <p>
 
 Make an element stick to viewport.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

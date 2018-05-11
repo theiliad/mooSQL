@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
+    import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
+import BasicDemo from './BasicDemo.js'
 import CustomRenderDemo from './CustomRenderDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
@@ -76,22 +76,24 @@ Fields in \`showSearch\`:
 </style>
 `
 const expComponent = () => (
-        <div>
-            <h4>Cascader</h4>
-            <p>
+        <div id="component-demos-cascader">
+            <div className="title-bar">
+                <h4>Cascader</h4>
+                <p>
 
 Cascade selection box.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
         <h4>Change On Select</h4>
         <ChangeOnSelectDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo">
         <h4>Custom Render</h4>

@@ -53,13 +53,15 @@ A single step in the step bar.
 | title | title of the step | string\|ReactNode | - |
 `
 const expComponent = () => (
-        <div>
-            <h4>Steps</h4>
-            <p>
+        <div id="component-demos-steps">
+            <div className="title-bar">
+                <h4>Steps</h4>
+                <p>
 
 \`Steps\` is a navigation bar that guides users through the steps of a task.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

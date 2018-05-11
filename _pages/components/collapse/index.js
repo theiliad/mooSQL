@@ -39,13 +39,15 @@ A content area which can be collapsed and expanded.
 | forceRender | Forced render of content on panel, instead of lazy rending after clicking on header | boolean | \`false\` |
 `
 const expComponent = () => (
-        <div>
-            <h4>Collapse</h4>
-            <p>
+        <div id="component-demos-collapse">
+            <div className="title-bar">
+                <h4>Collapse</h4>
+                <p>
 
 A content area which can be collapsed and expanded.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

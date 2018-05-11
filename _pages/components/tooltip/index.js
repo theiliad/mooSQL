@@ -46,13 +46,15 @@ The following APIs are shared by Tooltip, Popconfirm, Popover.
 Please ensure that the child node of \`Tooltip\` accepts \`onMouseEnter\`, \`onMouseLeave\`, \`onFocus\`, \`onClick\` events.
 `
 const expComponent = () => (
-        <div>
-            <h4>Tooltip</h4>
-            <p>
+        <div id="component-demos-tooltip">
+            <div className="title-bar">
+                <h4>Tooltip</h4>
+                <p>
 
 A simple text popup tip.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">

@@ -50,13 +50,15 @@ const dataSource = ['12345', '23456', '34567'];
 | focus() | get focus |
 `
 const expComponent = () => (
-        <div>
-            <h4>Auto Complete</h4>
-            <p>
+        <div id="component-demos-auto-complete">
+            <div className="title-bar">
+                <h4>Auto Complete</h4>
+                <p>
 
 Autocomplete function of input field.
 
 </p>
+            </div>
 
             <Card bordered={false}>
                 <div className="component-demo">
