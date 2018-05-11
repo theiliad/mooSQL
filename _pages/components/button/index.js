@@ -5,9 +5,9 @@ import ButtonGroupDemo from './ButtonGroupDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import GhostButtonDemo from './GhostButtonDemo.js'
 import IconDemo from './IconDemo.js'
-import SizeDemo from './SizeDemo.js'
 import LoadingDemo from './LoadingDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
+import SizeDemo from './SizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -83,10 +83,6 @@ To trigger an operation.
         <h4>Icon</h4>
         <IconDemo />
         </div>
-<div className="component-demo size">
-        <h4>Size</h4>
-        <SizeDemo />
-        </div>
 <div className="component-demo loading">
         <h4>Loading</h4>
         <LoadingDemo />
@@ -94,6 +90,10 @@ To trigger an operation.
 <div className="component-demo multiple-buttons">
         <h4>Multiple Buttons</h4>
         <MultipleButtonsDemo />
+        </div>
+<div className="component-demo size">
+        <h4>Size</h4>
+        <SizeDemo />
         </div>
 
                 <div id="demo-documentation">

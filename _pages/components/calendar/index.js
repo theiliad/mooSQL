@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import CardDemo from './CardDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CardDemo from './CardDemo.js'
 import NoticeCalendarDemo from './NoticeCalendarDemo.js'
 import SelectableCalendarDemo from './SelectableCalendarDemo.js'
-import BasicDemo from './BasicDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -60,7 +60,11 @@ Container for displaying data in calendar form.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo card">
+                <div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo card">
         <h4>Card</h4>
         <CardDemo />
         </div>
@@ -71,10 +75,6 @@ Container for displaying data in calendar form.
 <div className="component-demo selectable-calendar">
         <h4>Selectable Calendar</h4>
         <SelectableCalendarDemo />
-        </div>
-<div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
         </div>
 
                 <div id="demo-documentation">

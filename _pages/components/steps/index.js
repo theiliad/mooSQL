@@ -2,11 +2,11 @@ import React from 'react'
 
     import CustomizedDotStyleDemo from './CustomizedDotStyleDemo.js'
 import ErrorStatusDemo from './ErrorStatusDemo.js'
-import DotStyleDemo from './DotStyleDemo.js'
 import WithIconDemo from './WithIconDemo.js'
+import DotStyleDemo from './DotStyleDemo.js'
+import BasicDemo from './BasicDemo.js'
 import MiniVersionDemo from './MiniVersionDemo.js'
 import SwitchStepDemo from './SwitchStepDemo.js'
-import BasicDemo from './BasicDemo.js'
 import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -72,13 +72,17 @@ const expComponent = () => (
         <h4>Error Status</h4>
         <ErrorStatusDemo />
         </div>
+<div className="component-demo with-icon">
+        <h4>With Icon</h4>
+        <WithIconDemo />
+        </div>
 <div className="component-demo dot-style">
         <h4>Dot Style</h4>
         <DotStyleDemo />
         </div>
-<div className="component-demo with-icon">
-        <h4>With Icon</h4>
-        <WithIconDemo />
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo mini-version">
         <h4>Mini Version</h4>
@@ -87,10 +91,6 @@ const expComponent = () => (
 <div className="component-demo switch-step">
         <h4>Switch Step</h4>
         <SwitchStepDemo />
-        </div>
-<div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
         </div>
 <div className="component-demo vertical-mini-version">
         <h4>Vertical Mini Version</h4>

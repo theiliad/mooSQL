@@ -3,9 +3,9 @@ import React from 'react'
     import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
 import BasicDemo from './BasicDemo.js'
 import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
-import InformationModalDialogDemo from './InformationModalDialogDemo.js'
-import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import ConfirmationModalDialogDemo28 from './ConfirmationModalDialogDemo28.js'
+import CustomizedFooterDemo from './CustomizedFooterDemo.js'
+import InformationModalDialogDemo from './InformationModalDialogDemo.js'
 import InternationalizationDemo from './InternationalizationDemo.js'
 import ManualToDestroyDemo from './ManualToDestroyDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
@@ -120,17 +120,17 @@ Modal dialogs.
         <h4>Confirmation Modal Dialog</h4>
         <ConfirmationModalDialogDemo />
         </div>
-<div className="component-demo information-modal-dialog">
-        <h4>Information Modal Dialog</h4>
-        <InformationModalDialogDemo />
+<div className="component-demo confirmation-modal-dialog28">
+        <h4>Confirmation Modal Dialog28</h4>
+        <ConfirmationModalDialogDemo28 />
         </div>
 <div className="component-demo customized-footer">
         <h4>Customized Footer</h4>
         <CustomizedFooterDemo />
         </div>
-<div className="component-demo confirmation-modal-dialog28">
-        <h4>Confirmation Modal Dialog28</h4>
-        <ConfirmationModalDialogDemo28 />
+<div className="component-demo information-modal-dialog">
+        <h4>Information Modal Dialog</h4>
+        <InformationModalDialogDemo />
         </div>
 <div className="component-demo internationalization">
         <h4>Internationalization</h4>

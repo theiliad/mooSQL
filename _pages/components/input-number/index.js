@@ -3,8 +3,8 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import DecimalsDemo from './DecimalsDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import SizesDemo from './SizesDemo.js'
 import FormatterDemo from './FormatterDemo.js'
+import SizesDemo from './SizesDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -63,13 +63,13 @@ Enter a number within certain range with the mouse or keyboard.
         <h4>Disabled</h4>
         <DisabledDemo />
         </div>
-<div className="component-demo sizes">
-        <h4>Sizes</h4>
-        <SizesDemo />
-        </div>
 <div className="component-demo formatter">
         <h4>Formatter</h4>
         <FormatterDemo />
+        </div>
+<div className="component-demo sizes">
+        <h4>Sizes</h4>
+        <SizesDemo />
         </div>
 
                 <div id="demo-documentation">

@@ -2,10 +2,10 @@ import React from 'react'
 
     import HoursDemo from './HoursDemo.js'
 import AddonDemo from './AddonDemo.js'
-import DisabledDemo from './DisabledDemo.js'
 import BasicDemo from './BasicDemo.js'
-import IntervalOptionDemo from './IntervalOptionDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import HourAndMinuteDemo from './HourAndMinuteDemo.js'
+import IntervalOptionDemo from './IntervalOptionDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
 import UnderControlDemo from './UnderControlDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -86,21 +86,21 @@ To select/input a time.
         <h4>Addon</h4>
         <AddonDemo />
         </div>
-<div className="component-demo disabled">
-        <h4>Disabled</h4>
-        <DisabledDemo />
-        </div>
 <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo interval-option">
-        <h4>Interval Option</h4>
-        <IntervalOptionDemo />
+<div className="component-demo disabled">
+        <h4>Disabled</h4>
+        <DisabledDemo />
         </div>
 <div className="component-demo hour-and-minute">
         <h4>Hour And Minute</h4>
         <HourAndMinuteDemo />
+        </div>
+<div className="component-demo interval-option">
+        <h4>Interval Option</h4>
+        <IntervalOptionDemo />
         </div>
 <div className="component-demo three-sizes">
         <h4>Three Sizes</h4>

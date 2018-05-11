@@ -1,11 +1,11 @@
 import React from 'react'
 
     import BasicListDemo from './BasicListDemo.js'
-import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
 import GridDemo from './GridDemo.js'
+import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
+import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
 import LoadMoreDemo from './LoadMoreDemo.js'
 import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
-import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
 import SimpleListDemo from './SimpleListDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -80,13 +80,17 @@ Simple List.
         <h4>Basic List</h4>
         <BasicListDemo />
         </div>
+<div className="component-demo grid">
+        <h4>Grid</h4>
+        <GridDemo />
+        </div>
 <div className="component-demo scrolling-loaded">
         <h4>Scrolling Loaded</h4>
         <ScrollingLoadedDemo />
         </div>
-<div className="component-demo grid">
-        <h4>Grid</h4>
-        <GridDemo />
+<div className="component-demo infinite-virtualized">
+        <h4>Infinite Virtualized</h4>
+        <InfiniteVirtualizedDemo />
         </div>
 <div className="component-demo load-more">
         <h4>Load More</h4>
@@ -95,10 +99,6 @@ Simple List.
 <div className="component-demo responsive-grid-list">
         <h4>Responsive Grid List</h4>
         <ResponsiveGridListDemo />
-        </div>
-<div className="component-demo infinite-virtualized">
-        <h4>Infinite Virtualized</h4>
-        <InfiniteVirtualizedDemo />
         </div>
 <div className="component-demo simple-list">
         <h4>Simple List</h4>

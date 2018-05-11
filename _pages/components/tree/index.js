@@ -1,12 +1,12 @@
 import React from 'react'
 
     import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
+import BasicDemo from './BasicDemo.js'
 import CustomizeIconDemo from './CustomizeIconDemo.js'
 import DraggableDemo from './DraggableDemo.js'
-import BasicDemo from './BasicDemo.js'
+import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
 import TreeWithLineDemo from './TreeWithLineDemo.js'
 import SearchableDemo from './SearchableDemo.js'
-import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -90,6 +90,10 @@ const expComponent = () => (
         <h4>Basic Controlled Example</h4>
         <BasicControlledExampleDemo />
         </div>
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
 <div className="component-demo customize-icon">
         <h4>Customize Icon</h4>
         <CustomizeIconDemo />
@@ -98,9 +102,9 @@ const expComponent = () => (
         <h4>Draggable</h4>
         <DraggableDemo />
         </div>
-<div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
+<div className="component-demo load-data-asynchronously">
+        <h4>Load Data Asynchronously</h4>
+        <LoadDataAsynchronouslyDemo />
         </div>
 <div className="component-demo tree-with-line">
         <h4>Tree With Line</h4>
@@ -109,10 +113,6 @@ const expComponent = () => (
 <div className="component-demo searchable">
         <h4>Searchable</h4>
         <SearchableDemo />
-        </div>
-<div className="component-demo load-data-asynchronously">
-        <h4>Load Data Asynchronously</h4>
-        <LoadDataAsynchronouslyDemo />
         </div>
 
                 <div id="demo-documentation">

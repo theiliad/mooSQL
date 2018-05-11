@@ -119,6 +119,7 @@ initialPromise.then(() => {
                 // Demo Logic
                 const antdComponentName = directory.replace('components/', '')
                     , subDirectories = getFilesAndDirectories(directory + '/demo')
+                    , subDirectoriesToIgnore = "components/breadcrumb/demo/router.md"
                     , demoComponentPromises = []
                     , demoComponents = []
                     , demoComponentNames = []
@@ -129,7 +130,9 @@ initialPromise.then(() => {
                 , varietyIndex = 1
                 , componentFileNames = []
 
-                subDirectories.map(subDirectory => {
+                subDirectories
+                .filter(subDirectory => subDirectoriesToIgnore.indexOf(subDirectory) === -1)
+                .map(subDirectory => {
                     const newPromise = fs.readFileAsync(subDirectory, (err, data, resolve, reject) => {
                         if (err) {
                             reject()

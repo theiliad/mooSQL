@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import CallbackDemo from './CallbackDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CallbackDemo from './CallbackDemo.js'
 import ContainerToScrollDemo from './ContainerToScrollDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -45,13 +45,13 @@ Make an element stick to viewport.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo callback">
-        <h4>Callback</h4>
-        <CallbackDemo />
-        </div>
-<div className="component-demo basic">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
+        </div>
+<div className="component-demo callback">
+        <h4>Callback</h4>
+        <CallbackDemo />
         </div>
 <div className="component-demo container-to-scroll">
         <h4>Container To Scroll</h4>

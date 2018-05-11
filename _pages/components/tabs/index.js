@@ -1,15 +1,15 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
+import ContainerOfCardTypeTabDemo from './ContainerOfCardTypeTabDemo.js'
 import CardTypeTabDemo from './CardTypeTabDemo.js'
 import CustomizedTriggerOfNewTabDemo from './CustomizedTriggerOfNewTabDemo.js'
-import ContainerOfCardTypeTabDemo from './ContainerOfCardTypeTabDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import ExtraContentDemo from './ExtraContentDemo.js'
-import SizeDemo from './SizeDemo.js'
 import AddCloseTabDemo from './AddCloseTabDemo.js'
-import PositionDemo from './PositionDemo.js'
+import ExtraContentDemo from './ExtraContentDemo.js'
 import IconDemo from './IconDemo.js'
+import PositionDemo from './PositionDemo.js'
+import SizeDemo from './SizeDemo.js'
 import SlideDemo from './SlideDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -72,6 +72,10 @@ Tabs make it easy to switch between different views.
         <h4>Basic</h4>
         <BasicDemo />
         </div>
+<div className="component-demo container-of-card-type-tab">
+        <h4>Container Of Card Type Tab</h4>
+        <ContainerOfCardTypeTabDemo />
+        </div>
 <div className="component-demo card-type-tab">
         <h4>Card Type Tab</h4>
         <CardTypeTabDemo />
@@ -80,33 +84,29 @@ Tabs make it easy to switch between different views.
         <h4>Customized Trigger Of New Tab</h4>
         <CustomizedTriggerOfNewTabDemo />
         </div>
-<div className="component-demo container-of-card-type-tab">
-        <h4>Container Of Card Type Tab</h4>
-        <ContainerOfCardTypeTabDemo />
-        </div>
 <div className="component-demo disabled">
         <h4>Disabled</h4>
         <DisabledDemo />
-        </div>
-<div className="component-demo extra-content">
-        <h4>Extra Content</h4>
-        <ExtraContentDemo />
-        </div>
-<div className="component-demo size">
-        <h4>Size</h4>
-        <SizeDemo />
         </div>
 <div className="component-demo add-close-tab">
         <h4>Add Close Tab</h4>
         <AddCloseTabDemo />
         </div>
-<div className="component-demo position">
-        <h4>Position</h4>
-        <PositionDemo />
+<div className="component-demo extra-content">
+        <h4>Extra Content</h4>
+        <ExtraContentDemo />
         </div>
 <div className="component-demo icon">
         <h4>Icon</h4>
         <IconDemo />
+        </div>
+<div className="component-demo position">
+        <h4>Position</h4>
+        <PositionDemo />
+        </div>
+<div className="component-demo size">
+        <h4>Size</h4>
+        <SizeDemo />
         </div>
 <div className="component-demo slide">
         <h4>Slide</h4>

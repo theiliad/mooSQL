@@ -1,12 +1,12 @@
 import React from 'react'
 
     import PrePostTabDemo from './PrePostTabDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
 import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
 import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
-import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
+import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import TextAreaDemo from './TextAreaDemo.js'
 import FormatTooltipInputDemo from './FormatTooltipInputDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -99,13 +99,13 @@ Keyboard and mouse can be used for providing or changing data.
         <h4>Pre Post Tab</h4>
         <PrePostTabDemo />
         </div>
-<div className="component-demo basic-usage">
-        <h4>Basic Usage</h4>
-        <BasicUsageDemo />
-        </div>
 <div className="component-demo autosizing-the-height-to-fit-the-content">
         <h4>Autosizing The Height To Fit The Content</h4>
         <AutosizingTheHeightToFitTheContentDemo />
+        </div>
+<div className="component-demo basic-usage">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
         </div>
 <div className="component-demo input-group">
         <h4>Input Group</h4>
@@ -115,13 +115,13 @@ Keyboard and mouse can be used for providing or changing data.
         <h4>Prefix And Suffix</h4>
         <PrefixAndSuffixDemo />
         </div>
-<div className="component-demo three-sizes-of-input">
-        <h4>Three Sizes Of Input</h4>
-        <ThreeSizesOfInputDemo />
-        </div>
 <div className="component-demo search-box">
         <h4>Search Box</h4>
         <SearchBoxDemo />
+        </div>
+<div className="component-demo three-sizes-of-input">
+        <h4>Three Sizes Of Input</h4>
+        <ThreeSizesOfInputDemo />
         </div>
 <div className="component-demo text-area">
         <h4>Text Area</h4>

@@ -15,7 +15,7 @@ import AutoCompleteDemo from './components/auto-complete/index.js'
 import AvatarDemo from './components/avatar/index.js'
 import BackTopDemo from './components/back-top/index.js'
 import BadgeDemo from './components/badge/index.js'
-// import BreadcrumbDemo from './components/breadcrumb/index.js'
+import BreadcrumbDemo from './components/breadcrumb/index.js'
 import ButtonDemo from './components/button/index.js'
 import CalendarDemo from './components/calendar/index.js'
 import CardDemo from './components/card/index.js'
@@ -71,7 +71,7 @@ const ComponentsPage = ({ match }) => (
     <Route path={match.url + '/avatar'} component={AvatarDemo} exact={true} />
     <Route path={match.url + '/back-top'} component={BackTopDemo} exact={true} />
     <Route path={match.url + '/badge'} component={BadgeDemo} exact={true} />
-    {/* <Route path={match.url + '/breadcrumb'} component={BreadcrumbDemo} exact={true} /> */}
+    <Route path={match.url + '/breadcrumb'} component={BreadcrumbDemo} exact={true} />
     <Route path={match.url + '/button'} component={ButtonDemo} exact={true} />
     <Route path={match.url + '/calendar'} component={CalendarDemo} exact={true} />
     <Route path={match.url + '/card'} component={CardDemo} exact={true} />

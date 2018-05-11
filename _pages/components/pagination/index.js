@@ -3,12 +3,12 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import ChangerDemo from './ChangerDemo.js'
 import ControlledDemo from './ControlledDemo.js'
-import JumperDemo from './JumperDemo.js'
-import MoreDemo from './MoreDemo.js'
 import PrevAndNextDemo from './PrevAndNextDemo.js'
+import JumperDemo from './JumperDemo.js'
 import MiniSizeDemo from './MiniSizeDemo.js'
-import TotalNumberDemo from './TotalNumberDemo.js'
+import MoreDemo from './MoreDemo.js'
 import SimpleModeDemo from './SimpleModeDemo.js'
+import TotalNumberDemo from './TotalNumberDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -69,29 +69,29 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
         <h4>Controlled</h4>
         <ControlledDemo />
         </div>
-<div className="component-demo jumper">
-        <h4>Jumper</h4>
-        <JumperDemo />
-        </div>
-<div className="component-demo more">
-        <h4>More</h4>
-        <MoreDemo />
-        </div>
 <div className="component-demo prev-and-next">
         <h4>Prev And Next</h4>
         <PrevAndNextDemo />
+        </div>
+<div className="component-demo jumper">
+        <h4>Jumper</h4>
+        <JumperDemo />
         </div>
 <div className="component-demo mini-size">
         <h4>Mini Size</h4>
         <MiniSizeDemo />
         </div>
-<div className="component-demo total-number">
-        <h4>Total Number</h4>
-        <TotalNumberDemo />
+<div className="component-demo more">
+        <h4>More</h4>
+        <MoreDemo />
         </div>
 <div className="component-demo simple-mode">
         <h4>Simple Mode</h4>
         <SimpleModeDemo />
+        </div>
+<div className="component-demo total-number">
+        <h4>Total Number</h4>
+        <TotalNumberDemo />
         </div>
 
                 <div id="demo-documentation">

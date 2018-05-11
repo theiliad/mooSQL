@@ -3,12 +3,12 @@ import React from 'react'
     import BasicStructureDemo from './BasicStructureDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
 import FixedSiderDemo from './FixedSiderDemo.js'
-import ResponsiveDemo from './ResponsiveDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
+import ResponsiveDemo from './ResponsiveDemo.js'
 import SiderDemo from './SiderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
-import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
 import HeaderSiderDemo22 from './HeaderSiderDemo22.js'
+import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -145,13 +145,13 @@ Handling the overall layout of a page.
         <h4>Fixed Sider</h4>
         <FixedSiderDemo />
         </div>
-<div className="component-demo responsive">
-        <h4>Responsive</h4>
-        <ResponsiveDemo />
-        </div>
 <div className="component-demo fixed-header">
         <h4>Fixed Header</h4>
         <FixedHeaderDemo />
+        </div>
+<div className="component-demo responsive">
+        <h4>Responsive</h4>
+        <ResponsiveDemo />
         </div>
 <div className="component-demo sider">
         <h4>Sider</h4>
@@ -161,13 +161,13 @@ Handling the overall layout of a page.
         <h4>Header Sider</h4>
         <HeaderSiderDemo />
         </div>
-<div className="component-demo header-content-footer">
-        <h4>Header Content Footer</h4>
-        <HeaderContentFooterDemo />
-        </div>
 <div className="component-demo header-sider22">
         <h4>Header Sider22</h4>
         <HeaderSiderDemo22 />
+        </div>
+<div className="component-demo header-content-footer">
+        <h4>Header Content Footer</h4>
+        <HeaderContentFooterDemo />
         </div>
 
                 <div id="demo-documentation">
