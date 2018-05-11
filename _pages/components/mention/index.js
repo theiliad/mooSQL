@@ -1,15 +1,15 @@
 import React from 'react'
 
     import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
-import IconImageDemo from './IconImageDemo.js'
 import BasicDemo from './BasicDemo.js'
+import IconImageDemo from './IconImageDemo.js'
 import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
 import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
-import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -93,12 +93,12 @@ Mention component.
         <AsynchronousLoadingDemo />
         </div>
 <div className="component-demo">
-        <h4>Icon Image</h4>
-        <IconImageDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon Image</h4>
+        <IconImageDemo />
         </div>
 <div className="component-demo">
         <h4>Controlled</h4>
@@ -121,19 +121,21 @@ Mention component.
         <CustomizeTriggerTokenDemo />
         </div>
 <div className="component-demo">
-        <h4>Suggestion Container</h4>
-        <SuggestionContainerDemo />
-        </div>
-<div className="component-demo">
         <h4>Placement</h4>
         <PlacementDemo />
+        </div>
+<div className="component-demo">
+        <h4>Suggestion Container</h4>
+        <SuggestionContainerDemo />
         </div>
 <div className="component-demo">
         <h4>Disabled Or Read Only</h4>
         <DisabledOrReadOnlyDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

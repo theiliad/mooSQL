@@ -2,9 +2,9 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
-import LoadingDemo from './LoadingDemo.js'
-import TwoSizesDemo from './TwoSizesDemo.js'
 import TextIconDemo from './TextIconDemo.js'
+import TwoSizesDemo from './TwoSizesDemo.js'
+import LoadingDemo from './LoadingDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -59,19 +59,21 @@ Switching Selector.
         <DisabledDemo />
         </div>
 <div className="component-demo">
-        <h4>Loading</h4>
-        <LoadingDemo />
+        <h4>Text Icon</h4>
+        <TextIconDemo />
         </div>
 <div className="component-demo">
         <h4>Two Sizes</h4>
         <TwoSizesDemo />
         </div>
 <div className="component-demo">
-        <h4>Text Icon</h4>
-        <TextIconDemo />
+        <h4>Loading</h4>
+        <LoadingDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

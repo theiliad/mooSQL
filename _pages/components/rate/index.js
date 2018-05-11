@@ -1,9 +1,9 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import OtherCharacterDemo from './OtherCharacterDemo.js'
 import ClearStarDemo from './ClearStarDemo.js'
 import ReadOnlyDemo from './ReadOnlyDemo.js'
+import OtherCharacterDemo from './OtherCharacterDemo.js'
 import HalfStarDemo from './HalfStarDemo.js'
 import ShowCopywritingDemo from './ShowCopywritingDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -61,16 +61,16 @@ Rate component.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Other Character</h4>
-        <OtherCharacterDemo />
-        </div>
-<div className="component-demo">
         <h4>Clear Star</h4>
         <ClearStarDemo />
         </div>
 <div className="component-demo">
         <h4>Read Only</h4>
         <ReadOnlyDemo />
+        </div>
+<div className="component-demo">
+        <h4>Other Character</h4>
+        <OtherCharacterDemo />
         </div>
 <div className="component-demo">
         <h4>Half Star</h4>
@@ -81,7 +81,9 @@ Rate component.
         <ShowCopywritingDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

@@ -2,9 +2,9 @@ import React from 'react'
 
     import ArrowPointingDemo from './ArrowPointingDemo.js'
 import BasicDemo from './BasicDemo.js'
-import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import ThreeWaysToTriggerDemo from './ThreeWaysToTriggerDemo.js'
+import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -52,10 +52,6 @@ The floating card popped by clicking or hovering.
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Controlling The Close Of The Dialog</h4>
-        <ControllingTheCloseOfTheDialogDemo />
-        </div>
-<div className="component-demo">
         <h4>Placement</h4>
         <PlacementDemo />
         </div>
@@ -63,8 +59,14 @@ The floating card popped by clicking or hovering.
         <h4>Three Ways To Trigger</h4>
         <ThreeWaysToTriggerDemo />
         </div>
+<div className="component-demo">
+        <h4>Controlling The Close Of The Dialog</h4>
+        <ControllingTheCloseOfTheDialogDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

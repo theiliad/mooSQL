@@ -49,7 +49,9 @@ Avatars can be used to represent people or objects. It supports images, \`Icon\`
         <TypeDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

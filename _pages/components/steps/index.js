@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import CustomizedDotStyleDemo from './CustomizedDotStyleDemo.js'
-import ErrorStatusDemo from './ErrorStatusDemo.js'
-import WithIconDemo from './WithIconDemo.js'
+    import ErrorStatusDemo from './ErrorStatusDemo.js'
+import CustomizedDotStyleDemo from './CustomizedDotStyleDemo.js'
 import DotStyleDemo from './DotStyleDemo.js'
+import WithIconDemo from './WithIconDemo.js'
 import BasicDemo from './BasicDemo.js'
 import MiniVersionDemo from './MiniVersionDemo.js'
 import SwitchStepDemo from './SwitchStepDemo.js'
-import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import VerticalDemo from './VerticalDemo.js'
+import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -65,20 +65,20 @@ const expComponent = () => (
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Customized Dot Style</h4>
-        <CustomizedDotStyleDemo />
-        </div>
-<div className="component-demo">
         <h4>Error Status</h4>
         <ErrorStatusDemo />
         </div>
 <div className="component-demo">
-        <h4>With Icon</h4>
-        <WithIconDemo />
+        <h4>Customized Dot Style</h4>
+        <CustomizedDotStyleDemo />
         </div>
 <div className="component-demo">
         <h4>Dot Style</h4>
         <DotStyleDemo />
+        </div>
+<div className="component-demo">
+        <h4>With Icon</h4>
+        <WithIconDemo />
         </div>
 <div className="component-demo">
         <h4>Basic</h4>
@@ -93,15 +93,17 @@ const expComponent = () => (
         <SwitchStepDemo />
         </div>
 <div className="component-demo">
-        <h4>Vertical Mini Version</h4>
-        <VerticalMiniVersionDemo />
-        </div>
-<div className="component-demo">
         <h4>Vertical</h4>
         <VerticalDemo />
         </div>
+<div className="component-demo">
+        <h4>Vertical Mini Version</h4>
+        <VerticalMiniVersionDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

@@ -6,9 +6,9 @@ import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
 import ConfirmationModalDialogDemo28 from './ConfirmationModalDialogDemo28.js'
 import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import InformationModalDialogDemo from './InformationModalDialogDemo.js'
-import InternationalizationDemo from './InternationalizationDemo.js'
 import ManualToDestroyDemo from './ManualToDestroyDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
+import InternationalizationDemo from './InternationalizationDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -133,10 +133,6 @@ Modal dialogs.
         <InformationModalDialogDemo />
         </div>
 <div className="component-demo">
-        <h4>Internationalization</h4>
-        <InternationalizationDemo />
-        </div>
-<div className="component-demo">
         <h4>Manual To Destroy</h4>
         <ManualToDestroyDemo />
         </div>
@@ -144,8 +140,14 @@ Modal dialogs.
         <h4>To Customize The Position Of Modal</h4>
         <ToCustomizeThePositionOfModalDemo />
         </div>
+<div className="component-demo">
+        <h4>Internationalization</h4>
+        <InternationalizationDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

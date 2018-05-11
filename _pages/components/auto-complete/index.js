@@ -2,8 +2,8 @@ import React from 'react'
 
     import BasicUsageDemo from './BasicUsageDemo.js'
 import LookupPatternsCertainCategoryDemo from './LookupPatternsCertainCategoryDemo.js'
-import CustomizeInputComponentDemo from './CustomizeInputComponentDemo.js'
 import NoncasesensitiveAutoCompleteDemo from './NoncasesensitiveAutoCompleteDemo.js'
+import CustomizeInputComponentDemo from './CustomizeInputComponentDemo.js'
 import CustomizedDemo from './CustomizedDemo.js'
 import LookupPatternsUncertainCategoryDemo from './LookupPatternsUncertainCategoryDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -70,12 +70,12 @@ Autocomplete function of input field.
         <LookupPatternsCertainCategoryDemo />
         </div>
 <div className="component-demo">
-        <h4>Customize Input Component</h4>
-        <CustomizeInputComponentDemo />
-        </div>
-<div className="component-demo">
         <h4>Noncasesensitive Auto Complete</h4>
         <NoncasesensitiveAutoCompleteDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customize Input Component</h4>
+        <CustomizeInputComponentDemo />
         </div>
 <div className="component-demo">
         <h4>Customized</h4>
@@ -86,7 +86,9 @@ Autocomplete function of input field.
         <LookupPatternsUncertainCategoryDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

@@ -2,19 +2,19 @@ import React from 'react'
 
     import AdvancedSearchDemo from './AdvancedSearchDemo.js'
 import CoordinatedControlsDemo from './CoordinatedControlsDemo.js'
-import CustomizedFormControlsDemo from './CustomizedFormControlsDemo.js'
 import DynamicFormItemDemo from './DynamicFormItemDemo.js'
 import DynamicRulesDemo from './DynamicRulesDemo.js'
+import CustomizedFormControlsDemo from './CustomizedFormControlsDemo.js'
 import FormInModalToCreateDemo from './FormInModalToCreateDemo.js'
 import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperComponentDemo.js'
 import HorizontalLoginFormDemo from './HorizontalLoginFormDemo.js'
-import LoginFormDemo from './LoginFormDemo.js'
-import RegistrationDemo from './RegistrationDemo.js'
-import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
 import FormLayoutDemo from './FormLayoutDemo.js'
-import OtherFormControlsDemo from './OtherFormControlsDemo.js'
+import LoginFormDemo from './LoginFormDemo.js'
+import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
+import RegistrationDemo from './RegistrationDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
+import OtherFormControlsDemo from './OtherFormControlsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -216,16 +216,16 @@ Form is used to collect, validate, and submit the user input, usually contains v
         <CoordinatedControlsDemo />
         </div>
 <div className="component-demo">
-        <h4>Customized Form Controls</h4>
-        <CustomizedFormControlsDemo />
-        </div>
-<div className="component-demo">
         <h4>Dynamic Form Item</h4>
         <DynamicFormItemDemo />
         </div>
 <div className="component-demo">
         <h4>Dynamic Rules</h4>
         <DynamicRulesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Customized Form Controls</h4>
+        <CustomizedFormControlsDemo />
         </div>
 <div className="component-demo">
         <h4>Form In Modal To Create</h4>
@@ -240,24 +240,20 @@ Form is used to collect, validate, and submit the user input, usually contains v
         <HorizontalLoginFormDemo />
         </div>
 <div className="component-demo">
-        <h4>Login Form</h4>
-        <LoginFormDemo />
+        <h4>Form Layout</h4>
+        <FormLayoutDemo />
         </div>
 <div className="component-demo">
-        <h4>Registration</h4>
-        <RegistrationDemo />
+        <h4>Login Form</h4>
+        <LoginFormDemo />
         </div>
 <div className="component-demo">
         <h4>Timerelated Controls</h4>
         <TimerelatedControlsDemo />
         </div>
 <div className="component-demo">
-        <h4>Form Layout</h4>
-        <FormLayoutDemo />
-        </div>
-<div className="component-demo">
-        <h4>Other Form Controls</h4>
-        <OtherFormControlsDemo />
+        <h4>Registration</h4>
+        <RegistrationDemo />
         </div>
 <div className="component-demo">
         <h4>Customized Validation</h4>
@@ -267,8 +263,14 @@ Form is used to collect, validate, and submit the user input, usually contains v
         <h4>Handle Form Data Manually</h4>
         <HandleFormDataManuallyDemo />
         </div>
+<div className="component-demo">
+        <h4>Other Form Controls</h4>
+        <OtherFormControlsDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

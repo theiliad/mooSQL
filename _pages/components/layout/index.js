@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import BasicStructureDemo from './BasicStructureDemo.js'
-import CustomTriggerDemo from './CustomTriggerDemo.js'
+    import CustomTriggerDemo from './CustomTriggerDemo.js'
+import BasicStructureDemo from './BasicStructureDemo.js'
 import FixedSiderDemo from './FixedSiderDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
-import ResponsiveDemo from './ResponsiveDemo.js'
 import SiderDemo from './SiderDemo.js'
+import ResponsiveDemo from './ResponsiveDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderSiderDemo22 from './HeaderSiderDemo22.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
@@ -134,12 +134,12 @@ Handling the overall layout of a page.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic Structure</h4>
-        <BasicStructureDemo />
-        </div>
-<div className="component-demo">
         <h4>Custom Trigger</h4>
         <CustomTriggerDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Structure</h4>
+        <BasicStructureDemo />
         </div>
 <div className="component-demo">
         <h4>Fixed Sider</h4>
@@ -150,12 +150,12 @@ Handling the overall layout of a page.
         <FixedHeaderDemo />
         </div>
 <div className="component-demo">
-        <h4>Responsive</h4>
-        <ResponsiveDemo />
-        </div>
-<div className="component-demo">
         <h4>Sider</h4>
         <SiderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Responsive</h4>
+        <ResponsiveDemo />
         </div>
 <div className="component-demo">
         <h4>Header Sider</h4>
@@ -170,7 +170,9 @@ Handling the overall layout of a page.
         <HeaderContentFooterDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

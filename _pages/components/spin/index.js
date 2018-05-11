@@ -70,7 +70,9 @@ A spinner for displaying loading state of a page or a section.
         <CustomizedDescriptionDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

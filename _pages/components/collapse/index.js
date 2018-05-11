@@ -3,9 +3,9 @@ import React from 'react'
     import AccordionDemo from './AccordionDemo.js'
 import CollapseDemo from './CollapseDemo.js'
 import BorderlessDemo from './BorderlessDemo.js'
-import CustomPanelDemo from './CustomPanelDemo.js'
 import NestedPanelDemo from './NestedPanelDemo.js'
 import NoArrowDemo from './NoArrowDemo.js'
+import CustomPanelDemo from './CustomPanelDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -63,10 +63,6 @@ A content area which can be collapsed and expanded.
         <BorderlessDemo />
         </div>
 <div className="component-demo">
-        <h4>Custom Panel</h4>
-        <CustomPanelDemo />
-        </div>
-<div className="component-demo">
         <h4>Nested Panel</h4>
         <NestedPanelDemo />
         </div>
@@ -74,8 +70,14 @@ A content area which can be collapsed and expanded.
         <h4>No Arrow</h4>
         <NoArrowDemo />
         </div>
+<div className="component-demo">
+        <h4>Custom Panel</h4>
+        <CustomPanelDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

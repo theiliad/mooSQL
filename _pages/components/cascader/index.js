@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
-import BasicDemo from './BasicDemo.js'
-import CustomRenderDemo from './CustomRenderDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
-import DefaultValueDemo from './DefaultValueDemo.js'
+import CustomRenderDemo from './CustomRenderDemo.js'
 import DisabledOptionDemo from './DisabledOptionDemo.js'
+import DefaultValueDemo from './DefaultValueDemo.js'
 import HoverDemo from './HoverDemo.js'
 import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
 import SearchDemo from './SearchDemo.js'
@@ -88,28 +88,28 @@ Cascade selection box.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Change On Select</h4>
-        <ChangeOnSelectDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
 <div className="component-demo">
-        <h4>Custom Render</h4>
-        <CustomRenderDemo />
+        <h4>Change On Select</h4>
+        <ChangeOnSelectDemo />
         </div>
 <div className="component-demo">
         <h4>Custom Trigger</h4>
         <CustomTriggerDemo />
         </div>
 <div className="component-demo">
-        <h4>Default Value</h4>
-        <DefaultValueDemo />
+        <h4>Custom Render</h4>
+        <CustomRenderDemo />
         </div>
 <div className="component-demo">
         <h4>Disabled Option</h4>
         <DisabledOptionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Default Value</h4>
+        <DefaultValueDemo />
         </div>
 <div className="component-demo">
         <h4>Hover</h4>
@@ -128,7 +128,9 @@ Cascade selection box.
         <SizeDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

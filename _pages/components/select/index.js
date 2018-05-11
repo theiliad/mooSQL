@@ -1,17 +1,17 @@
 import React from 'react'
 
-    import AutomaticTokenizationDemo from './AutomaticTokenizationDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
+    import BasicUsageDemo from './BasicUsageDemo.js'
+import AutomaticTokenizationDemo from './AutomaticTokenizationDemo.js'
 import AutomaticCompletionDemo from './AutomaticCompletionDemo.js'
 import CoordinateDemo from './CoordinateDemo.js'
 import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import OptionGroupDemo from './OptionGroupDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
-import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
-import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
 import SizesDemo from './SizesDemo.js'
+import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
 import TagsDemo from './TagsDemo.js'
+import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -106,12 +106,12 @@ Select component to select value from options.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Automatic Tokenization</h4>
-        <AutomaticTokenizationDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic Usage</h4>
         <BasicUsageDemo />
+        </div>
+<div className="component-demo">
+        <h4>Automatic Tokenization</h4>
+        <AutomaticTokenizationDemo />
         </div>
 <div className="component-demo">
         <h4>Automatic Completion</h4>
@@ -138,23 +138,25 @@ Select component to select value from options.
         <SearchBoxDemo />
         </div>
 <div className="component-demo">
-        <h4>Select With Search Field</h4>
-        <SelectWithSearchFieldDemo />
-        </div>
-<div className="component-demo">
-        <h4>Search And Select Users</h4>
-        <SearchAndSelectUsersDemo />
-        </div>
-<div className="component-demo">
         <h4>Sizes</h4>
         <SizesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Select With Search Field</h4>
+        <SelectWithSearchFieldDemo />
         </div>
 <div className="component-demo">
         <h4>Tags</h4>
         <TagsDemo />
         </div>
+<div className="component-demo">
+        <h4>Search And Select Users</h4>
+        <SearchAndSelectUsersDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

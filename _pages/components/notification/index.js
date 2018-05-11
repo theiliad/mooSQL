@@ -1,12 +1,12 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import CustomizedIconDemo from './CustomizedIconDemo.js'
+    import CustomizedIconDemo from './CustomizedIconDemo.js'
 import CustomizedStyleDemo from './CustomizedStyleDemo.js'
 import PlacementDemo from './PlacementDemo.js'
 import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
 import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
+import BasicDemo from './BasicDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -82,10 +82,6 @@ Display a notification message globally.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
         <h4>Customized Icon</h4>
         <CustomizedIconDemo />
         </div>
@@ -109,8 +105,14 @@ Display a notification message globally.
         <h4>Notification With Icon</h4>
         <NotificationWithIconDemo />
         </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

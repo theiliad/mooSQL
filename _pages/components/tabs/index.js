@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import ContainerOfCardTypeTabDemo from './ContainerOfCardTypeTabDemo.js'
-import CardTypeTabDemo from './CardTypeTabDemo.js'
+    import CardTypeTabDemo from './CardTypeTabDemo.js'
 import CustomizedTriggerOfNewTabDemo from './CustomizedTriggerOfNewTabDemo.js'
+import BasicDemo from './BasicDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import AddCloseTabDemo from './AddCloseTabDemo.js'
+import ContainerOfCardTypeTabDemo from './ContainerOfCardTypeTabDemo.js'
 import ExtraContentDemo from './ExtraContentDemo.js'
-import IconDemo from './IconDemo.js'
 import PositionDemo from './PositionDemo.js'
+import IconDemo from './IconDemo.js'
 import SizeDemo from './SizeDemo.js'
 import SlideDemo from './SlideDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -69,20 +69,16 @@ Tabs make it easy to switch between different views.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
-        <h4>Container Of Card Type Tab</h4>
-        <ContainerOfCardTypeTabDemo />
-        </div>
-<div className="component-demo">
         <h4>Card Type Tab</h4>
         <CardTypeTabDemo />
         </div>
 <div className="component-demo">
         <h4>Customized Trigger Of New Tab</h4>
         <CustomizedTriggerOfNewTabDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo">
         <h4>Disabled</h4>
@@ -93,16 +89,20 @@ Tabs make it easy to switch between different views.
         <AddCloseTabDemo />
         </div>
 <div className="component-demo">
+        <h4>Container Of Card Type Tab</h4>
+        <ContainerOfCardTypeTabDemo />
+        </div>
+<div className="component-demo">
         <h4>Extra Content</h4>
         <ExtraContentDemo />
         </div>
 <div className="component-demo">
-        <h4>Icon</h4>
-        <IconDemo />
-        </div>
-<div className="component-demo">
         <h4>Position</h4>
         <PositionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon</h4>
+        <IconDemo />
         </div>
 <div className="component-demo">
         <h4>Size</h4>
@@ -113,7 +113,9 @@ Tabs make it easy to switch between different views.
         <SlideDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

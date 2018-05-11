@@ -6,8 +6,8 @@ import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
-import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import PresettedRangesDemo from './PresettedRangesDemo.js'
+import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import ThreeSizesDemo from './ThreeSizesDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
@@ -164,12 +164,12 @@ To select or input a date.
         <DateFormatDemo />
         </div>
 <div className="component-demo">
-        <h4>Controlled Panels</h4>
-        <ControlledPanelsDemo />
-        </div>
-<div className="component-demo">
         <h4>Presetted Ranges</h4>
         <PresettedRangesDemo />
+        </div>
+<div className="component-demo">
+        <h4>Controlled Panels</h4>
+        <ControlledPanelsDemo />
         </div>
 <div className="component-demo">
         <h4>Three Sizes</h4>
@@ -184,7 +184,9 @@ To select or input a date.
         <ChooseTimeDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

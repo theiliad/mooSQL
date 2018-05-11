@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
 import CustomizeIconDemo from './CustomizeIconDemo.js'
 import DraggableDemo from './DraggableDemo.js'
 import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
@@ -87,12 +87,12 @@ const expComponent = () => (
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic Controlled Example</h4>
-        <BasicControlledExampleDemo />
-        </div>
-<div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic Controlled Example</h4>
+        <BasicControlledExampleDemo />
         </div>
 <div className="component-demo">
         <h4>Customize Icon</h4>
@@ -115,7 +115,9 @@ const expComponent = () => (
         <SearchableDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

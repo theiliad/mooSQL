@@ -2,8 +2,8 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import ConditionalTriggerDemo from './ConditionalTriggerDemo.js'
-import LocaleTextDemo from './LocaleTextDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import LocaleTextDemo from './LocaleTextDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -55,15 +55,17 @@ A simple and compact confirmation dialog of an action.
         <ConditionalTriggerDemo />
         </div>
 <div className="component-demo">
-        <h4>Locale Text</h4>
-        <LocaleTextDemo />
-        </div>
-<div className="component-demo">
         <h4>Placement</h4>
         <PlacementDemo />
         </div>
+<div className="component-demo">
+        <h4>Locale Text</h4>
+        <LocaleTextDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

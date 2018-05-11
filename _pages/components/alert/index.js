@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import BannerDemo from './BannerDemo.js'
-import ClosableDemo from './ClosableDemo.js'
+    import ClosableDemo from './ClosableDemo.js'
+import BannerDemo from './BannerDemo.js'
 import BasicDemo from './BasicDemo.js'
 import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
-import IconDemo from './IconDemo.js'
 import DescriptionDemo from './DescriptionDemo.js'
+import IconDemo from './IconDemo.js'
 import MoreTypesDemo from './MoreTypesDemo.js'
 import SmoothlyUnmountDemo from './SmoothlyUnmountDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -48,12 +48,12 @@ Alert component for feedback.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Banner</h4>
-        <BannerDemo />
-        </div>
-<div className="component-demo">
         <h4>Closable</h4>
         <ClosableDemo />
+        </div>
+<div className="component-demo">
+        <h4>Banner</h4>
+        <BannerDemo />
         </div>
 <div className="component-demo">
         <h4>Basic</h4>
@@ -64,12 +64,12 @@ Alert component for feedback.
         <CustomizedCloseTextDemo />
         </div>
 <div className="component-demo">
-        <h4>Icon</h4>
-        <IconDemo />
-        </div>
-<div className="component-demo">
         <h4>Description</h4>
         <DescriptionDemo />
+        </div>
+<div className="component-demo">
+        <h4>Icon</h4>
+        <IconDemo />
         </div>
 <div className="component-demo">
         <h4>More Types</h4>
@@ -80,7 +80,9 @@ Alert component for feedback.
         <SmoothlyUnmountDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

@@ -2,12 +2,12 @@ import React from 'react'
 
     import TypeDemo from './TypeDemo.js'
 import ButtonGroupDemo from './ButtonGroupDemo.js'
-import DisabledDemo from './DisabledDemo.js'
 import GhostButtonDemo from './GhostButtonDemo.js'
 import IconDemo from './IconDemo.js'
 import LoadingDemo from './LoadingDemo.js'
 import MultipleButtonsDemo from './MultipleButtonsDemo.js'
 import SizeDemo from './SizeDemo.js'
+import DisabledDemo from './DisabledDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -72,10 +72,6 @@ To trigger an operation.
         <ButtonGroupDemo />
         </div>
 <div className="component-demo">
-        <h4>Disabled</h4>
-        <DisabledDemo />
-        </div>
-<div className="component-demo">
         <h4>Ghost Button</h4>
         <GhostButtonDemo />
         </div>
@@ -95,8 +91,14 @@ To trigger an operation.
         <h4>Size</h4>
         <SizeDemo />
         </div>
+<div className="component-demo">
+        <h4>Disabled</h4>
+        <DisabledDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

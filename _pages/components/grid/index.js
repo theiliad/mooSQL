@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import BasicGridDemo from './BasicGridDemo.js'
-import FlexAlignmentDemo from './FlexAlignmentDemo.js'
+    import FlexAlignmentDemo from './FlexAlignmentDemo.js'
 import FlexOrderDemo from './FlexOrderDemo.js'
 import FlexLayoutDemo from './FlexLayoutDemo.js'
-import GridGutterDemo from './GridGutterDemo.js'
 import ColumnOffsetDemo from './ColumnOffsetDemo.js'
 import PlaygroundDemo from './PlaygroundDemo.js'
 import MoreResponsiveDemo from './MoreResponsiveDemo.js'
+import BasicGridDemo from './BasicGridDemo.js'
+import GridGutterDemo from './GridGutterDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
 import GridSortDemo from './GridSortDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -135,10 +135,6 @@ const expComponent = () => (
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic Grid</h4>
-        <BasicGridDemo />
-        </div>
-<div className="component-demo">
         <h4>Flex Alignment</h4>
         <FlexAlignmentDemo />
         </div>
@@ -149,10 +145,6 @@ const expComponent = () => (
 <div className="component-demo">
         <h4>Flex Layout</h4>
         <FlexLayoutDemo />
-        </div>
-<div className="component-demo">
-        <h4>Grid Gutter</h4>
-        <GridGutterDemo />
         </div>
 <div className="component-demo">
         <h4>Column Offset</h4>
@@ -167,6 +159,14 @@ const expComponent = () => (
         <MoreResponsiveDemo />
         </div>
 <div className="component-demo">
+        <h4>Basic Grid</h4>
+        <BasicGridDemo />
+        </div>
+<div className="component-demo">
+        <h4>Grid Gutter</h4>
+        <GridGutterDemo />
+        </div>
+<div className="component-demo">
         <h4>Responsive</h4>
         <ResponsiveDemo />
         </div>
@@ -175,7 +175,9 @@ const expComponent = () => (
         <GridSortDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

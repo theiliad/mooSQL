@@ -1,8 +1,8 @@
 import React from 'react'
 
     import CustomizeDurationDemo from './CustomizeDurationDemo.js'
-import MessageOfLoadingDemo from './MessageOfLoadingDemo.js'
 import NormalPromptDemo from './NormalPromptDemo.js'
+import MessageOfLoadingDemo from './MessageOfLoadingDemo.js'
 import OtherTypesOfMessageDemo from './OtherTypesOfMessageDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -70,19 +70,21 @@ Display global messages as feedback in response to user operations.
         <CustomizeDurationDemo />
         </div>
 <div className="component-demo">
-        <h4>Message Of Loading</h4>
-        <MessageOfLoadingDemo />
-        </div>
-<div className="component-demo">
         <h4>Normal Prompt</h4>
         <NormalPromptDemo />
+        </div>
+<div className="component-demo">
+        <h4>Message Of Loading</h4>
+        <MessageOfLoadingDemo />
         </div>
 <div className="component-demo">
         <h4>Other Types Of Message</h4>
         <OtherTypesOfMessageDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

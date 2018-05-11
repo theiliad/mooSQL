@@ -1,11 +1,11 @@
 import React from 'react'
 
     import PrePostTabDemo from './PrePostTabDemo.js'
+import BasicUsageDemo from './BasicUsageDemo.js'
 import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
-import BasicUsageDemo from './BasicUsageDemo.js'
-import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
+import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
 import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import TextAreaDemo from './TextAreaDemo.js'
 import FormatTooltipInputDemo from './FormatTooltipInputDemo.js'
@@ -100,6 +100,10 @@ Keyboard and mouse can be used for providing or changing data.
         <PrePostTabDemo />
         </div>
 <div className="component-demo">
+        <h4>Basic Usage</h4>
+        <BasicUsageDemo />
+        </div>
+<div className="component-demo">
         <h4>Autosizing The Height To Fit The Content</h4>
         <AutosizingTheHeightToFitTheContentDemo />
         </div>
@@ -108,16 +112,12 @@ Keyboard and mouse can be used for providing or changing data.
         <InputGroupDemo />
         </div>
 <div className="component-demo">
-        <h4>Basic Usage</h4>
-        <BasicUsageDemo />
+        <h4>Search Box</h4>
+        <SearchBoxDemo />
         </div>
 <div className="component-demo">
         <h4>Prefix And Suffix</h4>
         <PrefixAndSuffixDemo />
-        </div>
-<div className="component-demo">
-        <h4>Search Box</h4>
-        <SearchBoxDemo />
         </div>
 <div className="component-demo">
         <h4>Three Sizes Of Input</h4>
@@ -132,7 +132,9 @@ Keyboard and mouse can be used for providing or changing data.
         <FormatTooltipInputDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

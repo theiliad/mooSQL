@@ -1,14 +1,14 @@
 import React from 'react'
 
     import BasicCardDemo from './BasicCardDemo.js'
-import NoBorderDemo from './NoBorderDemo.js'
-import GridCardDemo from './GridCardDemo.js'
 import CustomizedContentDemo from './CustomizedContentDemo.js'
-import InnerCardDemo from './InnerCardDemo.js'
+import GridCardDemo from './GridCardDemo.js'
+import NoBorderDemo from './NoBorderDemo.js'
 import CardInColumnDemo from './CardInColumnDemo.js'
+import InnerCardDemo from './InnerCardDemo.js'
+import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
 import LoadingCardDemo from './LoadingCardDemo.js'
 import SimpleCardDemo from './SimpleCardDemo.js'
-import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
 import WithTabsDemo from './WithTabsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -79,24 +79,28 @@ Simple rectangular container.
         <BasicCardDemo />
         </div>
 <div className="component-demo">
-        <h4>No Border</h4>
-        <NoBorderDemo />
+        <h4>Customized Content</h4>
+        <CustomizedContentDemo />
         </div>
 <div className="component-demo">
         <h4>Grid Card</h4>
         <GridCardDemo />
         </div>
 <div className="component-demo">
-        <h4>Customized Content</h4>
-        <CustomizedContentDemo />
+        <h4>No Border</h4>
+        <NoBorderDemo />
+        </div>
+<div className="component-demo">
+        <h4>Card In Column</h4>
+        <CardInColumnDemo />
         </div>
 <div className="component-demo">
         <h4>Inner Card</h4>
         <InnerCardDemo />
         </div>
 <div className="component-demo">
-        <h4>Card In Column</h4>
-        <CardInColumnDemo />
+        <h4>Support More Content Configuration</h4>
+        <SupportMoreContentConfigurationDemo />
         </div>
 <div className="component-demo">
         <h4>Loading Card</h4>
@@ -107,15 +111,13 @@ Simple rectangular container.
         <SimpleCardDemo />
         </div>
 <div className="component-demo">
-        <h4>Support More Content Configuration</h4>
-        <SupportMoreContentConfigurationDemo />
-        </div>
-<div className="component-demo">
         <h4>With Tabs</h4>
         <WithTabsDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

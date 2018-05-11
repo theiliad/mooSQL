@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import ChangerDemo from './ChangerDemo.js'
-import ControlledDemo from './ControlledDemo.js'
-import PrevAndNextDemo from './PrevAndNextDemo.js'
+    import ChangerDemo from './ChangerDemo.js'
+import BasicDemo from './BasicDemo.js'
 import JumperDemo from './JumperDemo.js'
-import MiniSizeDemo from './MiniSizeDemo.js'
+import PrevAndNextDemo from './PrevAndNextDemo.js'
+import ControlledDemo from './ControlledDemo.js'
 import MoreDemo from './MoreDemo.js'
 import SimpleModeDemo from './SimpleModeDemo.js'
 import TotalNumberDemo from './TotalNumberDemo.js'
+import MiniSizeDemo from './MiniSizeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -58,28 +58,24 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
         <h4>Changer</h4>
         <ChangerDemo />
         </div>
 <div className="component-demo">
-        <h4>Controlled</h4>
-        <ControlledDemo />
-        </div>
-<div className="component-demo">
-        <h4>Prev And Next</h4>
-        <PrevAndNextDemo />
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo">
         <h4>Jumper</h4>
         <JumperDemo />
         </div>
 <div className="component-demo">
-        <h4>Mini Size</h4>
-        <MiniSizeDemo />
+        <h4>Prev And Next</h4>
+        <PrevAndNextDemo />
+        </div>
+<div className="component-demo">
+        <h4>Controlled</h4>
+        <ControlledDemo />
         </div>
 <div className="component-demo">
         <h4>More</h4>
@@ -93,8 +89,14 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
         <h4>Total Number</h4>
         <TotalNumberDemo />
         </div>
+<div className="component-demo">
+        <h4>Mini Size</h4>
+        <MiniSizeDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import CheckableDemo from './CheckableDemo.js'
+    import CheckableDemo from './CheckableDemo.js'
+import BasicDemo from './BasicDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import GenerateFormTreeDataDemo from './GenerateFormTreeDataDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -83,12 +83,12 @@ Tree selection control.
 
             <Card bordered={false}>
                 <div className="component-demo">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo">
         <h4>Checkable</h4>
         <CheckableDemo />
+        </div>
+<div className="component-demo">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo">
         <h4>Multiple Selection</h4>
@@ -99,7 +99,9 @@ Tree selection control.
         <GenerateFormTreeDataDemo />
         </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

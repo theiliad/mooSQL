@@ -1,9 +1,9 @@
 import React from 'react'
 
     import ScrollAutomaticallyDemo from './ScrollAutomaticallyDemo.js'
+import FadeInDemo from './FadeInDemo.js'
 import BasicDemo from './BasicDemo.js'
 import VerticalDemo from './VerticalDemo.js'
-import FadeInDemo from './FadeInDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -55,6 +55,10 @@ A carousel component. Scales with its container.
         <ScrollAutomaticallyDemo />
         </div>
 <div className="component-demo">
+        <h4>Fade In</h4>
+        <FadeInDemo />
+        </div>
+<div className="component-demo">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
@@ -62,12 +66,10 @@ A carousel component. Scales with its container.
         <h4>Vertical</h4>
         <VerticalDemo />
         </div>
-<div className="component-demo">
-        <h4>Fade In</h4>
-        <FadeInDemo />
-        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

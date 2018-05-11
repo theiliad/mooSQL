@@ -3,8 +3,8 @@ import React from 'react'
     import AdvancedDemo from './AdvancedDemo.js'
 import BasicDemo from './BasicDemo.js'
 import CustomDatasourceDemo from './CustomDatasourceDemo.js'
-import PerformanceTestDemo from './PerformanceTestDemo.js'
 import SearchDemo from './SearchDemo.js'
+import PerformanceTestDemo from './PerformanceTestDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -76,15 +76,17 @@ Double column transfer choice box.
         <CustomDatasourceDemo />
         </div>
 <div className="component-demo">
-        <h4>Performance Test</h4>
-        <PerformanceTestDemo />
-        </div>
-<div className="component-demo">
         <h4>Search</h4>
         <SearchDemo />
         </div>
+<div className="component-demo">
+        <h4>Performance Test</h4>
+        <PerformanceTestDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )

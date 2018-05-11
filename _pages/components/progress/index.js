@@ -2,13 +2,13 @@ import React from 'react'
 
     import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
 import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
-import CircularProgressBarDemo from './CircularProgressBarDemo.js'
-import DashboardDemo from './DashboardDemo.js'
 import DynamicDemo from './DynamicDemo.js'
-import CustomTextFormatDemo from './CustomTextFormatDemo.js'
+import DashboardDemo from './DashboardDemo.js'
+import CircularProgressBarDemo from './CircularProgressBarDemo.js'
 import MiniSizeProgressBarDemo from './MiniSizeProgressBarDemo.js'
 import ProgressBarDemo from './ProgressBarDemo.js'
 import ProgressBarWithSuccessSegmentDemo from './ProgressBarWithSuccessSegmentDemo.js'
+import CustomTextFormatDemo from './CustomTextFormatDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -60,20 +60,16 @@ Display the current progress of an operation flow.
         <MiniSizeCircularProgressBarDemo />
         </div>
 <div className="component-demo">
-        <h4>Circular Progress Bar</h4>
-        <CircularProgressBarDemo />
+        <h4>Dynamic</h4>
+        <DynamicDemo />
         </div>
 <div className="component-demo">
         <h4>Dashboard</h4>
         <DashboardDemo />
         </div>
 <div className="component-demo">
-        <h4>Dynamic</h4>
-        <DynamicDemo />
-        </div>
-<div className="component-demo">
-        <h4>Custom Text Format</h4>
-        <CustomTextFormatDemo />
+        <h4>Circular Progress Bar</h4>
+        <CircularProgressBarDemo />
         </div>
 <div className="component-demo">
         <h4>Mini Size Progress Bar</h4>
@@ -87,8 +83,14 @@ Display the current progress of an operation flow.
         <h4>Progress Bar With Success Segment</h4>
         <ProgressBarWithSuccessSegmentDemo />
         </div>
+<div className="component-demo">
+        <h4>Custom Text Format</h4>
+        <CustomTextFormatDemo />
+        </div>
 
-                <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                <div id="demo-documentation">
+                    <ReactMarkdown source={markDownInput} escapeHtml={false} />
+                </div>
             </Card>
         </div>
     )
