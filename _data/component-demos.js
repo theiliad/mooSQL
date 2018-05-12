@@ -1,6 +1,7 @@
 module.exports = [
     {
         name: 'Navigation',
+        icon: 'appstore',
         items: [
             { name: 'Affix', path: 'affix' },
             { name: 'Breadcrumb', path: 'breadcrumb' },
@@ -11,6 +12,7 @@ module.exports = [
         ]
     }, {
         name: 'Data Entry',
+        icon: 'form',
         items: [
             { name: 'AutoComplete', path: 'auto-complete' },
             { name: 'Cascader', path: 'cascader' },
@@ -32,6 +34,7 @@ module.exports = [
         ]
     }, {
         name: 'Data Display',
+        icon: 'filter',
         items: [
             { name: 'Avatar', path: 'avatar' },
             { name: 'Badge', path: 'badge' },
@@ -50,6 +53,7 @@ module.exports = [
         ]
     }, {
         name: 'Feedback',
+        icon: 'notification',
         items: [
             { name: 'Alert', path: 'alert' },
             { name: 'Modal', path: 'modal' },
@@ -61,6 +65,7 @@ module.exports = [
         ]
     }, {
         name: 'Other',
+        icon: 'profile',
         items: [
             { name: 'Anchor', path: 'anchor' },
             { name: 'BackTop', path: 'back-top' },

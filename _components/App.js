@@ -196,7 +196,7 @@ class App extends React.Component {
                   {ComponentDemos.map((compCategory, index) =>
                     <SubMenu
                       key={`compCategory-${index}`}
-                      title={<span><Icon type="appstore" /><span>{compCategory.name}</span></span>}
+                      title={<span><Icon type={compCategory.icon} /><span>{compCategory.name}</span></span>}
                     >
                       {compCategory.items.map((item, i) =>
                         <Menu.Item key={`comp-nav-${item.path}`}>
