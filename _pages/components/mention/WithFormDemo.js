@@ -67,6 +67,8 @@ const FormDemo = Form.create()(App);
 
 
 const expComponent = () => (
-<FormDemo />
+    <div>
+        <FormDemo />
+    </div>
 )
 export default expComponent

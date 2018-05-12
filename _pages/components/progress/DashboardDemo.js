@@ -3,6 +3,8 @@ import { Progress } from 'antd';
 
 
 const expComponent = () => (
-<Progress type="dashboard" percent={75} />
+    <div>
+        <Progress type="dashboard" percent={75} />
+    </div>
 )
 export default expComponent

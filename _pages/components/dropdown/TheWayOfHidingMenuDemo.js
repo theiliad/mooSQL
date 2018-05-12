@@ -36,6 +36,8 @@ class OverlayVisible extends React.Component {
 
 
 const expComponent = () => (
-<OverlayVisible />
+    <div>
+        <OverlayVisible />
+    </div>
 )
 export default expComponent

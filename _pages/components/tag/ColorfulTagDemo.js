@@ -3,6 +3,7 @@ import { Tag } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <h4 style={{ marginBottom: 16 }}>Presets:</h4>
     <div>
@@ -26,5 +27,6 @@ const expComponent = () => (
       <Tag color="#108ee9">#108ee9</Tag>
     </div>
   </div>
+    </div>
 )
 export default expComponent

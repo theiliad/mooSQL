@@ -1,14 +1,14 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import ContextMenuDemo from './ContextMenuDemo.js'
 import ButtonWithDropdownMenuDemo from './ButtonWithDropdownMenuDemo.js'
 import ClickEventDemo from './ClickEventDemo.js'
+import ContextMenuDemo from './ContextMenuDemo.js'
 import OtherElementsDemo from './OtherElementsDemo.js'
-import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
 import PlacementDemo from './PlacementDemo.js'
-import TriggerModeDemo from './TriggerModeDemo.js'
 import CascadingMenuDemo from './CascadingMenuDemo.js'
+import TheWayOfHidingMenuDemo from './TheWayOfHidingMenuDemo.js'
+import TriggerModeDemo from './TriggerModeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -69,10 +69,6 @@ A dropdown list.
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo context-menu">
-        <h4>Context Menu</h4>
-        <ContextMenuDemo />
-        </div>
 <div className="component-demo button-with-dropdown-menu">
         <h4>Button With Dropdown Menu</h4>
         <ButtonWithDropdownMenuDemo />
@@ -81,25 +77,29 @@ A dropdown list.
         <h4>Click Event</h4>
         <ClickEventDemo />
         </div>
+<div className="component-demo context-menu">
+        <h4>Context Menu</h4>
+        <ContextMenuDemo />
+        </div>
 <div className="component-demo other-elements">
         <h4>Other Elements</h4>
         <OtherElementsDemo />
-        </div>
-<div className="component-demo the-way-of-hiding-menu">
-        <h4>The Way Of Hiding Menu</h4>
-        <TheWayOfHidingMenuDemo />
         </div>
 <div className="component-demo placement">
         <h4>Placement</h4>
         <PlacementDemo />
         </div>
-<div className="component-demo trigger-mode">
-        <h4>Trigger Mode</h4>
-        <TriggerModeDemo />
-        </div>
 <div className="component-demo cascading-menu">
         <h4>Cascading Menu</h4>
         <CascadingMenuDemo />
+        </div>
+<div className="component-demo the-way-of-hiding-menu">
+        <h4>The Way Of Hiding Menu</h4>
+        <TheWayOfHidingMenuDemo />
+        </div>
+<div className="component-demo trigger-mode">
+        <h4>Trigger Mode</h4>
+        <TriggerModeDemo />
         </div>
 
                 <div id="demo-documentation">

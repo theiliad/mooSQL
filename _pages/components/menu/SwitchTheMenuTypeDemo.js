@@ -62,6 +62,8 @@ class Sider extends React.Component {
 
 
 const expComponent = () => (
-<Sider />
+    <div>
+        <Sider />
+    </div>
 )
 export default expComponent

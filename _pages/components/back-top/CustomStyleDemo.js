@@ -3,6 +3,7 @@ import { BackTop } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <BackTop>
       <div className="ant-back-top-inner">UP</div>
@@ -11,5 +12,6 @@ const expComponent = () => (
     <strong style={{ color: '#1088e9' }}> blue </strong>
     button.
   </div>
+    </div>
 )
 export default expComponent

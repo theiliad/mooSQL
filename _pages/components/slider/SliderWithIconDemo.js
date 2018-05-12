@@ -26,6 +26,8 @@ class IconSlider extends React.Component {
 
 
 const expComponent = () => (
-<IconSlider min={0} max={20} />
+    <div>
+        <IconSlider min={0} max={20} />
+    </div>
 )
 export default expComponent

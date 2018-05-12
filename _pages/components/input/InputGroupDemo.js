@@ -127,6 +127,8 @@ class CompactDemo extends React.Component {
 
 
 const expComponent = () => (
-<CompactDemo />
+    <div>
+        <CompactDemo />
+    </div>
 )
 export default expComponent

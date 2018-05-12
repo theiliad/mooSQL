@@ -3,6 +3,8 @@ import { Radio } from 'antd';
 
 
 const expComponent = () => (
-<Radio>Radio</Radio>
+    <div>
+        <Radio>Radio</Radio>
+    </div>
 )
 export default expComponent

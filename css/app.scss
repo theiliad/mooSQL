@@ -75,6 +75,12 @@ div#app-content {
 }
 
 div#app-sidebar {
+    transition: none;
+    background: none;
+    width: auto !important;
+    flex: none !important;
+    max-width: 10000px !important;
+    min-width: 200px !important;
     min-width: 0 !important;
     box-shadow: 0 0 15px rgba(53, 61, 129, 0.05);
 

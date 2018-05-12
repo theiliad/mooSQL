@@ -4,6 +4,7 @@ const Search = Input.Search;
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Search
       placeholder="input search text"
@@ -19,5 +20,6 @@ const expComponent = () => (
     <br /><br />
     <Search placeholder="input search text" enterButton="Search" size="large" />
   </div>
+    </div>
 )
 export default expComponent

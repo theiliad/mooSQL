@@ -27,6 +27,8 @@ class Card extends React.Component {
 
 
 const expComponent = () => (
-<Card />
+    <div>
+        <Card />
+    </div>
 )
 export default expComponent

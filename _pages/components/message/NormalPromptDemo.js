@@ -7,6 +7,8 @@ const info = () => {
 
 
 const expComponent = () => (
+    <div>
   <Button type="primary" onClick={info}>Display normal message</Button>
+    </div>
 )
 export default expComponent

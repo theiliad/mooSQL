@@ -2,9 +2,9 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import CheckAllDemo from './CheckAllDemo.js'
-import ControlledCheckboxDemo from './ControlledCheckboxDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import CheckboxGroupDemo from './CheckboxGroupDemo.js'
+import ControlledCheckboxDemo from './ControlledCheckboxDemo.js'
 import UseWithGridDemo from './UseWithGridDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -68,10 +68,6 @@ Checkbox.
         <h4>Check All</h4>
         <CheckAllDemo />
         </div>
-<div className="component-demo controlled-checkbox">
-        <h4>Controlled Checkbox</h4>
-        <ControlledCheckboxDemo />
-        </div>
 <div className="component-demo disabled">
         <h4>Disabled</h4>
         <DisabledDemo />
@@ -79,6 +75,10 @@ Checkbox.
 <div className="component-demo checkbox-group">
         <h4>Checkbox Group</h4>
         <CheckboxGroupDemo />
+        </div>
+<div className="component-demo controlled-checkbox">
+        <h4>Controlled Checkbox</h4>
+        <ControlledCheckboxDemo />
         </div>
 <div className="component-demo use-with-grid">
         <h4>Use With Grid</h4>

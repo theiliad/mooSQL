@@ -59,10 +59,12 @@ class ControlledRangePicker extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <ControlledDatePicker />
     <br />
     <ControlledRangePicker />
   </div>
+    </div>
 )
 export default expComponent

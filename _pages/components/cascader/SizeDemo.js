@@ -31,10 +31,12 @@ function onChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Cascader size="large" options={options} onChange={onChange} /><br /><br />
     <Cascader options={options} onChange={onChange} /><br /><br />
     <Cascader size="small" options={options} onChange={onChange} /><br /><br />
   </div>
+    </div>
 )
 export default expComponent

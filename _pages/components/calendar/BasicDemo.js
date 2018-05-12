@@ -7,6 +7,8 @@ function onPanelChange(value, mode) {
 
 
 const expComponent = () => (
+    <div>
   <Calendar onPanelChange={onPanelChange} />
+    </div>
 )
 export default expComponent

@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
-import IconImageDemo from './IconImageDemo.js'
-import ControlledDemo from './ControlledDemo.js'
+    import IconImageDemo from './IconImageDemo.js'
+import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
 import BasicDemo from './BasicDemo.js'
+import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
@@ -88,21 +88,21 @@ Mention component.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo asynchronous-loading">
-        <h4>Asynchronous Loading</h4>
-        <AsynchronousLoadingDemo />
-        </div>
-<div className="component-demo icon-image">
+                <div className="component-demo icon-image">
         <h4>Icon Image</h4>
         <IconImageDemo />
         </div>
-<div className="component-demo controlled">
-        <h4>Controlled</h4>
-        <ControlledDemo />
+<div className="component-demo asynchronous-loading">
+        <h4>Asynchronous Loading</h4>
+        <AsynchronousLoadingDemo />
         </div>
 <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
+        </div>
+<div className="component-demo controlled">
+        <h4>Controlled</h4>
+        <ControlledDemo />
         </div>
 <div className="component-demo with-form">
         <h4>With Form</h4>

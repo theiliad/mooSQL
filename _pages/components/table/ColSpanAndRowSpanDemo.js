@@ -103,6 +103,8 @@ const data = [{
 
 
 const expComponent = () => (
-<Table columns={columns} dataSource={data} bordered />
+    <div>
+        <Table columns={columns} dataSource={data} bordered />
+    </div>
 )
 export default expComponent

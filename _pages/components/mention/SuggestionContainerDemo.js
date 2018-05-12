@@ -47,6 +47,8 @@ class PopoverContainer extends React.Component {
 
 
 const expComponent = () => (
-<PopoverContainer />
+    <div>
+        <PopoverContainer />
+    </div>
 )
 export default expComponent

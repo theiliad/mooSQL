@@ -30,11 +30,13 @@ const data = [{
 
 
 const expComponent = () => (
+    <div>
   <div>
     <h4>Middle size table</h4>
     <Table columns={columns} dataSource={data} size="middle" />
     <h4>Small size table</h4>
     <Table columns={columns} dataSource={data} size="small" />
   </div>
+    </div>
 )
 export default expComponent

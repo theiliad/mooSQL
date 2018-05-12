@@ -12,6 +12,7 @@ const text = (
 
 
 const expComponent = () => (
+    <div>
   <Collapse bordered={false} defaultActiveKey={['1']}>
     <Panel header="This is panel header 1" key="1">
       {text}
@@ -23,5 +24,6 @@ const expComponent = () => (
       {text}
     </Panel>
   </Collapse>
+    </div>
 )
 export default expComponent

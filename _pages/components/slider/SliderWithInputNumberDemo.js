@@ -62,9 +62,11 @@ class DecimalStep extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <IntegerStep />
     <DecimalStep />
   </div>
+    </div>
 )
 export default expComponent

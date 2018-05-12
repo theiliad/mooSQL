@@ -43,6 +43,8 @@ class ButtonSize extends React.Component {
 
 
 const expComponent = () => (
-<ButtonSize />
+    <div>
+        <ButtonSize />
+    </div>
 )
 export default expComponent

@@ -5,6 +5,7 @@ const { Header, Content, Sider } = Layout;
 
 
 const expComponent = () => (
+    <div>
   <Layout>
     <Header className="header">
       <div className="logo" />
@@ -59,5 +60,6 @@ const expComponent = () => (
       </Layout>
     </Layout>
   </Layout>
+    </div>
 )
 export default expComponent

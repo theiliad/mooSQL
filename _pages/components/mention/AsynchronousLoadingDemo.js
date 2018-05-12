@@ -39,6 +39,8 @@ class AsyncMention extends React.Component {
 
 
 const expComponent = () => (
-<AsyncMention />
+    <div>
+        <AsyncMention />
+    </div>
 )
 export default expComponent

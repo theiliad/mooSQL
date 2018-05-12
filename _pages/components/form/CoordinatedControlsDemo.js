@@ -66,6 +66,8 @@ const WrappedApp = Form.create()(App);
 
 
 const expComponent = () => (
-<WrappedApp />
+    <div>
+        <WrappedApp />
+    </div>
 )
 export default expComponent

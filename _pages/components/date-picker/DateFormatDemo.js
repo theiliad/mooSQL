@@ -7,6 +7,7 @@ const dateFormat = 'YYYY/MM/DD';
 const monthFormat = 'YYYY/MM';
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
     <br />
@@ -17,5 +18,6 @@ const expComponent = () => (
       format={dateFormat}
     />
   </div>
+    </div>
 )
 export default expComponent

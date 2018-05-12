@@ -7,9 +7,11 @@ function formatter(value) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Slider tipFormatter={formatter} />
     <Slider tipFormatter={null} />
   </div>
+    </div>
 )
 export default expComponent

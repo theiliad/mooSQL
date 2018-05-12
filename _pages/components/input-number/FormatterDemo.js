@@ -7,6 +7,7 @@ function onChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <InputNumber
       defaultValue={1000}
@@ -23,5 +24,6 @@ const expComponent = () => (
       onChange={onChange}
     />
   </div>
+    </div>
 )
 export default expComponent

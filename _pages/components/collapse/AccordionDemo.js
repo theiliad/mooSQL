@@ -10,6 +10,7 @@ const text = `
 
 
 const expComponent = () => (
+    <div>
   <Collapse accordion>
     <Panel header="This is panel header 1" key="1">
       <p>{text}</p>
@@ -21,5 +22,6 @@ const expComponent = () => (
       <p>{text}</p>
     </Panel>
   </Collapse>
+    </div>
 )
 export default expComponent

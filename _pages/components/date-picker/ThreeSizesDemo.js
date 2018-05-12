@@ -35,6 +35,8 @@ class PickerSizesDemo extends React.Component {
 
 
 const expComponent = () => (
-<PickerSizesDemo />
+    <div>
+        <PickerSizesDemo />
+    </div>
 )
 export default expComponent

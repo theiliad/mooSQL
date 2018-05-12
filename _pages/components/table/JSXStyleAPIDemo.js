@@ -25,6 +25,7 @@ const data = [{
 
 
 const expComponent = () => (
+    <div>
   <Table dataSource={data}>
     <ColumnGroup title="Name">
       <Column
@@ -64,5 +65,6 @@ const expComponent = () => (
       )}
     />
   </Table>
+    </div>
 )
 export default expComponent

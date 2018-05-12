@@ -45,10 +45,12 @@ function confirm() {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <LocalizedModal />
     <br />
     <Button onClick={confirm}>Confirm</Button>
   </div>
+    </div>
 )
 export default expComponent

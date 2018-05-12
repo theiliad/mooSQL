@@ -78,6 +78,8 @@ class DateRange extends React.Component {
 
 
 const expComponent = () => (
-<DateRange />
+    <div>
+        <DateRange />
+    </div>
 )
 export default expComponent

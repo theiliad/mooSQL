@@ -4,6 +4,7 @@ const { Link } = Anchor;
 
 
 const expComponent = () => (
+    <div>
   <Anchor>
     <Link href="#components-anchor-demo-basic" title="Basic demo" />
     <Link href="#components-anchor-demo-fixed" title="Fixed demo" />
@@ -12,5 +13,6 @@ const expComponent = () => (
       <Link href="#Link-Props" title="Link Props" />
     </Link>
   </Anchor>
+    </div>
 )
 export default expComponent

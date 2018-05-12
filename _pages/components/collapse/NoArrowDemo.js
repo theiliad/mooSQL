@@ -14,6 +14,7 @@ const text = `
 
 
 const expComponent = () => (
+    <div>
   <Collapse defaultActiveKey={['1']} onChange={callback}>
     <Panel header="This is panel header with arrow icon" key="1">
       <p>{text}</p>
@@ -22,5 +23,6 @@ const expComponent = () => (
       <p>{text}</p>
     </Panel>
   </Collapse>
+    </div>
 )
 export default expComponent

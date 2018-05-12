@@ -3,6 +3,7 @@ import { Rate, Icon } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Rate character={<Icon type="heart" />} allowHalf />
     <br />
@@ -10,5 +11,6 @@ const expComponent = () => (
     <br />
     <Rate character="好" allowHalf />
   </div>
+    </div>
 )
 export default expComponent

@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Row>
       <Col span={12}>col-12</Col>
@@ -20,5 +21,6 @@ const expComponent = () => (
       <Col span={6}>col-6</Col>
     </Row>
   </div>
+    </div>
 )
 export default expComponent

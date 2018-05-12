@@ -4,6 +4,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 
 const expComponent = () => (
+    <div>
   <Layout>
     <Sider
       breakpoint="lg"
@@ -42,5 +43,6 @@ const expComponent = () => (
       </Footer>
     </Layout>
   </Layout>
+    </div>
 )
 export default expComponent

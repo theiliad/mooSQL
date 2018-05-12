@@ -15,6 +15,7 @@ const marks = {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <h4>included=true</h4>
     <Slider marks={marks} defaultValue={37} />
@@ -26,5 +27,6 @@ const expComponent = () => (
     <h4>step=null</h4>
     <Slider marks={marks} step={null} defaultValue={37} />
   </div>
+    </div>
 )
 export default expComponent

@@ -16,6 +16,8 @@ function Complete() {
 
 
 const expComponent = () => (
-<Complete />
+    <div>
+        <Complete />
+    </div>
 )
 export default expComponent

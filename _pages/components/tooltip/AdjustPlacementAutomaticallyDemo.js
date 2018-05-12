@@ -10,6 +10,7 @@ const wrapStyles = {
 
 
 const expComponent = () => (
+    <div>
   <div style={wrapStyles}>
     <Tooltip placement="left" title="Prompt Text" getPopupContainer={trigger => trigger.parentElement}>
       <Button>Adjust automatically / 自动调整</Button>
@@ -19,5 +20,6 @@ const expComponent = () => (
       <Button>Ingore / 不处理</Button>
     </Tooltip>
   </div>
+    </div>
 )
 export default expComponent

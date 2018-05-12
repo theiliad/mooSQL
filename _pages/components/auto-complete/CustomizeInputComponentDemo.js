@@ -47,6 +47,8 @@ class Complete extends React.Component {
 
 
 const expComponent = () => (
-<Complete />
+    <div>
+        <Complete />
+    </div>
 )
 export default expComponent

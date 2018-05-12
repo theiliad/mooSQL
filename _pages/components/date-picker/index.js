@@ -1,15 +1,15 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
+    import CustomizedDateRenderingDemo from './CustomizedDateRenderingDemo.js'
 import DisabledDateTimeDemo from './DisabledDateTimeDemo.js'
 import DisabledDemo from './DisabledDemo.js'
+import BasicDemo from './BasicDemo.js'
 import ExtraFooterDemo from './ExtraFooterDemo.js'
 import DateFormatDemo from './DateFormatDemo.js'
 import ControlledPanelsDemo from './ControlledPanelsDemo.js'
 import PresettedRangesDemo from './PresettedRangesDemo.js'
-import ThreeSizesDemo from './ThreeSizesDemo.js'
 import CustomizedRangePickerDemo from './CustomizedRangePickerDemo.js'
+import ThreeSizesDemo from './ThreeSizesDemo.js'
 import ChooseTimeDemo from './ChooseTimeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -139,11 +139,7 @@ To select or input a date.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo customized-date-rendering">
+                <div className="component-demo customized-date-rendering">
         <h4>Customized Date Rendering</h4>
         <CustomizedDateRenderingDemo />
         </div>
@@ -154,6 +150,10 @@ To select or input a date.
 <div className="component-demo disabled">
         <h4>Disabled</h4>
         <DisabledDemo />
+        </div>
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo extra-footer">
         <h4>Extra Footer</h4>
@@ -171,13 +171,13 @@ To select or input a date.
         <h4>Presetted Ranges</h4>
         <PresettedRangesDemo />
         </div>
-<div className="component-demo three-sizes">
-        <h4>Three Sizes</h4>
-        <ThreeSizesDemo />
-        </div>
 <div className="component-demo customized-range-picker">
         <h4>Customized Range Picker</h4>
         <CustomizedRangePickerDemo />
+        </div>
+<div className="component-demo three-sizes">
+        <h4>Three Sizes</h4>
+        <ThreeSizesDemo />
         </div>
 <div className="component-demo choose-time">
         <h4>Choose Time</h4>

@@ -4,6 +4,7 @@ const { Meta } = Card;
 
 
 const expComponent = () => (
+    <div>
   <Card
     style={{ width: 300 }}
     cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
@@ -15,5 +16,6 @@ const expComponent = () => (
       description="This is the description"
     />
   </Card>
+    </div>
 )
 export default expComponent

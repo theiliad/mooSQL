@@ -57,6 +57,8 @@ class FormLayoutDemo extends React.Component {
 
 
 const expComponent = () => (
-<FormLayoutDemo />
+    <div>
+        <FormLayoutDemo />
+    </div>
 )
 export default expComponent

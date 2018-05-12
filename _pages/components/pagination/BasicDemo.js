@@ -3,6 +3,8 @@ import { Pagination } from 'antd';
 
 
 const expComponent = () => (
-<Pagination defaultCurrent={1} total={50} />
+    <div>
+        <Pagination defaultCurrent={1} total={50} />
+    </div>
 )
 export default expComponent

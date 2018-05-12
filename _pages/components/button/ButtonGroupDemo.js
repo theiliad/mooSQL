@@ -4,6 +4,7 @@ const ButtonGroup = Button.Group;
 
 
 const expComponent = () => (
+    <div>
   <div>
     <h4>Basic</h4>
     <ButtonGroup>
@@ -34,5 +35,6 @@ const expComponent = () => (
       <Button type="primary" icon="cloud-download" />
     </ButtonGroup>
   </div>
+    </div>
 )
 export default expComponent

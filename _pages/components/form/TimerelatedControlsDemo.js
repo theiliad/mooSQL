@@ -116,6 +116,8 @@ const WrappedTimeRelatedForm = Form.create()(TimeRelatedForm);
 
 
 const expComponent = () => (
-<WrappedTimeRelatedForm />
+    <div>
+        <WrappedTimeRelatedForm />
+    </div>
 )
 export default expComponent

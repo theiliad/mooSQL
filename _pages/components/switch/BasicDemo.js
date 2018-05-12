@@ -7,6 +7,8 @@ function onChange(checked) {
 
 
 const expComponent = () => (
+    <div>
   <Switch defaultChecked onChange={onChange} />
+    </div>
 )
 export default expComponent

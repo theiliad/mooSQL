@@ -12,6 +12,8 @@ function success() {
 
 
 const expComponent = () => (
+    <div>
   <Button onClick={success}>Success</Button>
+    </div>
 )
 export default expComponent

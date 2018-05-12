@@ -36,11 +36,13 @@ function displayRender(label) {
 
 
 const expComponent = () => (
+    <div>
   <Cascader
     options={options}
     expandTrigger="hover"
     displayRender={displayRender}
     onChange={onChange}
   />
+    </div>
 )
 export default expComponent

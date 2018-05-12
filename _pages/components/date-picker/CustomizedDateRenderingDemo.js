@@ -4,6 +4,7 @@ const { RangePicker } = DatePicker;
 
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker
       dateRender={(current) => {
@@ -34,5 +35,6 @@ const expComponent = () => (
       }}
     />
   </div>
+    </div>
 )
 export default expComponent

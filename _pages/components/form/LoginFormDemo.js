@@ -51,6 +51,8 @@ const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 
 
 const expComponent = () => (
-<WrappedNormalLoginForm />
+    <div>
+        <WrappedNormalLoginForm />
+    </div>
 )
 export default expComponent

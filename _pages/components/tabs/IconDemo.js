@@ -4,6 +4,7 @@ const TabPane = Tabs.TabPane;
 
 
 const expComponent = () => (
+    <div>
   <Tabs defaultActiveKey="2">
     <TabPane tab={<span><Icon type="apple" />Tab 1</span>} key="1">
       Tab 1
@@ -12,5 +13,6 @@ const expComponent = () => (
       Tab 2
     </TabPane>
   </Tabs>
+    </div>
 )
 export default expComponent

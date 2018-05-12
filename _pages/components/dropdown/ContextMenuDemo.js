@@ -11,8 +11,10 @@ const menu = (
 
 
 const expComponent = () => (
+    <div>
   <Dropdown overlay={menu} trigger={['contextMenu']}>
     <span style={{ userSelect: 'none' }}>Right Click on Me</span>
   </Dropdown>
+    </div>
 )
 export default expComponent

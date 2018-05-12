@@ -8,6 +8,7 @@ const gridStyle = {
 
 
 const expComponent = () => (
+    <div>
   <Card title="Card Title">
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
@@ -17,5 +18,6 @@ const expComponent = () => (
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
   </Card>
+    </div>
 )
 export default expComponent

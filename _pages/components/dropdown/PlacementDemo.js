@@ -17,6 +17,7 @@ const menu = (
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Dropdown overlay={menu} placement="bottomLeft">
       <Button>bottomLeft</Button>
@@ -38,5 +39,6 @@ const expComponent = () => (
       <Button>topRight</Button>
     </Dropdown>
   </div>
+    </div>
 )
 export default expComponent

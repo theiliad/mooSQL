@@ -3,6 +3,7 @@ import { Badge } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Badge count={99}>
       <a href="#" className="head-example" />
@@ -17,5 +18,6 @@ const expComponent = () => (
       <a href="#" className="head-example" />
     </Badge>
   </div>
+    </div>
 )
 export default expComponent

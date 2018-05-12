@@ -27,6 +27,8 @@ class TimePickerAddonDemo extends React.Component {
 
 
 const expComponent = () => (
-<TimePickerAddonDemo />
+    <div>
+        <TimePickerAddonDemo />
+    </div>
 )
 export default expComponent

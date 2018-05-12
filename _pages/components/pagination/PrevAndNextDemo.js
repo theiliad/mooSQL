@@ -12,6 +12,8 @@ function itemRender(current, type, originalElement) {
 
 
 const expComponent = () => (
+    <div>
   <Pagination total={500} itemRender={itemRender} />
+    </div>
 )
 export default expComponent

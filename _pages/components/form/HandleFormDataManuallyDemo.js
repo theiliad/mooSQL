@@ -58,6 +58,8 @@ class RawForm extends React.Component {
 
 
 const expComponent = () => (
-<RawForm />
+    <div>
+        <RawForm />
+    </div>
 )
 export default expComponent

@@ -123,6 +123,8 @@ class VirtualizedExample extends React.Component {
 
 
 const expComponent = () => (
-<VirtualizedExample />
+    <div>
+        <VirtualizedExample />
+    </div>
 )
 export default expComponent

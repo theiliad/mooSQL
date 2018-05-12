@@ -41,6 +41,7 @@ function disabledRangeTime(_, type) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker
       format="YYYY-MM-DD HH:mm:ss"
@@ -61,5 +62,6 @@ const expComponent = () => (
       format="YYYY-MM-DD HH:mm:ss"
     />
   </div>
+    </div>
 )
 export default expComponent

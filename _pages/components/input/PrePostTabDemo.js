@@ -19,6 +19,7 @@ const selectAfter = (
 
 
 const expComponent = () => (
+    <div>
   <div>
     <div style={{ marginBottom: 16 }}>
       <Input addonBefore="Http://" addonAfter=".com" defaultValue="mysite" />
@@ -30,5 +31,6 @@ const expComponent = () => (
       <Input addonAfter={<Icon type="setting" />} defaultValue="mysite" />
     </div>
   </div>
+    </div>
 )
 export default expComponent

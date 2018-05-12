@@ -6,6 +6,7 @@ const { MonthPicker, RangePicker } = DatePicker;
 const dateFormat = 'YYYY-MM-DD';
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker defaultValue={moment('2015-06-06', dateFormat)} disabled />
     <br />
@@ -16,5 +17,6 @@ const expComponent = () => (
       disabled
     />
   </div>
+    </div>
 )
 export default expComponent

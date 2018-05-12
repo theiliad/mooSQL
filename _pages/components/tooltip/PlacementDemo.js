@@ -7,6 +7,7 @@ const buttonWidth = 70;
 
 
 const expComponent = () => (
+    <div>
   <div className="demo">
     <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
       <Tooltip placement="topLeft" title={text}>
@@ -53,5 +54,6 @@ const expComponent = () => (
       </Tooltip>
     </div>
   </div>
+    </div>
 )
 export default expComponent

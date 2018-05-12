@@ -243,6 +243,8 @@ const WrappedRegistrationForm = Form.create()(RegistrationForm);
 
 
 const expComponent = () => (
-<WrappedRegistrationForm />
+    <div>
+        <WrappedRegistrationForm />
+    </div>
 )
 export default expComponent

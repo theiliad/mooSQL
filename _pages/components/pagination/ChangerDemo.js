@@ -7,6 +7,8 @@ function onShowSizeChange(current, pageSize) {
 
 
 const expComponent = () => (
+    <div>
   <Pagination showSizeChanger onShowSizeChange={onShowSizeChange} defaultCurrent={3} total={500} />
+    </div>
 )
 export default expComponent

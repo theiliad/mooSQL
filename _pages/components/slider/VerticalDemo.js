@@ -21,6 +21,7 @@ const marks = {
 
 
 const expComponent = () => (
+    <div>
   <div style={{ height: 300 }}>
     <div style={style}>
       <Slider vertical defaultValue={30} />
@@ -32,5 +33,6 @@ const expComponent = () => (
       <Slider vertical range marks={marks} defaultValue={[26, 37]} />
     </div>
   </div>
+    </div>
 )
 export default expComponent

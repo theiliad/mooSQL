@@ -9,6 +9,7 @@ function handleClick(e) {
 
 
 const expComponent = () => (
+    <div>
   <Menu onClick={handleClick} style={{ width: 256 }} mode="vertical">
     <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
       <MenuItemGroup title="Item 1">
@@ -35,5 +36,6 @@ const expComponent = () => (
       <Menu.Item key="12">Option 12</Menu.Item>
     </SubMenu>
   </Menu>
+    </div>
 )
 export default expComponent

@@ -49,6 +49,8 @@ const data = [{
 
 
 const expComponent = () => (
-<Table columns={columns} dataSource={data} />
+    <div>
+        <Table columns={columns} dataSource={data} />
+    </div>
 )
 export default expComponent

@@ -83,6 +83,8 @@ const rowSelection = {
 
 
 const expComponent = () => (
+    <div>
   <Table columns={columns} rowSelection={rowSelection} dataSource={data} />
+    </div>
 )
 export default expComponent

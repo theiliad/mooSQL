@@ -2,8 +2,8 @@ import React from 'react'
 
     import AvatarDemo from './AvatarDemo.js'
 import UploadByClickingDemo from './UploadByClickingDemo.js'
-import DefaultFilesDemo from './DefaultFilesDemo.js'
 import DragAndDropDemo from './DragAndDropDemo.js'
+import DefaultFilesDemo from './DefaultFilesDemo.js'
 import CompleteControlOverFileListDemo from './CompleteControlOverFileListDemo.js'
 import PicturesWallDemo from './PicturesWallDemo.js'
 import PicturesWithListStyleDemo from './PicturesWithListStyleDemo.js'
@@ -110,13 +110,13 @@ Upload file by selecting or dragging.
         <h4>Upload By Clicking</h4>
         <UploadByClickingDemo />
         </div>
-<div className="component-demo default-files">
-        <h4>Default Files</h4>
-        <DefaultFilesDemo />
-        </div>
 <div className="component-demo drag-and-drop">
         <h4>Drag And Drop</h4>
         <DragAndDropDemo />
+        </div>
+<div className="component-demo default-files">
+        <h4>Default Files</h4>
+        <DefaultFilesDemo />
         </div>
 <div className="component-demo complete-control-over-file-list">
         <h4>Complete Control Over File List</h4>

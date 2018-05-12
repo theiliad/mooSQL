@@ -16,6 +16,7 @@ const formItemLayout = {
 
 
 const expComponent = () => (
+    <div>
   <Form>
     <FormItem
       {...formItemLayout}
@@ -132,5 +133,6 @@ const expComponent = () => (
       <InputNumber style={{ width: '100%' }} />
     </FormItem>
   </Form>
+    </div>
 )
 export default expComponent

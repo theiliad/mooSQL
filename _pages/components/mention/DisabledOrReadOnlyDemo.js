@@ -34,6 +34,8 @@ function App() {
 
 
 const expComponent = () => (
+    <div>
   <App />
+    </div>
 )
 export default expComponent

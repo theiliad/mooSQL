@@ -3,6 +3,7 @@ import { Button } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Button type="primary" shape="circle" icon="search" />
     <Button type="primary" icon="search">Search</Button>
@@ -14,5 +15,6 @@ const expComponent = () => (
     <Button type="dashed" shape="circle" icon="search" />
     <Button type="dashed" icon="search">Search</Button>
   </div>
+    </div>
 )
 export default expComponent

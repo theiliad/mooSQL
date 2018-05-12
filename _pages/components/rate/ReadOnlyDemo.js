@@ -3,6 +3,8 @@ import { Rate } from 'antd';
 
 
 const expComponent = () => (
-<Rate disabled defaultValue={2} />
+    <div>
+        <Rate disabled defaultValue={2} />
+    </div>
 )
 export default expComponent

@@ -19,10 +19,12 @@ const menu = (
 
 
 const expComponent = () => (
+    <div>
   <Dropdown overlay={menu}>
     <a className="ant-dropdown-link" href="#">
       Cascading menu <Icon type="down" />
     </a>
   </Dropdown>
+    </div>
 )
 export default expComponent

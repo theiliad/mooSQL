@@ -54,6 +54,8 @@ class App extends React.Component {
 
 
 const expComponent = () => (
-<App />
+    <div>
+        <App />
+    </div>
 )
 export default expComponent

@@ -5,6 +5,7 @@ const DemoBox = props => <p className={`height-${props.value}`}>{props.children}
 
 
 const expComponent = () => (
+    <div>
   <div>
     <p>Align Top</p>
     <Row type="flex" justify="center" align="top">
@@ -28,5 +29,6 @@ const expComponent = () => (
       <Col span={4}><DemoBox value={80}>col-4</DemoBox></Col>
     </Row>
   </div>
+    </div>
 )
 export default expComponent

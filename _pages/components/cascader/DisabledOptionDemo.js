@@ -32,6 +32,8 @@ function onChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <Cascader options={options} onChange={onChange} />
+    </div>
 )
 export default expComponent

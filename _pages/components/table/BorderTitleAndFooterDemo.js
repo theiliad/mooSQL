@@ -33,6 +33,7 @@ const data = [{
 
 
 const expComponent = () => (
+    <div>
   <Table
     columns={columns}
     dataSource={data}
@@ -40,5 +41,6 @@ const expComponent = () => (
     title={() => 'Header'}
     footer={() => 'Footer'}
   />
+    </div>
 )
 export default expComponent

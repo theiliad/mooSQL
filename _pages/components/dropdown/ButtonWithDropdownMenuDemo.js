@@ -21,6 +21,7 @@ const menu = (
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
       Dropdown
@@ -39,5 +40,6 @@ const expComponent = () => (
       </Button>
     </Dropdown>
   </div>
+    </div>
 )
 export default expComponent

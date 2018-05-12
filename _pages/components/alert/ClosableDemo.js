@@ -7,6 +7,7 @@ const onClose = function (e) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Alert
       message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
@@ -22,5 +23,6 @@ const expComponent = () => (
       onClose={onClose}
     />
   </div>
+    </div>
 )
 export default expComponent

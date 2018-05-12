@@ -11,6 +11,7 @@ const content = (
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Popover placement="topLeft" title={text} content={content}>
       <Button>Align edge / 边缘对齐</Button>
@@ -19,5 +20,6 @@ const expComponent = () => (
       <Button>Arrow points to center / 箭头指向中心</Button>
     </Popover>
   </div>
+    </div>
 )
 export default expComponent

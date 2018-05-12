@@ -16,6 +16,7 @@ function handleFocus() {
 
 
 const expComponent = () => (
+    <div>
   <Select
     showSearch
     style={{ width: 200 }}
@@ -30,5 +31,6 @@ const expComponent = () => (
     <Option value="lucy">Lucy</Option>
     <Option value="tom">Tom</Option>
   </Select>
+    </div>
 )
 export default expComponent

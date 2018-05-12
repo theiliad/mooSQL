@@ -4,6 +4,7 @@ const { Meta } = Card;
 
 
 const expComponent = () => (
+    <div>
   <Card
     hoverable
     style={{ width: 240 }}
@@ -14,5 +15,6 @@ const expComponent = () => (
       description="www.instagram.com"
     />
   </Card>
+    </div>
 )
 export default expComponent

@@ -8,6 +8,7 @@ function handleChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
       <Option value="jack">Jack</Option>
@@ -19,5 +20,6 @@ const expComponent = () => (
       <Option value="lucy">Lucy</Option>
     </Select>
   </div>
+    </div>
 )
 export default expComponent

@@ -76,6 +76,8 @@ class NumericInputDemo extends React.Component {
 
 
 const expComponent = () => (
-<NumericInputDemo />
+    <div>
+        <NumericInputDemo />
+    </div>
 )
 export default expComponent

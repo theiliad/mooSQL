@@ -94,15 +94,6 @@
     overflow: visible !important;
 }
 
-div.ant-layout-has-sider div.ant-layout-sider {
-    transition: none;
-    background: none;
-    width: auto !important;
-    flex: none !important;
-    max-width: 10000px !important;
-    min-width: 200px !important;
-}
-
 // Message
 .ant-message-notice-content {
     padding: 0;

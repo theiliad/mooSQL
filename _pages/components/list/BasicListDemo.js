@@ -18,6 +18,7 @@ const data = [
 
 
 const expComponent = () => (
+    <div>
   <List
     itemLayout="horizontal"
     dataSource={data}
@@ -31,5 +32,6 @@ const expComponent = () => (
       </List.Item>
     )}
   />
+    </div>
 )
 export default expComponent

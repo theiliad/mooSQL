@@ -2,9 +2,9 @@ import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
 import EventDemo from './EventDemo.js'
-import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
-import SliderWithIconDemo from './SliderWithIconDemo.js'
 import GraduatedSliderDemo from './GraduatedSliderDemo.js'
+import SliderWithIconDemo from './SliderWithIconDemo.js'
+import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
 import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -65,17 +65,17 @@ A Slider component for displaying current value and intervals in range.
         <h4>Event</h4>
         <EventDemo />
         </div>
-<div className="component-demo slider-with-input-number">
-        <h4>Slider With Input Number</h4>
-        <SliderWithInputNumberDemo />
+<div className="component-demo graduated-slider">
+        <h4>Graduated Slider</h4>
+        <GraduatedSliderDemo />
         </div>
 <div className="component-demo slider-with-icon">
         <h4>Slider With Icon</h4>
         <SliderWithIconDemo />
         </div>
-<div className="component-demo graduated-slider">
-        <h4>Graduated Slider</h4>
-        <GraduatedSliderDemo />
+<div className="component-demo slider-with-input-number">
+        <h4>Slider With Input Number</h4>
+        <SliderWithInputNumberDemo />
         </div>
 <div className="component-demo customize-tooltip">
         <h4>Customize Tooltip</h4>

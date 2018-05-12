@@ -91,6 +91,8 @@ function NestedTable() {
 
 
 const expComponent = () => (
-<NestedTable />
+    <div>
+        <NestedTable />
+    </div>
 )
 export default expComponent

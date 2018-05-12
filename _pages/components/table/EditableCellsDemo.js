@@ -142,6 +142,8 @@ class EditableTable extends React.Component {
 
 
 const expComponent = () => (
-<EditableTable />
+    <div>
+        <EditableTable />
+    </div>
 )
 export default expComponent

@@ -10,8 +10,10 @@ const App = () => (
 
 
 const expComponent = () => (
+    <div>
   <LocaleProvider locale={zhCN}>
     <App />
   </LocaleProvider>
+    </div>
 )
 export default expComponent

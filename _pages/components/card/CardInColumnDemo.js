@@ -3,6 +3,7 @@ import { Card, Col, Row } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div style={{ background: '#ECECEC', padding: '30px' }}>
     <Row gutter={16}>
       <Col span={8}>
@@ -16,5 +17,6 @@ const expComponent = () => (
       </Col>
     </Row>
   </div>
+    </div>
 )
 export default expComponent

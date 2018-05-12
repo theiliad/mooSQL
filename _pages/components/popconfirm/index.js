@@ -1,8 +1,8 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
+    import LocaleTextDemo from './LocaleTextDemo.js'
+import BasicDemo from './BasicDemo.js'
 import ConditionalTriggerDemo from './ConditionalTriggerDemo.js'
-import LocaleTextDemo from './LocaleTextDemo.js'
 import PlacementDemo from './PlacementDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -46,17 +46,17 @@ A simple and compact confirmation dialog of an action.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo basic">
+                <div className="component-demo locale-text">
+        <h4>Locale Text</h4>
+        <LocaleTextDemo />
+        </div>
+<div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
 <div className="component-demo conditional-trigger">
         <h4>Conditional Trigger</h4>
         <ConditionalTriggerDemo />
-        </div>
-<div className="component-demo locale-text">
-        <h4>Locale Text</h4>
-        <LocaleTextDemo />
         </div>
 <div className="component-demo placement">
         <h4>Placement</h4>

@@ -24,6 +24,8 @@ class LoadingCard extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <LoadingCard />
+    </div>
 )
 export default expComponent

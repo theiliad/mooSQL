@@ -80,6 +80,8 @@ class LoadMoreList extends React.Component {
 
 
 const expComponent = () => (
-<LoadMoreList />
+    <div>
+        <LoadMoreList />
+    </div>
 )
 export default expComponent

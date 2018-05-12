@@ -18,6 +18,7 @@ const data = [
 
 
 const expComponent = () => (
+    <div>
   <List
     grid={{ gutter: 16, column: 4 }}
     dataSource={data}
@@ -27,5 +28,6 @@ const expComponent = () => (
       </List.Item>
     )}
   />
+    </div>
 )
 export default expComponent

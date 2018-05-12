@@ -49,6 +49,8 @@ class CustomNavMention extends React.Component {
 
 
 const expComponent = () => (
-<CustomNavMention />
+    <div>
+        <CustomNavMention />
+    </div>
 )
 export default expComponent

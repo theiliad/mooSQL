@@ -62,6 +62,8 @@ function monthCellRender(value) {
 
 
 const expComponent = () => (
+    <div>
   <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />
+    </div>
 )
 export default expComponent

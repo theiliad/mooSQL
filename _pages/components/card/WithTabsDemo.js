@@ -68,6 +68,8 @@ class TabsCard extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <TabsCard />
+    </div>
 )
 export default expComponent

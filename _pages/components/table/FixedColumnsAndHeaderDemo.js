@@ -33,6 +33,8 @@ for (let i = 0; i < 100; i++) {
 
 
 const expComponent = () => (
-<Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />
+    <div>
+        <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />
+    </div>
 )
 export default expComponent

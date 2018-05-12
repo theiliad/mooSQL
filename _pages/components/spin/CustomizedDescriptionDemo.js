@@ -3,6 +3,7 @@ import { Spin, Alert } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <Spin tip="Loading...">
     <Alert
       message="Alert message title"
@@ -10,5 +11,6 @@ const expComponent = () => (
       type="info"
     />
   </Spin>
+    </div>
 )
 export default expComponent

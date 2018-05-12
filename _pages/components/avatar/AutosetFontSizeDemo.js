@@ -35,6 +35,8 @@ class Autoset extends React.Component {
 
 
 const expComponent = () => (
-<Autoset />
+    <div>
+        <Autoset />
+    </div>
 )
 export default expComponent

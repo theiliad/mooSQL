@@ -18,6 +18,7 @@ const customPanelStyle = {
 
 
 const expComponent = () => (
+    <div>
   <Collapse bordered={false} defaultActiveKey={['1']}>
     <Panel header="This is panel header 1" key="1" style={customPanelStyle}>
       <p>{text}</p>
@@ -29,5 +30,6 @@ const expComponent = () => (
       <p>{text}</p>
     </Panel>
   </Collapse>
+    </div>
 )
 export default expComponent

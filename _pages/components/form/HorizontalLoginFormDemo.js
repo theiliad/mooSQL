@@ -65,6 +65,8 @@ const WrappedHorizontalLoginForm = Form.create()(HorizontalLoginForm);
 
 
 const expComponent = () => (
-<WrappedHorizontalLoginForm />
+    <div>
+        <WrappedHorizontalLoginForm />
+    </div>
 )
 export default expComponent

@@ -1,12 +1,11 @@
 import React from 'react'
 
-    import BasicStructureDemo from './BasicStructureDemo.js'
-import CustomTriggerDemo from './CustomTriggerDemo.js'
-import FixedSiderDemo from './FixedSiderDemo.js'
+    import CustomTriggerDemo from './CustomTriggerDemo.js'
+import BasicStructureDemo from './BasicStructureDemo.js'
 import FixedHeaderDemo from './FixedHeaderDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
-import SiderDemo from './SiderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
+import SiderDemo from './SiderDemo.js'
 import HeaderSiderDemo22 from './HeaderSiderDemo22.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -133,17 +132,13 @@ Handling the overall layout of a page.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo basic-structure">
-        <h4>Basic Structure</h4>
-        <BasicStructureDemo />
-        </div>
-<div className="component-demo custom-trigger">
+                <div className="component-demo custom-trigger">
         <h4>Custom Trigger</h4>
         <CustomTriggerDemo />
         </div>
-<div className="component-demo fixed-sider">
-        <h4>Fixed Sider</h4>
-        <FixedSiderDemo />
+<div className="component-demo basic-structure">
+        <h4>Basic Structure</h4>
+        <BasicStructureDemo />
         </div>
 <div className="component-demo fixed-header">
         <h4>Fixed Header</h4>
@@ -153,13 +148,13 @@ Handling the overall layout of a page.
         <h4>Responsive</h4>
         <ResponsiveDemo />
         </div>
-<div className="component-demo sider">
-        <h4>Sider</h4>
-        <SiderDemo />
-        </div>
 <div className="component-demo header-sider">
         <h4>Header Sider</h4>
         <HeaderSiderDemo />
+        </div>
+<div className="component-demo sider">
+        <h4>Sider</h4>
+        <SiderDemo />
         </div>
 <div className="component-demo header-sider22">
         <h4>Header Sider22</h4>

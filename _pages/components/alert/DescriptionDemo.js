@@ -3,6 +3,7 @@ import { Alert } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Alert
       message="Success Text"
@@ -25,5 +26,6 @@ const expComponent = () => (
       type="error"
     />
   </div>
+    </div>
 )
 export default expComponent

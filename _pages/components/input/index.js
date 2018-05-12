@@ -6,8 +6,8 @@ import BasicUsageDemo from './BasicUsageDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
 import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
-import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import TextAreaDemo from './TextAreaDemo.js'
+import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
 import FormatTooltipInputDemo from './FormatTooltipInputDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -119,13 +119,13 @@ Keyboard and mouse can be used for providing or changing data.
         <h4>Search Box</h4>
         <SearchBoxDemo />
         </div>
-<div className="component-demo three-sizes-of-input">
-        <h4>Three Sizes Of Input</h4>
-        <ThreeSizesOfInputDemo />
-        </div>
 <div className="component-demo text-area">
         <h4>Text Area</h4>
         <TextAreaDemo />
+        </div>
+<div className="component-demo three-sizes-of-input">
+        <h4>Three Sizes Of Input</h4>
+        <ThreeSizesOfInputDemo />
         </div>
 <div className="component-demo format-tooltip-input">
         <h4>Format Tooltip Input</h4>

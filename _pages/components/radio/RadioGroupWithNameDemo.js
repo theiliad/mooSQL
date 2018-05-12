@@ -15,6 +15,8 @@ function App() {
 
 
 const expComponent = () => (
-<App />
+    <div>
+        <App />
+    </div>
 )
 export default expComponent

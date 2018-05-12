@@ -3,6 +3,7 @@ import { Avatar } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <div>
       <Avatar size="large" icon="user" />
@@ -15,5 +16,6 @@ const expComponent = () => (
       <Avatar shape="square" size="small" icon="user" />
     </div>
   </div>
+    </div>
 )
 export default expComponent

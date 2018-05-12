@@ -21,6 +21,8 @@ class Rater extends React.Component {
 
 
 const expComponent = () => (
-<Rater />
+    <div>
+        <Rater />
+    </div>
 )
 export default expComponent

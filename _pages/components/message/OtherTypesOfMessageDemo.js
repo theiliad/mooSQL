@@ -15,10 +15,12 @@ const warning = () => {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Button onClick={success}>Success</Button>
     <Button onClick={error}>Error</Button>
     <Button onClick={warning}>Warning</Button>
   </div>
+    </div>
 )
 export default expComponent

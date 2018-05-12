@@ -14,10 +14,12 @@ class MyTag extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <MyTag>Tag1</MyTag>
     <MyTag>Tag2</MyTag>
     <MyTag>Tag3</MyTag>
   </div>
+    </div>
 )
 export default expComponent

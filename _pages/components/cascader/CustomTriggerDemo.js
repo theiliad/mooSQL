@@ -42,6 +42,8 @@ class CitySwitcher extends React.Component {
 
 
 const expComponent = () => (
-<CitySwitcher />
+    <div>
+        <CitySwitcher />
+    </div>
 )
 export default expComponent

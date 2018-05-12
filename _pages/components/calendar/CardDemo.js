@@ -7,8 +7,10 @@ function onPanelChange(value, mode) {
 
 
 const expComponent = () => (
+    <div>
   <div style={{ width: 300, border: '1px solid #d9d9d9', borderRadius: 4 }}>
     <Calendar fullscreen={false} onPanelChange={onPanelChange} />
   </div>
+    </div>
 )
 export default expComponent

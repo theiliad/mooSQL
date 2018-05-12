@@ -125,6 +125,8 @@ class SearchTree extends React.Component {
 
 
 const expComponent = () => (
-<SearchTree />
+    <div>
+        <SearchTree />
+    </div>
 )
 export default expComponent

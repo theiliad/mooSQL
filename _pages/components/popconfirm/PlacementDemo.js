@@ -9,6 +9,7 @@ function confirm() {
 
 
 const expComponent = () => (
+    <div>
   <div className="demo">
     <div style={{ marginLeft: 70, whiteSpace: 'nowrap' }}>
       <Popconfirm placement="topLeft" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
@@ -55,5 +56,6 @@ const expComponent = () => (
       </Popconfirm>
     </div>
   </div>
+    </div>
 )
 export default expComponent

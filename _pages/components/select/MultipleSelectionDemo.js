@@ -13,6 +13,7 @@ function handleChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <Select
     mode="multiple"
     style={{ width: '100%' }}
@@ -22,5 +23,6 @@ const expComponent = () => (
   >
     {children}
   </Select>
+    </div>
 )
 export default expComponent

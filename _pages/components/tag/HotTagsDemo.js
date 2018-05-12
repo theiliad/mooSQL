@@ -39,6 +39,8 @@ class HotTags extends React.Component {
 
 
 const expComponent = () => (
-<HotTags />
+    <div>
+        <HotTags />
+    </div>
 )
 export default expComponent

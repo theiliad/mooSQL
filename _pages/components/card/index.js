@@ -3,8 +3,8 @@ import React from 'react'
     import BasicCardDemo from './BasicCardDemo.js'
 import NoBorderDemo from './NoBorderDemo.js'
 import CustomizedContentDemo from './CustomizedContentDemo.js'
-import GridCardDemo from './GridCardDemo.js'
 import CardInColumnDemo from './CardInColumnDemo.js'
+import GridCardDemo from './GridCardDemo.js'
 import InnerCardDemo from './InnerCardDemo.js'
 import LoadingCardDemo from './LoadingCardDemo.js'
 import SupportMoreContentConfigurationDemo from './SupportMoreContentConfigurationDemo.js'
@@ -86,13 +86,13 @@ Simple rectangular container.
         <h4>Customized Content</h4>
         <CustomizedContentDemo />
         </div>
-<div className="component-demo grid-card">
-        <h4>Grid Card</h4>
-        <GridCardDemo />
-        </div>
 <div className="component-demo card-in-column">
         <h4>Card In Column</h4>
         <CardInColumnDemo />
+        </div>
+<div className="component-demo grid-card">
+        <h4>Grid Card</h4>
+        <GridCardDemo />
         </div>
 <div className="component-demo inner-card">
         <h4>Inner Card</h4>

@@ -3,6 +3,7 @@ import { Badge, Icon } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Badge dot>
       <Icon type="notification" />
@@ -14,5 +15,6 @@ const expComponent = () => (
       <a href="#">Link something</a>
     </Badge>
   </div>
+    </div>
 )
 export default expComponent

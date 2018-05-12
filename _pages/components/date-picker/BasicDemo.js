@@ -8,6 +8,7 @@ function onChange(date, dateString) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker onChange={onChange} />
     <br />
@@ -17,5 +18,6 @@ const expComponent = () => (
     <br />
     <WeekPicker onChange={onChange} placeholder="Select week" />
   </div>
+    </div>
 )
 export default expComponent

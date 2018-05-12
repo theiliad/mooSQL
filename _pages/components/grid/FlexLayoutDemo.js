@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <p>sub-element align left</p>
     <Row type="flex" justify="start">
@@ -40,5 +41,6 @@ const expComponent = () => (
       <Col span={4}>col-4</Col>
     </Row>
   </div>
+    </div>
 )
 export default expComponent

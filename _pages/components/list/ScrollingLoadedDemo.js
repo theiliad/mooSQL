@@ -88,6 +88,8 @@ class InfiniteListExample extends React.Component {
 
 
 const expComponent = () => (
-<InfiniteListExample />
+    <div>
+        <InfiniteListExample />
+    </div>
 )
 export default expComponent

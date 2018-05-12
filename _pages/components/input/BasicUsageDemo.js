@@ -3,6 +3,8 @@ import { Input } from 'antd';
 
 
 const expComponent = () => (
-<Input placeholder="Basic usage" />
+    <div>
+        <Input placeholder="Basic usage" />
+    </div>
 )
 export default expComponent

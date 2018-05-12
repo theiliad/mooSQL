@@ -30,6 +30,7 @@ const props2 = {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Upload {...props}>
       <Button>
@@ -44,5 +45,6 @@ const expComponent = () => (
       </Button>
     </Upload>
   </div>
+    </div>
 )
 export default expComponent

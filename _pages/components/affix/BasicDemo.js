@@ -3,6 +3,7 @@ import { Affix, Button } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Affix>
       <Button type="primary">Affix top</Button>
@@ -12,5 +13,6 @@ const expComponent = () => (
       <Button type="primary">Affix bottom</Button>
     </Affix>
   </div>
+    </div>
 )
 export default expComponent

@@ -53,6 +53,8 @@ class PicturesWall extends React.Component {
 
 
 const expComponent = () => (
-<PicturesWall />
+    <div>
+        <PicturesWall />
+    </div>
 )
 export default expComponent

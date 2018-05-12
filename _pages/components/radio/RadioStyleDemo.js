@@ -9,6 +9,7 @@ function onChange(e) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <div>
       <RadioGroup onChange={onChange} defaultValue="a">
@@ -35,5 +36,6 @@ const expComponent = () => (
       </RadioGroup>
     </div>
   </div>
+    </div>
 )
 export default expComponent

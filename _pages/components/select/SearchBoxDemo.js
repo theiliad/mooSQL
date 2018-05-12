@@ -69,6 +69,8 @@ class SearchInput extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <SearchInput placeholder="input search text" style={{ width: 200 }} />
+    </div>
 )
 export default expComponent

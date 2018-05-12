@@ -79,6 +79,8 @@ class EditableTagGroup extends React.Component {
 
 
 const expComponent = () => (
-<EditableTagGroup />
+    <div>
+        <EditableTagGroup />
+    </div>
 )
 export default expComponent

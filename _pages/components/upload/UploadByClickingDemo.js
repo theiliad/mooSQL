@@ -21,10 +21,12 @@ const props = {
 
 
 const expComponent = () => (
+    <div>
   <Upload {...props}>
     <Button>
       <Icon type="upload" /> Click to Upload
     </Button>
   </Upload>
+    </div>
 )
 export default expComponent

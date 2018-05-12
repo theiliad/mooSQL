@@ -13,6 +13,7 @@ function onOk(value) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker
       showTime
@@ -30,5 +31,6 @@ const expComponent = () => (
       onOk={onOk}
     />
   </div>
+    </div>
 )
 export default expComponent

@@ -12,6 +12,7 @@ function onSelect(suggestion) {
 
 
 const expComponent = () => (
+    <div>
   <Mention
     style={{ width: '100%' }}
     onChange={onChange}
@@ -19,5 +20,6 @@ const expComponent = () => (
     suggestions={['afc163', 'benjycui', 'yiminghe', 'RaoHai', '中文', 'にほんご']}
     onSelect={onSelect}
   />
+    </div>
 )
 export default expComponent

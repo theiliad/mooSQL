@@ -10,6 +10,7 @@ const content = (
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Popover content={content} title="Title" trigger="hover">
       <Button>Hover me</Button>
@@ -21,5 +22,6 @@ const expComponent = () => (
       <Button>Click me</Button>
     </Popover>
   </div>
+    </div>
 )
 export default expComponent

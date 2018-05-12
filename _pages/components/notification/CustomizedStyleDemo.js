@@ -14,6 +14,8 @@ const openNotification = () => {
 
 
 const expComponent = () => (
+    <div>
   <Button type="primary" onClick={openNotification}>Open the notification box</Button>
+    </div>
 )
 export default expComponent

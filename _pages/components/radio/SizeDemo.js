@@ -5,6 +5,7 @@ const RadioGroup = Radio.Group;
 
 
 const expComponent = () => (
+    <div>
   <div>
     <div>
       <RadioGroup defaultValue="a" size="large">
@@ -31,5 +32,6 @@ const expComponent = () => (
       </RadioGroup>
     </div>
   </div>
+    </div>
 )
 export default expComponent

@@ -13,6 +13,7 @@ const buttonWidth = 70;
 
 
 const expComponent = () => (
+    <div>
   <div className="demo">
     <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
       <Popover placement="topLeft" title={text} content={content} trigger="click">
@@ -59,5 +60,6 @@ const expComponent = () => (
       </Popover>
     </div>
   </div>
+    </div>
 )
 export default expComponent

@@ -7,6 +7,7 @@ function onChange(checkedValues) {
 
 
 const expComponent = () => (
+    <div>
   <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
     <Row>
       <Col span={8}><Checkbox value="A">A</Checkbox></Col>
@@ -16,5 +17,6 @@ const expComponent = () => (
       <Col span={8}><Checkbox value="E">E</Checkbox></Col>
     </Row>
   </Checkbox.Group>
+    </div>
 )
 export default expComponent

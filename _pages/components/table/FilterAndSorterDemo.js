@@ -73,6 +73,8 @@ function onChange(pagination, filters, sorter) {
 
 
 const expComponent = () => (
+    <div>
   <Table columns={columns} dataSource={data} onChange={onChange} />
+    </div>
 )
 export default expComponent

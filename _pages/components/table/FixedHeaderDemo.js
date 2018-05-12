@@ -26,6 +26,8 @@ for (let i = 0; i < 100; i++) {
 
 
 const expComponent = () => (
+    <div>
   <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} />
+    </div>
 )
 export default expComponent

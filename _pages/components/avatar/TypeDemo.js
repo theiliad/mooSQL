@@ -3,6 +3,7 @@ import { Avatar } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Avatar icon="user" />
     <Avatar>U</Avatar>
@@ -11,5 +12,6 @@ const expComponent = () => (
     <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>U</Avatar>
     <Avatar style={{ backgroundColor: '#87d068' }} icon="user" />
   </div>
+    </div>
 )
 export default expComponent

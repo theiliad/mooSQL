@@ -9,6 +9,8 @@ const success = () => {
 
 
 const expComponent = () => (
+    <div>
   <Button onClick={success}>Display a loading indicator</Button>
+    </div>
 )
 export default expComponent

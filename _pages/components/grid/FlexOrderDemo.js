@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Row type="flex">
       <Col span={6} order={4}>1 col-order-4</Col>
@@ -11,5 +12,6 @@ const expComponent = () => (
       <Col span={6} order={1}>4 col-order-1</Col>
     </Row>
   </div>
+    </div>
 )
 export default expComponent

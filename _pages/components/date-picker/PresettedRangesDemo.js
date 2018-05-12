@@ -10,6 +10,7 @@ function onChange(dates, dateStrings) {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <RangePicker
       ranges={{ Today: [moment(), moment()], 'This Month': [moment(), moment().endOf('month')] }}
@@ -23,5 +24,6 @@ const expComponent = () => (
       onChange={onChange}
     />
   </div>
+    </div>
 )
 export default expComponent

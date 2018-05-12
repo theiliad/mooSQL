@@ -10,8 +10,10 @@ const content = (
 
 
 const expComponent = () => (
+    <div>
   <Popover content={content} title="Title">
     <Button type="primary">Hover me</Button>
   </Popover>
+    </div>
 )
 export default expComponent

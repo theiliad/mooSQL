@@ -212,6 +212,12 @@ class App extends React.Component {
                     <span>Option 3</span>
                   </Menu.Item> */}
 
+                  <Menu.Item key="3">
+                    <Link to='/'>
+                      Home
+                    </Link>
+                  </Menu.Item>
+
                   {ComponentDemos.map((compCategory, index) =>
                     <SubMenu
                       key={`compCategory-${index}`}

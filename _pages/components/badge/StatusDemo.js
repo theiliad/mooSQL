@@ -3,6 +3,7 @@ import { Badge } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Badge status="success" />
     <Badge status="error" />
@@ -20,5 +21,6 @@ const expComponent = () => (
     <br />
     <Badge status="warning" text="Warning" />
   </div>
+    </div>
 )
 export default expComponent

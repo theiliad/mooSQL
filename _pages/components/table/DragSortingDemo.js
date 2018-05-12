@@ -177,6 +177,8 @@ const Demo = DragDropContext(HTML5Backend)(DragSortingTable);
 
 
 const expComponent = () => (
-<Demo />
+    <div>
+        <Demo />
+    </div>
 )
 export default expComponent

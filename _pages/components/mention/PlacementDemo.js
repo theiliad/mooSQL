@@ -12,6 +12,7 @@ function onSelect(suggestion) {
 
 
 const expComponent = () => (
+    <div>
   <Mention
     style={{ width: '100%' }}
     onChange={onChange}
@@ -19,5 +20,6 @@ const expComponent = () => (
     onSelect={onSelect}
     placement="top"
   />
+    </div>
 )
 export default expComponent

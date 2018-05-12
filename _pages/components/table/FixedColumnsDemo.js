@@ -35,6 +35,8 @@ const data = [{
 
 
 const expComponent = () => (
-<Table columns={columns} dataSource={data} scroll={{ x: 1300 }} />
+    <div>
+        <Table columns={columns} dataSource={data} scroll={{ x: 1300 }} />
+    </div>
 )
 export default expComponent

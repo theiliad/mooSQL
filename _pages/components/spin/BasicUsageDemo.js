@@ -3,6 +3,8 @@ import { Spin } from 'antd';
 
 
 const expComponent = () => (
-<Spin />
+    <div>
+        <Spin />
+    </div>
 )
 export default expComponent

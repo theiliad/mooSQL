@@ -46,11 +46,13 @@ const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
 
 
 const expComponent = () => (
+    <div>
   <Cascader
     options={options}
     defaultValue={['zhejiang', 'hangzhou', 'xihu']}
     displayRender={displayRender}
     style={{ width: '100%' }}
   />
+    </div>
 )
 export default expComponent

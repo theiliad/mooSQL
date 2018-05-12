@@ -188,6 +188,8 @@ const WrappedDemo = Form.create()(Demo);
 
 
 const expComponent = () => (
-<WrappedDemo />
+    <div>
+        <WrappedDemo />
+    </div>
 )
 export default expComponent

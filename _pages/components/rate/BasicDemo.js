@@ -3,6 +3,8 @@ import { Rate } from 'antd';
 
 
 const expComponent = () => (
-<Rate />
+    <div>
+        <Rate />
+    </div>
 )
 export default expComponent

@@ -77,6 +77,8 @@ class SelectSizesDemo extends React.Component {
 
 
 const expComponent = () => (
-<SelectSizesDemo />
+    <div>
+        <SelectSizesDemo />
+    </div>
 )
 export default expComponent

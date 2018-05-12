@@ -8,6 +8,7 @@ function handleChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <Select
     defaultValue="lucy"
     style={{ width: 200 }}
@@ -21,5 +22,6 @@ const expComponent = () => (
       <Option value="Yiminghe">yiminghe</Option>
     </OptGroup>
   </Select>
+    </div>
 )
 export default expComponent

@@ -58,8 +58,10 @@ const Home = withRouter((props) => {
 
 
 const expComponent = () => (
+    <div>
   <Router>
     <Home />
   </Router>
+    </div>
 )
 export default expComponent

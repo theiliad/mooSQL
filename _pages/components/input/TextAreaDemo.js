@@ -4,6 +4,8 @@ const { TextArea } = Input;
 
 
 const expComponent = () => (
-<TextArea rows={4} />
+    <div>
+        <TextArea rows={4} />
+    </div>
 )
 export default expComponent

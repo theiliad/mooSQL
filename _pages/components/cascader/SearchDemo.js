@@ -39,11 +39,13 @@ function filter(inputValue, path) {
 
 
 const expComponent = () => (
+    <div>
   <Cascader
     options={options}
     onChange={onChange}
     placeholder="Please select"
     showSearch={{ filter }}
   />
+    </div>
 )
 export default expComponent

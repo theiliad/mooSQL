@@ -20,6 +20,7 @@ const optionsWithDisabled = [
 
 
 const expComponent = () => (
+    <div>
   <div>
     <CheckboxGroup options={plainOptions} defaultValue={['Apple']} onChange={onChange} />
     <br /><br />
@@ -27,5 +28,6 @@ const expComponent = () => (
     <br /><br />
     <CheckboxGroup options={optionsWithDisabled} disabled defaultValue={['Apple']} onChange={onChange} />
   </div>
+    </div>
 )
 export default expComponent

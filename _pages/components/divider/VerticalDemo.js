@@ -3,6 +3,7 @@ import { Divider } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     Text
     <Divider type="vertical" />
@@ -10,5 +11,6 @@ const expComponent = () => (
     <Divider type="vertical" />
     <a href="#">Link</a>
   </div>
+    </div>
 )
 export default expComponent

@@ -12,6 +12,7 @@ const openNotification = () => {
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Select
       defaultValue="topRight"
@@ -31,5 +32,6 @@ const expComponent = () => (
       Open the notification box
     </Button>
   </div>
+    </div>
 )
 export default expComponent

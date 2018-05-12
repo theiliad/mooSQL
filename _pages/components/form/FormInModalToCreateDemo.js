@@ -85,6 +85,8 @@ class CollectionsPage extends React.Component {
 
 
 const expComponent = () => (
-<CollectionsPage />
+    <div>
+        <CollectionsPage />
+    </div>
 )
 export default expComponent

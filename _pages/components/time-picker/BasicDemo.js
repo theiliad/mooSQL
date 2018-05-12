@@ -8,6 +8,8 @@ function onChange(time, timeString) {
 
 
 const expComponent = () => (
+    <div>
   <TimePicker onChange={onChange} defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} />
+    </div>
 )
 export default expComponent

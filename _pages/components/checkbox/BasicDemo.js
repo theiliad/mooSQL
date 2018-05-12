@@ -7,6 +7,8 @@ function onChange(e) {
 
 
 const expComponent = () => (
+    <div>
   <Checkbox onChange={onChange}>Checkbox</Checkbox>
+    </div>
 )
 export default expComponent

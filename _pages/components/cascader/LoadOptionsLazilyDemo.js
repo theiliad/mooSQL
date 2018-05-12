@@ -51,6 +51,8 @@ class LazyOptions extends React.Component {
 
 
 const expComponent = () => (
-<LazyOptions />
+    <div>
+        <LazyOptions />
+    </div>
 )
 export default expComponent

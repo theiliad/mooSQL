@@ -4,6 +4,7 @@ const { RangePicker, MonthPicker } = DatePicker;
 
 
 const expComponent = () => (
+    <div>
   <div>
     <DatePicker renderExtraFooter={() => 'extra footer'} />
     <DatePicker renderExtraFooter={() => 'extra footer'} showTime />
@@ -11,5 +12,6 @@ const expComponent = () => (
     <RangePicker renderExtraFooter={() => 'extra footer'} showTime />
     <MonthPicker renderExtraFooter={() => 'extra footer'} placeholder="Select month" />
   </div>
+    </div>
 )
 export default expComponent

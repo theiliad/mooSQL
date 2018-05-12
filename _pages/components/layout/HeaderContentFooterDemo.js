@@ -4,6 +4,7 @@ const { Header, Content, Footer } = Layout;
 
 
 const expComponent = () => (
+    <div>
   <Layout className="layout">
     <Header>
       <div className="logo" />
@@ -30,5 +31,6 @@ const expComponent = () => (
       Ant Design ©2016 Created by Ant UED
     </Footer>
   </Layout>
+    </div>
 )
 export default expComponent

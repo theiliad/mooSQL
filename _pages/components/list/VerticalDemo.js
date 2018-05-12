@@ -28,6 +28,7 @@ const IconText = ({ type, text }) => (
 
 
 const expComponent = () => (
+    <div>
   <List
     itemLayout="vertical"
     size="large"
@@ -49,5 +50,6 @@ const expComponent = () => (
       </List.Item>
     )}
   />
+    </div>
 )
 export default expComponent

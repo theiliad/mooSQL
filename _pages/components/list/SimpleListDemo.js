@@ -11,6 +11,7 @@ const data = [
 
 
 const expComponent = () => (
+    <div>
   <div>
     <h3 style={{ marginBottom: 16 }}>Default Size</h3>
     <List
@@ -39,5 +40,6 @@ const expComponent = () => (
       renderItem={item => (<List.Item>{item}</List.Item>)}
     />
   </div>
+    </div>
 )
 export default expComponent

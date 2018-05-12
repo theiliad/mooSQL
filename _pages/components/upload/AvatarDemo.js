@@ -62,6 +62,8 @@ class Avatar extends React.Component {
 
 
 const expComponent = () => (
-<Avatar />
+    <div>
+        <Avatar />
+    </div>
 )
 export default expComponent

@@ -245,5 +245,73 @@ div {
                 margin-bottom: 30px;
             }
         }
+
+        &-layout {
+            div.logo {
+                height: 32px;
+                background: rgba(255,255,255,.2);
+                margin: 16px;
+            }
+
+            div.ant-layout {
+                background: #f0f2f5;
+            }
+
+            div.ant-layout-sider {
+                background: #001529;
+            }
+
+            div.ant-layout-header {
+                i.trigger {
+                    font-size: 18px;
+                    line-height: 64px;
+                    padding: 0 24px;
+                    cursor: pointer;
+                    transition: color .3s;
+                }
+            }
+
+            div.ant-layout-header + div.ant-layout-content {
+                background: #f0f0f3;
+            }
+
+            // Examples
+            div.fixed-header, div.header-sider, div.header-sider22, div.header-content-footer {
+                .logo {
+                    width: 120px;
+                    height: 31px;
+                    background: rgba(255,255,255,.2);
+                    margin: 16px 24px 16px 0;
+                    float: left;
+                }
+            }
+
+            div.fixed-header {
+                div.ant-layout {
+                    position: relative;
+                }
+
+                div.ant-layout-header {
+                    position: absolute !important;
+                }
+            }
+
+            div.component-demo.sider {
+                .ant-layout-sider-trigger {
+                    position: absolute;
+                }
+            }
+
+            div.fixed-sider {
+                height: 600px;
+                overflow-y: scroll;
+
+                div.ant-layout-sider {
+                    position: absolute !important;
+                    left: 25px !important;
+                    height: 558px !important;
+                }
+            }
+        }
     }
 }

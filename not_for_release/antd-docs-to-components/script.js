@@ -119,7 +119,7 @@ initialPromise.then(() => {
                 // Demo Logic
                 const antdComponentName = directory.replace('components/', '')
                     , subDirectories = getFilesAndDirectories(directory + '/demo')
-                    , subDirectoriesToIgnore = "components/breadcrumb/demo/router.md"
+                    , subDirectoriesToIgnore = ["components/breadcrumb/demo/router.md", "components/layout/demo/fixed-sider.md"]
                     , demoComponentPromises = []
                     , demoComponents = []
                     , demoComponentNames = []

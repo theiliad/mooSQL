@@ -3,12 +3,12 @@ import React from 'react'
     import DynamicCircularProgressBarDemo from './DynamicCircularProgressBarDemo.js'
 import MiniSizeCircularProgressBarDemo from './MiniSizeCircularProgressBarDemo.js'
 import CircularProgressBarDemo from './CircularProgressBarDemo.js'
-import DashboardDemo from './DashboardDemo.js'
 import DynamicDemo from './DynamicDemo.js'
-import MiniSizeProgressBarDemo from './MiniSizeProgressBarDemo.js'
+import DashboardDemo from './DashboardDemo.js'
 import CustomTextFormatDemo from './CustomTextFormatDemo.js'
 import ProgressBarDemo from './ProgressBarDemo.js'
 import ProgressBarWithSuccessSegmentDemo from './ProgressBarWithSuccessSegmentDemo.js'
+import MiniSizeProgressBarDemo from './MiniSizeProgressBarDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -63,17 +63,13 @@ Display the current progress of an operation flow.
         <h4>Circular Progress Bar</h4>
         <CircularProgressBarDemo />
         </div>
-<div className="component-demo dashboard">
-        <h4>Dashboard</h4>
-        <DashboardDemo />
-        </div>
 <div className="component-demo dynamic">
         <h4>Dynamic</h4>
         <DynamicDemo />
         </div>
-<div className="component-demo mini-size-progress-bar">
-        <h4>Mini Size Progress Bar</h4>
-        <MiniSizeProgressBarDemo />
+<div className="component-demo dashboard">
+        <h4>Dashboard</h4>
+        <DashboardDemo />
         </div>
 <div className="component-demo custom-text-format">
         <h4>Custom Text Format</h4>
@@ -86,6 +82,10 @@ Display the current progress of an operation flow.
 <div className="component-demo progress-bar-with-success-segment">
         <h4>Progress Bar With Success Segment</h4>
         <ProgressBarWithSuccessSegmentDemo />
+        </div>
+<div className="component-demo mini-size-progress-bar">
+        <h4>Mini Size Progress Bar</h4>
+        <MiniSizeProgressBarDemo />
         </div>
 
                 <div id="demo-documentation">

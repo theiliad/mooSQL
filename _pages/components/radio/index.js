@@ -5,9 +5,9 @@ import DisabledDemo from './DisabledDemo.js'
 import RadioStyleDemo from './RadioStyleDemo.js'
 import VerticalRadioGroupDemo from './VerticalRadioGroupDemo.js'
 import RadioGroupGroupOptionalDemo from './RadioGroupGroupOptionalDemo.js'
-import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
 import RadioGroupDemo from './RadioGroupDemo.js'
 import SizeDemo from './SizeDemo.js'
+import RadioGroupWithNameDemo from './RadioGroupWithNameDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -86,10 +86,6 @@ Radio.
         <h4>Radio Group Group Optional</h4>
         <RadioGroupGroupOptionalDemo />
         </div>
-<div className="component-demo radio-group-with-name">
-        <h4>Radio Group With Name</h4>
-        <RadioGroupWithNameDemo />
-        </div>
 <div className="component-demo radio-group">
         <h4>Radio Group</h4>
         <RadioGroupDemo />
@@ -97,6 +93,10 @@ Radio.
 <div className="component-demo size">
         <h4>Size</h4>
         <SizeDemo />
+        </div>
+<div className="component-demo radio-group-with-name">
+        <h4>Radio Group With Name</h4>
+        <RadioGroupWithNameDemo />
         </div>
 
                 <div id="demo-documentation">

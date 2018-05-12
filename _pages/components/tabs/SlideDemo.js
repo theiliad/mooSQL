@@ -45,6 +45,8 @@ class SlidingTabsDemo extends React.Component {
 
 
 const expComponent = () => (
-<SlidingTabsDemo />
+    <div>
+        <SlidingTabsDemo />
+    </div>
 )
 export default expComponent

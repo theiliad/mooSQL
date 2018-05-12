@@ -7,6 +7,8 @@ const success = () => {
 
 
 const expComponent = () => (
+    <div>
   <Button onClick={success}>Customized display duration</Button>
+    </div>
 )
 export default expComponent

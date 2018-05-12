@@ -15,6 +15,7 @@ const menu = (
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Button type="primary">primary</Button>
     <Button>secondary</Button>
@@ -24,5 +25,6 @@ const expComponent = () => (
       </Button>
     </Dropdown>
   </div>
+    </div>
 )
 export default expComponent

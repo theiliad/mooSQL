@@ -16,10 +16,12 @@ const menu = (
 
 
 const expComponent = () => (
+    <div>
   <Dropdown overlay={menu} trigger={['click']}>
     <a className="ant-dropdown-link" href="#">
       Click me <Icon type="down" />
     </a>
   </Dropdown>
+    </div>
 )
 export default expComponent

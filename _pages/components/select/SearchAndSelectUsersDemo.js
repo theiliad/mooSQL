@@ -61,6 +61,8 @@ class UserRemoteSelect extends React.Component {
 
 
 const expComponent = () => (
-<UserRemoteSelect />
+    <div>
+        <UserRemoteSelect />
+    </div>
 )
 export default expComponent

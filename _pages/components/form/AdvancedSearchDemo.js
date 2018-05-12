@@ -73,9 +73,11 @@ class AdvancedSearchForm extends React.Component {
 const WrappedAdvancedSearchForm = Form.create()(AdvancedSearchForm);
 
 const expComponent = () => (
+    <div>
   <div>
     <WrappedAdvancedSearchForm />
     <div className="search-result-list">Search Result List</div>
   </div>
+    </div>
 )
 export default expComponent

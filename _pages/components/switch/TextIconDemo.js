@@ -3,6 +3,7 @@ import { Switch, Icon } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <div>
     <Switch checkedChildren="开" unCheckedChildren="关" defaultChecked />
     <br />
@@ -10,5 +11,6 @@ const expComponent = () => (
     <br />
     <Switch checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="cross" />} defaultChecked />
   </div>
+    </div>
 )
 export default expComponent

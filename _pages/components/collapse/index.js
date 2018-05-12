@@ -1,8 +1,8 @@
 import React from 'react'
 
     import AccordionDemo from './AccordionDemo.js'
-import CollapseDemo from './CollapseDemo.js'
 import BorderlessDemo from './BorderlessDemo.js'
+import CollapseDemo from './CollapseDemo.js'
 import CustomPanelDemo from './CustomPanelDemo.js'
 import NestedPanelDemo from './NestedPanelDemo.js'
 import NoArrowDemo from './NoArrowDemo.js'
@@ -54,13 +54,13 @@ A content area which can be collapsed and expanded.
         <h4>Accordion</h4>
         <AccordionDemo />
         </div>
-<div className="component-demo collapse">
-        <h4>Collapse</h4>
-        <CollapseDemo />
-        </div>
 <div className="component-demo borderless">
         <h4>Borderless</h4>
         <BorderlessDemo />
+        </div>
+<div className="component-demo collapse">
+        <h4>Collapse</h4>
+        <CollapseDemo />
         </div>
 <div className="component-demo custom-panel">
         <h4>Custom Panel</h4>

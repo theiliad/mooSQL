@@ -3,6 +3,7 @@ import { Card } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <Card title="Card title">
     <p
       style={{
@@ -30,5 +31,6 @@ const expComponent = () => (
       Inner Card content
     </Card>
   </Card>
+    </div>
 )
 export default expComponent

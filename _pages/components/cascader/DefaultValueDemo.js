@@ -31,6 +31,8 @@ function onChange(value) {
 
 
 const expComponent = () => (
+    <div>
   <Cascader defaultValue={['zhejiang', 'hangzhou', 'xihu']} options={options} onChange={onChange} />
+    </div>
 )
 export default expComponent

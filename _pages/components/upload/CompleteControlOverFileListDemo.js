@@ -54,6 +54,8 @@ class MyUpload extends React.Component {
 
 
 const expComponent = () => (
-<MyUpload />
+    <div>
+        <MyUpload />
+    </div>
 )
 export default expComponent

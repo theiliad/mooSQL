@@ -3,6 +3,7 @@ import { Breadcrumb, Icon } from 'antd';
 
 
 const expComponent = () => (
+    <div>
   <Breadcrumb>
     <Breadcrumb.Item href="">
       <Icon type="home" />
@@ -15,5 +16,6 @@ const expComponent = () => (
       Application
     </Breadcrumb.Item>
   </Breadcrumb>
+    </div>
 )
 export default expComponent

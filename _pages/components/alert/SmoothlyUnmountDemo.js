@@ -29,6 +29,8 @@ class App extends React.Component {
 
 
 const expComponent = () => (
+    <div>
   <App />
+    </div>
 )
 export default expComponent

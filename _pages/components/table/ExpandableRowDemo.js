@@ -16,10 +16,12 @@ const data = [
 
 
 const expComponent = () => (
+    <div>
   <Table
     columns={columns}
     expandedRowRender={record => <p style={{ margin: 0 }}>{record.description}</p>}
     dataSource={data}
   />
+    </div>
 )
 export default expComponent
