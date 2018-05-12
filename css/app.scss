@@ -137,6 +137,22 @@ div#app-sidebar {
             }
         }
     }
+
+    /* Scrollbar */
+    /* width */
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #b5b5b5;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: $primary_color; 
+    }
 }
 
 div#app-footer {
@@ -177,4 +193,25 @@ div#app-footer {
         border-color: #365899;
         margin-top: 5px;
     }
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $primary_color; 
 }
