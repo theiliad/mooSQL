@@ -312,6 +312,28 @@ div {
                     height: 558px !important;
                 }
             }
+
+            div.basic-structure {
+                div.ant-layout {
+                    margin-bottom: 30px;
+
+                    div.ant-layout {
+                        margin-bottom: 0;
+                    }
+                }
+
+                div.ant-layout-header, div.ant-layout-sider {
+                    color: #fff;
+                }
+
+                div.ant-layout-sider, div.ant-layout-content {
+                    padding: 20px 50px;
+                }
+
+                div.ant-layout-sider {
+                    min-height: 100px;
+                }
+            }
         }
     }
 }
