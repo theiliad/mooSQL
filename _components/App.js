@@ -171,7 +171,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { loading } = this.state
+    const { loading, collapsed } = this.state
         , { getFieldDecorator } = this.props.form
         , auth = { isAuthenticated: true }
 
@@ -186,9 +186,14 @@ class App extends React.Component {
             <Sider
               id="app-sidebar"
               collapsible
-              collapsed={this.state.collapsed}
+              collapsed={collapsed}
               onCollapse={this.toggleCollapsed}
             >
+              <div className="logo">
+                <Link to="/">
+                  <img src={LOGO} />
+                </Link>
+              </div>
               <div className="side-menu">
                 <Menu
                   defaultSelectedKeys={['1']}
@@ -214,7 +219,8 @@ class App extends React.Component {
 
                   <Menu.Item key="3">
                     <Link to='/'>
-                      Home
+                      <Icon type="home" />
+                      <span>Home</span>
                     </Link>
                   </Menu.Item>
 
@@ -236,8 +242,8 @@ class App extends React.Component {
               </div>
             </Sider>
 
-            <Content id="app-content">
-              <div className="container">
+            <Content id="app-content" className={collapsed && 'wide'}>
+              <div className="content-wrapper container">
                 <Switch>
                   <Route path="/" component={HomeComponent} exact={true} />
 
@@ -256,10 +262,10 @@ class App extends React.Component {
                   <Route path="*" exact={true} component={NotFoundComponent} /> */}
                 </Switch>
               </div>
+
+              <FooterComponent />
             </Content>
           </Layout>
-
-          <FooterComponent />
         </Layout>
       );
     else

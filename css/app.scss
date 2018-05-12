@@ -71,28 +71,50 @@ div#header {
 }
 
 div#app-content {
-    padding: 20px;
+    margin-left: 200px;
+    transition: margin .2s ease-out;
+
+    &.wide {
+        margin-left: 80px;
+        transition: margin .2s ease-out;
+    }
+
+    div.content-wrapper {
+        padding: 20px;
+    }
 }
 
 div#app-sidebar {
-    transition: none;
     background: none;
-    width: auto !important;
-    flex: none !important;
-    max-width: 10000px !important;
-    min-width: 200px !important;
-    min-width: 0 !important;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     box-shadow: 0 0 15px rgba(53, 61, 129, 0.05);
 
-    div.ant-layout-sider-trigger {
-        position: static !important;
+    &.ant-layout-sider-collapsed {
+        div.logo {
+            width: 65px;
+            overflow: hidden;
+        }
+    }
+
+    div.ant-layout-sider-children {
+        background: #fff
+    }
+
+    div.logo {
+        img {
+            width: 152px;
+            margin: 14px 0 14px 20px;
+        }
     }
 
     div.side-menu {
-        height: 100%;
-
         ul {
-            height: 100%;
             border: none;
 
             li.ant-menu-item-selected {
