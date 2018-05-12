@@ -130,7 +130,7 @@ const HeaderComponent = ({ userData, updateLang, signOut, toggleCollapsed }) => 
 
 class App extends React.Component {
   state = {
-    collapsed: false
+    collapsed: true
   }
 
   toggleCollapsed = () => {
