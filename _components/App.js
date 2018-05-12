@@ -18,15 +18,13 @@ import { connect } from "react-redux";
 import axios from "axios";
 
 // Antd
-import { Layout, Breadcrumb } from "antd";
+import { Layout } from "antd";
 const { Header, Content, Sider } = Layout;
 import { Menu, Dropdown, Icon } from "antd";
-import { Input } from "antd";
-import { Button, Radio } from "antd";
-import { Form, Checkbox } from "antd";
-const FormItem = Form.Item;
-import { message } from "antd";
 const SubMenu = Menu.SubMenu;
+import { Badge } from "antd"
+
+import { Form } from "antd";
 
 // Components
 import HomeComponent from "./Home"
@@ -55,104 +53,75 @@ WebFont.load({
 
 const HeaderComponent = ({ userData, updateLang, signOut, toggleCollapsed }) => (
   <Header id="header">
-    <div className="container">
-      <div className="logo">
-        <Link to="/">
-          <img src={LOGO} />
-        </Link>
-      </div>
-
-      {userData && (
+    <div className="container-fluid">
+      {true && (
         <div className="header-right">
-          <Dropdown
-            overlay={
-              <Menu>
-                <Menu.Item key="0">
-                  <a
-                    href="#"
-                    onClick={e => {
-                      e.preventDefault();
-                      updateLang("en-ca");
-                    }}
-                  >
-                    English (Canada)
-                  </a>
-                </Menu.Item>
-
-                <Menu.Item key="1" onClick={updateLang.bind(this, "fr-ca")}>
-                  <a
-                    href="#"
-                    onClick={e => {
-                      e.preventDefault();
-                      updateLang("fr-ca");
-                    }}
-                  >
-                    French (Canada)
-                  </a>
-                </Menu.Item>
-
-                <Menu.Divider />
-
-                <Menu.Item key="3">
-                  <a
-                    href="#"
-                    onClick={e => {
-                      e.preventDefault();
-                      signOut();
-                    }}
-                  >
-                    <Icon type="logout" /> Sign Out
-                  </a>
-                </Menu.Item>
-              </Menu>
-            }
-            trigger={["click"]}
+          <Menu
+            mode="horizontal"
+            defaultSelectedKeys={['2']}
+            style={{ lineHeight: '65px' }}
           >
-            <a className="ant-dropdown-link" href="#">
-              <Icon type="user" /> {userData.fullName} <Icon type="down" />
-            </a>
-          </Dropdown>
+            <Menu.Item key="1">
+              <Icon type="search" />
+            </Menu.Item>
 
-          <Dropdown
-            overlay={
-              <Menu>
-                <Menu.Item key="0">
-                  <Link to={"/"}>
-                    Calendar View
-                  </Link>
-                </Menu.Item>
+            <Menu.Item key="2">
+              <Badge count={5}>
+                <Icon type="bell" />
+              </Badge>
+            </Menu.Item>
+            
+            <Menu.Item key="3">
+              <Dropdown
+                overlay={
+                  <Menu>
+                    <Menu.Item key="0">
+                      <a
+                        href="#"
+                        onClick={e => {
+                          e.preventDefault();
+                          updateLang("en-ca");
+                        }}
+                      >
+                        English (Canada)
+                      </a>
+                    </Menu.Item>
 
-                <Menu.Item key="1" onClick={updateLang.bind(this, "fr-ca")}>
-                  <a
-                    href="#"
-                    onClick={e => {
-                      e.preventDefault();
-                    }}
-                  >
-                    Manage my classroom(s)
-                  </a>
-                </Menu.Item>
+                    <Menu.Item key="1">
+                      <a
+                        href="#"
+                        onClick={e => {
+                          e.preventDefault();
+                          updateLang("fr-ca");
+                        }}
+                      >
+                        French (Canada)
+                      </a>
+                    </Menu.Item>
 
-                <Menu.Divider />
+                    <Menu.Divider />
 
-                <Menu.Item key="3">
-                  <a
-                    href="#"
-                    onClick={e => {
-                      e.preventDefault();
-                    }}
-                  >
-                    My Profile
-                  </a>
-                </Menu.Item>
-              </Menu>
-            }
-            trigger={["click"]}
-          >
-            <a className="ant-dropdown-link pages-menu" href="#">
-              <Icon type="ellipsis" />
-            </a>
-          </Dropdown>
+                    <Menu.Item key="3">
+                      <a
+                        href="#"
+                        onClick={e => {
+                          e.preventDefault();
+                          signOut();
+                        }}
+                      >
+                        <Icon type="logout" /> Sign Out
+                      </a>
+                    </Menu.Item>
+                  </Menu>
+                }
+                trigger={["click"]}
+              >
+                <a className="ant-dropdown-link" href="#">
+                  <Icon type="user" /> Alex <Icon type="down" />
+                </a>
+              </Dropdown>
+            </Menu.Item>
+          </Menu>
         </div>
       )}
     </div>

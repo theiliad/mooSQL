@@ -33,34 +33,33 @@ div#header {
     background: #fff;
     box-shadow: 0 4px 30px -7px rgba(70, 78, 142, 0.15);
 
-    div.logo {
-        display: table;
-        margin: auto;
-        transition: width .2s ease-out;
-
-        img {
-            height: 47px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    }
-
-    .ant-menu-horizontal {
-        line-height: 71px !important;
-        border: none;
-    }
-
     div.header-right {
         float: right;
 
-        a.pages-menu {
-            vertical-align: middle;
-            
-            i {
-                font-size: 20px;
-                transform: rotate(90deg);
-                margin-left: 15px;
-                margin-right: -10px;
+        ul.ant-menu {
+            border: none;
+
+            li.ant-menu-item {
+                top: 0;
+                border: none;
+
+                &:hover {
+                    background-color: $accent_light_color;
+                    color: $accent_color;
+                }
+
+                span.ant-badge {
+                    margin-right: 5px;
+                }
+
+                a.ant-dropdown-link {
+                    margin: 0;
+                }
+
+                i {
+                    margin: 0;
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -98,7 +97,7 @@ div#app-sidebar {
 
     &.ant-layout-sider-collapsed {
         div.logo {
-            width: 65px;
+            width: 60px;
             overflow: hidden;
             transition: width .2s ease-out;
         }
@@ -113,7 +112,7 @@ div#app-sidebar {
         transition: width .2s ease-out;
 
         img {
-            width: 152px;
+            height: 37px;
             margin: 14px 0 14px 20px;
         }
     }
@@ -124,7 +123,7 @@ div#app-sidebar {
 
             li.ant-menu-item-selected {
                 max-width: 100%;
-                background-color: rgba(255, 163, 152, 0.15);
+                background-color: $accent_light_color;
                 color: #ff6f8f;
 
                 &::after {

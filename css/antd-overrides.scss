@@ -15,10 +15,10 @@
 
 // Dropdown
 .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
-    background-color: #f4fcff;
+    background-color: $accent_light_color;
     
     a {
-        color: $primary_color;
+        color: $accent_color;
     }
 }
 

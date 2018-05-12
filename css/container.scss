@@ -3,22 +3,25 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
 
-@media (min-width: 890px) {
-  .container {
+  @media (min-width: 890px) {
     width: 750px;
   }
-}
 
-@media (min-width: 1127px) {
-  .container {
+  @media (min-width: 1127px) {
     width: 970px;
   }
-}
 
-@media (min-width: 1325px) {
-  .container {
+  @media (min-width: 1325px) {
     width: 1170px;
   }
+}
+
+.container-fluid {
+  display: table;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
