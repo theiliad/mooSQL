@@ -385,7 +385,7 @@ class HomeComponent extends React.Component {
                                 </div>
                             }
                         >
-                            <Carousel className="light goals marginTop-30">
+                            <Carousel className="light goals marginTop-30" autoplay>
                                 <div>
                                     <Progress type="circle" percent={75} />
 
