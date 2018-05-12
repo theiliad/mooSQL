@@ -59,7 +59,7 @@ const HeaderComponent = ({ userData, updateLang, signOut, toggleCollapsed }) => 
           <Menu
             mode="horizontal"
             defaultSelectedKeys={['2']}
-            style={{ lineHeight: '65px' }}
+            style={{ lineHeight: '69px' }}
           >
             <Menu.Item key="1">
               <Icon type="search" />
