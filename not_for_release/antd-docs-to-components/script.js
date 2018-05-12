@@ -164,7 +164,9 @@ initialPromise.then(() => {
 
                         finalComponent += `
 const expComponent = () => (
-${insideDomMountBracket}
+    <div>
+        ${insideDomMountBracket}
+    </div>
 )
 export default expComponent
 `.replace(/^\s*$(?:\r\n?|\n)/gm, '')

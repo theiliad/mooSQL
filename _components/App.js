@@ -195,6 +195,7 @@ class App extends React.Component {
                   // defaultOpenKeys={['sub1']}
                   mode="inline"
                   inlineCollapsed={this.state.collapsed}
+                  activeKey={window.location.pathname}
                 >
                   {/* <Menu.Item key="1">
                     <Icon type="pie-chart" />

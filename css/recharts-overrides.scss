@@ -1,0 +1,8 @@
+div.recharts-tooltip-wrapper {
+    box-shadow: 0 10px 15px -1px rgba(53,61,129,.1);
+    border-radius: 3px;
+
+    div.recharts-default-tooltip {
+        border: none !important;
+    }
+}

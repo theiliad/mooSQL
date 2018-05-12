@@ -37,13 +37,13 @@ import {
 } from 'recharts'
 
 const data = [
-  { name: 'Page A', users: 4800, pv: 4900, amt: 2400 },
-  { name: 'Page B', users: 3400, pv: 6200, amt: 2210 },
-  { name: 'Page C', users: 2000, pv: 5000, amt: 2290 },
-  { name: 'Page D', users: 2780, pv: 3908, amt: 2000 },
-  { name: 'Page E', users: 1890, pv: 4800, amt: 2181 },
-  { name: 'Page F', users: 2390, pv: 3800, amt: 2500 },
-  { name: 'Page G', users: 3490, pv: 4800, amt: 2100 },
+  { name: 'Day 1', users: 4800, pv: 4900, amt: 2400 },
+  { name: 'Day 2', users: 3400, pv: 6200, amt: 2210 },
+  { name: 'Day 3', users: 2000, pv: 5000, amt: 2290 },
+  { name: 'Day 4', users: 2780, pv: 3908, amt: 2000 },
+  { name: 'Day 5', users: 1890, pv: 4800, amt: 2181 },
+  { name: 'Day 6', users: 2390, pv: 3800, amt: 2500 },
+  { name: 'Day 7', users: 3490, pv: 4800, amt: 2100 },
 ]
 
 const followersData = [
