@@ -218,17 +218,7 @@ class App extends React.Component {
 
                   <Route path="/components" component={ComponentsPage} exact={false} />
 
-                  {/* <Route
-                    path="/form/create"
-                    component={CreateFormComponent}
-                    exact={true}
-                  />
-                  <Route
-                    path="/events/:id"
-                    component={EventDetailsComponent}
-                    exact={true}
-                  />
-                  <Route path="*" exact={true} component={NotFoundComponent} /> */}
+                  {/* <Route path="*" exact={true} component={NotFoundComponent} /> */}
                 </Switch>
               </div>
 

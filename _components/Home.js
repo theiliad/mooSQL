@@ -161,7 +161,18 @@ class HomeComponent extends React.Component {
                 <h4>Quick Statistics</h4>
 
                 <Card bordered={false} className="top-stats">
-                    <Row gutter={16}>
+                    <Row gutter={16} style={{ margin: 0 }}>
+                        <Col className="gutter-row" xs={24} md={12} lg={8}>
+                            <Link to=''>
+                                <Avatar size="large" icon="safety" className="success" />
+
+                                <div>
+                                    <h5>Operational</h5>
+                                    <p>72 systems</p>
+                                </div>
+                            </Link>
+                        </Col>
+
                         <Col className="gutter-row" xs={24} md={12} lg={8}>
                             <Link to=''>
                                 <Avatar size="large" icon="api" />
@@ -180,17 +191,6 @@ class HomeComponent extends React.Component {
                                 <div>
                                     <h5>Sales</h5>
                                     <p>{formatNumbers(17213)} this month</p>
-                                </div>
-                            </Link>
-                        </Col>
-
-                        <Col className="gutter-row" xs={24} md={12} lg={8}>
-                            <Link to=''>
-                                <Avatar size="large" icon="safety" className="success" />
-
-                                <div>
-                                    <h5>Operational</h5>
-                                    <p>72 systems</p>
                                 </div>
                             </Link>
                         </Col>
@@ -513,7 +513,7 @@ class HomeComponent extends React.Component {
                         >
                             <h3>Congragulations Mike</h3>
 
-                            <p>You have gone 30% over your quotas this month! You've been added to this month's top artists page</p>
+                            <p>You have gone 30% over your quotas this month! You've been added to this month's top agents page</p>
 
                             <Button size='large'>
                                 Check it out

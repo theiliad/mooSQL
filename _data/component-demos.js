@@ -4,7 +4,6 @@ module.exports = [
         icon: 'select',
         items: [
             { name: 'Checkbox', path: 'checkbox' },
-            { name: 'Collapse', path: 'collapse' },
             { name: 'DatePicker', path: 'date-picker' },
             { name: 'Radio', path: 'radio' },
             { name: 'Select', path: 'select' },
@@ -38,6 +37,7 @@ module.exports = [
             { name: 'Calendar', path: 'calendar' },
             { name: 'Card', path: 'card' },
             { name: 'Carousel', path: 'carousel' },
+            { name: 'Collapse', path: 'collapse' },
             { name: 'List', path: 'list' },
             { name: 'Popover', path: 'popover' },
             { name: 'Table', path: 'table' },
