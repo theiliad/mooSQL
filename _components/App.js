@@ -171,6 +171,7 @@ class App extends React.Component {
     if (show) {
       setTimeout(() => {
         this.searchInput.focus()
+        document.body.style.overflowY = 'scroll'
       })
     }
   }
