@@ -152,13 +152,14 @@ class App extends React.Component {
       compCategory.items.map(item => {
         if (results.length === 5) return null
 
-        if (item.name.indexOf(query) > -1) results.push(item)
+        if (item.name.toLowerCase().indexOf(query.toLowerCase()) > -1) results.push(item)
       })
     })
 
     this.setState({
       ...this.state,
-      searchResults: results
+      searchResults: results,
+      searchQuery: query
     })
   }
 
@@ -177,7 +178,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { loading, collapsed, searchVisible, searchResults } = this.state
+    const { loading, collapsed, searchVisible, searchResults, searchQuery } = this.state
         , { getFieldDecorator } = this.props.form
         , auth = { isAuthenticated: true }
 
@@ -262,7 +263,10 @@ class App extends React.Component {
 
               <FooterComponent />
             </Content>
-
+            
+            {/*
+              * Search Modal
+            */}
             <Modal
               visible={this.state.searchVisible}
               title={null}
@@ -280,11 +284,18 @@ class App extends React.Component {
               <Menu
               >
                 {searchResults.map((result, index) =>
-                  <Menu.Item key={`search-result-${index}`} onClick={this._showSearchModal.bind(this, false)}>
-                    <Link to={`/components/${result.path}`}>
-                      {result.name}
-                    </Link>
-                  </Menu.Item>
+                  {
+                    const resultIndex = result.name.toLowerCase().indexOf(searchQuery)
+                    return (
+                      <Menu.Item key={`search-result-${index}`} onClick={this._showSearchModal.bind(this, false)}>
+                        <Link to={`/components/${result.path}`}>
+                          {result.name.substring(0, resultIndex)}
+                          <span>{result.name.substring(resultIndex, resultIndex + searchQuery.length)}</span>
+                          {result.name.substring(resultIndex + searchQuery.length)}
+                        </Link>
+                      </Menu.Item>
+                    )
+                  }
                 )}
               </Menu>
             </Modal>
