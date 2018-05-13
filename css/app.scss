@@ -101,6 +101,23 @@ div#app-sidebar {
             overflow: hidden;
             transition: width .2s ease-out;
         }
+
+        div.side-menu {
+            ul {    
+                li.ant-menu-item {
+                    span {
+                        transition: none;
+                    }
+                }
+
+                li.ant-menu-submenu {
+                    div.ant-menu-submenu-title span span {
+                        opacity: 0;
+                        transition: $generic_transition;
+                    }
+                }
+            }
+        }
     }
 
     div.ant-layout-sider-children {
@@ -120,6 +137,20 @@ div#app-sidebar {
     div.side-menu {
         ul {
             border: none;
+
+            li.ant-menu-item {
+                transition: none;
+
+                .anticon, span {
+                    transition: none;
+                }
+            }
+
+            li.ant-menu-submenu {
+                div.ant-menu-submenu-title span span {
+                    transition: none;
+                }
+            }
 
             li.ant-menu-item-selected {
                 max-width: 100%;
