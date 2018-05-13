@@ -10,10 +10,10 @@ import StoreFormDataIntoUpperComponentDemo from './StoreFormDataIntoUpperCompone
 import HorizontalLoginFormDemo from './HorizontalLoginFormDemo.js'
 import FormLayoutDemo from './FormLayoutDemo.js'
 import LoginFormDemo from './LoginFormDemo.js'
-import RegistrationDemo from './RegistrationDemo.js'
 import TimerelatedControlsDemo from './TimerelatedControlsDemo.js'
-import OtherFormControlsDemo from './OtherFormControlsDemo.js'
+import RegistrationDemo from './RegistrationDemo.js'
 import CustomizedValidationDemo from './CustomizedValidationDemo.js'
+import OtherFormControlsDemo from './OtherFormControlsDemo.js'
 import HandleFormDataManuallyDemo from './HandleFormDataManuallyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -247,21 +247,21 @@ Form is used to collect, validate, and submit the user input, usually contains v
         <h4>Login Form</h4>
         <LoginFormDemo />
         </div>
-<div className="component-demo registration">
-        <h4>Registration</h4>
-        <RegistrationDemo />
-        </div>
 <div className="component-demo timerelated-controls">
         <h4>Timerelated Controls</h4>
         <TimerelatedControlsDemo />
         </div>
-<div className="component-demo other-form-controls">
-        <h4>Other Form Controls</h4>
-        <OtherFormControlsDemo />
+<div className="component-demo registration">
+        <h4>Registration</h4>
+        <RegistrationDemo />
         </div>
 <div className="component-demo customized-validation">
         <h4>Customized Validation</h4>
         <CustomizedValidationDemo />
+        </div>
+<div className="component-demo other-form-controls">
+        <h4>Other Form Controls</h4>
+        <OtherFormControlsDemo />
         </div>
 <div className="component-demo handle-form-data-manually">
         <h4>Handle Form Data Manually</h4>

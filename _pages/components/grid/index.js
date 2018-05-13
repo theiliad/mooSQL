@@ -4,9 +4,9 @@ import React from 'react'
 import FlexAlignmentDemo from './FlexAlignmentDemo.js'
 import FlexLayoutDemo from './FlexLayoutDemo.js'
 import FlexOrderDemo from './FlexOrderDemo.js'
+import PlaygroundDemo from './PlaygroundDemo.js'
 import GridGutterDemo from './GridGutterDemo.js'
 import ColumnOffsetDemo from './ColumnOffsetDemo.js'
-import PlaygroundDemo from './PlaygroundDemo.js'
 import MoreResponsiveDemo from './MoreResponsiveDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
 import GridSortDemo from './GridSortDemo.js'
@@ -150,6 +150,10 @@ const expComponent = () => (
         <h4>Flex Order</h4>
         <FlexOrderDemo />
         </div>
+<div className="component-demo playground">
+        <h4>Playground</h4>
+        <PlaygroundDemo />
+        </div>
 <div className="component-demo grid-gutter">
         <h4>Grid Gutter</h4>
         <GridGutterDemo />
@@ -157,10 +161,6 @@ const expComponent = () => (
 <div className="component-demo column-offset">
         <h4>Column Offset</h4>
         <ColumnOffsetDemo />
-        </div>
-<div className="component-demo playground">
-        <h4>Playground</h4>
-        <PlaygroundDemo />
         </div>
 <div className="component-demo more-responsive">
         <h4>More Responsive</h4>

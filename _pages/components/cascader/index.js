@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
+    import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
+import BasicDemo from './BasicDemo.js'
 import CustomRenderDemo from './CustomRenderDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
 import DefaultValueDemo from './DefaultValueDemo.js'
@@ -87,13 +87,13 @@ Cascade selection box.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo change-on-select">
+                <div className="component-demo change-on-select">
         <h4>Change On Select</h4>
         <ChangeOnSelectDemo />
+        </div>
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo custom-render">
         <h4>Custom Render</h4>

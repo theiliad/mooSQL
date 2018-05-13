@@ -3,10 +3,10 @@ import React from 'react'
     import BasicDemo from './BasicDemo.js'
 import EventDemo from './EventDemo.js'
 import SliderWithIconDemo from './SliderWithIconDemo.js'
-import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
-import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
 import GraduatedSliderDemo from './GraduatedSliderDemo.js'
+import SliderWithInputNumberDemo from './SliderWithInputNumberDemo.js'
 import VerticalDemo from './VerticalDemo.js'
+import CustomizeTooltipDemo from './CustomizeTooltipDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -69,21 +69,21 @@ A Slider component for displaying current value and intervals in range.
         <h4>Slider With Icon</h4>
         <SliderWithIconDemo />
         </div>
-<div className="component-demo slider-with-input-number">
-        <h4>Slider With Input Number</h4>
-        <SliderWithInputNumberDemo />
-        </div>
-<div className="component-demo customize-tooltip">
-        <h4>Customize Tooltip</h4>
-        <CustomizeTooltipDemo />
-        </div>
 <div className="component-demo graduated-slider">
         <h4>Graduated Slider</h4>
         <GraduatedSliderDemo />
         </div>
+<div className="component-demo slider-with-input-number">
+        <h4>Slider With Input Number</h4>
+        <SliderWithInputNumberDemo />
+        </div>
 <div className="component-demo vertical">
         <h4>Vertical</h4>
         <VerticalDemo />
+        </div>
+<div className="component-demo customize-tooltip">
+        <h4>Customize Tooltip</h4>
+        <CustomizeTooltipDemo />
         </div>
 
                 <div id="demo-documentation">

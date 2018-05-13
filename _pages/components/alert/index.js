@@ -3,11 +3,11 @@ import React from 'react'
     import BannerDemo from './BannerDemo.js'
 import BasicDemo from './BasicDemo.js'
 import ClosableDemo from './ClosableDemo.js'
-import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
 import DescriptionDemo from './DescriptionDemo.js'
+import MoreTypesDemo from './MoreTypesDemo.js'
 import IconDemo from './IconDemo.js'
 import SmoothlyUnmountDemo from './SmoothlyUnmountDemo.js'
-import MoreTypesDemo from './MoreTypesDemo.js'
+import CustomizedCloseTextDemo from './CustomizedCloseTextDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -59,13 +59,13 @@ Alert component for feedback.
         <h4>Closable</h4>
         <ClosableDemo />
         </div>
-<div className="component-demo customized-close-text">
-        <h4>Customized Close Text</h4>
-        <CustomizedCloseTextDemo />
-        </div>
 <div className="component-demo description">
         <h4>Description</h4>
         <DescriptionDemo />
+        </div>
+<div className="component-demo more-types">
+        <h4>More Types</h4>
+        <MoreTypesDemo />
         </div>
 <div className="component-demo icon">
         <h4>Icon</h4>
@@ -75,9 +75,9 @@ Alert component for feedback.
         <h4>Smoothly Unmount</h4>
         <SmoothlyUnmountDemo />
         </div>
-<div className="component-demo more-types">
-        <h4>More Types</h4>
-        <MoreTypesDemo />
+<div className="component-demo customized-close-text">
+        <h4>Customized Close Text</h4>
+        <CustomizedCloseTextDemo />
         </div>
 
                 <div id="demo-documentation">

@@ -8,9 +8,9 @@ import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
 import OptionGroupDemo from './OptionGroupDemo.js'
 import SearchBoxDemo from './SearchBoxDemo.js'
+import SizesDemo from './SizesDemo.js'
 import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
 import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
-import SizesDemo from './SizesDemo.js'
 import TagsDemo from './TagsDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -137,6 +137,10 @@ Select component to select value from options.
         <h4>Search Box</h4>
         <SearchBoxDemo />
         </div>
+<div className="component-demo sizes">
+        <h4>Sizes</h4>
+        <SizesDemo />
+        </div>
 <div className="component-demo select-with-search-field">
         <h4>Select With Search Field</h4>
         <SelectWithSearchFieldDemo />
@@ -144,10 +148,6 @@ Select component to select value from options.
 <div className="component-demo search-and-select-users">
         <h4>Search And Select Users</h4>
         <SearchAndSelectUsersDemo />
-        </div>
-<div className="component-demo sizes">
-        <h4>Sizes</h4>
-        <SizesDemo />
         </div>
 <div className="component-demo tags">
         <h4>Tags</h4>

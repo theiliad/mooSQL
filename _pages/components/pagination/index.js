@@ -1,14 +1,14 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import ChangerDemo from './ChangerDemo.js'
 import ControlledDemo from './ControlledDemo.js'
 import PrevAndNextDemo from './PrevAndNextDemo.js'
-import JumperDemo from './JumperDemo.js'
-import MiniSizeDemo from './MiniSizeDemo.js'
+import ChangerDemo from './ChangerDemo.js'
 import MoreDemo from './MoreDemo.js'
-import SimpleModeDemo from './SimpleModeDemo.js'
+import MiniSizeDemo from './MiniSizeDemo.js'
+import JumperDemo from './JumperDemo.js'
 import TotalNumberDemo from './TotalNumberDemo.js'
+import SimpleModeDemo from './SimpleModeDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -61,10 +61,6 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo changer">
-        <h4>Changer</h4>
-        <ChangerDemo />
-        </div>
 <div className="component-demo controlled">
         <h4>Controlled</h4>
         <ControlledDemo />
@@ -73,25 +69,29 @@ A long list can be divided into several pages by \`Pagination\`, and only one pa
         <h4>Prev And Next</h4>
         <PrevAndNextDemo />
         </div>
-<div className="component-demo jumper">
-        <h4>Jumper</h4>
-        <JumperDemo />
-        </div>
-<div className="component-demo mini-size">
-        <h4>Mini Size</h4>
-        <MiniSizeDemo />
+<div className="component-demo changer">
+        <h4>Changer</h4>
+        <ChangerDemo />
         </div>
 <div className="component-demo more">
         <h4>More</h4>
         <MoreDemo />
         </div>
-<div className="component-demo simple-mode">
-        <h4>Simple Mode</h4>
-        <SimpleModeDemo />
+<div className="component-demo mini-size">
+        <h4>Mini Size</h4>
+        <MiniSizeDemo />
+        </div>
+<div className="component-demo jumper">
+        <h4>Jumper</h4>
+        <JumperDemo />
         </div>
 <div className="component-demo total-number">
         <h4>Total Number</h4>
         <TotalNumberDemo />
+        </div>
+<div className="component-demo simple-mode">
+        <h4>Simple Mode</h4>
+        <SimpleModeDemo />
         </div>
 
                 <div id="demo-documentation">

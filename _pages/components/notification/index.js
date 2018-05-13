@@ -4,8 +4,8 @@ import React from 'react'
 import CustomizedIconDemo from './CustomizedIconDemo.js'
 import CustomizedStyleDemo from './CustomizedStyleDemo.js'
 import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
-import PlacementDemo from './PlacementDemo.js'
 import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
+import PlacementDemo from './PlacementDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -97,13 +97,13 @@ Display a notification message globally.
         <h4>Duration After Which The Notification Box Is Closed</h4>
         <DurationAfterWhichTheNotificationBoxIsClosedDemo />
         </div>
-<div className="component-demo placement">
-        <h4>Placement</h4>
-        <PlacementDemo />
-        </div>
 <div className="component-demo custom-close-button">
         <h4>Custom Close Button</h4>
         <CustomCloseButtonDemo />
+        </div>
+<div className="component-demo placement">
+        <h4>Placement</h4>
+        <PlacementDemo />
         </div>
 <div className="component-demo notification-with-icon">
         <h4>Notification With Icon</h4>

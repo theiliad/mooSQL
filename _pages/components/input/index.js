@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import PrePostTabDemo from './PrePostTabDemo.js'
-import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
+    import AutosizingTheHeightToFitTheContentDemo from './AutosizingTheHeightToFitTheContentDemo.js'
+import PrePostTabDemo from './PrePostTabDemo.js'
 import BasicUsageDemo from './BasicUsageDemo.js'
 import InputGroupDemo from './InputGroupDemo.js'
-import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
-import SearchBoxDemo from './SearchBoxDemo.js'
 import ThreeSizesOfInputDemo from './ThreeSizesOfInputDemo.js'
-import TextAreaDemo from './TextAreaDemo.js'
 import FormatTooltipInputDemo from './FormatTooltipInputDemo.js'
+import TextAreaDemo from './TextAreaDemo.js'
+import SearchBoxDemo from './SearchBoxDemo.js'
+import PrefixAndSuffixDemo from './PrefixAndSuffixDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -95,13 +95,13 @@ Keyboard and mouse can be used for providing or changing data.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo pre-post-tab">
-        <h4>Pre Post Tab</h4>
-        <PrePostTabDemo />
-        </div>
-<div className="component-demo autosizing-the-height-to-fit-the-content">
+                <div className="component-demo autosizing-the-height-to-fit-the-content">
         <h4>Autosizing The Height To Fit The Content</h4>
         <AutosizingTheHeightToFitTheContentDemo />
+        </div>
+<div className="component-demo pre-post-tab">
+        <h4>Pre Post Tab</h4>
+        <PrePostTabDemo />
         </div>
 <div className="component-demo basic-usage">
         <h4>Basic Usage</h4>
@@ -111,25 +111,25 @@ Keyboard and mouse can be used for providing or changing data.
         <h4>Input Group</h4>
         <InputGroupDemo />
         </div>
-<div className="component-demo prefix-and-suffix">
-        <h4>Prefix And Suffix</h4>
-        <PrefixAndSuffixDemo />
-        </div>
-<div className="component-demo search-box">
-        <h4>Search Box</h4>
-        <SearchBoxDemo />
-        </div>
 <div className="component-demo three-sizes-of-input">
         <h4>Three Sizes Of Input</h4>
         <ThreeSizesOfInputDemo />
+        </div>
+<div className="component-demo format-tooltip-input">
+        <h4>Format Tooltip Input</h4>
+        <FormatTooltipInputDemo />
         </div>
 <div className="component-demo text-area">
         <h4>Text Area</h4>
         <TextAreaDemo />
         </div>
-<div className="component-demo format-tooltip-input">
-        <h4>Format Tooltip Input</h4>
-        <FormatTooltipInputDemo />
+<div className="component-demo search-box">
+        <h4>Search Box</h4>
+        <SearchBoxDemo />
+        </div>
+<div className="component-demo prefix-and-suffix">
+        <h4>Prefix And Suffix</h4>
+        <PrefixAndSuffixDemo />
         </div>
 
                 <div id="demo-documentation">

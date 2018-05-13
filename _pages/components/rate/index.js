@@ -1,8 +1,8 @@
 import React from 'react'
 
     import BasicDemo from './BasicDemo.js'
-import OtherCharacterDemo from './OtherCharacterDemo.js'
 import ClearStarDemo from './ClearStarDemo.js'
+import OtherCharacterDemo from './OtherCharacterDemo.js'
 import ReadOnlyDemo from './ReadOnlyDemo.js'
 import HalfStarDemo from './HalfStarDemo.js'
 import ShowCopywritingDemo from './ShowCopywritingDemo.js'
@@ -60,13 +60,13 @@ Rate component.
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo other-character">
-        <h4>Other Character</h4>
-        <OtherCharacterDemo />
-        </div>
 <div className="component-demo clear-star">
         <h4>Clear Star</h4>
         <ClearStarDemo />
+        </div>
+<div className="component-demo other-character">
+        <h4>Other Character</h4>
+        <OtherCharacterDemo />
         </div>
 <div className="component-demo read-only">
         <h4>Read Only</h4>

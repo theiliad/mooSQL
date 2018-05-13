@@ -2,8 +2,8 @@ import React from 'react'
 
     import ArrowPointingDemo from './ArrowPointingDemo.js'
 import BasicDemo from './BasicDemo.js'
-import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import ControllingTheCloseOfTheDialogDemo from './ControllingTheCloseOfTheDialogDemo.js'
 import ThreeWaysToTriggerDemo from './ThreeWaysToTriggerDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -51,13 +51,13 @@ The floating card popped by clicking or hovering.
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo controlling-the-close-of-the-dialog">
-        <h4>Controlling The Close Of The Dialog</h4>
-        <ControllingTheCloseOfTheDialogDemo />
-        </div>
 <div className="component-demo placement">
         <h4>Placement</h4>
         <PlacementDemo />
+        </div>
+<div className="component-demo controlling-the-close-of-the-dialog">
+        <h4>Controlling The Close Of The Dialog</h4>
+        <ControllingTheCloseOfTheDialogDemo />
         </div>
 <div className="component-demo three-ways-to-trigger">
         <h4>Three Ways To Trigger</h4>

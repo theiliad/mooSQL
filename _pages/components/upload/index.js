@@ -2,12 +2,12 @@ import React from 'react'
 
     import AvatarDemo from './AvatarDemo.js'
 import UploadByClickingDemo from './UploadByClickingDemo.js'
-import DefaultFilesDemo from './DefaultFilesDemo.js'
 import DragAndDropDemo from './DragAndDropDemo.js'
 import CompleteControlOverFileListDemo from './CompleteControlOverFileListDemo.js'
 import PicturesWallDemo from './PicturesWallDemo.js'
-import UploadManuallyDemo from './UploadManuallyDemo.js'
 import PicturesWithListStyleDemo from './PicturesWithListStyleDemo.js'
+import DefaultFilesDemo from './DefaultFilesDemo.js'
+import UploadManuallyDemo from './UploadManuallyDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -110,10 +110,6 @@ Upload file by selecting or dragging.
         <h4>Upload By Clicking</h4>
         <UploadByClickingDemo />
         </div>
-<div className="component-demo default-files">
-        <h4>Default Files</h4>
-        <DefaultFilesDemo />
-        </div>
 <div className="component-demo drag-and-drop">
         <h4>Drag And Drop</h4>
         <DragAndDropDemo />
@@ -126,13 +122,17 @@ Upload file by selecting or dragging.
         <h4>Pictures Wall</h4>
         <PicturesWallDemo />
         </div>
-<div className="component-demo upload-manually">
-        <h4>Upload Manually</h4>
-        <UploadManuallyDemo />
-        </div>
 <div className="component-demo pictures-with-list-style">
         <h4>Pictures With List Style</h4>
         <PicturesWithListStyleDemo />
+        </div>
+<div className="component-demo default-files">
+        <h4>Default Files</h4>
+        <DefaultFilesDemo />
+        </div>
+<div className="component-demo upload-manually">
+        <h4>Upload Manually</h4>
+        <UploadManuallyDemo />
         </div>
 
                 <div id="demo-documentation">

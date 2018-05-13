@@ -1,8 +1,8 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
-import DisabledDemo from './DisabledDemo.js'
+    import DisabledDemo from './DisabledDemo.js'
 import LoadingDemo from './LoadingDemo.js'
+import BasicDemo from './BasicDemo.js'
 import TwoSizesDemo from './TwoSizesDemo.js'
 import TextIconDemo from './TextIconDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -50,17 +50,17 @@ Switching Selector.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo disabled">
+                <div className="component-demo disabled">
         <h4>Disabled</h4>
         <DisabledDemo />
         </div>
 <div className="component-demo loading">
         <h4>Loading</h4>
         <LoadingDemo />
+        </div>
+<div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo two-sizes">
         <h4>Two Sizes</h4>

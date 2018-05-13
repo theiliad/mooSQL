@@ -3,8 +3,8 @@ import React from 'react'
     import BasicStructureDemo from './BasicStructureDemo.js'
 import CustomTriggerDemo from './CustomTriggerDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
-import FixedHeaderDemo from './FixedHeaderDemo.js'
 import SiderDemo from './SiderDemo.js'
+import FixedHeaderDemo from './FixedHeaderDemo.js'
 import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderSiderDemo22 from './HeaderSiderDemo22.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
@@ -144,13 +144,13 @@ Handling the overall layout of a page.
         <h4>Responsive</h4>
         <ResponsiveDemo />
         </div>
-<div className="component-demo fixed-header">
-        <h4>Fixed Header</h4>
-        <FixedHeaderDemo />
-        </div>
 <div className="component-demo sider">
         <h4>Sider</h4>
         <SiderDemo />
+        </div>
+<div className="component-demo fixed-header">
+        <h4>Fixed Header</h4>
+        <FixedHeaderDemo />
         </div>
 <div className="component-demo header-sider">
         <h4>Header Sider</h4>

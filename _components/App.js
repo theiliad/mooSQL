@@ -22,9 +22,9 @@ import { Layout } from "antd";
 const { Header, Content, Sider } = Layout;
 import { Menu, Dropdown, Icon } from "antd";
 const SubMenu = Menu.SubMenu;
+import { Form, Input } from "antd";
 import { Badge } from "antd"
-
-import { Form } from "antd";
+import { Modal, Button } from 'antd'
 
 // Components
 import HomeComponent from "./Home"
@@ -44,6 +44,7 @@ import ComponentsPage from '../_pages/Components'
 import ComponentDemos from '../_data/component-demos'
 
 import WebFont from 'webfontloader';
+import { ETIME } from "constants";
 
 WebFont.load({
   google: {
@@ -51,7 +52,7 @@ WebFont.load({
   }
 });
 
-const HeaderComponent = ({ userData, updateLang, signOut, toggleCollapsed }) => (
+const HeaderComponent = ({ showSearchModal }) => (
   <Header id="header">
     <div className="container-fluid">
       {true && (
@@ -61,7 +62,7 @@ const HeaderComponent = ({ userData, updateLang, signOut, toggleCollapsed }) => 
             defaultSelectedKeys={['2']}
             style={{ lineHeight: '69px' }}
           >
-            <Menu.Item key="1">
+            <Menu.Item key="1" onClick={showSearchModal.bind(this, true)}>
               <Icon type="search" />
             </Menu.Item>
 
@@ -130,7 +131,9 @@ const HeaderComponent = ({ userData, updateLang, signOut, toggleCollapsed }) => 
 
 class App extends React.Component {
   state = {
-    collapsed: true
+    collapsed: true,
+    searchVisible: false,
+    searchResults: []
   }
 
   toggleCollapsed = () => {
@@ -139,8 +142,41 @@ class App extends React.Component {
     })
   }
 
+  _searchComponents = (e) => {
+    const { value: query } = e.target
+    const results = []
+
+    ComponentDemos.map(compCategory => {
+      if (results.length === 5) return null
+ 
+      compCategory.items.map(item => {
+        if (results.length === 5) return null
+
+        if (item.name.indexOf(query) > -1) results.push(item)
+      })
+    })
+
+    this.setState({
+      ...this.state,
+      searchResults: results
+    })
+  }
+
+  _showSearchModal = (show) => {
+    this.setState({
+      ...this.state,
+      searchVisible: show
+    })
+
+    if (show) {
+      setTimeout(() => {
+        this.searchInput.focus()
+      })
+    }
+  }
+
   render() {
-    const { loading, collapsed } = this.state
+    const { loading, collapsed, searchVisible, searchResults } = this.state
         , { getFieldDecorator } = this.props.form
         , auth = { isAuthenticated: true }
 
@@ -149,6 +185,7 @@ class App extends React.Component {
         <Layout className="fullheight">
           <HeaderComponent
             toggleCollapsed={this.toggleCollapsed}
+            showSearchModal={this._showSearchModal}
           />
 
           <Layout>
@@ -224,6 +261,32 @@ class App extends React.Component {
 
               <FooterComponent />
             </Content>
+
+            <Modal
+              visible={this.state.searchVisible}
+              title={null}
+              footer={null}
+              className="search-modal"
+              onCancel={this._showSearchModal.bind(this, false)}
+            >
+              <Input
+                placeholder="Search Components"
+                prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                onChange={this._searchComponents}
+                ref={searchInput => this.searchInput = searchInput}
+              />
+
+              <Menu
+              >
+                {searchResults.map((result, index) =>
+                  <Menu.Item key={`search-result-${index}`} onClick={this._showSearchModal.bind(this, false)}>
+                    <Link to={`/components/${result.path}`}>
+                      {result.name}
+                    </Link>
+                  </Menu.Item>
+                )}
+              </Menu>
+            </Modal>
           </Layout>
         </Layout>
       );

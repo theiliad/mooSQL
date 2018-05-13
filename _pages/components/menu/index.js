@@ -2,9 +2,9 @@ import React from 'react'
 
     import TopNavigationDemo from './TopNavigationDemo.js'
 import CollapsedInlineMenuDemo from './CollapsedInlineMenuDemo.js'
-import InlineMenuDemo from './InlineMenuDemo.js'
 import OpenCurrentSubmenuOnlyDemo from './OpenCurrentSubmenuOnlyDemo.js'
 import SwitchTheMenuTypeDemo from './SwitchTheMenuTypeDemo.js'
+import InlineMenuDemo from './InlineMenuDemo.js'
 import MenuThemesDemo from './MenuThemesDemo.js'
 import VerticalMenuDemo from './VerticalMenuDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -103,10 +103,6 @@ Menu list of Navigation.
         <h4>Collapsed Inline Menu</h4>
         <CollapsedInlineMenuDemo />
         </div>
-<div className="component-demo inline-menu">
-        <h4>Inline Menu</h4>
-        <InlineMenuDemo />
-        </div>
 <div className="component-demo open-current-submenu-only">
         <h4>Open Current Submenu Only</h4>
         <OpenCurrentSubmenuOnlyDemo />
@@ -114,6 +110,10 @@ Menu list of Navigation.
 <div className="component-demo switch-the-menu-type">
         <h4>Switch The Menu Type</h4>
         <SwitchTheMenuTypeDemo />
+        </div>
+<div className="component-demo inline-menu">
+        <h4>Inline Menu</h4>
+        <InlineMenuDemo />
         </div>
 <div className="component-demo menu-themes">
         <h4>Menu Themes</h4>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-    import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
-import BasicDemo from './BasicDemo.js'
+    import BasicDemo from './BasicDemo.js'
 import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
 import ConfirmationModalDialogDemo28 from './ConfirmationModalDialogDemo28.js'
 import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import InformationModalDialogDemo from './InformationModalDialogDemo.js'
@@ -108,17 +108,17 @@ Modal dialogs.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo asynchronously-close">
-        <h4>Asynchronously Close</h4>
-        <AsynchronouslyCloseDemo />
-        </div>
-<div className="component-demo basic">
+                <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
 <div className="component-demo confirmation-modal-dialog">
         <h4>Confirmation Modal Dialog</h4>
         <ConfirmationModalDialogDemo />
+        </div>
+<div className="component-demo asynchronously-close">
+        <h4>Asynchronously Close</h4>
+        <AsynchronouslyCloseDemo />
         </div>
 <div className="component-demo confirmation-modal-dialog28">
         <h4>Confirmation Modal Dialog28</h4>

@@ -201,3 +201,49 @@ div.circle-figure {
         }
     }
 }
+
+/*
+ *
+ * Search Modal
+ *
+ */
+
+div.search-modal {
+    button.ant-modal-close {
+        display: none;
+    }
+
+    div.ant-modal-body {
+        padding: 0;
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+
+        .ant-input-affix-wrapper .ant-input-prefix {
+            left: 15px;
+        }
+
+        input.ant-input {
+            padding: 22px 35px;
+            border-color: #fff;
+
+            &:hover, &:focus {
+                border-color: #fff;
+                box-shadow: none;
+            }
+        }
+
+        ul.ant-menu {
+            width: 100%;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+
+            li {
+                margin: 0;
+
+                &:last-child {
+                    border-bottom-right-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+            }
+        }
+    }
+}
