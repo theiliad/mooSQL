@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import CustomTriggerDemo from './CustomTriggerDemo.js'
-import BasicStructureDemo from './BasicStructureDemo.js'
-import FixedHeaderDemo from './FixedHeaderDemo.js'
+    import BasicStructureDemo from './BasicStructureDemo.js'
+import CustomTriggerDemo from './CustomTriggerDemo.js'
 import ResponsiveDemo from './ResponsiveDemo.js'
-import HeaderSiderDemo from './HeaderSiderDemo.js'
+import FixedHeaderDemo from './FixedHeaderDemo.js'
 import SiderDemo from './SiderDemo.js'
+import HeaderSiderDemo from './HeaderSiderDemo.js'
 import HeaderSiderDemo22 from './HeaderSiderDemo22.js'
 import HeaderContentFooterDemo from './HeaderContentFooterDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -132,29 +132,29 @@ Handling the overall layout of a page.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo custom-trigger">
-        <h4>Custom Trigger</h4>
-        <CustomTriggerDemo />
-        </div>
-<div className="component-demo basic-structure">
+                <div className="component-demo basic-structure">
         <h4>Basic Structure</h4>
         <BasicStructureDemo />
         </div>
-<div className="component-demo fixed-header">
-        <h4>Fixed Header</h4>
-        <FixedHeaderDemo />
+<div className="component-demo custom-trigger">
+        <h4>Custom Trigger</h4>
+        <CustomTriggerDemo />
         </div>
 <div className="component-demo responsive">
         <h4>Responsive</h4>
         <ResponsiveDemo />
         </div>
-<div className="component-demo header-sider">
-        <h4>Header Sider</h4>
-        <HeaderSiderDemo />
+<div className="component-demo fixed-header">
+        <h4>Fixed Header</h4>
+        <FixedHeaderDemo />
         </div>
 <div className="component-demo sider">
         <h4>Sider</h4>
         <SiderDemo />
+        </div>
+<div className="component-demo header-sider">
+        <h4>Header Sider</h4>
+        <HeaderSiderDemo />
         </div>
 <div className="component-demo header-sider22">
         <h4>Header Sider22</h4>

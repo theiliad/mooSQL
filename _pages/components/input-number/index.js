@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import DisabledDemo from './DisabledDemo.js'
+    import DecimalsDemo from './DecimalsDemo.js'
 import BasicDemo from './BasicDemo.js'
 import FormatterDemo from './FormatterDemo.js'
-import DecimalsDemo from './DecimalsDemo.js'
+import DisabledDemo from './DisabledDemo.js'
 import SizesDemo from './SizesDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -51,9 +51,9 @@ Enter a number within certain range with the mouse or keyboard.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo disabled">
-        <h4>Disabled</h4>
-        <DisabledDemo />
+                <div className="component-demo decimals">
+        <h4>Decimals</h4>
+        <DecimalsDemo />
         </div>
 <div className="component-demo basic">
         <h4>Basic</h4>
@@ -63,9 +63,9 @@ Enter a number within certain range with the mouse or keyboard.
         <h4>Formatter</h4>
         <FormatterDemo />
         </div>
-<div className="component-demo decimals">
-        <h4>Decimals</h4>
-        <DecimalsDemo />
+<div className="component-demo disabled">
+        <h4>Disabled</h4>
+        <DisabledDemo />
         </div>
 <div className="component-demo sizes">
         <h4>Sizes</h4>

@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import IconImageDemo from './IconImageDemo.js'
-import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
+    import AsynchronousLoadingDemo from './AsynchronousLoadingDemo.js'
+import IconImageDemo from './IconImageDemo.js'
 import BasicDemo from './BasicDemo.js'
-import ControlledDemo from './ControlledDemo.js'
 import WithFormDemo from './WithFormDemo.js'
 import CustomizeSuggestionDemo from './CustomizeSuggestionDemo.js'
+import ControlledDemo from './ControlledDemo.js'
 import MultilinesModeDemo from './MultilinesModeDemo.js'
-import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import CustomizeTriggerTokenDemo from './CustomizeTriggerTokenDemo.js'
 import SuggestionContainerDemo from './SuggestionContainerDemo.js'
 import DisabledOrReadOnlyDemo from './DisabledOrReadOnlyDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -88,21 +88,17 @@ Mention component.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo icon-image">
-        <h4>Icon Image</h4>
-        <IconImageDemo />
-        </div>
-<div className="component-demo asynchronous-loading">
+                <div className="component-demo asynchronous-loading">
         <h4>Asynchronous Loading</h4>
         <AsynchronousLoadingDemo />
+        </div>
+<div className="component-demo icon-image">
+        <h4>Icon Image</h4>
+        <IconImageDemo />
         </div>
 <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
-        </div>
-<div className="component-demo controlled">
-        <h4>Controlled</h4>
-        <ControlledDemo />
         </div>
 <div className="component-demo with-form">
         <h4>With Form</h4>
@@ -112,17 +108,21 @@ Mention component.
         <h4>Customize Suggestion</h4>
         <CustomizeSuggestionDemo />
         </div>
+<div className="component-demo controlled">
+        <h4>Controlled</h4>
+        <ControlledDemo />
+        </div>
 <div className="component-demo multilines-mode">
         <h4>Multilines Mode</h4>
         <MultilinesModeDemo />
         </div>
-<div className="component-demo customize-trigger-token">
-        <h4>Customize Trigger Token</h4>
-        <CustomizeTriggerTokenDemo />
-        </div>
 <div className="component-demo placement">
         <h4>Placement</h4>
         <PlacementDemo />
+        </div>
+<div className="component-demo customize-trigger-token">
+        <h4>Customize Trigger Token</h4>
+        <CustomizeTriggerTokenDemo />
         </div>
 <div className="component-demo suggestion-container">
         <h4>Suggestion Container</h4>

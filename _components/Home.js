@@ -178,8 +178,8 @@ class HomeComponent extends React.Component {
                                 <Avatar size="large" icon="calendar" />
 
                                 <div>
-                                    <h5>Sales this month</h5>
-                                    <p>{formatNumbers(17213)}</p>
+                                    <h5>Sales</h5>
+                                    <p>{formatNumbers(17213)} this month</p>
                                 </div>
                             </Link>
                         </Col>

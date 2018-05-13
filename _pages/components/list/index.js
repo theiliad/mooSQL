@@ -4,9 +4,9 @@ import React from 'react'
 import GridDemo from './GridDemo.js'
 import ScrollingLoadedDemo from './ScrollingLoadedDemo.js'
 import InfiniteVirtualizedDemo from './InfiniteVirtualizedDemo.js'
+import LoadMoreDemo from './LoadMoreDemo.js'
 import ResponsiveGridListDemo from './ResponsiveGridListDemo.js'
 import SimpleListDemo from './SimpleListDemo.js'
-import LoadMoreDemo from './LoadMoreDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -92,6 +92,10 @@ Simple List.
         <h4>Infinite Virtualized</h4>
         <InfiniteVirtualizedDemo />
         </div>
+<div className="component-demo load-more">
+        <h4>Load More</h4>
+        <LoadMoreDemo />
+        </div>
 <div className="component-demo responsive-grid-list">
         <h4>Responsive Grid List</h4>
         <ResponsiveGridListDemo />
@@ -99,10 +103,6 @@ Simple List.
 <div className="component-demo simple-list">
         <h4>Simple List</h4>
         <SimpleListDemo />
-        </div>
-<div className="component-demo load-more">
-        <h4>Load More</h4>
-        <LoadMoreDemo />
         </div>
 <div className="component-demo vertical">
         <h4>Vertical</h4>

@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import ArrowPointingAtTheCenterDemo from './ArrowPointingAtTheCenterDemo.js'
-import AdjustPlacementAutomaticallyDemo from './AdjustPlacementAutomaticallyDemo.js'
+    import AdjustPlacementAutomaticallyDemo from './AdjustPlacementAutomaticallyDemo.js'
+import ArrowPointingAtTheCenterDemo from './ArrowPointingAtTheCenterDemo.js'
 import BasicDemo from './BasicDemo.js'
 import PlacementDemo from './PlacementDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -57,13 +57,13 @@ A simple text popup tip.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo arrow-pointing-at-the-center">
-        <h4>Arrow Pointing At The Center</h4>
-        <ArrowPointingAtTheCenterDemo />
-        </div>
-<div className="component-demo adjust-placement-automatically">
+                <div className="component-demo adjust-placement-automatically">
         <h4>Adjust Placement Automatically</h4>
         <AdjustPlacementAutomaticallyDemo />
+        </div>
+<div className="component-demo arrow-pointing-at-the-center">
+        <h4>Arrow Pointing At The Center</h4>
+        <ArrowPointingAtTheCenterDemo />
         </div>
 <div className="component-demo basic">
         <h4>Basic</h4>

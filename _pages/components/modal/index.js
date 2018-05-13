@@ -1,14 +1,14 @@
 import React from 'react'
 
-    import BasicDemo from './BasicDemo.js'
+    import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
+import BasicDemo from './BasicDemo.js'
 import ConfirmationModalDialogDemo from './ConfirmationModalDialogDemo.js'
+import ConfirmationModalDialogDemo28 from './ConfirmationModalDialogDemo28.js'
 import CustomizedFooterDemo from './CustomizedFooterDemo.js'
 import InformationModalDialogDemo from './InformationModalDialogDemo.js'
-import ConfirmationModalDialogDemo28 from './ConfirmationModalDialogDemo28.js'
-import AsynchronouslyCloseDemo from './AsynchronouslyCloseDemo.js'
+import InternationalizationDemo from './InternationalizationDemo.js'
 import ManualToDestroyDemo from './ManualToDestroyDemo.js'
 import ToCustomizeThePositionOfModalDemo from './ToCustomizeThePositionOfModalDemo.js'
-import InternationalizationDemo from './InternationalizationDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     require('./styles.scss')
@@ -108,13 +108,21 @@ Modal dialogs.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo basic">
+                <div className="component-demo asynchronously-close">
+        <h4>Asynchronously Close</h4>
+        <AsynchronouslyCloseDemo />
+        </div>
+<div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
 <div className="component-demo confirmation-modal-dialog">
         <h4>Confirmation Modal Dialog</h4>
         <ConfirmationModalDialogDemo />
+        </div>
+<div className="component-demo confirmation-modal-dialog28">
+        <h4>Confirmation Modal Dialog28</h4>
+        <ConfirmationModalDialogDemo28 />
         </div>
 <div className="component-demo customized-footer">
         <h4>Customized Footer</h4>
@@ -124,13 +132,9 @@ Modal dialogs.
         <h4>Information Modal Dialog</h4>
         <InformationModalDialogDemo />
         </div>
-<div className="component-demo confirmation-modal-dialog28">
-        <h4>Confirmation Modal Dialog28</h4>
-        <ConfirmationModalDialogDemo28 />
-        </div>
-<div className="component-demo asynchronously-close">
-        <h4>Asynchronously Close</h4>
-        <AsynchronouslyCloseDemo />
+<div className="component-demo internationalization">
+        <h4>Internationalization</h4>
+        <InternationalizationDemo />
         </div>
 <div className="component-demo manual-to-destroy">
         <h4>Manual To Destroy</h4>
@@ -139,10 +143,6 @@ Modal dialogs.
 <div className="component-demo to-customize-the-position-of-modal">
         <h4>To Customize The Position Of Modal</h4>
         <ToCustomizeThePositionOfModalDemo />
-        </div>
-<div className="component-demo internationalization">
-        <h4>Internationalization</h4>
-        <InternationalizationDemo />
         </div>
 
                 <div id="demo-documentation">

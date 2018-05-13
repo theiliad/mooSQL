@@ -1,13 +1,13 @@
 import React from 'react'
 
-    import CustomizedDotStyleDemo from './CustomizedDotStyleDemo.js'
-import ErrorStatusDemo from './ErrorStatusDemo.js'
+    import ErrorStatusDemo from './ErrorStatusDemo.js'
+import CustomizedDotStyleDemo from './CustomizedDotStyleDemo.js'
 import DotStyleDemo from './DotStyleDemo.js'
 import WithIconDemo from './WithIconDemo.js'
-import MiniVersionDemo from './MiniVersionDemo.js'
-import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import BasicDemo from './BasicDemo.js'
+import MiniVersionDemo from './MiniVersionDemo.js'
 import SwitchStepDemo from './SwitchStepDemo.js'
+import VerticalMiniVersionDemo from './VerticalMiniVersionDemo.js'
 import VerticalDemo from './VerticalDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -64,13 +64,13 @@ const expComponent = () => (
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo customized-dot-style">
-        <h4>Customized Dot Style</h4>
-        <CustomizedDotStyleDemo />
-        </div>
-<div className="component-demo error-status">
+                <div className="component-demo error-status">
         <h4>Error Status</h4>
         <ErrorStatusDemo />
+        </div>
+<div className="component-demo customized-dot-style">
+        <h4>Customized Dot Style</h4>
+        <CustomizedDotStyleDemo />
         </div>
 <div className="component-demo dot-style">
         <h4>Dot Style</h4>
@@ -80,21 +80,21 @@ const expComponent = () => (
         <h4>With Icon</h4>
         <WithIconDemo />
         </div>
-<div className="component-demo mini-version">
-        <h4>Mini Version</h4>
-        <MiniVersionDemo />
-        </div>
-<div className="component-demo vertical-mini-version">
-        <h4>Vertical Mini Version</h4>
-        <VerticalMiniVersionDemo />
-        </div>
 <div className="component-demo basic">
         <h4>Basic</h4>
         <BasicDemo />
         </div>
+<div className="component-demo mini-version">
+        <h4>Mini Version</h4>
+        <MiniVersionDemo />
+        </div>
 <div className="component-demo switch-step">
         <h4>Switch Step</h4>
         <SwitchStepDemo />
+        </div>
+<div className="component-demo vertical-mini-version">
+        <h4>Vertical Mini Version</h4>
+        <VerticalMiniVersionDemo />
         </div>
 <div className="component-demo vertical">
         <h4>Vertical</h4>

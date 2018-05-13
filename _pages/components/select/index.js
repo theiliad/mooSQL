@@ -2,16 +2,16 @@ import React from 'react'
 
     import AutomaticTokenizationDemo from './AutomaticTokenizationDemo.js'
 import BasicUsageDemo from './BasicUsageDemo.js'
-import CoordinateDemo from './CoordinateDemo.js'
 import AutomaticCompletionDemo from './AutomaticCompletionDemo.js'
-import OptionGroupDemo from './OptionGroupDemo.js'
+import CoordinateDemo from './CoordinateDemo.js'
 import GetValueOfSelectedItemDemo from './GetValueOfSelectedItemDemo.js'
 import MultipleSelectionDemo from './MultipleSelectionDemo.js'
+import OptionGroupDemo from './OptionGroupDemo.js'
+import SearchBoxDemo from './SearchBoxDemo.js'
+import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
 import SearchAndSelectUsersDemo from './SearchAndSelectUsersDemo.js'
 import SizesDemo from './SizesDemo.js'
 import TagsDemo from './TagsDemo.js'
-import SearchBoxDemo from './SearchBoxDemo.js'
-import SelectWithSearchFieldDemo from './SelectWithSearchFieldDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -113,17 +113,13 @@ Select component to select value from options.
         <h4>Basic Usage</h4>
         <BasicUsageDemo />
         </div>
-<div className="component-demo coordinate">
-        <h4>Coordinate</h4>
-        <CoordinateDemo />
-        </div>
 <div className="component-demo automatic-completion">
         <h4>Automatic Completion</h4>
         <AutomaticCompletionDemo />
         </div>
-<div className="component-demo option-group">
-        <h4>Option Group</h4>
-        <OptionGroupDemo />
+<div className="component-demo coordinate">
+        <h4>Coordinate</h4>
+        <CoordinateDemo />
         </div>
 <div className="component-demo get-value-of-selected-item">
         <h4>Get Value Of Selected Item</h4>
@@ -132,6 +128,18 @@ Select component to select value from options.
 <div className="component-demo multiple-selection">
         <h4>Multiple Selection</h4>
         <MultipleSelectionDemo />
+        </div>
+<div className="component-demo option-group">
+        <h4>Option Group</h4>
+        <OptionGroupDemo />
+        </div>
+<div className="component-demo search-box">
+        <h4>Search Box</h4>
+        <SearchBoxDemo />
+        </div>
+<div className="component-demo select-with-search-field">
+        <h4>Select With Search Field</h4>
+        <SelectWithSearchFieldDemo />
         </div>
 <div className="component-demo search-and-select-users">
         <h4>Search And Select Users</h4>
@@ -144,14 +152,6 @@ Select component to select value from options.
 <div className="component-demo tags">
         <h4>Tags</h4>
         <TagsDemo />
-        </div>
-<div className="component-demo search-box">
-        <h4>Search Box</h4>
-        <SearchBoxDemo />
-        </div>
-<div className="component-demo select-with-search-field">
-        <h4>Select With Search Field</h4>
-        <SelectWithSearchFieldDemo />
         </div>
 
                 <div id="demo-documentation">

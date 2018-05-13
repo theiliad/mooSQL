@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import ButtonGroupDemo from './ButtonGroupDemo.js'
-import TypeDemo from './TypeDemo.js'
+    import TypeDemo from './TypeDemo.js'
+import ButtonGroupDemo from './ButtonGroupDemo.js'
 import DisabledDemo from './DisabledDemo.js'
 import GhostButtonDemo from './GhostButtonDemo.js'
 import IconDemo from './IconDemo.js'
@@ -63,13 +63,13 @@ To trigger an operation.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo button-group">
-        <h4>Button Group</h4>
-        <ButtonGroupDemo />
-        </div>
-<div className="component-demo type">
+                <div className="component-demo type">
         <h4>Type</h4>
         <TypeDemo />
+        </div>
+<div className="component-demo button-group">
+        <h4>Button Group</h4>
+        <ButtonGroupDemo />
         </div>
 <div className="component-demo disabled">
         <h4>Disabled</h4>

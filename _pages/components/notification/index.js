@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import CustomizedIconDemo from './CustomizedIconDemo.js'
+    import BasicDemo from './BasicDemo.js'
+import CustomizedIconDemo from './CustomizedIconDemo.js'
 import CustomizedStyleDemo from './CustomizedStyleDemo.js'
-import BasicDemo from './BasicDemo.js'
-import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import DurationAfterWhichTheNotificationBoxIsClosedDemo from './DurationAfterWhichTheNotificationBoxIsClosedDemo.js'
 import PlacementDemo from './PlacementDemo.js'
+import CustomCloseButtonDemo from './CustomCloseButtonDemo.js'
 import NotificationWithIconDemo from './NotificationWithIconDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
@@ -81,21 +81,17 @@ Display a notification message globally.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo customized-icon">
+                <div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
+        </div>
+<div className="component-demo customized-icon">
         <h4>Customized Icon</h4>
         <CustomizedIconDemo />
         </div>
 <div className="component-demo customized-style">
         <h4>Customized Style</h4>
         <CustomizedStyleDemo />
-        </div>
-<div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
-        </div>
-<div className="component-demo custom-close-button">
-        <h4>Custom Close Button</h4>
-        <CustomCloseButtonDemo />
         </div>
 <div className="component-demo duration-after-which-the-notification-box-is-closed">
         <h4>Duration After Which The Notification Box Is Closed</h4>
@@ -104,6 +100,10 @@ Display a notification message globally.
 <div className="component-demo placement">
         <h4>Placement</h4>
         <PlacementDemo />
+        </div>
+<div className="component-demo custom-close-button">
+        <h4>Custom Close Button</h4>
+        <CustomCloseButtonDemo />
         </div>
 <div className="component-demo notification-with-icon">
         <h4>Notification With Icon</h4>

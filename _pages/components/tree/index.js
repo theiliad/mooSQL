@@ -2,9 +2,9 @@ import React from 'react'
 
     import BasicControlledExampleDemo from './BasicControlledExampleDemo.js'
 import BasicDemo from './BasicDemo.js'
-import DraggableDemo from './DraggableDemo.js'
-import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
 import CustomizeIconDemo from './CustomizeIconDemo.js'
+import LoadDataAsynchronouslyDemo from './LoadDataAsynchronouslyDemo.js'
+import DraggableDemo from './DraggableDemo.js'
 import TreeWithLineDemo from './TreeWithLineDemo.js'
 import SearchableDemo from './SearchableDemo.js'
     import { Card, Row, Col } from 'antd';
@@ -94,17 +94,17 @@ const expComponent = () => (
         <h4>Basic</h4>
         <BasicDemo />
         </div>
-<div className="component-demo draggable">
-        <h4>Draggable</h4>
-        <DraggableDemo />
+<div className="component-demo customize-icon">
+        <h4>Customize Icon</h4>
+        <CustomizeIconDemo />
         </div>
 <div className="component-demo load-data-asynchronously">
         <h4>Load Data Asynchronously</h4>
         <LoadDataAsynchronouslyDemo />
         </div>
-<div className="component-demo customize-icon">
-        <h4>Customize Icon</h4>
-        <CustomizeIconDemo />
+<div className="component-demo draggable">
+        <h4>Draggable</h4>
+        <DraggableDemo />
         </div>
 <div className="component-demo tree-with-line">
         <h4>Tree With Line</h4>

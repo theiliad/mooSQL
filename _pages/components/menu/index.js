@@ -1,9 +1,9 @@
 import React from 'react'
 
-    import CollapsedInlineMenuDemo from './CollapsedInlineMenuDemo.js'
-import TopNavigationDemo from './TopNavigationDemo.js'
-import OpenCurrentSubmenuOnlyDemo from './OpenCurrentSubmenuOnlyDemo.js'
+    import TopNavigationDemo from './TopNavigationDemo.js'
+import CollapsedInlineMenuDemo from './CollapsedInlineMenuDemo.js'
 import InlineMenuDemo from './InlineMenuDemo.js'
+import OpenCurrentSubmenuOnlyDemo from './OpenCurrentSubmenuOnlyDemo.js'
 import SwitchTheMenuTypeDemo from './SwitchTheMenuTypeDemo.js'
 import MenuThemesDemo from './MenuThemesDemo.js'
 import VerticalMenuDemo from './VerticalMenuDemo.js'
@@ -95,21 +95,21 @@ Menu list of Navigation.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo collapsed-inline-menu">
-        <h4>Collapsed Inline Menu</h4>
-        <CollapsedInlineMenuDemo />
-        </div>
-<div className="component-demo top-navigation">
+                <div className="component-demo top-navigation">
         <h4>Top Navigation</h4>
         <TopNavigationDemo />
         </div>
-<div className="component-demo open-current-submenu-only">
-        <h4>Open Current Submenu Only</h4>
-        <OpenCurrentSubmenuOnlyDemo />
+<div className="component-demo collapsed-inline-menu">
+        <h4>Collapsed Inline Menu</h4>
+        <CollapsedInlineMenuDemo />
         </div>
 <div className="component-demo inline-menu">
         <h4>Inline Menu</h4>
         <InlineMenuDemo />
+        </div>
+<div className="component-demo open-current-submenu-only">
+        <h4>Open Current Submenu Only</h4>
+        <OpenCurrentSubmenuOnlyDemo />
         </div>
 <div className="component-demo switch-the-menu-type">
         <h4>Switch The Menu Type</h4>

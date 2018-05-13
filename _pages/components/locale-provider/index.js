@@ -1,7 +1,7 @@
 import React from 'react'
 
-    import LocalizationDemo from './LocalizationDemo.js'
-import AllComponentsDemo from './AllComponentsDemo.js'
+    import AllComponentsDemo from './AllComponentsDemo.js'
+import LocalizationDemo from './LocalizationDemo.js'
     import { Card, Row, Col } from 'antd';
     const ReactMarkdown = require('react-markdown')
     const markDownInput = `---
@@ -60,13 +60,13 @@ const expComponent = () => (
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo localization">
-        <h4>Localization</h4>
-        <LocalizationDemo />
-        </div>
-<div className="component-demo all-components">
+                <div className="component-demo all-components">
         <h4>All Components</h4>
         <AllComponentsDemo />
+        </div>
+<div className="component-demo localization">
+        <h4>Localization</h4>
+        <LocalizationDemo />
         </div>
 
                 <div id="demo-documentation">

@@ -1,11 +1,11 @@
 import React from 'react'
 
-    import CustomRenderDemo from './CustomRenderDemo.js'
-import DefaultValueDemo from './DefaultValueDemo.js'
-import CustomTriggerDemo from './CustomTriggerDemo.js'
-import DisabledOptionDemo from './DisabledOptionDemo.js'
+    import BasicDemo from './BasicDemo.js'
 import ChangeOnSelectDemo from './ChangeOnSelectDemo.js'
-import BasicDemo from './BasicDemo.js'
+import CustomRenderDemo from './CustomRenderDemo.js'
+import CustomTriggerDemo from './CustomTriggerDemo.js'
+import DefaultValueDemo from './DefaultValueDemo.js'
+import DisabledOptionDemo from './DisabledOptionDemo.js'
 import HoverDemo from './HoverDemo.js'
 import LoadOptionsLazilyDemo from './LoadOptionsLazilyDemo.js'
 import SearchDemo from './SearchDemo.js'
@@ -87,29 +87,29 @@ Cascade selection box.
             </div>
 
             <Card bordered={false}>
-                <div className="component-demo custom-render">
-        <h4>Custom Render</h4>
-        <CustomRenderDemo />
-        </div>
-<div className="component-demo default-value">
-        <h4>Default Value</h4>
-        <DefaultValueDemo />
-        </div>
-<div className="component-demo custom-trigger">
-        <h4>Custom Trigger</h4>
-        <CustomTriggerDemo />
-        </div>
-<div className="component-demo disabled-option">
-        <h4>Disabled Option</h4>
-        <DisabledOptionDemo />
+                <div className="component-demo basic">
+        <h4>Basic</h4>
+        <BasicDemo />
         </div>
 <div className="component-demo change-on-select">
         <h4>Change On Select</h4>
         <ChangeOnSelectDemo />
         </div>
-<div className="component-demo basic">
-        <h4>Basic</h4>
-        <BasicDemo />
+<div className="component-demo custom-render">
+        <h4>Custom Render</h4>
+        <CustomRenderDemo />
+        </div>
+<div className="component-demo custom-trigger">
+        <h4>Custom Trigger</h4>
+        <CustomTriggerDemo />
+        </div>
+<div className="component-demo default-value">
+        <h4>Default Value</h4>
+        <DefaultValueDemo />
+        </div>
+<div className="component-demo disabled-option">
+        <h4>Disabled Option</h4>
+        <DisabledOptionDemo />
         </div>
 <div className="component-demo hover">
         <h4>Hover</h4>
