@@ -26,6 +26,7 @@ div.top-stats {
                     
                     span.ant-avatar {
                         background: $accent_color;
+                        color: #fff;
                         transition: $generic_transition;
 
                         &.success {
@@ -37,9 +38,12 @@ div.top-stats {
                 span.ant-avatar {
                     float: left;
                     margin-right: 15px;
+                    background: none;
+                    color: #ccc;
                     transition: $generic_transition;
 
                     &.success {
+                        color: #fff;
                         background-color: #56da7f;
                     }
                 }
