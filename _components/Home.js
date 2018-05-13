@@ -36,6 +36,9 @@ import {
     BarChart, Bar, Legend
 } from 'recharts'
 
+// Misc
+import { formatNumbers } from '../_data/Tools.js'
+
 const data = [
   { name: 'Day 1', users: 4800, pv: 4900, amt: 2400 },
   { name: 'Day 2', users: 3400, pv: 6200, amt: 2210 },
@@ -144,18 +147,47 @@ class HomeComponent extends React.Component {
         })
     }
 
-    formatNumbers = (num) => (num % 1 != 0 ? parseFloat(num).toFixed(2) : num).toLocaleString('en-CA')
-
     render() {
         const { isLoading, quotes } = this.state
         return (
             <div>
-                <h4>Comments</h4>
+                <h4>Quick Statistics</h4>
 
-                <Card bordered={false}>
-                    <p>Card content</p>
-                    <p>Card content</p>
-                    <p>Card content</p>
+                <Card bordered={false} className="top-stats">
+                    <Row gutter={16}>
+                        <Col className="gutter-row" xs={24} md={12} lg={8}>
+                            <Link to=''>
+                                <Avatar size="large" icon="api" />
+
+                                <div>
+                                    <h5>API Usage</h5>
+                                    <p>{formatNumbers(31759)}</p>
+                                </div>
+                            </Link>
+                        </Col>
+
+                        <Col className="gutter-row" xs={24} md={12} lg={8}>
+                            <Link to=''>
+                                <Avatar size="large" icon="calendar" />
+
+                                <div>
+                                    <h5>Sales this month</h5>
+                                    <p>{formatNumbers(17213)}</p>
+                                </div>
+                            </Link>
+                        </Col>
+
+                        <Col className="gutter-row" xs={24} md={12} lg={8}>
+                            <Link to=''>
+                                <Avatar size="large" icon="safety" className="success" />
+
+                                <div>
+                                    <h5>Operational</h5>
+                                    <p>72 systems</p>
+                                </div>
+                            </Link>
+                        </Col>
+                    </Row>
                 </Card>
 
                 <Row gutter={16} className="marginTop-30">
@@ -193,7 +225,7 @@ class HomeComponent extends React.Component {
                                 <div className="head-container">
                                     <div className="title">
                                         <p>Active Users</p>
-                                        <h4>{this.formatNumbers(7000)}</h4>
+                                        <h4>{formatNumbers(7000)}</h4>
                                     </div>
 
                                     <div className="actions">
@@ -240,7 +272,7 @@ class HomeComponent extends React.Component {
                                 <div className="head-container">
                                     <div className="title">
                                         <p>Job Applicants this Week</p>
-                                        <h4>{this.formatNumbers(21379)}</h4>
+                                        <h4>{formatNumbers(21379)}</h4>
                                     </div>
 
                                     <div className="actions">
@@ -331,7 +363,7 @@ class HomeComponent extends React.Component {
                                     
                                     <div className="content">
                                         <p className="title">{quote.name} <Icon type={quote.up ? 'caret-up' : 'caret-down'} /></p>
-                                        <p>${this.formatNumbers(quote.price)}</p>
+                                        <p>${formatNumbers(quote.price)}</p>
                                     </div>
                                 </Col>
                             )}
@@ -354,7 +386,7 @@ class HomeComponent extends React.Component {
                                     
                                     <div className="content">
                                         <p className="title">{quote.name} <Icon type={quote.up ? 'caret-up' : 'caret-down'} /></p>
-                                        <p>${this.formatNumbers(quote.price)}</p>
+                                        <p>${formatNumbers(quote.price)}</p>
                                     </div>
                                 </Col>
                             )}
@@ -390,14 +422,14 @@ class HomeComponent extends React.Component {
                                     <Progress type="circle" percent={75} />
 
                                     <p>Total views today</p>
-                                    <h4>{this.formatNumbers(2700)}</h4>
+                                    <h4>{formatNumbers(2700)}</h4>
                                 </div>
 
                                 <div>
                                     <Progress type="circle" percent={90} />
 
                                     <p>Total views this week</p>
-                                    <h4>{this.formatNumbers(17000)}</h4>
+                                    <h4>{formatNumbers(17000)}</h4>
                                 </div>
                             </Carousel>
                         </Card>

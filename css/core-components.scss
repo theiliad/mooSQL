@@ -1,5 +1,65 @@
 @import "commons";
 
+/*
+ *
+ * Top Stats Cards
+ *
+ */
+div.top-stats {
+    div.ant-card-body {
+        padding: 0;
+
+        div.ant-row {
+            > div {
+                padding: 0 !important;
+
+                a {
+                    display: table;
+                    width: 100%;
+                    padding: 24px;
+                }
+
+                &:hover {
+                    a {
+                        color: $primary_color;    
+                    }
+                    
+                    span.ant-avatar {
+                        background: $accent_color;
+                        transition: $generic_transition;
+
+                        &.success {
+                            background-color: #56da7f;
+                        }
+                    }
+                }
+
+                span.ant-avatar {
+                    float: left;
+                    margin-right: 15px;
+                    transition: $generic_transition;
+
+                    &.success {
+                        background-color: #56da7f;
+                    }
+                }
+
+                div {
+                    float: left;
+
+                    h5, p {
+                        margin: 0;
+                    }
+
+                    h5 {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 div.circle {
     position: relative;
     width: 60px;

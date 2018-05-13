@@ -1,0 +1,1 @@
+export const formatNumbers = (num) => (num % 1 != 0 ? parseFloat(num).toFixed(2) : num).toLocaleString('en-CA')
