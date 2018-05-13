@@ -127,23 +127,30 @@ class HomeComponent extends React.Component {
             return result
         }
 
-        axios.get(API_URLS.quotes.stocks)
-        .then(function (response) {
-            console.log(response.data)
+        const updateState = (result) => {
             this.setState({
                 ...this.state,
                 quotes: {
                     ...this.state.quotes,
-                    stocksQuotes: quotesParser(response.data["Stock Quotes"])
+                    stocksQuotes: result
                 },
                 isLoading: {
                     ...this.state.isLoading,
                     stocksQuotes: false
                 }
             })
-        }.bind(this))
-        .catch(function (error) {
+        }
+
+        axios.get(API_URLS.quotes.stocks)
+        .then(response => {
+            console.log(response.data)
+            
+            updateState(quotesParser(response.data["Stock Quotes"]))
+        })
+        .catch(error => {
             console.log(error)
+
+            updateState(quotesParser(API_URLS.quotes.stocksMock["Stock Quotes"]))
         })
     }
 
