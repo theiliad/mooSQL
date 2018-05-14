@@ -187,7 +187,7 @@ class App extends React.Component {
 
     this.setState({
       ...this.state,
-      navSelectedKey: componentPath === '/' ? componentPath : `comp-nav-${componentPath}`
+      navSelectedKey: `nav-${componentPath}`
     })
   }
 
@@ -222,7 +222,7 @@ class App extends React.Component {
                   inlineCollapsed={this.state.collapsed}
                   selectedKeys={[navSelectedKey]}
                 >
-                  <Menu.Item key="/">
+                  <Menu.Item key="nav-/">
                     <Link to='/'>
                       <Icon type="home" />
                       <span>Home</span>
@@ -235,7 +235,7 @@ class App extends React.Component {
                       title={<span><Icon type={compCategory.icon} /><span>{compCategory.name}</span></span>}
                     >
                       {compCategory.items.map((item, i) =>
-                        <Menu.Item key={`comp-nav-${item.path}`}>
+                        <Menu.Item key={`nav-${item.path}`}>
                           <Link to={`/components/${item.path}`}>
                             {item.name}
                           </Link>
