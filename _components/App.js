@@ -43,6 +43,7 @@ import { updateLang } from "../__actions/localization";
 import NotFoundPage from './404'
 import ComponentsPage from '../_pages/Components'
 import ComponentDemos from '../_data/component-demos'
+import LoginPage from '../_pages/Login'
 
 import WebFont from 'webfontloader'
 WebFont.load({
@@ -55,75 +56,73 @@ WebFont.load({
 const HeaderComponent = ({ showSearchModal }) => (
   <Header id="header">
     <div className="container-fluid">
-      {true && (
-        <div className="header-right">
-          <Menu
-            mode="horizontal"
-            defaultSelectedKeys={['2']}
-            style={{ lineHeight: '69px' }}
-          >
-            <Menu.Item key="1" onClick={showSearchModal.bind(this, true)}>
-              <Icon type="search" />
-            </Menu.Item>
+      <div className="header-right">
+        <Menu
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+          style={{ lineHeight: '69px' }}
+        >
+          <Menu.Item key="1" onClick={showSearchModal.bind(this, true)}>
+            <Icon type="search" />
+          </Menu.Item>
 
-            <Menu.Item key="2" className="dropdown">
-              <NotificationsComponent />
-            </Menu.Item>
-            
-            <Menu.Item key="3">
-              <Dropdown
-                overlay={
-                  <Menu>
-                    <Menu.Item key="0">
-                      <a
-                        href="#"
-                        onClick={e => {
-                          e.preventDefault();
-                          updateLang("en-ca");
-                        }}
-                      >
-                        English (Canada)
-                      </a>
-                    </Menu.Item>
+          <Menu.Item key="2" className="dropdown">
+            <NotificationsComponent />
+          </Menu.Item>
+          
+          <Menu.Item key="3">
+            <Dropdown
+              overlay={
+                <Menu>
+                  <Menu.Item key="0">
+                    <a
+                      href="#"
+                      onClick={e => {
+                        e.preventDefault();
+                        updateLang("en-ca");
+                      }}
+                    >
+                      English (Canada)
+                    </a>
+                  </Menu.Item>
 
-                    <Menu.Item key="1">
-                      <a
-                        href="#"
-                        onClick={e => {
-                          e.preventDefault();
-                          updateLang("fr-ca");
-                        }}
-                      >
-                        French (Canada)
-                      </a>
-                    </Menu.Item>
+                  <Menu.Item key="1">
+                    <a
+                      href="#"
+                      onClick={e => {
+                        e.preventDefault();
+                        updateLang("fr-ca");
+                      }}
+                    >
+                      French (Canada)
+                    </a>
+                  </Menu.Item>
 
-                    <Menu.Divider />
+                  <Menu.Divider />
 
-                    <Menu.Item key="3">
-                      <a
-                        href="#"
-                        onClick={e => {
-                          e.preventDefault();
-                          signOut();
-                        }}
-                      >
-                        <Icon type="logout" /> Sign Out
-                      </a>
-                    </Menu.Item>
-                  </Menu>
-                }
-                trigger={["click"]}
-                placement="bottomRight"
-              >
-                <a className="ant-dropdown-link" href="#">
-                  <Icon type="user" /> Alex <Icon type="down" />
-                </a>
-              </Dropdown>
-            </Menu.Item>
-          </Menu>
-        </div>
-      )}
+                  <Menu.Item key="3">
+                    <a
+                      href="#"
+                      onClick={e => {
+                        e.preventDefault();
+                        signOut();
+                      }}
+                    >
+                      <Icon type="logout" /> Sign Out
+                    </a>
+                  </Menu.Item>
+                </Menu>
+              }
+              trigger={["click"]}
+              placement="bottomRight"
+            >
+              <a className="ant-dropdown-link" href="#">
+                <Icon type="user" /> Alex <Icon type="down" />
+              </a>
+            </Dropdown>
+          </Menu.Item>
+        </Menu>
+      </div>
     </div>
   </Header>
 );
@@ -195,7 +194,7 @@ class App extends React.Component {
   render() {
     const { loading, collapsed, searchVisible, searchResults, searchQuery, navSelectedKey } = this.state
         , { getFieldDecorator } = this.props.form
-        , auth = { isAuthenticated: true }
+        , auth = { isAuthenticated: false }
 
     if (auth.isAuthenticated)
       return (
@@ -301,15 +300,7 @@ class App extends React.Component {
         </Layout>
       );
     else
-      return (
-        <Layout className="layout">
-          <HeaderComponent />
-
-          <div className="container">
-            <h3 className="marginTop-30">Sign In</h3>
-          </div>
-        </Layout>
-      );
+      return <LoginPage />
   }
 }
 

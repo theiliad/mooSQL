@@ -210,6 +210,54 @@ div#app-footer {
     }
 }
 
+div.login-page {
+    height: 100vh;
+
+    div.ant-row {
+        height: 100%;
+    }
+
+    div.ant-row > div {
+        position: relative;
+        height: 100%;
+
+        div.absolute-center {
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+            padding: 30px;
+            text-align: left;
+        }
+
+        img.logo {
+            height: 50px;
+            margin-bottom: 25px;
+        }
+
+        button.ghost {
+            color: #6f739e;
+            background-color: transparent;
+            border-color: #6f739e;
+            transition: $generic_transition;
+
+            &:hover {
+                color: #fff;
+                background-color: $accent_color;
+                border-color: $accent_color;
+                transition: $generic_transition;
+            }
+        }
+
+        div.ant-form-item {
+            margin-bottom: 5px;
+        }
+    }
+
+    div.white-bg {
+        background: #fff;
+    }
+}
+
 .login-form {
     max-width: 350px;
     // margin: auto;
