@@ -39,18 +39,16 @@ import { updateAuth } from "../__actions/auth";
 import { updateLang } from "../__actions/localization";
 
 // Pages
+import NotFoundPage from './404'
 import ComponentsPage from '../_pages/Components'
-
 import ComponentDemos from '../_data/component-demos'
 
-import WebFont from 'webfontloader';
-import { ETIME } from "constants";
-
+import WebFont from 'webfontloader'
 WebFont.load({
   google: {
     families: ['Nunito+Sans', 'Nunito:700']
   }
-});
+})
 
 const HeaderComponent = ({ showSearchModal }) => (
   <Header id="header">
@@ -257,7 +255,7 @@ class App extends React.Component {
 
                   <Route path="/components" component={ComponentsPage} exact={false} />
 
-                  {/* <Route path="*" exact={true} component={NotFoundComponent} /> */}
+                  <Route path="*" exact={true} component={NotFoundPage} />
                 </Switch>
               </div>
 
