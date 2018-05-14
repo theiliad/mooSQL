@@ -186,3 +186,21 @@
         }
     }
 }
+
+// Ant Menu - Custom Dropdowns
+li.ant-menu-item.dropdown {
+    padding: 0;
+
+    div.ant-dropdown-trigger {
+        padding: 0 20px;
+    }
+}
+
+ul.header-dropdown-tabs {
+    width: 300px;
+    max-width: 100%;
+    
+    div.ant-tabs-bar {
+        margin-bottom: 0;
+    }
+}
