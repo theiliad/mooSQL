@@ -114,6 +114,7 @@ const HeaderComponent = ({ showSearchModal }) => (
                   </Menu>
                 }
                 trigger={["click"]}
+                placement="bottomRight"
               >
                 <a className="ant-dropdown-link" href="#">
                   <Icon type="user" /> Alex <Icon type="down" />

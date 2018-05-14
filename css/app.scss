@@ -85,7 +85,7 @@ div#app-content {
 }
 
 div#app-sidebar {
-    background: none;
+    background: #fff;
     overflow: auto;
     overflow-x: hidden;
     height: 100%;
@@ -121,6 +121,7 @@ div#app-sidebar {
     }
 
     div.ant-layout-sider-children {
+        height: auto;
         background: #fff
     }
 
@@ -148,7 +149,6 @@ div#app-sidebar {
 
             li.ant-menu-submenu {
                 &-selected {
-                    background-color: $accent_light_color;
                     color: $accent_color;
                 }
                 
