@@ -147,6 +147,11 @@ div#app-sidebar {
             }
 
             li.ant-menu-submenu {
+                &-selected {
+                    background-color: $accent_light_color;
+                    color: $accent_color;
+                }
+                
                 div.ant-menu-submenu-title span span {
                     transition: none;
                 }
@@ -155,7 +160,7 @@ div#app-sidebar {
             li.ant-menu-item-selected {
                 max-width: 100%;
                 background-color: $accent_light_color;
-                color: #ff6f8f;
+                color: $accent_color;
 
                 &::after {
                     content: none;

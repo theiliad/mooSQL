@@ -134,6 +134,12 @@ class App extends React.Component {
     searchResults: []
   }
 
+  componentDidMount() {
+    this.highlightCorrectMenuItem()
+
+    this.props.history.listen(this.highlightCorrectMenuItem)
+  }
+
   toggleCollapsed = () => {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -175,8 +181,18 @@ class App extends React.Component {
     }
   }
 
+  highlightCorrectMenuItem = () => {
+    const { pathname } = window.location
+    const componentPath = pathname.replace("/components/", "")
+
+    this.setState({
+      ...this.state,
+      navSelectedKey: componentPath === '/' ? componentPath : `comp-nav-${componentPath}`
+    })
+  }
+
   render() {
-    const { loading, collapsed, searchVisible, searchResults, searchQuery } = this.state
+    const { loading, collapsed, searchVisible, searchResults, searchQuery, navSelectedKey } = this.state
         , { getFieldDecorator } = this.props.form
         , auth = { isAuthenticated: true }
 
@@ -202,28 +218,11 @@ class App extends React.Component {
               </div>
               <div className="side-menu">
                 <Menu
-                  defaultSelectedKeys={['1']}
-                  // defaultOpenKeys={['sub1']}
                   mode="inline"
                   inlineCollapsed={this.state.collapsed}
-                  activeKey={window.location.pathname}
+                  selectedKeys={[navSelectedKey]}
                 >
-                  {/* <Menu.Item key="1">
-                    <Icon type="pie-chart" />
-                    <span>Option 1</span>
-                  </Menu.Item>
-
-                  <Menu.Item key="2">
-                    <Icon type="desktop" />
-                    <span>Option 2</span>
-                  </Menu.Item>
-
-                  <Menu.Item key="3">
-                    <Icon type="inbox" />
-                    <span>Option 3</span>
-                  </Menu.Item> */}
-
-                  <Menu.Item key="3">
+                  <Menu.Item key="/">
                     <Link to='/'>
                       <Icon type="home" />
                       <span>Home</span>
