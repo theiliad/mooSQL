@@ -251,6 +251,12 @@ div.login-page {
         div.ant-form-item {
             margin-bottom: 5px;
         }
+
+        p.hint {
+            opacity: 0.8;
+            font-weight: 900;
+            color: $accent_color;
+        }
     }
 
     div.white-bg {

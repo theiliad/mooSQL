@@ -52,7 +52,7 @@ class LoginPage extends React.Component {
         return (
             <Layout className="layout login-page">
                 <Row>
-                    <Col span={12}>
+                    <Col lg={12} xs={0}>
                         <div className="absolute-center">
                             <img src={LOGO} className="logo" />
 
@@ -66,10 +66,10 @@ class LoginPage extends React.Component {
                         </div>
                     </Col>
 
-                    <Col className="white-bg" span={12}>
+                    <Col className="white-bg" lg={12} xs={24}>
                         <div className="absolute-center">
                             <h3 style={{ margin: 0 }}>Welcome!</h3>
-                            <p style={{ fontWeight: 'bold', opacity: 0.8 }}>Username & password: {correctCredentials}</p>
+                            <p className="hint">Username & password: {correctCredentials}</p>
 
                             <Form onSubmit={this.handleSubmit} className="login-form">
                                 <FormItem>
