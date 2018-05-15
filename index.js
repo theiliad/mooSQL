@@ -30,7 +30,11 @@ const rootReducer = combineReducers({
 
 const store = createStore(
  rootReducer,
- {}
+ {
+   auth: {
+     isAuthenticated: true
+   }
+ }
 )
 
 const render = Component => {
