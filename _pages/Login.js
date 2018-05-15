@@ -58,9 +58,9 @@ class LoginPage extends React.Component {
 
                             <p>Core admin is a premium React application.</p>
 
-                            <p>The dashboard will let you browse through the various features of the Core Admin application.</p>
+                            <p style={{ margin: '10px 0 0 0' }}>The dashboard will let you browse through the various features of the Core Admin application.</p>
 
-                            <Button type="primary" className="ghost">Read More</Button>
+                            <Button type="primary" className="ghost marginTop-15">Read More</Button>
 
                             <p className="marginTop-30" style={{ opacity: 0.6 }}>&copy; Copyright 2018. All rights reserved</p>
                         </div>
