@@ -134,6 +134,46 @@ div.circle-figure {
     }
 }
 
+// Progress using steps
+div.step-progress {
+    div.ant-card-body {
+        padding: 0;
+
+        div.top-message {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+            background: $accent_color;
+            padding: 15px 0;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+
+            p {
+                margin: 0;
+                color: #fff;
+
+                button {
+                    background: transparent;
+                    color: #fff;
+                    font-weight: 900;
+                    border-color: rgba(256, 256, 256, 0.3);
+                    margin-left: 10px;
+    
+                    &:hover {
+                        background: #fff;
+                        border-color: #fff;
+                        color: $accent_color;
+                    }
+                }
+            }
+        }
+
+        div.ant-steps {
+            padding: 24px;
+        }
+    }
+}
+
 // Diamond containers with logos inside
 .diamond-logo {
     position: relative;

@@ -29,6 +29,8 @@ import { Card } from 'antd';
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
 import { List, Table, Carousel } from 'antd'
+import { Steps, Popover } from 'antd'
+const Step = Steps.Step
 
 // Charts
 import {
@@ -107,7 +109,13 @@ const data = [{
   
 function onChange(pagination, filters, sorter) {
     console.log('params', pagination, filters, sorter);
-}  
+}
+
+const customDot = (dot, { status, index }) => (
+    <Popover content={<span>step {index} status: {status}</span>}>
+      {dot}
+    </Popover>
+)
 
 class HomePageLA extends React.Component {
     constructor(props) {
@@ -172,43 +180,18 @@ class HomePageLA extends React.Component {
         return (
             <div className="with-pattern">
                 <div>
-                    <h4>Quick Statistics</h4>
+                    <h4>Loan Application</h4>
+                    <Card bordered={false} className="step-progress">
+                        <div className="top-message">
+                            <p>You're almost there <Button size='large' type='primary'>Continue</Button></p>
+                        </div>
 
-                    <Card bordered={false} className="top-stats">
-                        <Row gutter={16} style={{ margin: 0 }}>
-                            <Col className="gutter-row" xs={24} md={12} lg={8}>
-                                <Link to=''>
-                                    <Avatar size="large" icon="safety" className="success" />
-
-                                    <div>
-                                        <h5>Operational</h5>
-                                        <p>72 systems</p>
-                                    </div>
-                                </Link>
-                            </Col>
-
-                            <Col className="gutter-row" xs={24} md={12} lg={8}>
-                                <Link to=''>
-                                    <Avatar size="large" icon="api" />
-
-                                    <div>
-                                        <h5>API Usage</h5>
-                                        <p>{formatNumbers(31759)}</p>
-                                    </div>
-                                </Link>
-                            </Col>
-
-                            <Col className="gutter-row" xs={24} md={12} lg={8}>
-                                <Link to=''>
-                                    <Avatar size="large" icon="calendar" />
-
-                                    <div>
-                                        <h5>Sales</h5>
-                                        <p>{formatNumbers(17213)} this month</p>
-                                    </div>
-                                </Link>
-                            </Col>
-                        </Row>
+                        <Steps current={1} progressDot={customDot}>
+                            <Step title="Personal Information" />
+                            <Step title="Financial Statements" />
+                            <Step title="Document Verfication" />
+                            <Step title="In-person interview" />
+                        </Steps>
                     </Card>
 
                     <h4 className="marginTop-30">Sales</h4>
