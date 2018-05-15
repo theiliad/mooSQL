@@ -225,12 +225,20 @@ class App extends React.Component {
                   inlineCollapsed={this.state.collapsed}
                   selectedKeys={[navSelectedKey]}
                 >
-                  <Menu.Item key="nav-/">
-                    <Link to='/'>
-                      <Icon type="home" />
-                      <span>Home</span>
-                    </Link>
-                  </Menu.Item>
+                  <SubMenu
+                      key={`compCategory-home`}
+                      title={<span><Icon type='home' /><span>Home</span></span>}
+                  >
+                    <Menu.Item key='nav-/'>
+                      <Link to='/'>
+                        Home
+                      </Link>
+                    </Menu.Item>
+
+                    <Menu.Item onClick={this._signOut}>
+                      Login
+                    </Menu.Item>
+                  </SubMenu>
 
                   {ComponentDemos.map((compCategory, index) =>
                     <SubMenu
