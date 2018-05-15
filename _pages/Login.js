@@ -1,6 +1,12 @@
 // React-related
 import React from "react"
+import PropTypes from "prop-types"
+import { instanceOf } from "prop-types"
+import { compose } from "redux"
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
 
+// Antd
 import { Layout } from "antd"
 import { Row, Col } from 'antd'
 import { Button } from 'antd'
@@ -8,6 +14,11 @@ import { Form, Icon, Input, Checkbox } from 'antd'
 const FormItem = Form.Item
 import { message } from 'antd'
 
+// Redux
+// Actions
+import { updateAuth } from "../__actions/auth";
+
+// Misc
 import LOGO from "../img/logo.svg"
 
 const correctCredentials = 'demo-admin'
@@ -18,17 +29,18 @@ class LoginPage extends React.Component {
             password: correctCredentials
         })
     }
+    
     handleSubmit = (e) => {
         e.preventDefault()
 
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 if (values.userName === correctCredentials && values.password === correctCredentials) {
-                    message.success('Welcome')
-
-
+                    this.props.updateAuth(true)
+                    
+                    message.success('Welcome', 0.5)
                 } else {
-                    message.error('Wrong credentials!')
+                    message.error('Wrong credentials!', 1)
                 }
             }
         })
@@ -98,4 +110,21 @@ class LoginPage extends React.Component {
     }
 }
 
-export default Form.create()(LoginPage)
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(
+      {
+        updateAuth,
+      },
+      dispatch
+    )
+  }
+  
+  export default compose(
+    connect(
+      state => ({
+        auth: state.auth,
+      }),
+      mapDispatchToProps
+    )
+  )(Form.create()(LoginPage))
+  

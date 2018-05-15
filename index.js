@@ -19,7 +19,6 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, compose } from 'redux'
 
 import AuthReducer from './__reducers/auth'
-import LocalizationReducer from './__reducers/localization'
 
 require('./node_modules/antd/lib/style/index.less')
 require('./node_modules/antd/lib/style/components.less')
@@ -27,17 +26,11 @@ require('./css/app.scss')
 
 const rootReducer = combineReducers({
   auth: AuthReducer,
-  localization: LocalizationReducer
 })
 
-const initialState = {
-  localization: {
-    language: 'en-ca'
-  }
-}
 const store = createStore(
  rootReducer,
- initialState
+ {}
 )
 
 const render = Component => {

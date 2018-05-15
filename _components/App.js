@@ -37,7 +37,6 @@ import LOGO from "../img/logo.svg";
 // Redux
 // Actions
 import { updateAuth } from "../__actions/auth";
-import { updateLang } from "../__actions/localization";
 
 // Pages
 import NotFoundPage from './404'
@@ -53,7 +52,7 @@ WebFont.load({
 })
 
 
-const HeaderComponent = ({ showSearchModal }) => (
+const HeaderComponent = ({ showSearchModal, signOut }) => (
   <Header id="header">
     <div className="container-fluid">
       <div className="header-right">
@@ -181,6 +180,10 @@ class App extends React.Component {
     }
   }
 
+  _signOut = () => {
+    this.props.updateAuth(false)
+  }
+
   highlightCorrectMenuItem = () => {
     const { pathname } = window.location
     const componentPath = pathname.replace("/components/", "")
@@ -194,14 +197,14 @@ class App extends React.Component {
   render() {
     const { loading, collapsed, searchVisible, searchResults, searchQuery, navSelectedKey } = this.state
         , { getFieldDecorator } = this.props.form
-        , auth = { isAuthenticated: false }
+        , { isAuthenticated } = this.props.auth
 
-    if (auth.isAuthenticated)
+    if (isAuthenticated)
       return (
         <Layout className="fullheight">
           <HeaderComponent
-            toggleCollapsed={this.toggleCollapsed}
             showSearchModal={this._showSearchModal}
+            signOut={this._signOut}
           />
 
           <Layout>
@@ -311,18 +314,16 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       updateAuth,
-      updateLang
     },
     dispatch
-  );
+  )
 }
 
 export default compose(
   connect(
     state => ({
       auth: state.auth,
-      localization: state.localization
     }),
     mapDispatchToProps
   )
-)(Form.create()(App));
+)(Form.create()(App))

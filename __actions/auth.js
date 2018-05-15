@@ -1,7 +1,8 @@
 const UPDATE_AUTH = "UPDATE_AUTH";
 
-export const updateAuth = (authToken, fullName) => {
+export const updateAuth = (isAuthenticated) => {
     return {
-        type: UPDATE_AUTH
+        type: UPDATE_AUTH,
+        isAuthenticated
     }
 };
