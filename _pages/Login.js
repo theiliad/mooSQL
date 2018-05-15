@@ -23,6 +23,10 @@ import LOGO from "../img/logo.svg"
 
 const correctCredentials = 'demo-admin'
 class LoginPage extends React.Component {
+    state = {
+        loading: false
+    }
+
     componentDidMount() {
         this.props.form.setFieldsValue({
             userName: correctCredentials,
@@ -36,9 +40,15 @@ class LoginPage extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 if (values.userName === correctCredentials && values.password === correctCredentials) {
-                    this.props.updateAuth(true)
-                    
-                    message.success('Welcome', 0.5)
+                    this.setState({
+                        ...this.state,
+                        loading: true
+                    })
+
+                    setTimeout(() => {
+                        this.props.updateAuth(true)
+                        message.success('Welcome', 0.5)
+                    }, 1000)
                 } else {
                     message.error('Wrong credentials!', 1)
                 }
@@ -47,6 +57,7 @@ class LoginPage extends React.Component {
     }
 
     render() {
+        const { loading } = this.state
         const { getFieldDecorator } = this.props.form
 
         return (
@@ -97,7 +108,7 @@ class LoginPage extends React.Component {
 
                                     <a className="login-form-forgot" href="">Forgot password</a>
 
-                                    <Button type="primary" htmlType="submit" className="login-form-button">
+                                    <Button type="primary" htmlType="submit" className="login-form-button" loading={loading}>
                                         Log in
                                     </Button>
                                 </FormItem>

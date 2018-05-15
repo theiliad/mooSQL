@@ -28,7 +28,7 @@ import { Spin, Progress, message } from 'antd'
 import { Card } from 'antd';
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
-import { List, Table, Carousel } from 'antd';
+import { List, Table, Carousel } from 'antd'
 
 // Charts
 import {
@@ -39,64 +39,77 @@ import {
 // Misc
 import { formatNumbers } from '../_data/Tools.js'
 
-const data = [
-  { name: 'Day 1', users: 4800, pv: 4900, amt: 2400 },
-  { name: 'Day 2', users: 3400, pv: 6200, amt: 2210 },
-  { name: 'Day 3', users: 2000, pv: 5000, amt: 2290 },
-  { name: 'Day 4', users: 2780, pv: 3908, amt: 2000 },
-  { name: 'Day 5', users: 1890, pv: 4800, amt: 2181 },
-  { name: 'Day 6', users: 2390, pv: 3800, amt: 2500 },
-  { name: 'Day 7', users: 3490, pv: 4800, amt: 2100 },
-]
+const columns = [{
+    title: 'Name',
+    dataIndex: 'name',
+    filters: [{
+      text: 'Joe',
+      value: 'Joe',
+    }, {
+      text: 'Jim',
+      value: 'Jim',
+    }, {
+      text: 'Submenu',
+      value: 'Submenu',
+      children: [{
+        text: 'Green',
+        value: 'Green',
+      }, {
+        text: 'Black',
+        value: 'Black',
+      }],
+    }],
+    // specify the condition of filtering result
+    // here is that finding the name started with `value`
+    onFilter: (value, record) => record.name.indexOf(value) === 0,
+    sorter: (a, b) => a.name.length - b.name.length,
+  }, {
+    title: 'Age',
+    dataIndex: 'age',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.age - b.age,
+  }, {
+    title: 'Address',
+    dataIndex: 'address',
+    filters: [{
+      text: 'London',
+      value: 'London',
+    }, {
+      text: 'New York',
+      value: 'New York',
+    }],
+    filterMultiple: false,
+    onFilter: (value, record) => record.address.indexOf(value) === 0,
+    sorter: (a, b) => a.address.length - b.address.length,
+}];
+  
+const data = [{
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+}, {
+    key: '2',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+}, {
+    key: '3',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+}, {
+    key: '4',
+    name: 'Jim Red',
+    age: 32,
+    address: 'London No. 2 Lake Park',
+}];
+  
+function onChange(pagination, filters, sorter) {
+    console.log('params', pagination, filters, sorter);
+}  
 
-const followersData = [
-    {name: 'Week 1', follow: 4000, unfollow: 2400},
-    {name: 'Week 2', follow: 3000, unfollow: 1398},
-    {name: 'Week 3', follow: 2000, unfollow: 9800},
-    {name: 'Week 4', follow: 2780, unfollow: 3908}
-];
-
-const listData = [];
-for (let i = 0; i < 2; i++) {
-  listData.push({
-    href: 'http://ant.design',
-    title: `ant design part ${i}`,
-    description: 'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
-
-const pagination = {
-  pageSize: 1,
-  current: 1,
-  total: listData.length,
-  onChange: (() => {}),
-};
-
-const IconText = ({ type, text }) => (
-  <span>
-    <Icon type={type} style={{ marginRight: 8 }} />
-    {text}
-  </span>
-);
-
-const widgetActionsMenu = (
-    <Menu>
-      <Menu.Item style={{ color: "#ff5656" }}>
-        Remove
-      </Menu.Item>
-
-      <Menu.Item>
-        Save as
-      </Menu.Item>
-
-      <Menu.Item>
-        Refresh Data
-      </Menu.Item>
-    </Menu>
-  );
-
-class HomeComponent extends React.Component {
+class HomePageLA extends React.Component {
     constructor(props) {
         super(props)
 
@@ -197,163 +210,13 @@ class HomeComponent extends React.Component {
                     </Row>
                 </Card>
 
-                <Row gutter={16} className="marginTop-30">
-                    {/* <Col className="gutter-row" span={18}>
-                        <Card bordered={false}>
-                            <AreaChart
-                                width={730} height={250} data={data}
-                                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
-                            >
-                                <defs>
-                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#2196F3" stopOpacity={0.8}/>
-                                        <stop offset="95%" stopColor="#6c78e4" stopOpacity={0}/>
-                                    </linearGradient>
-                                    
-                                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#ff9a8d" stopOpacity={0.8}/>
-                                        <stop offset="95%" stopColor="#ff6f90" stopOpacity={0}/>
-                                    </linearGradient>
-                                </defs>
-
-                                <XAxis dataKey="name" />
-                                <YAxis />
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <Tooltip />
-                                <Area type="monotone" dataKey="uv" stroke="#2196F3" fillOpacity={1} strokeWidth={2} fill="url(#colorUv)" />
-                                <Area type="monotone" dataKey="pv" stroke="#ff9a8d" fillOpacity={1} strokeWidth={2} fill="url(#colorPv)" />
-                            </AreaChart>
-                        </Card>
-                    </Col> */}
-
-                    <Col className="gutter-row" xs={24} md={12} lg={9}>
-                        <Card
-                            title={
-                                <div className="head-container">
-                                    <div className="title">
-                                        <p>Active Users</p>
-                                        <h4>{formatNumbers(7000)}</h4>
-                                    </div>
-
-                                    <div className="actions">
-                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger={['click']}>
-                                            <a className="ant-dropdown-link" href="#">
-                                                <Icon type="setting" />
-                                            </a>
-                                        </Dropdown>
-                                    </div>
-                                </div>
-                            }
-                            bordered={false}
-                            className="widget"
-                        >
-                            <ResponsiveContainer width="100%" height={200}>
-                                <AreaChart
-                                    width={500} height={250} data={data}
-                                    margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-                                >
-                                    <defs>
-                                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="#2196F3" stopOpacity={0.8}/>
-                                            <stop offset="95%" stopColor="#6c78e4" stopOpacity={0}/>
-                                        </linearGradient>
-                                    </defs>
-
-                                    <Tooltip />
-
-                                    <Area type="monotone" dataKey="users" stroke="#2196F3" fillOpacity={1} strokeWidth={2} fill="url(#colorUv)" />
-                                </AreaChart>
-                            </ResponsiveContainer>
-
-                            <div className="spaced">
-                                <p>
-                                    <Icon type="sync" style={{ marginRight: 5 }} /> Just updated
-                                </p>
-                            </div>
-                        </Card>
-                    </Col>
-
-                    <Col className="gutter-row" xs={24} md={12} lg={9}>
-                        <Card
-                            title={
-                                <div className="head-container">
-                                    <div className="title">
-                                        <p>Job Applicants this Week</p>
-                                        <h4>{formatNumbers(21379)}</h4>
-                                    </div>
-
-                                    <div className="actions">
-                                        <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger={['click']}>
-                                            <a className="ant-dropdown-link" href="#">
-                                                <Icon type="setting" />
-                                            </a>
-                                        </Dropdown>
-                                    </div>
-                                </div>
-                            }
-                            bordered={false}
-                            className="widget"
-                        >
-                            <ResponsiveContainer width="100%" height={200}>
-                                <AreaChart
-                                    width={500} height={250} data={data}
-                                    margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-                                >
-                                    <defs>
-                                        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="#ff9a8d" stopOpacity={0.8}/>
-                                            <stop offset="95%" stopColor="#ff6f90" stopOpacity={0}/>
-                                        </linearGradient>
-                                    </defs>
-
-                                    <Tooltip />
-
-                                    <Area type="monotone" dataKey="pv" stroke="#ff9a8d" fillOpacity={1} strokeWidth={2} fill="url(#colorPv)" />
-                                </AreaChart>
-                            </ResponsiveContainer>
-
-                            <div className="spaced">
-                                <p>
-                                    <Icon type="sync" style={{ marginRight: 5 }} /> Just updated
-                                </p>
-                            </div>
-                        </Card>
-                    </Col>
-
-                    <Col className="gutter-row" xs={24} md={24} lg={6}>
-                        <Link to={'/'}>
-                            <Card bordered={false} className="hoverable gradient-primary circle-figure">
-                                <div className="circle light">
-                                    <span>23</span>
-
-                                    <Icon type="right" />
-                                </div>
-
-                                <div className="content">
-                                    <h3>Comments</h3>
-
-                                    <p>From xuvaa61, mike23 and 7 others</p>
-                                </div>
-                            </Card>
-                        </Link>
-
-                        <Link to={'/'}>
-                            <Card bordered={false} className="hoverable gradient-secondary circle-figure marginTop-15">
-                                <div className="circle light">
-                                    <span>77</span>
-
-                                    <Icon type="right" />
-                                </div>
-
-                                <div className="content">
-                                    <h3>New Jobs</h3>
-
-                                    <p>By Hooli, Pied Piper and 63 others</p>
-                                </div>
-                            </Card>
-                        </Link>
-                    </Col>
-                </Row>
+                <Card bordered={false} className="marginTop-30">
+                    <Row gutter={16}>
+                        <Col className="gutter-row" xs={24} md={24} lg={24}>
+                            <Table columns={columns} dataSource={data} onChange={onChange} />
+                        </Col>
+                    </Row>
+                </Card>
 
                 {/*
                     Stock Quotes
@@ -526,7 +389,7 @@ class HomeComponent extends React.Component {
     }
 }
 
-HomeComponent.propTypes = {}
+HomePageLA.propTypes = {}
 
 export default
     compose(
@@ -537,4 +400,4 @@ export default
             }),
             // mapDispatchToProps
         )
-    )(HomeComponent)
+    )(HomePageLA)

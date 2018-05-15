@@ -27,7 +27,9 @@ import { Badge } from "antd"
 import { Modal, Button } from 'antd'
 
 // Components
-import HomeComponent from "./Home"
+import HomePageMalibu from '../_pages/Home_Malibu'
+import HomePageLA from '../_pages/Home_LA'
+
 import FooterComponent from './Footer'
 import NotificationsComponent from './App/Notifications'
 
@@ -231,7 +233,13 @@ class App extends React.Component {
                   >
                     <Menu.Item key='nav-/'>
                       <Link to='/'>
-                        Home
+                        Home - Malibu
+                      </Link>
+                    </Menu.Item>
+
+                    <Menu.Item key='nav-/la'>
+                      <Link to='/la'>
+                        Home - L.A.
                       </Link>
                     </Menu.Item>
 
@@ -261,7 +269,8 @@ class App extends React.Component {
             <Content id="app-content" className={collapsed && 'wide'}>
               <div className="content-wrapper container">
                 <Switch>
-                  <Route path="/" component={HomeComponent} exact={true} />
+                  <Route path="/" component={HomePageMalibu} exact={true} />
+                  <Route path="/la" component={HomePageLA} exact={true} />
 
                   <Route path="/components" component={ComponentsPage} exact={false} />
 
