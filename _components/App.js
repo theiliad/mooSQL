@@ -101,7 +101,7 @@ const HeaderComponent = ({ showSearchModal, signOut }) => (
 
                   <Menu.Divider />
 
-                  <Menu.Item key="3">
+                  <Menu.Item key="3" className="with-anchor">
                     <a
                       href="#"
                       onClick={e => {

@@ -46,6 +46,16 @@
     padding-top: 10px;
 }
 
+// Dropdown items with anchors inside
+li.ant-dropdown-menu-item.with-anchor {
+    padding: 0;
+
+    a {
+        margin: 0;
+        padding: 10px 12px;
+    }
+}
+
 // Select
 .ant-select-dropdown-menu-item:hover, .ant-select-dropdown-menu-item-active {
     background-color: #f4fcff;

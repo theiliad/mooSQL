@@ -15,7 +15,7 @@
 @import 'core-components';
 
 html, body {
-    background: #fafafd;
+    background: $bg_color;
     // #f7f8fc;
     padding: 0 !important;
 }
@@ -71,6 +71,7 @@ div#header {
 }
 
 div#app-content {
+    position: relative;
     margin-left: 200px;
     transition: margin .2s ease-out;
 
@@ -81,6 +82,24 @@ div#app-content {
 
     div.content-wrapper {
         padding: 30px 20px;
+
+        div.with-pattern {
+            &:before {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 140px;
+                background-color: $bg_color;
+                background-image: url('../img/bg_pattern.svg');
+            }
+
+            > div {
+                position: relative;
+            }
+        }
     }
 }
 
