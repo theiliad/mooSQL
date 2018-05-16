@@ -214,3 +214,10 @@ ul.header-dropdown-tabs {
         margin-bottom: 0;
     }
 }
+
+// Progress bar
+div.ant-progress {
+    &.short {
+        max-width: 180px;
+    }
+}

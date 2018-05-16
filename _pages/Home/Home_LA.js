@@ -42,72 +42,6 @@ import {
 import { formatNumbers } from '../../_data/Tools.js'
 import { widgetActionsMenu } from './commons/charts'
 
-const columns = [{
-    title: 'Name',
-    dataIndex: 'name',
-    filters: [{
-      text: 'Joe',
-      value: 'Joe',
-    }, {
-      text: 'Jim',
-      value: 'Jim',
-    }, {
-      text: 'Submenu',
-      value: 'Submenu',
-      children: [{
-        text: 'Green',
-        value: 'Green',
-      }, {
-        text: 'Black',
-        value: 'Black',
-      }],
-    }],
-    // specify the condition of filtering result
-    // here is that finding the name started with `value`
-    onFilter: (value, record) => record.name.indexOf(value) === 0,
-    sorter: (a, b) => a.name.length - b.name.length,
-  }, {
-    title: 'Age',
-    dataIndex: 'age',
-    defaultSortOrder: 'descend',
-    sorter: (a, b) => a.age - b.age,
-  }, {
-    title: 'Address',
-    dataIndex: 'address',
-    filters: [{
-      text: 'London',
-      value: 'London',
-    }, {
-      text: 'New York',
-      value: 'New York',
-    }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
-}];
-  
-const data = [{
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-}, {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-}, {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-}, {
-    key: '4',
-    name: 'Jim Red',
-    age: 32,
-    address: 'London No. 2 Lake Park',
-}];
-
 const followersData = [
     {name: 'Week 1', follow: 4000, unfollow: 2400},
     {name: 'Week 2', follow: 3000, unfollow: 1398},
@@ -118,7 +52,7 @@ const followersData = [
     {name: 'Week 7', follow: 2000, unfollow: 9800}
 ]
 
-const newUsersData = [
+const data = [
     { name: 'Day 1', users: 4800, applicants: 4900, amt: 2400 },
     { name: 'Day 2', users: 3400, applicants: 6200, amt: 2210 },
     { name: 'Day 3', users: 2000, applicants: 5000, amt: 2290 },
@@ -239,7 +173,7 @@ class HomePageLA extends React.Component {
                             >
                                 <ResponsiveContainer width="100%" height={200}>
                                     <AreaChart
-                                        width={500} height={250} data={newUsersData}
+                                        width={500} height={250} data={data}
                                         margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
                                     >
                                         <defs>
@@ -280,31 +214,13 @@ class HomePageLA extends React.Component {
                     </Row>
 
                     <Row gutter={16} className="marginTop-30">
-                        <Col className="gutter-row" xs={24} md={24} lg={24}>
-                            <h4>Follow Trends</h4>
+                        <Col className="gutter-row" xs={24} md={24} lg={16}>
                             <Card
                                 title={
                                     <div className="head-container">
                                         <div className="title">
-                                            <Dropdown overlay={
-                                                <Menu>
-                                                    <Menu.Item key="0">
-                                                        <a href="http://www.alipay.com/">1st menu item</a>
-                                                    </Menu.Item>
-
-                                                    <Menu.Item key="1">
-                                                        <a href="http://www.taobao.com/">2nd menu item</a>
-                                                    </Menu.Item>
-
-                                                    <Menu.Divider />
-                                                    
-                                                    <Menu.Item key="3">3rd menu item</Menu.Item>
-                                                </Menu>
-                                            } trigger={['click']}>
-                                                <a className="ant-dropdown-link" href="#">
-                                                    Q1 2018 <Icon type="down" />
-                                                </a>
-                                            </Dropdown>
+                                            <p>Job Applicants this Week</p>
+                                            <h4>{formatNumbers(21379)}</h4>
                                         </div>
 
                                         <div className="actions">
@@ -317,64 +233,148 @@ class HomePageLA extends React.Component {
                                     </div>
                                 }
                                 bordered={false}
-                                className="widget bordered add-chart-padding"
+                                className="widget"
                             >
-                                <ResponsiveContainer width="100%" height={300}>
-                                    <BarChart
-                                        className="minimal-chart"
-                                        width={500} height={300}
-                                        data={followersData} barSize={30}
+                                <ResponsiveContainer width="100%" height={210}>
+                                    <AreaChart
+                                        width={500} height={250} data={data}
+                                        margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
                                     >
-                                        <XAxis dataKey="name" />
-                                        <YAxis />
-                                        <Tooltip cursor={{ fill: '#f9f9fd' }} />
-                                        <Legend />
+                                        <defs>
+                                            <linearGradient id="colorApplicants" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="5%" stopColor="#ff9a8d" stopOpacity={0.8}/>
+                                                <stop offset="95%" stopColor="#ff6f90" stopOpacity={0}/>
+                                            </linearGradient>
+                                        </defs>
 
-                                        <CartesianGrid strokeDasharsray="1 1" />
+                                        <Tooltip />
 
-                                        <Bar dataKey="follow" stackId="a" fill="#ff6e8e" />
-                                        <Bar dataKey="unfollow" stackId="a" fill="#fedcd2" />
-                                    </BarChart>
+                                        <Area type="monotone" dataKey="applicants" stroke="#ff9a8d" fillOpacity={1} strokeWidth={2} fill="url(#colorApplicants)" />
+                                    </AreaChart>
                                 </ResponsiveContainer>
+
+                                <div className="spaced">
+                                    <Row gutter={30} className="marginTop-15">
+                                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                                            <h5 className="marginBottom-0">Candidate verifications</h5>
+                                            <Progress percent={100} size="small" className="short" />
+                                        </Col>
+
+                                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                                            <h5 className="marginBottom-0">Rejections issued</h5>
+                                            <Progress percent={30} size="small" className="short" />
+                                        </Col>
+
+                                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                                            <h5 className="marginBottom-0">Interviews concluded</h5>
+                                            <Progress percent={50} status="active" size="small" className="short" />
+                                        </Col>
+                                    </Row>
+                                </div>
+                            </Card>
+                        </Col>
+
+                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                            <h4>Post Views</h4>
+                            <Card
+                                bordered={false}
+                                className="widget bordered"
+                                title={
+                                    <div className="head-container">
+                                        <div className="title center-vertical">
+                                            <a href="#">
+                                                Change goal
+                                            </a>
+                                        </div>
+
+                                        <div className="actions">
+                                            <Button type='primary' size='large'>
+                                                View Goal
+                                            </Button>
+                                        </div>
+                                    </div>
+                                }
+                            >
+                                <Carousel className="light goals marginTop-30" autoplay>
+                                    <div>
+                                        <Progress type="circle" percent={75} />
+
+                                        <p>Total views today</p>
+                                        <h4>{formatNumbers(2700)}</h4>
+                                    </div>
+
+                                    <div>
+                                        <Progress type="circle" percent={90} />
+
+                                        <p>Total views this week</p>
+                                        <h4>{formatNumbers(17000)}</h4>
+                                    </div>
+                                </Carousel>
                             </Card>
                         </Col>
                     </Row>
+                    
+                    <h4 className="marginTop-30">Follow Trends</h4>
+                    <Card
+                        title={
+                            <div className="head-container">
+                                <div className="title">
+                                    <Dropdown overlay={
+                                        <Menu>
+                                            <Menu.Item key="0">
+                                                <a href="http://www.alipay.com/">1st menu item</a>
+                                            </Menu.Item>
 
-                    <Card bordered={false} className="marginTop-30">
-                        <Row gutter={16}>
-                            <Col className="gutter-row" xs={24} md={24} lg={24}>
-                                <Table columns={columns} dataSource={data} onChange={onChange} />
-                            </Col>
-                        </Row>
+                                            <Menu.Item key="1">
+                                                <a href="http://www.taobao.com/">2nd menu item</a>
+                                            </Menu.Item>
+
+                                            <Menu.Divider />
+                                            
+                                            <Menu.Item key="3">3rd menu item</Menu.Item>
+                                        </Menu>
+                                    } trigger={['click']}>
+                                        <a className="ant-dropdown-link" href="#">
+                                            Q1 2018 <Icon type="down" />
+                                        </a>
+                                    </Dropdown>
+                                </div>
+
+                                <div className="actions">
+                                    <Dropdown overlay={widgetActionsMenu} placement="bottomRight" trigger={['click']}>
+                                        <a className="ant-dropdown-link" href="#">
+                                            <Icon type="setting" />
+                                        </a>
+                                    </Dropdown>
+                                </div>
+                            </div>
+                        }
+                        bordered={false}
+                        className="widget bordered add-chart-padding"
+                    >
+                        <ResponsiveContainer width="100%" height={300}>
+                            <BarChart
+                                className="minimal-chart"
+                                width={500} height={300}
+                                data={followersData} barSize={30}
+                            >
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <Tooltip cursor={{ fill: '#f9f9fd' }} />
+                                <Legend />
+
+                                <CartesianGrid strokeDasharsray="1 1" />
+
+                                <Bar dataKey="follow" stackId="a" fill="#ff6e8e" />
+                                <Bar dataKey="unfollow" stackId="a" fill="#fedcd2" />
+                            </BarChart>
+                        </ResponsiveContainer>
                     </Card>
 
                     {/*
                         Stock Quotes
                     */}
-                    <h4 className="marginTop-60 marginBottom-20">Top Performing Tech Stocks</h4>
-                    <Spin spinning={isLoading.stocksQuotes}>
-                        <div className="widget-core-links">
-                            <Row gutter={16}>
-                                {quotes && quotes.stocksQuotes.map((quote, index) =>
-                                    <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
-                                        <div className="diamond-logo">
-                                            <img src={require(`../../img/demo_assets/logos/${quote.name}.svg`)} />
-                                        </div>
-                                        
-                                        <div className="content">
-                                            <p className="title">{quote.name} <Icon type={quote.up ? 'caret-up' : 'caret-down'} /></p>
-                                            <p>${formatNumbers(quote.price)}</p>
-                                        </div>
-                                    </Col>
-                                )}
-                            </Row>
-                        </div>
-                    </Spin>
-
-                    {/*
-                        Crypto Quotes
-                    */}
-                    <h4 className="marginTop-30 marginBottom-20">Top Performing Cryptocurrencies</h4>
+                    <h4 className="marginTop-60">Top Performing Tech Stocks</h4>
                     <Spin spinning={isLoading.stocksQuotes}>
                         <div className="widget-core-links">
                             <Row gutter={16}>
