@@ -16,7 +16,7 @@ import { connect } from 'react-redux'
 
 // Networking
 import axios from 'axios'
-import API_URLS from '../_data/apis'
+import API_URLS from '../../_data/apis'
 
 // Antd
 import { Layout, Icon } from 'antd'
@@ -37,7 +37,8 @@ import {
 } from 'recharts'
 
 // Misc
-import { formatNumbers } from '../_data/Tools.js'
+import { formatNumbers } from '../../_data/Tools.js'
+import { widgetActionsMenu } from './commons/charts'
 
 const data = [
   { name: 'Day 1', users: 4800, applicants: 4900, amt: 2400 },
@@ -79,22 +80,6 @@ const IconText = ({ type, text }) => (
     {text}
   </span>
 );
-
-const widgetActionsMenu = (
-    <Menu>
-      <Menu.Item style={{ color: "#ff5656" }}>
-        Remove
-      </Menu.Item>
-
-      <Menu.Item>
-        Save as
-      </Menu.Item>
-
-      <Menu.Item>
-        Refresh Data
-      </Menu.Item>
-    </Menu>
-  );
 
 class HomePageMalibu extends React.Component {
     constructor(props) {
@@ -366,7 +351,7 @@ class HomePageMalibu extends React.Component {
                                 {quotes && quotes.stocksQuotes.map((quote, index) =>
                                     <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                         <div className="diamond-logo">
-                                            <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
+                                            <img src={require(`../../img/demo_assets/logos/${quote.name}.svg`)} />
                                         </div>
                                         
                                         <div className="content">
@@ -389,7 +374,7 @@ class HomePageMalibu extends React.Component {
                                 {quotes && quotes.stocksQuotes.map((quote, index) =>
                                     <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                         <div className="diamond-logo">
-                                            <img src={require(`../img/demo_assets/logos/${quote.name}.svg`)} />
+                                            <img src={require(`../../img/demo_assets/logos/${quote.name}.svg`)} />
                                         </div>
                                         
                                         <div className="content">

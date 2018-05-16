@@ -27,8 +27,8 @@ import { Badge } from "antd"
 import { Modal, Button } from 'antd'
 
 // Components
-import HomePageMalibu from '../_pages/Home_Malibu'
-import HomePageLA from '../_pages/Home_LA'
+import HomePageMalibu from '../_pages/Home/Home_Malibu'
+import HomePageLA from '../_pages/Home/Home_LA'
 
 import FooterComponent from './Footer'
 import NotificationsComponent from './App/Notifications'
