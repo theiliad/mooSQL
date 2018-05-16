@@ -240,6 +240,11 @@ div.login-page {
         position: relative;
         height: 100%;
 
+        &.login-bg {
+            background: url('../img/login_bg.jpg') no-repeat center;
+            background-size: cover;
+        }
+
         div.absolute-center {
             width: 100%;
             max-width: 450px;

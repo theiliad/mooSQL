@@ -63,7 +63,10 @@ class LoginPage extends React.Component {
         return (
             <Layout className="layout login-page">
                 <Row>
-                    <Col lg={12} xs={0}>
+                    <Col lg={12} xs={0} className="login-bg">
+                    </Col>
+
+                    {/* <Col lg={12} xs={0}>
                         <div className="absolute-center">
                             <img src={LOGO} className="logo" />
 
@@ -75,7 +78,7 @@ class LoginPage extends React.Component {
 
                             <p className="marginTop-30" style={{ opacity: 0.6 }}>&copy; Copyright 2018. All rights reserved</p>
                         </div>
-                    </Col>
+                    </Col> */}
 
                     <Col className="white-bg" lg={12} xs={24}>
                         <div className="absolute-center">
