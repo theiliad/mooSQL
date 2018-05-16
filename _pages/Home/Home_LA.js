@@ -327,7 +327,7 @@ class HomePageLA extends React.Component {
                                     >
                                         <XAxis dataKey="name" />
                                         <YAxis />
-                                        <Tooltip />
+                                        <Tooltip cursor={{ fill: '#f9f9fd' }} />
                                         <Legend />
 
                                         <CartesianGrid strokeDasharsray="1 1" />
