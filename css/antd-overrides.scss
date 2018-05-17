@@ -221,3 +221,14 @@ div.ant-progress {
         max-width: 180px;
     }
 }
+
+// Calendar
+div.ant-fullcalendar {
+    ul {
+        padding: 0;
+
+        &.events {
+            overflow-x: hidden;
+        }
+    }
+}
