@@ -214,6 +214,45 @@ class HomePageLA extends React.Component {
                     </Row>
 
                     <Row gutter={16} className="marginTop-30">
+                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                            <h4>Post Views</h4>
+                            <Card
+                                bordered={false}
+                                className="widget bordered"
+                                title={
+                                    <div className="head-container">
+                                        <div className="title center-vertical">
+                                            <a href="#">
+                                                Change goal
+                                            </a>
+                                        </div>
+
+                                        <div className="actions">
+                                            <Button type='primary' size='large'>
+                                                View Goal
+                                            </Button>
+                                        </div>
+                                    </div>
+                                }
+                            >
+                                <Carousel className="light goals marginTop-30" autoplay>
+                                    <div>
+                                        <Progress type="circle" percent={75} />
+
+                                        <p>Total views today</p>
+                                        <h4>{formatNumbers(2700)}</h4>
+                                    </div>
+
+                                    <div>
+                                        <Progress type="circle" percent={90} />
+
+                                        <p>Total views this week</p>
+                                        <h4>{formatNumbers(17000)}</h4>
+                                    </div>
+                                </Carousel>
+                            </Card>
+                        </Col>
+
                         <Col className="gutter-row" xs={24} md={24} lg={16}>
                             <Card
                                 title={
@@ -255,61 +294,22 @@ class HomePageLA extends React.Component {
 
                                 <div className="spaced">
                                     <Row gutter={30} className="marginTop-15">
-                                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                                        <Col className="gutter-row" xs={24} sm={8} lg={8}>
                                             <h5 className="marginBottom-0">Candidate verifications</h5>
                                             <Progress percent={100} size="small" className="short" />
                                         </Col>
 
-                                        <Col className="gutter-row" xs={24} md={24} lg={8}>
-                                            <h5 className="marginBottom-0">Rejections issued</h5>
+                                        <Col className="gutter-row" xs={24} sm={8} lg={8}>
+                                            <h5 className="marginBottom-0">Rejections delivered</h5>
                                             <Progress percent={30} size="small" className="short" />
                                         </Col>
 
-                                        <Col className="gutter-row" xs={24} md={24} lg={8}>
+                                        <Col className="gutter-row" xs={24} sm={8} lg={8}>
                                             <h5 className="marginBottom-0">Interviews concluded</h5>
                                             <Progress percent={50} status="active" size="small" className="short" />
                                         </Col>
                                     </Row>
                                 </div>
-                            </Card>
-                        </Col>
-
-                        <Col className="gutter-row" xs={24} md={24} lg={8}>
-                            <h4>Post Views</h4>
-                            <Card
-                                bordered={false}
-                                className="widget bordered"
-                                title={
-                                    <div className="head-container">
-                                        <div className="title center-vertical">
-                                            <a href="#">
-                                                Change goal
-                                            </a>
-                                        </div>
-
-                                        <div className="actions">
-                                            <Button type='primary' size='large'>
-                                                View Goal
-                                            </Button>
-                                        </div>
-                                    </div>
-                                }
-                            >
-                                <Carousel className="light goals marginTop-30" autoplay>
-                                    <div>
-                                        <Progress type="circle" percent={75} />
-
-                                        <p>Total views today</p>
-                                        <h4>{formatNumbers(2700)}</h4>
-                                    </div>
-
-                                    <div>
-                                        <Progress type="circle" percent={90} />
-
-                                        <p>Total views this week</p>
-                                        <h4>{formatNumbers(17000)}</h4>
-                                    </div>
-                                </Carousel>
                             </Card>
                         </Col>
                     </Row>
@@ -321,17 +321,13 @@ class HomePageLA extends React.Component {
                                 <div className="title">
                                     <Dropdown overlay={
                                         <Menu>
-                                            <Menu.Item key="0">
-                                                <a href="http://www.alipay.com/">1st menu item</a>
-                                            </Menu.Item>
-
-                                            <Menu.Item key="1">
-                                                <a href="http://www.taobao.com/">2nd menu item</a>
-                                            </Menu.Item>
+                                            <Menu.Item key="0">Q2 2018</Menu.Item>
+                                            <Menu.Item key="1">Q3 2018</Menu.Item>
+                                            <Menu.Item key="2">Q4 2018</Menu.Item>
 
                                             <Menu.Divider />
                                             
-                                            <Menu.Item key="3">3rd menu item</Menu.Item>
+                                            <Menu.Item key="3">All Quarters</Menu.Item>
                                         </Menu>
                                     } trigger={['click']}>
                                         <a className="ant-dropdown-link" href="#">
