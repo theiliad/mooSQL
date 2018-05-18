@@ -94,48 +94,22 @@ class HomePageMalibu extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchStockQuotes()
+        this.fetchQuotes()
     }
 
-    fetchStockQuotes = () => {
-        const quotesParser = (data) => {
-            const result = []
-            data.map(stock => {
-                const keys = Object.keys(stock)
-                result.push({
-                    name: stock[keys[0]],
-                    price: stock[keys[1]],
-                    up: Math.random() >= 0.5
-                })
-            })
-
-            return result
-        }
-
-        const updateState = (result) => {
-            this.setState({
-                ...this.state,
-                quotes: {
-                    ...this.state.quotes,
-                    stocksQuotes: result
-                },
-                isLoading: {
-                    ...this.state.isLoading,
-                    stocksQuotes: false
-                }
-            })
-        }
-
-        axios.get(API_URLS.quotes.stocks)
-        .then(response => {
-            console.log(response.data)
-            
-            updateState(quotesParser(response.data["Stock Quotes"]))
-        })
-        .catch(error => {
-            console.log(error)
-
-            updateState(quotesParser(API_URLS.quotes.stocksMock["Stock Quotes"]))
+    fetchQuotes = () => {
+        this.setState({
+            ...this.state,
+            quotes: {
+                ...this.state.quotes,
+                stocksQuotes: API_URLS.quotes.STOCKS_MOCK,
+                cryptoQuotes: API_URLS.quotes.CRYPTOS_MOCK
+            },
+            isLoading: {
+                ...this.state.isLoading,
+                stocksQuotes: false,
+                cryptoQuotes: false
+            }
         })
     }
 
@@ -348,7 +322,7 @@ class HomePageMalibu extends React.Component {
                     <Spin spinning={isLoading.stocksQuotes}>
                         <div className="widget-core-links">
                             <Row gutter={16}>
-                                {quotes && quotes.stocksQuotes.map((quote, index) =>
+                                {quotes && quotes.stocksQuotes && quotes.stocksQuotes.map((quote, index) =>
                                     <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                         <div className="diamond-logo">
                                             <img src={require(`../../img/demo_assets/logos/${quote.name}.svg`)} />
@@ -368,11 +342,11 @@ class HomePageMalibu extends React.Component {
                         Crypto Quotes
                     */}
                     <h4 className="marginTop-30 marginBottom-20">Top Performing Cryptocurrencies</h4>
-                    <Spin spinning={isLoading.stocksQuotes}>
+                    <Spin spinning={isLoading.cryptoQuotes}>
                         <div className="widget-core-links">
                             <Row gutter={16}>
-                                {quotes && quotes.stocksQuotes.map((quote, index) =>
-                                    <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
+                                {quotes && quotes.cryptoQuotes && quotes.cryptoQuotes.map((quote, index) =>
+                                    <Col key={`cryptoQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                         <div className="diamond-logo">
                                             <img src={require(`../../img/demo_assets/logos/${quote.name}.svg`)} />
                                         </div>

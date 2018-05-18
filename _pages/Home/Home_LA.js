@@ -78,8 +78,7 @@ class HomePageLA extends React.Component {
 
         this.state = {
             isLoading: {
-                stocksQuotes: true,
-                cryptoQuotes: true
+                stocksQuotes: true
             }
         }
     }
@@ -89,44 +88,16 @@ class HomePageLA extends React.Component {
     }
 
     fetchStockQuotes = () => {
-        const quotesParser = (data) => {
-            const result = []
-            data.map(stock => {
-                const keys = Object.keys(stock)
-                result.push({
-                    name: stock[keys[0]],
-                    price: stock[keys[1]],
-                    up: Math.random() >= 0.5
-                })
-            })
-
-            return result
-        }
-
-        const updateState = (result) => {
-            this.setState({
-                ...this.state,
-                quotes: {
-                    ...this.state.quotes,
-                    stocksQuotes: result
-                },
-                isLoading: {
-                    ...this.state.isLoading,
-                    stocksQuotes: false
-                }
-            })
-        }
-
-        axios.get(API_URLS.quotes.stocks)
-        .then(response => {
-            console.log(response.data)
-            
-            updateState(quotesParser(response.data["Stock Quotes"]))
-        })
-        .catch(error => {
-            console.log(error)
-
-            updateState(quotesParser(API_URLS.quotes.stocksMock["Stock Quotes"]))
+        this.setState({
+            ...this.state,
+            quotes: {
+                ...this.state.quotes,
+                stocksQuotes: API_URLS.quotes.STOCKS_MOCK
+            },
+            isLoading: {
+                ...this.state.isLoading,
+                stocksQuotes: false
+            }
         })
     }
 
@@ -374,7 +345,7 @@ class HomePageLA extends React.Component {
                     <Spin spinning={isLoading.stocksQuotes}>
                         <div className="widget-core-links">
                             <Row gutter={16}>
-                                {quotes && quotes.stocksQuotes.map((quote, index) =>
+                                {quotes && quotes.stocksQuotes && quotes.stocksQuotes.map((quote, index) =>
                                     <Col key={`stockQuote-${index}`} className="gutter-row" xs={24} sm={12} md={8}>
                                         <div className="diamond-logo">
                                             <img src={require(`../../img/demo_assets/logos/${quote.name}.svg`)} />
