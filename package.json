@@ -7,13 +7,23 @@
     "start": "NODE_ENV=dev webpack-dev-server --mode development --open"
   },
   "keywords": [
-    "react16"
+    "react",
+    "antd",
+    "admin",
+    "dashboard",
+    "webpack",
+    "ES6",
+    "babel",
+    "charts",
+    "flexbox",
+    "Sass",
+    "redux"
   ],
   "engines": {
     "node": "6.10.3",
     "npm": "3.10.10"
   },
-  "author": "Gopher Labs Ltd.",
+  "author": "Gopher Labs",
   "dependencies": {
     "antd": "^3.5.1",
     "axios": "^0.18.0",

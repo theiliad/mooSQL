@@ -81,7 +81,6 @@ module.exports = {
           use: [
             'css-loader?{minimize: true}',
             `less-loader?{"javascriptEnabled": true, "sourceMap":true, "modifyVars":${JSON.stringify(theme)}}`
-            //, "modifyVars":${JSON.stringify(theme)}
           ]
         }),
       },
