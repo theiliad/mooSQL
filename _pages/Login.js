@@ -64,6 +64,9 @@ class LoginPage extends React.Component {
             <Layout className="layout login-page">
                 <Row>
                     <Col lg={12} xs={0} className="login-bg">
+                        <div className="login-credits">
+                            <a href="https://www.vecteezy.com" target="_blank" rel="nofollow">Illustrations by Vecteezy.com</a>
+                        </div>
                     </Col>
 
                     {/* <Col lg={12} xs={0}>

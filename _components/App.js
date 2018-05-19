@@ -41,7 +41,7 @@ import LOGO from "../img/logo.svg";
 import { updateAuth } from "../__actions/auth";
 
 // Pages
-import NotFoundPage from './404'
+import NotFoundPage from '../_pages/404'
 import ComponentsPage from '../_pages/Components'
 import ComponentDemos from '../_data/component-demos'
 import LoginPage from '../_pages/Login'
@@ -75,29 +75,9 @@ const HeaderComponent = ({ showSearchModal, signOut }) => (
             <Dropdown
               overlay={
                 <Menu>
-                  <Menu.Item key="0">
-                    <a
-                      href="#"
-                      onClick={e => {
-                        e.preventDefault();
-                        updateLang("en-ca");
-                      }}
-                    >
-                      English (Canada)
-                    </a>
-                  </Menu.Item>
+                  <Menu.Item key="0">Edit Profile</Menu.Item>
 
-                  <Menu.Item key="1">
-                    <a
-                      href="#"
-                      onClick={e => {
-                        e.preventDefault();
-                        updateLang("fr-ca");
-                      }}
-                    >
-                      French (Canada)
-                    </a>
-                  </Menu.Item>
+                  <Menu.Item key="1">Account settings</Menu.Item>
 
                   <Menu.Divider />
 

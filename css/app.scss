@@ -3,16 +3,16 @@
 @import "commons";
 @import "container";
 @import "general";
-@import "toasts";
 @import "demo";
 
-@import 'antd-overrides';
 @import 'antd/cards';
+@import 'antd/toasts';
+@import 'antd/misc';
 
 @import 'recharts-overrides';
 
 // Custom core-admin components
-@import 'core-components';
+@import 'core-admin-components';
 
 html, body {
     background: $bg_color;

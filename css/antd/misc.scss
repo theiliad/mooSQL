@@ -68,16 +68,9 @@ li.ant-dropdown-menu-item.with-anchor {
 }
 
 // Steps
-.ant-steps-item-process > .ant-steps-item-content > .ant-steps-item-title:after {
-    background-color: #d0e1e2;
-}
-
-.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
-    color: #c9dee0;
-}
-
-.ant-steps-item-wait > .ant-steps-item-content > .ant-steps-item-title {
-    color: #d2e4e5;
+.ant-steps-horizontal {
+    // Responsive
+    overflow-x: auto;
 }
 
 .ant-steps-item-title:after, .ant-steps-item-custom .ant-steps-item-icon > .ant-steps-icon,

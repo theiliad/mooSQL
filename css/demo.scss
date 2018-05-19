@@ -359,3 +359,21 @@ div {
         }
     }
 }
+
+div.login-credits {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: none;
+    padding: 0;
+
+    a {
+        color: rgba(255, 255, 255, 0.3);
+        transition: $generic_transition;
+
+        &:hover {
+            color: #fff;
+            transition: $generic_transition;
+        }
+    }
+}
