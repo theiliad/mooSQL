@@ -180,6 +180,8 @@ class App extends React.Component {
     const { loading, collapsed, searchVisible, searchResults, searchQuery, navSelectedKey } = this.state
         , { getFieldDecorator } = this.props.form
         , { isAuthenticated } = this.props.auth
+    
+    const HomeComponent = () => <Redirect to="/databases" />
 
     if (isAuthenticated)
       return (
@@ -222,7 +224,7 @@ class App extends React.Component {
             <Content id="app-content" className={collapsed && 'wide'}>
               <div className="content-wrapper container">
                 <Switch>
-                  <Route path="/" component={null} exact={true} />
+                  <Route path="/" component={HomeComponent} exact={true} />
                   <Route path="/databases" component={DatabasesPage} exact={true} />
                   <Route path="/databases/:name" component={DatabasesDetailsPage} exact={true} />
 

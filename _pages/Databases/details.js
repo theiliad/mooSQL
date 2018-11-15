@@ -29,7 +29,7 @@ import { Card } from 'antd';
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
 import { List, Table, Modal } from 'antd';
-import { Form, Input, InputNumber, AutoComplete, Select } from 'antd'
+import { Form, Input, InputNumber, AutoComplete, Select, Checkbox } from 'antd'
 const { Column } = Table
 const Option = Select.Option
 const FormItem = Form.Item
@@ -359,77 +359,211 @@ const collations = [
     "utf8mb4_unicode_ci",
     "utf8mb4_unicode_nopad_ci",
     "utf8mb4_vietnamese_ci"
- ]
+]
+const types = ["tinyint", "smallint", "mediumint", "int", "bigint", "decimal", "float", "double", "date", "datetime", "timestamp", "time", "year", "char", "varchar", "tinytext", "text", "mediumtext", "longtext", "enum", "set", "bit", "binary", "varbinary", "tinyblob", "blob", "mediumblob", "longblob", "geometry", "point", "linestring", "polygon", "multipoint", "multilinestring", "multipolygon", "geometrycollection"]
 
+let uuid = 0
+
+const prepareRequestBody = values => {
+    const columns = {}
+    values.columnNames.forEach((name, index) => {
+        const constraints = {}
+
+        values.constraints[index].forEach(constraint => {
+            constraints[constraint] = true
+        })
+
+        columns[name] = {
+            type: values.dataTypes[index],
+            constraints
+        }
+    })
+
+    return {
+        "name": values.name,
+        "collation": values.collation,
+        columns
+    }
+}
 
 class CreateTableComponent extends React.Component {
+    state = {
+        dataSource: [],
+        place: null
+    }
+
+    componentDidMount() {
+        this.add()
+    }
+
+    remove = (k) => {
+        const { form } = this.props;
+        // can use data-binding to get
+        const keys = form.getFieldValue('keys');
+        // We need at least one passenger
+        if (keys.length === 1) {
+            return;
+        }
+
+        // can use data-binding to set
+        form.setFieldsValue({
+            keys: keys.filter(key => key !== k),
+        });
+    }
+
+    add = () => {
+        const { form } = this.props;
+        // can use data-binding to get
+        const keys = form.getFieldValue('keys');
+        const nextKeys = keys.concat(uuid);
+        uuid++;
+        // can use data-binding to set
+        // important! notify form to detect changes
+        form.setFieldsValue({
+            keys: nextKeys,
+        });
+    }
+
+    validateThenSubmit = (e) => {
+        e.preventDefault()
+
+        this.props.form.validateFields((err, values) => {
+            if (err) return
+
+            this.props.onSubmit(prepareRequestBody(values))
+        })
+    }
+
     render() {
-        const { getFieldDecorator } = this.props.form
-        console.log(this.props)
+        const { visible, confirmLoading, classToEdit } = this.props // State variables
+            , { createClassroom, toggleModal } = this.props // Methods
+            , { dataSource, place } = this.state
+
+        const { getFieldDecorator, getFieldValue } = this.props.form
+        getFieldDecorator('keys', { initialValue: [] })
+        const keys = getFieldValue('keys')
+
+        const formItems = keys.map((k, index) => {
+            return (
+                <div key={`column-${index}`}>
+                    <h5>
+                        Column {index + 1}
+
+                        {keys.length > 1 ? (
+                            <Icon
+                                className="dynamic-delete-button"
+                                style={{ float: "right" }}
+                                type="minus-circle-o"
+                                disabled={keys.length === 1}
+                                onClick={() => this.remove(k)}
+                            />
+                        ) : null}
+                    </h5>
+
+                    <FormItem label='Column Name'>
+                        {getFieldDecorator(`columnNames[${k}]`, {
+                            rules: [{
+                                required: true,
+                                message: "Please provide a name for the column",
+                            }],
+                        })(
+                            <Input placeholder="PhoneNumber" />
+                        )}
+                    </FormItem>
+
+                    <FormItem label='Data Type'>
+                        {getFieldDecorator(`dataTypes[${k}]`, {
+                            rules: [{
+                                required: true,
+                                message: 'Please choose a data type',
+                            }],
+                        })(
+                            <Select
+                                showSearch
+                                style={{ width: 200 }}
+                                placeholder="Select a Data Type"
+                                OptionFilterProp="children"
+                                filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                            >
+                                {types.map(type => <Option value={type} key={`col-${type}`}>{type}</Option>)}
+                            </Select>
+                        )}
+                    </FormItem>
+
+                    <FormItem label='Constraints'>
+                        {getFieldDecorator(`constraints[${k}]`, {
+                            rules: [{
+                                required: false
+                            }],
+                        })(
+                            <Checkbox.Group style={{ width: '100%' }}>
+                                <Row>
+                                    <Col span={8}><Checkbox value="null">Null</Checkbox></Col>
+                                    <Col span={8}><Checkbox value="unique">Unique</Checkbox></Col>
+                                </Row>
+                            </Checkbox.Group>
+                        )}
+                    </FormItem>
+                </div>
+            )
+        })
+
         return (
             <Form
-                onSubmit={e => {
-                    if (e) e.preventDefault()
-
-                    this.props.form.validateFields((err, values) => {
-                        if (err) return
-                        
-                        this.props.onSubmit(values)
-                    })
-                }}
+                onSubmit={this.validateThenSubmit}
             >
-                <FormItem label='Table Name'>
-                    {getFieldDecorator('name', {
-                        rules: [{
-                            required: true,
-                            message: 'Please provide a table name',
-                        }],
-                    })(
-                        <Input autoComplete="false" placeholder="Bayview Secondary School" />
-                    )}
+                <Row gutter={32}>
+                    <Col xs={12} md={12} lg={12}>
+                        <FormItem label='Table Name'>
+                            {getFieldDecorator('name', {
+                                rules: [{
+                                    required: true,
+                                    message: 'Please provide a table name',
+                                }],
+                            })(
+                                <Input autoComplete="false" placeholder="myTable" />
+                            )}
+                        </FormItem>
+                    </Col>
+
+                    <Col xs={12} md={12} lg={12}>
+                        <FormItem label='Collation'>
+                            {getFieldDecorator('collation', {
+                                rules: [{
+                                    required: true,
+                                    message: 'Please choose a collation',
+                                }],
+                            })(
+                                <Select
+                                    showSearch
+                                    style={{ width: 200 }}
+                                    placeholder="Select a Collation"
+                                    OptionFilterProp="children"
+                                    filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                                >
+                                    {collations.map(collation => <Option value={collation} key={`col-${collation}`}>{collation}</Option>)}
+                                </Select>
+                            )}
+                        </FormItem>
+                    </Col>
+                </Row>
+
+                {formItems}
+                <FormItem>
+                    <Button type="dashed" onClick={this.add} style={{ width: '100%' }}>
+                        <Icon type="plus" /> Add Another Column
+                    </Button>
                 </FormItem>
-                
-                <FormItem label='Collation'>
-                    {getFieldDecorator('collation', {
-                        rules: [{
-                            required: true,
-                            message: 'Please choose a collation',
-                        }],
-                    })(
-                        <Select
-                            showSearch
-                            style={{ width: 200 }}
-                            placeholder="Select a Collation"
-                            OptionFilterProp="children"
-                            // onChange={handleChange}
-                            // onFocus={handleFocus}
-                            // onBlur={handleBlur}
-                            filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                        >
-                            {collations.map(collation => <Option value={collation} key={`col-${collation}`}>{collation}</Option>)}
-                        </Select>
-                    )}
-                </FormItem>
 
-                <Button size='large' style={{ marginRight: 5 }} onClick={this.props.onCancel}>
-                    Cancel
-                </Button>
+                <div className="alignRight">
+                    <Button size='large' style={{ marginRight: 5 }} onClick={this.props.onCancel} disabled={confirmLoading}>
+                        Cancel
+                    </Button>
 
-                <Button size='large' type="primary" htmlType="submit">
-                    Create
-                </Button>
-
-
-                {/* <FormItem label='Principal Name'>
-                    {getFieldDecorator('principalName', {
-                        rules: [{
-                            required: true,
-                            message: 'Please provide the name of the class',
-                        }],
-                    })(
-                        <Input placeholder="John Smith" />
-                    )}
-                </FormItem> */}
+                    <Button size='large' type="primary" htmlType="submit" loading={confirmLoading}>
+                        Create
+                    </Button>
+                </div>
             </Form>
         )
     }
@@ -462,6 +596,8 @@ class DatabaseDetails extends React.Component {
         console.log('selectedRowKeys changed: ', selectedRowKeys);
         this.setState({ selectedRowKeys });
     }
+
+
 
     showModal = () => {
         this.setState({
@@ -560,6 +696,16 @@ class DatabaseDetails extends React.Component {
                                 />
 
                                 <Column
+                                    title="Engine"
+                                    key="engine"
+                                    render={()=> (
+                                        <span>
+                                            InnoDB
+                                        </span>
+                                    )}
+                                />
+
+                                <Column
                                     title="# of Columns"
                                     dataIndex="numCount"
                                     key="columns"
@@ -587,25 +733,15 @@ class DatabaseDetails extends React.Component {
                                     this.setState({
                                         visible: false,
                                     }, _ => {
-                                        const oldData = tableData
-                                        oldData.push({
-                                            key: oldData[oldData.length - 1].key + 1,
-                                            name: values.name,
-                                            tables: 0
-                                        })
-
-                                        addTable(this.state.dbName, values.name, values.collation)
+                                        addTable(this.state.dbName, values.name, values.collation, values.columns)
                                             .then(res => {
-                                                this.setState({
-                                                    ...this.state,
-                                                    oldData
-                                                }, () => {
-                                                    message.success("Successfully Created")
-        
-                                                    this.componentDidMount()
-                                                })
+                                                message.success("Successfully Created")
+
+                                                this.componentDidMount()
                                             })
                                             .catch(e => {
+                                                console.log("Error", e)
+
                                                 message.warning("Something went wrong")
                                             })
                                     })

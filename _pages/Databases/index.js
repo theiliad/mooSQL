@@ -401,9 +401,6 @@ class CreateDatabaseComponent extends React.Component {
                             style={{ width: 200 }}
                             placeholder="Select a Collation"
                             OptionFilterProp="children"
-                            // onChange={handleChange}
-                            // onFocus={handleFocus}
-                            // onBlur={handleBlur}
                             filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
                         >
                             {collations.map(collation => <Option value={collation} key={`col-${collation}`}>{collation}</Option>)}
@@ -418,18 +415,6 @@ class CreateDatabaseComponent extends React.Component {
                 <Button size='large' type="primary" htmlType="submit">
                     Create
                 </Button>
-
-
-                {/* <FormItem label='Principal Name'>
-                    {getFieldDecorator('principalName', {
-                        rules: [{
-                            required: true,
-                            message: 'Please provide the name of the class',
-                        }],
-                    })(
-                        <Input placeholder="John Smith" />
-                    )}
-                </FormItem> */}
             </Form>
         )
     }
@@ -580,23 +565,23 @@ class Databases extends React.Component {
                                     this.setState({
                                         visible: false,
                                     }, _ => {
-                                        const oldData = tableData
-                                        oldData.push({
-                                            key: oldData[oldData.length - 1].key + 1,
-                                            name: values.name,
-                                            tables: 0
-                                        })
+                                        // const oldData = tableData
+                                        // oldData.push({
+                                        //     key: oldData[oldData.length - 1].key + 1,
+                                        //     name: values.name,
+                                        //     tables: 0
+                                        // })
 
                                         addDB(values.name, values.collation)
                                             .then(res => {
-                                                this.setState({
-                                                    ...this.state,
-                                                    oldData
-                                                }, () => {
+                                                // this.setState({
+                                                //     ...this.state,
+                                                //     oldData
+                                                // }, () => {
                                                     message.success("Successfully Created")
         
                                                     this.componentDidMount()
-                                                })
+                                                // })
                                             })
                                             .catch(e => {
                                                 message.warning("Something went wrong")
