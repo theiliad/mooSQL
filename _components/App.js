@@ -28,6 +28,7 @@ import { Modal, Button } from 'antd'
 
 // Components
 import DatabasesPage from "../_pages/Databases/index"
+import DatabasesDetailsPage from "../_pages/Databases/details"
 
 import FooterComponent from './Footer'
 import NotificationsComponent from './App/Notifications'
@@ -222,7 +223,8 @@ class App extends React.Component {
               <div className="content-wrapper container">
                 <Switch>
                   <Route path="/" component={null} exact={true} />
-                  <Route path="/databases" component={DatabasesPage} exact={false} />
+                  <Route path="/databases" component={DatabasesPage} exact={true} />
+                  <Route path="/databases/:name" component={DatabasesDetailsPage} exact={true} />
 
                   <Route path="*" exact={true} component={NotFoundPage} />
                 </Switch>

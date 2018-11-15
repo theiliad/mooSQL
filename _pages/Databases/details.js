@@ -34,7 +34,7 @@ const { Column } = Table
 const Option = Select.Option
 const FormItem = Form.Item
 
-import { databaseRef, addDB, toArray } from "../../_data/firebase"
+import { databaseRef, addTable, toArray } from "../../_data/firebase"
 
 const collations = [
     "armscii8_bin",
@@ -362,7 +362,7 @@ const collations = [
  ]
 
 
-class CreateDatabaseComponent extends React.Component {
+class CreateTableComponent extends React.Component {
     render() {
         const { getFieldDecorator } = this.props.form
         console.log(this.props)
@@ -378,11 +378,11 @@ class CreateDatabaseComponent extends React.Component {
                     })
                 }}
             >
-                <FormItem label='Database Name'>
+                <FormItem label='Table Name'>
                     {getFieldDecorator('name', {
                         rules: [{
                             required: true,
-                            message: 'Please provide a database name',
+                            message: 'Please provide a table name',
                         }],
                     })(
                         <Input autoComplete="false" placeholder="Bayview Secondary School" />
@@ -435,19 +435,25 @@ class CreateDatabaseComponent extends React.Component {
     }
 }
 
-const CreateDatabase = Form.create()(CreateDatabaseComponent)
+const CreateTable = Form.create()(CreateTableComponent)
 
-class Databases extends React.Component {
+class DatabaseDetails extends React.Component {
     state = {
         visible: false,
         selectedRowKeys: []
     };
 
     componentDidMount() {
-        databaseRef.child("databases").once("value", snapshot => {
+        const dbName = this.props.match.params.name
+        this.setState({
+            ...this.state,
+            dbName
+        })
+
+        databaseRef.child(`databases/${dbName}`).once("value", snapshot => {
             this.setState({
                 ...this.state,
-                tableData: toArray(snapshot.val(), "tables")
+                tableData: toArray(snapshot.val().tables, "columns")
             })
         })
     }
@@ -527,8 +533,9 @@ class Databases extends React.Component {
             <div className="with-pattern">
                 {tableData &&
                     <div>
+                        <h2>{this.state.dbName}</h2>
                         <Layout className="sider-pro">
-                            <Content><h4>{tableData.length} Databases</h4></Content>
+                            <Content><h4>{tableData.length} Tables</h4></Content>
                             <Sider>
                                 <Button
                                     onClick={e => {
@@ -539,7 +546,7 @@ class Databases extends React.Component {
                                     }}
                                     size='large' type='primary' icon="plus"
                                 >
-                                    New Database
+                                    New Table
                                 </Button>
                             </Sider>
                         </Layout>
@@ -553,13 +560,13 @@ class Databases extends React.Component {
                                 />
 
                                 <Column
-                                    title="# of Tables"
+                                    title="# of Columns"
                                     dataIndex="numCount"
-                                    key="tables"
-                                    render={(tables, record) => (
+                                    key="columns"
+                                    render={(columns, record) => (
                                         <span>
                                             <Link to={`/databases/${record.keyName}`}>
-                                                {tables}
+                                                {columns}
                                             </Link>
                                         </span>
                                     )}
@@ -574,7 +581,7 @@ class Databases extends React.Component {
                             onOk={this.handleOk}
                             onCancel={this.handleCancel}
                         >
-                            <CreateDatabase
+                            <CreateTable
                                 onCancel={this.handleCancel}
                                 onSubmit={values => {
                                     this.setState({
@@ -587,7 +594,7 @@ class Databases extends React.Component {
                                             tables: 0
                                         })
 
-                                        addDB(values.name, values.collation)
+                                        addTable(this.state.dbName, values.name, values.collation)
                                             .then(res => {
                                                 this.setState({
                                                     ...this.state,
@@ -612,6 +619,6 @@ class Databases extends React.Component {
     }
 }
 
-Databases.propTypes = {}
+DatabaseDetails.propTypes = {}
 
-export default Databases
+export default DatabaseDetails
