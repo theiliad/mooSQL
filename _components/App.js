@@ -63,9 +63,9 @@ const HeaderComponent = ({ showSearchModal, signOut }) => (
           defaultSelectedKeys={['2']}
           style={{ lineHeight: '69px' }}
         >
-          <Menu.Item key="1" onClick={showSearchModal.bind(this, true)}>
+          {/* <Menu.Item key="1" onClick={showSearchModal.bind(this, true)}>
             <Icon type="search" />
-          </Menu.Item>
+          </Menu.Item> */}
 
           <Menu.Item key="2" className="dropdown">
             <NotificationsComponent />
@@ -239,7 +239,7 @@ class App extends React.Component {
             {/*
               * Search Modal
             */}
-            <Modal
+            {/* <Modal
               visible={this.state.searchVisible}
               title={null}
               footer={null}
@@ -270,7 +270,7 @@ class App extends React.Component {
                   }
                 )}
               </Menu>
-            </Modal>
+            </Modal> */}
           </Layout>
         </Layout>
       );

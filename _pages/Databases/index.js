@@ -529,12 +529,19 @@ class Databases extends React.Component {
                             </Sider>
                         </Layout>
 
-                        <Card bordered={false} className="top-stats">
+                        <Card bordered={false} className="marginTop-15">
                             <Table rowSelection={rowSelection} dataSource={tableData}>
                                 <Column
                                     title="Name"
                                     dataIndex="keyName"
                                     key="name"
+                                    render={(name, record) => (
+                                        <span>
+                                            <Link to={`/databases/${record.keyName}`}>
+                                                {name}
+                                            </Link>
+                                        </span>
+                                    )}
                                 />
 
                                 <Column

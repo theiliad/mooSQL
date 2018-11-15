@@ -29,12 +29,22 @@ import { Card } from 'antd';
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
 import { List, Table, Modal } from 'antd';
-import { Form, Input, InputNumber, AutoComplete, Select, Checkbox } from 'antd'
+import { Form, Input, InputNumber, AutoComplete, Select, Checkbox, Collapse } from 'antd'
 const { Column } = Table
 const Option = Select.Option
 const FormItem = Form.Item
+const Panel = Collapse.Panel
 
 import { databaseRef, insertData, toArray } from "../../_data/firebase"
+
+const relationships = ["=","<",">","<=",">=","!=","LIKE","LIKE %%","REGEXP","IN","IS NULL","NOT LIKE","NOT REGEXP","NOT IN","IS NOT NULL","SQL"]
+const customPanelStyle = {
+    background: '#eaeaf7',
+    borderRadius: 4,
+    marginBottom: 24,
+    border: 0,
+    overflow: 'hidden',
+};
 
 class CreateTableComponent extends React.Component {
     state = {}
@@ -187,7 +197,9 @@ class DatabaseDetails extends React.Component {
                 {tableData &&
                     <div>
                         <h2>
-                            <Link to={`/databases/${dbName}`}>{dbName}</Link> > {tableName}</h2>
+                            <Link to={`/databases/${dbName}`}>{dbName}</Link> > {tableName}
+                        </h2>
+
                         <Layout className="sider-pro">
                             <Content><h4>{tableData.length} Rows</h4></Content>
                             <Sider>
@@ -204,6 +216,55 @@ class DatabaseDetails extends React.Component {
                                 </Button>
                             </Sider>
                         </Layout>
+                        
+                        <Collapse bordered={false} className="marginTop-15">
+                            <Panel header="Search & Filter" key="1" style={customPanelStyle}>
+                                <Row gutter={32}>
+                                    <Col xs={24} md={12} lg={5}>
+                                        <FormItem label='Column'>
+                                            <Select
+                                                showSearch
+                                                style={{ width: 200 }}
+                                                placeholder="Select a Column"
+                                                OptionFilterProp="children"
+                                                filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                                                defaultValue={columns && Object.keys(columns)[0]}
+                                            >
+                                                {columns && Object.keys(columns).map(column =>
+                                                    <Option value={column} key={`col-${column}`}>{column}</Option>)
+                                                }
+                                            </Select>
+                                        </FormItem>
+                                    </Col>
+
+                                    <Col xs={24} md={12} lg={5}>
+                                        <FormItem label='Relationship'>
+                                            <Select
+                                                showSearch
+                                                style={{ width: 200 }}
+                                                placeholder="Select a Relationship"
+                                                OptionFilterProp="children"
+                                                filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                                                defaultValue={relationships[0]}
+                                            >
+                                                {relationships.map(relationship =>
+                                                    <Option value={relationship} key={`col-${relationship}`}>{relationship}</Option>)
+                                                }
+                                            </Select>
+                                        </FormItem>
+                                    </Col>
+
+                                    <Col xs={24} md={12} lg={5}>
+                                        <FormItem label='Value'>
+                                            <Input autoComplete="false" placeholder="10" />
+                                        </FormItem>
+                                    </Col>
+                                </Row>
+                                <Button type='primary' icon="search">
+                                    Search
+                                </Button>
+                            </Panel>
+                        </Collapse>
 
                         <Card bordered={false} className="top-stats">
                             <Table rowSelection={rowSelection} dataSource={tableData}>

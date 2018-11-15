@@ -1,6 +1,7 @@
 @import "commons";
 
 .ant-card {
+    border: 1px solid #e8e8f7;
     box-shadow: 0 10px 30px -10px rgba(53, 61, 129, 0.1);
     transition: $generic_transition;
 
@@ -16,6 +17,8 @@
     }
 
     .ant-card-body {
+        padding: 0;
+
         h1, h2, h3, h4, h5, h6 {
             color: $primary_color;
         }

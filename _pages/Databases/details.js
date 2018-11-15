@@ -669,7 +669,7 @@ class DatabaseDetails extends React.Component {
             <div className="with-pattern">
                 {tableData &&
                     <div>
-                        <h2>{this.state.dbName}</h2>
+                        <h2><Link to="/">All DBs</Link> > {this.state.dbName}</h2>
                         <Layout className="sider-pro">
                             <Content><h4>{tableData.length} Tables</h4></Content>
                             <Sider>
@@ -687,7 +687,7 @@ class DatabaseDetails extends React.Component {
                             </Sider>
                         </Layout>
 
-                        <Card bordered={false} className="top-stats">
+                        <Card bordered={false} className="marginTop-15">
                             <Table rowSelection={rowSelection} dataSource={tableData}>
                                 <Column
                                     title="Name"
