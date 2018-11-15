@@ -328,3 +328,11 @@ div.login-page {
 ::-webkit-scrollbar-thumb:hover {
     background: $primary_color; 
 }
+
+.sider-pro .ant-layout-sider {
+    background: transparent;
+}
+
+.sider-pro .ant-layout-sider-children {
+    text-align: right;
+}

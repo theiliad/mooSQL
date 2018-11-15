@@ -27,8 +27,7 @@ import { Badge } from "antd"
 import { Modal, Button } from 'antd'
 
 // Components
-import HomePageMalibu from '../_pages/Home/Home_Malibu'
-import HomePageLA from '../_pages/Home/Home_LA'
+import DatabasesPage from "../_pages/Databases/index"
 
 import FooterComponent from './Footer'
 import NotificationsComponent from './App/Notifications'
@@ -110,7 +109,7 @@ const HeaderComponent = ({ showSearchModal, signOut }) => (
 
 class App extends React.Component {
   state = {
-    collapsed: true,
+    collapsed: false,
     searchVisible: false,
     searchResults: []
   }
@@ -168,11 +167,11 @@ class App extends React.Component {
 
   highlightCorrectMenuItem = () => {
     const { pathname } = window.location
-    const componentPath = pathname.replace("/components/", "")
+    const newPath = pathname.replace("/", "")
 
     this.setState({
       ...this.state,
-      navSelectedKey: `nav-${componentPath}`
+      navSelectedKey: `nav-${newPath}`
     })
   }
 
@@ -207,41 +206,14 @@ class App extends React.Component {
                   inlineCollapsed={this.state.collapsed}
                   selectedKeys={[navSelectedKey]}
                 >
-                  <SubMenu
-                      key={`compCategory-home`}
-                      title={<span><Icon type='home' /><span>Home</span></span>}
-                  >
-                    <Menu.Item key='nav-/'>
-                      <Link to='/'>
-                        Home - Malibu
+                  <Menu.Item key="nav-databases">
+                    <Icon type="pie-chart" />
+                    <span>
+                      <Link to="/databases">
+                        Databases
                       </Link>
-                    </Menu.Item>
-
-                    <Menu.Item key='nav-/la'>
-                      <Link to='/la'>
-                        Home - L.A.
-                      </Link>
-                    </Menu.Item>
-
-                    <Menu.Item onClick={this._signOut}>
-                      Login
-                    </Menu.Item>
-                  </SubMenu>
-
-                  {ComponentDemos.map((compCategory, index) =>
-                    <SubMenu
-                      key={`compCategory-${index}`}
-                      title={<span><Icon type={compCategory.icon} /><span>{compCategory.name}</span></span>}
-                    >
-                      {compCategory.items.map((item, i) =>
-                        <Menu.Item key={`nav-${item.path}`}>
-                          <Link to={`/components/${item.path}`}>
-                            {item.name}
-                          </Link>
-                        </Menu.Item>
-                      )}
-                    </SubMenu>
-                  )}
+                    </span>
+                  </Menu.Item>
                 </Menu>
               </div>
             </Sider>
@@ -249,10 +221,8 @@ class App extends React.Component {
             <Content id="app-content" className={collapsed && 'wide'}>
               <div className="content-wrapper container">
                 <Switch>
-                  <Route path="/" component={HomePageMalibu} exact={true} />
-                  <Route path="/la" component={HomePageLA} exact={true} />
-
-                  <Route path="/components" component={ComponentsPage} exact={false} />
+                  <Route path="/" component={null} exact={true} />
+                  <Route path="/databases" component={DatabasesPage} exact={false} />
 
                   <Route path="*" exact={true} component={NotFoundPage} />
                 </Switch>
