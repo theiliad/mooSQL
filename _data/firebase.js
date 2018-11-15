@@ -16,6 +16,7 @@ export const toArray = (obj, count) =>
         key: Math.random() + i,
         keyName: key,
         numCount: count && obj[key][count] ? Object.keys(obj[key][count]).length : 0,
+        dataCount: obj[key].data ? Object.keys(obj[key].data).length : 0,
         ...obj[key]
     })) : []
 
@@ -30,3 +31,5 @@ export const addTable = (dbName, name, collation, columns) => {
         columns: columns
     })
 }
+
+export const insertData = (dbName, tableName, values) => databasesRef.child(`${dbName}/tables/${tableName}/data`).push(values)

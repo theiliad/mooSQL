@@ -693,6 +693,13 @@ class DatabaseDetails extends React.Component {
                                     title="Name"
                                     dataIndex="keyName"
                                     key="name"
+                                    render={(name, record) => (
+                                        <span>
+                                            <Link to={`/databases/${this.state.dbName}/tables/${record.keyName}`}>
+                                                {name}
+                                            </Link>
+                                        </span>
+                                    )}
                                 />
 
                                 <Column
@@ -711,12 +718,41 @@ class DatabaseDetails extends React.Component {
                                     key="columns"
                                     render={(columns, record) => (
                                         <span>
-                                            <Link to={`/databases/${record.keyName}`}>
-                                                {columns}
+                                            {columns}
+                                        </span>
+                                    )}
+                                />
+
+                                <Column
+                                    title="Data Rows"
+                                    dataIndex="dataCount"
+                                    key="dataRows"
+                                    render={(rows, record) => (
+                                        <span>
+                                            <Link to={`/databases/${this.state.dbName}/tables/${record.keyName}`}>
+                                                {rows}
                                             </Link>
                                         </span>
                                     )}
                                 />
+
+                                {/* <Column
+                                    title="Actions"
+                                    key="actions"
+                                    render={_ => (
+                                        <Button
+                                            onClick={e => {
+                                                this.setState({
+                                                    ...this.state,
+                                                    visible: !this.state.visible
+                                                })
+                                            }}
+                                            type='primary' icon="plus"
+                                        >
+                                            Insert Data
+                                        </Button>
+                                    )}
+                                /> */}
                             </Table>
                         </Card>
 
