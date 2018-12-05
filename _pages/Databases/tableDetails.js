@@ -37,7 +37,7 @@ const Panel = Collapse.Panel
 
 import { databaseRef, insertData, toArray } from "../../_data/firebase"
 
-const relationships = ["=","<",">","<=",">=","!=","LIKE","LIKE %%","REGEXP","IN","IS NULL","NOT LIKE","NOT REGEXP","NOT IN","IS NOT NULL","SQL"]
+const relationships = ["==","<",">","<=",">=","!="]
 const customPanelStyle = {
     background: '#eaeaf7',
     borderRadius: 4,
@@ -45,6 +45,99 @@ const customPanelStyle = {
     border: 0,
     overflow: 'hidden',
 };
+
+class SearchFormComponent extends React.Component {
+    validateThenSubmit = (e) => {
+        e.preventDefault()
+
+        this.props.form.validateFields((err, values) => {
+            if (err) return
+
+            this.props.onSubmit(values)
+        })
+    }
+
+    render() {
+        const { getFieldDecorator } = this.props.form
+        const { columns } = this.props
+
+        return (
+            <Form
+                onSubmit={this.validateThenSubmit}
+            >
+                <Row gutter={32}>
+                    <Col xs={24} md={12} lg={5}>
+                        <FormItem label='Column'>
+                            {getFieldDecorator("column", {
+                                rules: [{
+                                    required: true,
+                                    message: "Please choose a column",
+                                }],
+                            })(
+                                <Select
+                                    showSearch
+                                    style={{ width: 200 }}
+                                    placeholder="Select a Column"
+                                    OptionFilterProp="children"
+                                    filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                                    initialValue={columns && Object.keys(columns)[0]}
+                                >
+                                    {columns && Object.keys(columns).filter(column => columns[column].type == "int").map(column =>
+                                        <Option value={column} key={`col-${column}`}>{column}</Option>)
+                                    }
+                                </Select>
+                            )}
+                        </FormItem>
+                    </Col>
+
+                    <Col xs={24} md={12} lg={5}>
+                        <FormItem label='Relationship'>
+                            {getFieldDecorator("relationship", {
+                                rules: [{
+                                    required: true,
+                                    message: "Please choose a relationship",
+                                }],
+                            })(
+                                <Select
+                                    showSearch
+                                    style={{ width: 200 }}
+                                    placeholder="Select a Relationship"
+                                    OptionFilterProp="children"
+                                    filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                                    initialValue={relationships[0]}
+                                    onChange={val => this.setState({ ...this.state, searchRelationship: val })}
+                                >
+                                    {relationships.map(relationship =>
+                                        <Option value={relationship} key={`col-${relationship}`}>{relationship}</Option>)
+                                    }
+                                </Select>
+                            )}
+                        </FormItem>
+                    </Col>
+
+                    <Col xs={24} md={12} lg={5}>
+                        <FormItem label='Value'>
+                            {getFieldDecorator("value", {
+                                rules: [{
+                                    required: true,
+                                    message: "Please specify a value",
+                                }],
+                            })(
+                                <Input autoComplete="false" placeholder="10" />
+                            )}
+                        </FormItem>
+                    </Col>
+                </Row>
+
+                <Button type='primary' htmlType="submit" icon="search" onClick={this.props.search}>
+                    Search
+                </Button>
+            </Form>
+        )
+    }
+}
+
+const SearchForm = Form.create()(SearchFormComponent)
 
 class CreateTableComponent extends React.Component {
     state = {}
@@ -99,7 +192,8 @@ const CreateTable = Form.create()(CreateTableComponent)
 class DatabaseDetails extends React.Component {
     state = {
         visible: false,
-        selectedRowKeys: []
+        selectedRowKeys: [],
+        searchCriteria: null
     };
 
     componentDidMount() {
@@ -114,6 +208,7 @@ class DatabaseDetails extends React.Component {
             this.setState({
                 ...this.state,
                 tableData: toArray(snapshot.val().data),
+                orgTableData: toArray(snapshot.val().data),
                 columns: snapshot.val().columns
             })
         })
@@ -123,8 +218,6 @@ class DatabaseDetails extends React.Component {
         console.log('selectedRowKeys changed: ', selectedRowKeys);
         this.setState({ selectedRowKeys });
     }
-
-
 
     showModal = () => {
         this.setState({
@@ -144,6 +237,15 @@ class DatabaseDetails extends React.Component {
         this.setState({
             visible: false,
         });
+    }
+
+    search = values => {
+        const searchQuery = `${values.column} ${values.relationship} ${values.value}`
+        this.setState({
+            ...this.state,
+            searchCriteria: searchQuery,
+            tableData: this.state.orgTableData.filter(datum => eval(`datum["${values.column}"] ${values.relationship} ${values.value}`))
+        })
     }
 
     render() {
@@ -190,7 +292,7 @@ class DatabaseDetails extends React.Component {
             onSelection: this.onSelection,
         };
 
-        const { tableData, dbName, tableName, columns } = this.state
+        const { tableData, dbName, tableName, columns, searchCriteria } = this.state
 
         return (
             <div className="with-pattern">
@@ -201,7 +303,7 @@ class DatabaseDetails extends React.Component {
                         </h2>
 
                         <Layout className="sider-pro">
-                            <Content><h4>{tableData.length} Rows</h4></Content>
+                            <Content><h4>{tableData.length} Rows{searchCriteria ? ` for search query (${searchCriteria})` : ''}</h4></Content>
                             <Sider>
                                 <Button
                                     onClick={e => {
@@ -219,50 +321,7 @@ class DatabaseDetails extends React.Component {
                         
                         <Collapse bordered={false} className="marginTop-15">
                             <Panel header="Search & Filter" key="1" style={customPanelStyle}>
-                                <Row gutter={32}>
-                                    <Col xs={24} md={12} lg={5}>
-                                        <FormItem label='Column'>
-                                            <Select
-                                                showSearch
-                                                style={{ width: 200 }}
-                                                placeholder="Select a Column"
-                                                OptionFilterProp="children"
-                                                filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                                                defaultValue={columns && Object.keys(columns)[0]}
-                                            >
-                                                {columns && Object.keys(columns).map(column =>
-                                                    <Option value={column} key={`col-${column}`}>{column}</Option>)
-                                                }
-                                            </Select>
-                                        </FormItem>
-                                    </Col>
-
-                                    <Col xs={24} md={12} lg={5}>
-                                        <FormItem label='Relationship'>
-                                            <Select
-                                                showSearch
-                                                style={{ width: 200 }}
-                                                placeholder="Select a Relationship"
-                                                OptionFilterProp="children"
-                                                filterOption={(input, Option) => Option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                                                defaultValue={relationships[0]}
-                                            >
-                                                {relationships.map(relationship =>
-                                                    <Option value={relationship} key={`col-${relationship}`}>{relationship}</Option>)
-                                                }
-                                            </Select>
-                                        </FormItem>
-                                    </Col>
-
-                                    <Col xs={24} md={12} lg={5}>
-                                        <FormItem label='Value'>
-                                            <Input autoComplete="false" placeholder="10" />
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <Button type='primary' icon="search">
-                                    Search
-                                </Button>
+                                <SearchForm onSubmit={this.search} columns={columns} />
                             </Panel>
                         </Collapse>
 
