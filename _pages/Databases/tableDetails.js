@@ -27,8 +27,7 @@ const MenuItemGroup = Menu.ItemGroup
 import { Spin, Progress, message } from 'antd'
 import { Card } from 'antd';
 import { Row, Col } from 'antd';
-import { Avatar } from 'antd';
-import { List, Table, Modal } from 'antd';
+import { Tag, Table, Modal } from 'antd';
 import { Form, Input, InputNumber, AutoComplete, Select, Checkbox, Collapse } from 'antd'
 const { Column } = Table
 const Option = Select.Option
@@ -248,6 +247,14 @@ class DatabaseDetails extends React.Component {
         })
     }
 
+    removeSearchFilters = () => {
+        this.setState({
+            ...this.state,
+            searchCriteria: null,
+            tableData: this.state.orgTableData
+        })
+    }
+
     render() {
         const { selectedRowKeys } = this.state;
         const rowSelection = {
@@ -303,7 +310,17 @@ class DatabaseDetails extends React.Component {
                         </h2>
 
                         <Layout className="sider-pro">
-                            <Content><h4>{tableData.length} Rows{searchCriteria ? ` for search query (${searchCriteria})` : ''}</h4></Content>
+                            <Content>
+                                <h4>
+                                    {tableData.length} Rows
+                                    {searchCriteria &&
+                                        <Tag closable={true} onClick={this.removeSearchFilters} style={{ marginLeft: 10 }}>
+                                            {searchCriteria}
+                                        </Tag>
+                                    }
+                                </h4>
+                            </Content>
+
                             <Sider>
                                 <Button
                                     onClick={e => {
